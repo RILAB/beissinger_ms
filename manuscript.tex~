@@ -1,0 +1,15 @@
+\documentclass{pnastwo}
+%% OPTIONAL POSTSCRIPT FONT FILES
+%\usepackage{PNAStwoF}
+/documentclass{pnastwo}
+
+\title{Demography and selection during the maize domestication
+  bottleneck}
+\author{Timothy M. Beissinger\affil{1}{University of
+    California,Davis}, ..., \and Jeffrey Ross-Ibrarr\affil{1}{} }
+
+\maketitle
+
+\begin{article}
+
+\end{article}
