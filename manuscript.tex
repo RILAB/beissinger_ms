@@ -7,9 +7,9 @@
 \title{Demography and selection during maize domestication}
 \author{Timothy M. Beissinger\affil{1}{University of
     California,Davis}, Li Wang\affil{2}{Iowa State University}, Arun
-  Durvasula\affil{1}{}, Kate Crosby\affil{1}{}, \and Jeffrey
-  Ross-Ibrarra\affil{1}{}\affil{2}{Genome Center, UC
-    Davis}\affil{3}{Center for population biology, UC Davis} }
+  Durvasula\affil{1}{}, Kate Crosby\affil{1}{}, Matthew Hufford\affil{2}{}, \and Jeffrey
+  Ross-Ibrarra\affil{1}{}\affil{3}{Genome Center, UC
+    Davis}\affil{4}{Center for population biology, UC Davis} }
 
 \significancetext{This work is insignificant ;-)}
 
@@ -89,7 +89,60 @@ underlying changes in selection pressure.
   about integrating to estimate BGS based on Jeff's work.}
 
 \subsection{Demography of maize domestication}
-Text goes here
+To explore whether differences in purifying selection between maize
+and teosinte can be explained purely by demographic processes, we
+first estimated the parameters of maize domestication using large-scale
+sequencing data involving 23 inbred maize
+landraces and 13 teosinte inbred lines included in the HapMap 2 panel
+\cite{hapmap2} \textcolor{red}{(supplemental table here)}. The maize
+lines were collected from across the Americas and the teosinte lines
+came from central Mexico. Before estimating demography, we compared
+the site frequency spectrum (SFS) in genic and non-genic regions, and
+observed substantial differences in the evolution of these classes of
+sites. For both maize and teosinte, the SFS within genes showed a
+dearth of low-frequency alleles and Tajima's D
+\textcolor{red}{(reference here)} was therefore shifted
+to more positive values \textcolor{red}{(figure here)}. This is consistent with the aforementioned purifying
+selection and indicates that genic regions are not evolving
+neutrally. Therefore, for demographic modeling we restricted analysis
+to non-genic sites.  
+
+We used diffusion approximation as implemented in
+dadi \cite{dadi} to find the domestication parameters that best explain
+the joint site frequency spectrum of maize and teosinte.  The model we optimized began with an
+equilibrium ancestral population of size $N_a$
+splitting into separate maize and teosinte populations $T_B$ generations in the past. Moving forward in
+time from the split, teosinte maintained the ancestral population size, while
+maize experienced an immediate effective population size change to
+$N_b$ individuals, followed by exponential growth to size
+$N_m$. Additionally, since the split a $M_{tm}$ individuals migrated
+from teosinte into maize and $M_{mt}$ individuals migrated from maize
+to teosinte. 
+
+The most likely model suggested an ancestral for $\theta$ ($4N\mu$) of
+0.014734, which is similar to previous estimates
+\textcolor{red}{(references here)}. Assuming a mutation rate of $\mu =
+3 \times 10^{-8}$ \textcolor{red}{(reference here)}, this suggests an effective
+population size of $N_a = 122,783$ individuals, a population split
+$T_B = 15,523$ generations in the past, a maize bottleneck
+effective populations size of $N_b = 6,455$ individuals (5.26\% of
+$N_a$), a modern maize effective population size of $N_m = 366,973$
+individuals, $M_{tm} = 1.35$ migrants per generation from teosinte to
+maize, and $M_{mt} = 1.72$ migrants per generation from maize to
+teosinte \textcolor{red}{(figure here)}. We note that a population
+split over 15 thousand generations before present precedes estimates
+from 
+archaeological data which suggests maize domestication began
+approximately 9,000 years before present \textcolor{red}{(reference
+  here)}. This could result from multiple generations per year, or in
+may reflect teosinte population structure that was present before
+domestication. Also, note that the genetic time of the population
+split must precede morphological changes that could be identified
+morphologically.   Additionally, because recent expansion is
+most evidenced by rare alleles, and because these data provide low
+power to detect rare alleles, we expect that the estimate of  $N_m =
+366,973$, or $\sim 3N_a$, is likely an underestimate. \textcolor{red}{(This
+  is where evaluation using Kate's SFS should go)}.
 
 
 \section{Discussion}
