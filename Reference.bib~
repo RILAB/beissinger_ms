@@ -1,0 +1,714 @@
+﻿@article{fischer2010breeding,
+  title={Breeding and cereal yield progress},
+  author={Fischer, RA and Edmeades, Gregory O},
+  year={2010},
+  journal={Crop. Sci.},
+  volume={50},
+}
+
+
+@misc{usdaERS,
+ author       = {USDA-ERS}, 
+ title        = {US Department of Agriculture Economic Research Service},
+ year         = {2015},
+}
+
+@article {GCB:GCB12381,
+author = {Harrison, Matthew T. and Tardieu, François and Dong, Zhanshan and Messina, Carlos D. and Hammer, Graeme L.},
+title = {Characterizing drought stress and trait influence on maize yield under current and future conditions},
+journal = {Global Change Biology},
+volume = {20},
+number = {3},
+issn = {1365-2486},
+url = {http://dx.doi.org/10.1111/gcb.12381},
+doi = {10.1111/gcb.12381},
+pages = {867--878},
+keywords = {APSIM, breeding, drought, grain, model, trait, water stress, Zea mays},
+year = {2014},
+}
+
+
+@article{lobell2014greater,
+ title={Greater sensitivity to drought accompanies maize yield increase in the US Midwest},
+ author={Lobell, David B and Roberts, Michael J and Schlenker, Wolfram and Braun, Noah and Little, Bertis B and Rejesus, Roderick M and Hammer, Graeme L},
+ journal={Science},
+ volume={344},
+ number={6183},
+ pages={516--519},
+ year={2014},
+ publisher={American Association for the Advancement of Science}
+}
+
+
+@inproceedings{jensen1994genetic,
+ title={Genetic improvement of maize for drought tolerance},
+ author={Jensen, SD},
+ booktitle={Proceedings of the Fourth Eastern and Southern African Regional Maize Conference, Harare, Zimbabwe: CIMMYT, El Batan, Mexico},
+ volume={28},
+ pages={67--75},
+ year={1994}
+}
+
+
+@article{campos2004improving,
+ title={Improving drought tolerance in maize: a view from industry},
+ author={Campos, H and Cooper, M and Habben, JE and Edmeades, GO and Schussler, JR},
+ journal={Field Crops Research},
+ volume={90},
+ number={1},
+ pages={19--34},
+ year={2004},
+ publisher={Elsevier}
+}
+
+
+@article{doebley2004genetics,
+ title={The genetics of maize evolution},
+ author={Doebley, John},
+ journal={Annu. Rev. Genet.},
+ volume={38},
+ pages={37--59},
+ year={2004},
+ publisher={Annual Reviews}
+}
+
+
+@article{doebley1997evolution,
+ title={The evolution of apical dominance in maize},
+ author={Doebley, John and Stec, Adrian and Hubbard, Lauren},
+ year={1997},
+ journal={Evolution},
+ publisher={Nature Publishing Group}
+}
+
+
+@article{clark2006distant,
+ title={A distant upstream enhancer at the maize domestication gene tb1 has pleiotropic effects on plant and inflorescent architecture},
+ author={Clark, Richard M and Wagler, Tina Nussbaum and Quijada, Pablo and Doebley, John},
+ journal={Nature genetics},
+ volume={38},
+ number={5},
+ pages={594--597},
+ year={2006},
+ publisher={Nature Publishing Group}
+}
+
+
+@article{dorweiler1997developmental,
+ title={Developmental analysis of teosinte glume architecture1: A key locus in the evolution of maize (Poaceae).},
+ author={Dorweiler, J and Doebley, John},
+ journal={American Journal of Botany},
+ volume={84},
+ number={10},
+ pages={1313--1313},
+ year={1997},
+ publisher={Botanical Soc America}
+}
+
+
+@article{wills2013many,
+ title={From many, one: Genetic control of prolificacy during maize domestication},
+ author={Wills, David M and Whipple, Clinton J and Takuno, Shohei and Kursel, Lisa E and Shannon, Laura M and Ross-Ibarra, Jeffrey and Doebley, John F},
+ journal={PLoS genetics},
+ volume={9},
+ number={6},
+ pages={e1003604},
+ year={2013},
+ publisher={Public Library of Science}
+}
+
+
+
+
+ @article{studer2011identification,
+ title={Identification of a functional transposon insertion in the maize domestication gene tb1},
+ author={Studer, Anthony and Zhao, Qiong and Ross-Ibarra, Jeffrey and Doebley, John},
+ journal={Nature genetics},
+ volume={43},
+ number={11},
+ pages={1160--1163},
+ year={2011},
+ publisher={Nature Publishing Group}
+}
+
+
+@article{beissinger2014genome,
+ title={A genome-wide scan for evidence of selection in a maize population under long-term artificial selection for ear number},
+ author={Beissinger, Timothy M and Hirsch, Candice N and Vaillancourt, Brieanne and Deshpande, Shweta and Barry, Kerrie and Buell, C Robin and Kaeppler, Shawn M and Gianola, Daniel and de Leon, Natalia},
+ journal={Genetics},
+ volume={196},
+ number={3},
+ pages={829--840},
+ year={2014},
+ publisher={Genetics Soc America}
+}
+
+
+@article{ross2007plant,
+ title={Plant domestication, a unique opportunity to identify the genetic basis of adaptation},
+ author={Ross-Ibarra, Jeffrey and Morrell, Peter L and Gaut, Brandon S},
+ journal={Proceedings of the National Academy of Sciences},
+ volume={104},
+ number={suppl 1},
+ pages={8641--8648},
+ year={2007},
+ publisher={National Acad Sciences}
+}
+
+
+@article{smith1974hitch,
+ title={The hitch-hiking effect of a favourable gene},
+ author={Maynard Smith, John and Haigh, John},
+ journal={Genetical research},
+ volume={23},
+ number={01},
+ pages={23--35},
+ year={1974},
+ publisher={Cambridge Univ Press}
+}
+
+
+
+
+@article{mangelsdorf1931hybridization,
+ title={Hybridization of maize, Tripsacum, and Euchlaena},
+ author={Mangelsdorf, Paul Christoph and Reeves, Robert Gatlin},
+ journal={Journal of Heredity},
+ volume={22},
+ number={11},
+ pages={329--343},
+ year={1931},
+ publisher={Am Genetic Assoc}
+}
+
+
+@article{krimbas1971genetics,
+ title={The genetics of Dacus oleae. V. Changes of esterase polymorphism in a natural population following insecticide control-selection or drift?},
+ author={Krimbas, Costas B and Tsakas, Spyros},
+ journal={Evolution},
+ pages={454--460},
+ year={1971},
+ publisher={JSTOR}
+}
+
+
+@article{stuber1980allozyme,
+ title={Allozyme frequency changes associated with selection for increased grain yield in maize (Zea mays L.)},
+ author={Stuber, CW and Moll, RH and Goodman, MM and Schaffer, HE and Weir, BS},
+ journal={Genetics},
+ volume={95},
+ number={1},
+ pages={225--236},
+ year={1980},
+ publisher={Genetics Soc America}
+}
+
+
+@article{stuber1972frequency,
+ title={Frequency changes of isozyme alleles in a selection experiment for grain yield in maize (Zea mays L.)},
+ author={Stuber, CW and Moll, RH},
+ journal={Crop Science},
+ volume={12},
+ number={3},
+ pages={337--340},
+ year={1972},
+ publisher={Crop Science Society of America}
+}
+
+
+@article{lorenz2015selection,
+ title={Selection for Silage Yield and Composition Did Not Affect Genomic Diversity Within the Wisconsin Quality Synthetic Maize Population},
+ author={Lorenz, Aaron J and Beissinger, Timothy M and Silva, Renato Rodrigues and de Leon, Natalia},
+ journal={G3: Genes| Genomes| Genetics},
+ pages={g3--114},
+ year={2015},
+ publisher={Genetics Society of America}
+}
+
+
+@article{hirsch2014insights,
+ title={Insights into the effects of long-term artificial selection on seed size in maize},
+ author={Hirsch, Candice N and Flint-Garcia, Sherry A and Beissinger, Timothy M and Eichten, Steven R and Deshpande, Shweta and Barry, Kerrie and McMullen, Michael D and Holland, James B and Buckler, Edward S and Springer, Nathan and others},
+ journal={Genetics},
+ volume={198},
+ number={1},
+ pages={409--421},
+ year={2014},
+ publisher={Genetics Soc America}
+}
+
+
+@article{wisser2008selection,
+ title={Selection mapping of loci for quantitative disease resistance in a diverse maize population},
+ author={Wisser, Randall J and Murray, Seth C and Kolkman, Judith M and Ceballos, Hern{\'a}n and Nelson, Rebecca J},
+ journal={Genetics},
+ volume={180},
+ number={1},
+ pages={583--599},
+ year={2008},
+ publisher={Genetics Soc America}
+}
+
+
+@article{hufford2012comparative,
+ title={Comparative population genomics of maize domestication and improvement},
+ author={Hufford, Matthew B and Xu, Xun and Van Heerwaarden, Joost and Pyh{\"a}j{\"a}rvi, Tanja and Chia, Jer-Ming and Cartwright, Reed A and Elshire, Robert J and Glaubitz, Jeffrey C and Guill, Kate E and Kaeppler, Shawn M and others},
+ journal={Nature genetics},
+ volume={44},
+ number={7},
+ pages={808--811},
+ year={2012},
+ publisher={Nature Publishing Group}
+}
+
+
+@article{heslot2015perspectives,
+ title={Perspectives for genomic selection applications and research in plants},
+ author={Heslot, Nicolas and Jannink, Jean-Luc and Sorrells, Mark E},
+ journal={Crop Science},
+ volume={55},
+ number={1},
+ pages={1--12},
+ year={2015},
+ publisher={The Crop Science Society of America, Inc.}
+}
+
+
+@article{beissinger2013marker,
+ title={Marker density and read depth for genotyping populations using genotyping-by-sequencing},
+ author={Beissinger, Timothy M and Hirsch, Candice N and Sekhon, Rajandeep S and Foerster, Jillian M and Johnson, James M and Muttoni, German and Vaillancourt, Brieanne and Buell, C Robin and Kaeppler, Shawn M and de Leon, Natalia},
+ journal={Genetics},
+ volume={193},
+ number={4},
+ pages={1073--1081},
+ year={2013},
+ publisher={Genetics Soc America}
+}
+
+
+@article{schnable2009b73,
+ title={The B73 maize genome: complexity, diversity, and dynamics},
+ author={Schnable, Patrick S and Ware, Doreen and Fulton, Robert S and Stein, Joshua C and Wei, Fusheng and Pasternak, Shiran and Liang, Chengzhi and Zhang, Jianwei and Fulton, Lucinda and Graves, Tina A and others},
+ journal={science},
+ volume={326},
+ number={5956},
+ pages={1112--1115},
+ year={2009},
+ publisher={American Association for the Advancement of Science}
+}
+
+
+@article{elshire2011robust,
+ title={A robust, simple genotyping-by-sequencing (GBS) approach for high diversity species},
+ author={Elshire, Robert J and Glaubitz, Jeffrey C and Sun, Qi and Poland, Jesse A and Kawamoto, Ken and Buckler, Edward S and Mitchell, Sharon E},
+ journal={PloS one},
+ volume={6},
+ number={5},
+ pages={e19379},
+ year={2011},
+ publisher={Public Library of Science}
+}
+
+
+@article{Meuwissen01042001,
+author = {Meuwissen, T. H. E. and Hayes, B. J. and Goddard, M. E.}, 
+title = {Prediction of Total Genetic Value Using Genome-Wide Dense Marker Maps},
+volume = {157}, 
+number = {4}, 
+pages = {1819-1829}, 
+year = {2001}, 
+URL = {http://www.genetics.org/content/157/4/1819.abstract}, 
+eprint = {http://www.genetics.org/content/157/4/1819.full.pdf+html}, 
+journal = {Genetics} 
+}
+
+
+
+@article{habier2011extension,
+ title={Extension of the Bayesian alphabet for genomic selection},
+ author={Habier, David and Fernando, Rohan L and Kizilkaya, Kadir and Garrick, Dorian J},
+ journal={BMC bioinformatics},
+ volume={12},
+ number={1},
+ pages={186},
+ year={2011},
+ publisher={BioMed Central Ltd}
+}
+
+
+@article{Cooper2005,
+abstract = {Comparisons of orthologous genomic DNA sequences can be used to characterize regions that have been subject to purifying selection and are enriched for functional elements. We here present the results of such an analysis on an alignment of sequences from 29 mammalian species. The alignment captures approximately 3.9 neutral substitutions per site and spans approximately 1.9 Mbp of the human genome. We identify constrained elements from 3 bp to over 1 kbp in length, covering approximately 5.5\% of the human locus. Our estimate for the total amount of nonexonic constraint experienced by this locus is roughly twice that for exonic constraint. Constrained elements tend to cluster, and we identify large constrained regions that correspond well with known functional elements. While constraint density inversely correlates with mobile element density, we also show the presence of unambiguously constrained elements overlapping mammalian ancestral repeats. In addition, we describe a number of elements in this region that have undergone intense purifying selection throughout mammalian evolution, and we show that these important elements are more numerous than previously thought. These results were obtained with Genomic Evolutionary Rate Profiling (GERP), a statistically rigorous and biologically transparent framework for constrained element identification. GERP identifies regions at high resolution that exhibit nucleotide substitution deficits, and measures these deficits as "rejected substitutions". Rejected substitutions reflect the intensity of past purifying selection and are used to rank and characterize constrained elements. We anticipate that GERP and the types of analyses it facilitates will provide further insights and improved annotation for the human genome as mammalian genome sequence data become richer.},
+author = {Cooper, Gregory M and Stone, Eric a and Asimenos, George and Green, Eric D and Batzoglou, Serafim and Sidow, Arend},
+doi = {10.1101/gr.3577405},
+file = {:Users/yangjl/Documents/Literatures/My research/Evolution/2005CooperEtAlGERP.pdf:pdf},
+issn = {1088-9051},
+journal = {Genome research},
+keywords = {Animals,Base Sequence,Computational Biology,Computational Biology: methods,Conserved Sequence,Cystic Fibrosis Transmembrane Conductance Regulato,Evolution, Molecular,Gene Components,Gene Expression Profiling,Gene Expression Profiling: methods,Genome,Humans,Interspersed Repetitive Sequences,Mammals,Mammals: genetics,Molecular Sequence Data,Sensitivity and Specificity,Sequence Alignment,Sequence Analysis, DNA,Sequence Homology, Nucleic Acid},
+month = jul,
+number = {7},
+pages = {901--13},
+pmid = {15965027},
+title = {{Distribution and intensity of constraint in mammalian genomic sequence.}},
+volume = {15},
+year = {2005}
+}
+
+@article{Rodgers-Melnick2015,
+author = {Rodgers-Melnick, Eli and Bradbury, Peter J. and Elshire, Robert J. and Glaubitz, Jeffrey C. and Acharya, Charlotte B. and Mitchell, Sharon E. and Li, Chunhui and Li, Yongxiang and Buckler, Edward S.},
+doi = {10.1073/pnas.1413864112},
+file = {:Users/yangjl/Documents/Literatures/My research/GWAS/PNAS-2015-Rodgers-Melnick-1413864112.pdf:pdf},
+isbn = {1413864112},
+issn = {0027-8424},
+journal = {Proceedings of the National Academy of Sciences},
+pages = {201413864},
+title = {{Recombination in diverse maize is stable, predictable, and associated with genetic load}},
+url = {http://www.pnas.org/lookup/doi/10.1073/pnas.1413864112},
+year = {2015}
+}
+@inproceedings{holland2004implementation,
+ title={Implementation of molecular markers for quantitative traits in breeding programs—challenges and opportunities},
+ author={Holland, James B},
+ booktitle={New Directions for a Diverse Planet: Proceedings for the 4th International Crop Science Congress. Regional Institute, Gosford, Australia, www. cropscience. org. au/icsc2004},
+ year={2004}
+}
+
+
+@article{browning2009unified,
+ title={A unified approach to genotype imputation and haplotype-phase inference for large data sets of trios and unrelated individuals},
+ author={Browning, Brian L and Browning, Sharon R},
+ journal={The American Journal of Human Genetics},
+ volume={84},
+ number={2},
+ pages={210--223},
+ year={2009},
+ publisher={Elsevier}
+}
+
+
+@article{Davydov2010,
+abstract = {Computational efforts to identify functional elements within genomes leverage comparative sequence information by looking for regions that exhibit evidence of selective constraint. One way of detecting constrained elements is to follow a bottom-up approach by computing constraint scores for individual positions of a multiple alignment and then defining constrained elements as segments of contiguous, highly scoring nucleotide positions. Here we present GERP++, a new tool that uses maximum likelihood evolutionary rate estimation for position-specific scoring and, in contrast to previous bottom-up methods, a novel dynamic programming approach to subsequently define constrained elements. GERP++ evaluates a richer set of candidate element breakpoints and ranks them based on statistical significance, eliminating the need for biased heuristic extension techniques. Using GERP++ we identify over 1.3 million constrained elements spanning over 7\% of the human genome. We predict a higher fraction than earlier estimates largely due to the annotation of longer constrained elements, which improves one to one correspondence between predicted elements with known functional sequences. GERP++ is an efficient and effective tool to provide both nucleotide- and element-level constraint scores within deep multiple sequence alignments.},
+author = {Davydov, Eugene V and Goode, David L and Sirota, Marina and Cooper, Gregory M and Sidow, Arend and Batzoglou, Serafim},
+doi = {10.1371/journal.pcbi.1001025},
+issn = {1553-7358},
+journal = {PLoS computational biology},
+number = {12},
+pages = {e1001025},
+title = {{Identifying a high fraction of the human genome to be under selective constraint using GERP++.}},
+volume = {6},
+year = {2010}
+}
+
+
+@article{lush1937animal,
+ title={Animal breeding plans.},
+ author={LUSH, JL and others},
+ journal={Ames.},
+ year={1937},
+ publisher={Collegiate Press Inc.}
+}
+@article{Li2012,
+author = {Li, Xianran and Zhu, Chengsong and Yeh, Cheng-Ting and Wu, Wei and Takacs, Elizabeth M and Petsch, Katherine a and Tian, Feng and Bai, Guihua and Buckler, Edward S and Muehlbauer, Gary J and Timmermans, Marja C P and Scanlon, Michael J and Schnable, Patrick S and Yu, Jianming},
+doi = {10.1101/gr.140277.112},
+issn = {1549-5469},
+journal = {Genome research},
+mendeley-groups = {KRN-GWAS},
+number = {12},
+pages = {2436--44},
+title = {{Genic and nongenic contributions to natural variation of quantitative traits in maize.}},
+volume = {22},
+year = {2012}
+}
+
+
+
+
+@article{frova1999genetic,
+ title={Genetic analysis of drought tolerance in maize by molecular markers I. Yield components},
+ author={Frova, C and Krajewski, P and Di Fonzo, N and Villa, M and Sari-Gorla, M},
+ journal={Theoretical and Applied Genetics},
+ volume={99},
+ number={1-2},
+ pages={280--288},
+ year={1999},
+ publisher={Springer}
+}
+
+
+@article{hayes2009invited,
+ title={Invited review: Genomic selection in dairy cattle: Progress and challenges},
+ author={Hayes, BJ and Bowman, PJ and Chamberlain, AJ and Goddard, ME},
+ journal={Journal of dairy science},
+ volume={92},
+ number={2},
+ pages={433--443},
+ year={2009},
+ publisher={Elsevier}
+}
+
+
+@article{heffner2009genomic,
+ title={Genomic selection for crop improvement},
+ author={Heffner, Elliot L and Sorrells, Mark E and Jannink, Jean-Luc},
+ journal={Crop Science},
+ volume={49},
+ number={1},
+ pages={1--12},
+ year={2009},
+ publisher={Crop Science Society of America}
+}
+
+
+
+@article{campos2006changes,
+ title={Changes in drought tolerance in maize associated with fifty years of breeding for yield in the US corn belt},
+ author={Campos, H and Cooper, M and Edmeades, GO and Loffler, C and Schussler, JR and Ibanez, M},
+ journal={Maydica},
+ volume={51},
+ number={2},
+ pages={369},
+ year={2006},
+ publisher={ISTITUTO SPERIMENTALE PER LA CEREALICOLTURA}
+}
+@article{morota2014genome,
+ title={Genome-enabled prediction of quantitative traits in chickens using genomic annotation},
+ author={Morota, Gota and Abdollahi-Arpanahi, Rostam and Kranis, Andreas and Gianola, Daniel},
+ journal={BMC genomics},
+ volume={15},
+ number={1},
+ pages={109},
+ year={2014},
+ publisher={BioMed Central Ltd}
+}
+
+
+
+
+@article{reeves1950use,
+ title={The use of teosinte in the improvement of corn inbreds.},
+ author={Reeves, RG and others},
+ journal={Agronomy Journal},
+ volume={42},
+ pages={248--51},
+ year={1950}
+}
+@article{swarts2014novel,
+ title={Novel methods to optimize genotypic imputation for low-coverage, next-generation sequence data in crop plants},
+ author={Swarts, Kelly and Li, Huihui and Romero Navarro, J Alberto and An, Dong and Romay, Maria Cinta and Hearne, Sarah and Acharya, Charlotte and Glaubitz, Jeffrey C and Mitchell, Sharon and Elshire, Robert J and others},
+ journal={The Plant Genome},
+ volume={7},
+ number={3},
+ year={2014},
+ publisher={Crop Science Society of America}
+}
+
+
+@article{10.1371/journal.pone.0066428,
+    author = {Ray, Deepak K. AND Mueller, Nathaniel D. AND West, Paul C. AND Foley, Jonathan A.},
+    journal = {PLoS ONE},
+    publisher = {Public Library of Science},
+    title = {Yield Trends Are Insufficient to Double Global Crop Production by 2050},
+    year = {2013},
+    month = {06},
+    volume = {8},
+    pages = {e66428},
+    number = {6},    doi = {10.1371/journal.pone.0066428}
+}        
+
+
+@article{Burton2013,
+abstract = {We characterized phenotypic variation for root traits in 256 Zea spp. accessions, including maize landraces and Z. mays L. subsp. huehuetenangensis (H. H. Iltis \& Doebley) Doebley, subsp. mexicana (Schrad.) H. H. Iltis, and subsp. parviglumis H. H. Iltis \& Doebley, Z. nicaraguensis H. H. Iltis \& B. F. Benz, Z. perennis (Hitchc.) Reeves \& Mangelsd., and Z. luxurians (Durieu \& Asch.) R. M. Bird. Anatomical traits included areas of the cross-section, stele, cortex, aerenchyma, and xylem and number of cortical cells and cell files. Architectural traits included diameters of the nodal root system, individual crown roots, and the stem; numbers of seminal and nodal roots; biomass; and nodal root length and branching. Ranges for anatomical traits were similar for teosintes and landraces, except for aerenchyma and xylem areas, and number of cortical cells. Landraces had greater variation for architectural traits except for nodal root number and branching, and had larger mean stele and xylem areas, longer nodal roots, wider nodal systems, and more seminal roots than teosintes. In contrast, teosintes were smaller but had more nodal roots with greater branching. At a common plant size, teosintes would have lower mean values for all anatomical traits, except for number of cortical cells and cell files. Teosintes had greater scaled values for all architectural traits except average root diameter. Cluster analysis divided accessions into eight root phenotypes. Phenotypic diversity for root traits in the genus Zea could be a valuable resource for improving stress tolerance in maize.},
+author = {Burton, Amy L. and Brown, Kathleen M. and Lynch, Jonathan P.},
+doi = {10.2135/cropsci2012.07.0440},
+file = {:Users/yangjl/Documents/Literatures/My research/Drought/cs-53-3-1042.pdf:pdf},
+issn = {0011183X},
+journal = {Crop Science},
+number = {3},
+pages = {1042--1055},
+title = {{Phenotypic diversity of root anatomical and architectural traits in Zea species}},
+volume = {53},
+year = {2013}
+}
+
+
+@article{matsuoka2002single,
+ title={A single domestication for maize shown by multilocus microsatellite genotyping},
+ author={Matsuoka, Yoshihiro and Vigouroux, Yves and Goodman, Major M and Sanchez, Jesus and Buckler, Edward and Doebley, John},
+ journal={Proceedings of the National Academy of Sciences},
+ volume={99},
+ number={9},
+ pages={6080--6084},
+ year={2002},
+ publisher={National Acad Sciences}
+}
+@article{piperno2009starch,
+ title={Starch grain and phytolith evidence for early ninth millennium BP maize from the Central Balsas River Valley, Mexico},
+ author={Piperno, Dolores R and Ranere, Anthony J and Holst, Irene and Iriarte, Jose and Dickau, Ruth},
+ journal={Proceedings of the National Academy of Sciences},
+ volume={106},
+ number={13},
+ pages={5019--5024},
+ year={2009},
+ publisher={National Acad Sciences}
+}
+@article{wallace2014association,
+ title={Association Mapping across Numerous Traits Reveals Patterns of Functional Variation in Maize},
+ author={Wallace, Jason G and Bradbury, Peter J and Zhang, Nengyi and Gibon, Yves and Stitt, Mark and Buckler, Edward S},
+ journal={PLoS genetics},
+ volume={10},
+ number={12},
+ pages={e1004845},
+ year={2014},
+ publisher={Public Library of Science}
+}
+
+
+
+
+@article {takuno,
+        author = {Takuno, Shohei and Ralph, Peter and Swarts, Kelly and Elshire, Rob J and Glaubitz, Jeffrey C and Buckler, Edward S. and Hufford, Matthew B and Ross-Ibarra, Jeff},
+        title = {Independent molecular basis of convergent highland adaptation in maize},
+        year = {2015},
+        doi = {10.1101/013607},
+        publisher = {Cold Spring Harbor Labs Journals},
+        journal = {bioRxiv}
+}
+
+
+@article{brondum2012genome,
+ title={Genome position specific priors for genomic prediction},
+ author={Br{\o}ndum, Rasmus F and Su, Guosheng and Lund, Mogens S and Bowman, Philip J and Goddard, Michael E and Hayes, Benjamin J},
+ journal={BMC genomics},
+ volume={13},
+ number={1},
+ pages={543},
+ year={2012},
+ publisher={BioMed Central Ltd}
+}
+
+
+@article{lin2014genomic,
+ title={Genomic selection in crops, trees and forages: a review},
+ author={Lin, Z and Hayes, BJ and Daetwyler, HD},
+ journal={Crop and Pasture Science},
+ volume={65},
+ number={11},
+ pages={1177--1191},
+ year={2014},
+ publisher={CSIRO}
+}
+
+
+@article{sobrado2011leaf,
+ title={Leaf gas exchange and fluorescence of two teosinte species: Zea mays ssp. parviglumis and Z. diploperennis},
+ author={Sobrado, MA and others},
+ journal={Journal of Tropical Agriculture},
+ volume={49},
+ number={1-2},
+ pages={91--94},
+ year={2011},
+ publisher={Kerala Agricultural University}
+}
+
+
+
+@article{mcmullen2009genetic,
+ title={Genetic properties of the maize nested association mapping population},
+ author={McMullen, Michael D and Kresovich, Stephen and Villeda, Hector Sanchez and Bradbury, Peter and Li, Huihui and Sun, Qi and Flint-Garcia, Sherry and Thornsberry, Jeffry and Acharya, Charlotte and Bottoms, Christopher and others},
+ journal={Science},
+ volume={325},
+ number={5941},
+ pages={737--740},
+ year={2009},
+ publisher={American Association for the Advancement of Science}
+}
+
+
+@article{fang2013comparative,
+ title={Comparative analyses identify the contributions of exotic donors to disease resistance in a barley experimental population},
+ author={Fang, Zhou and Eule-Nashoba, Amber and Powers, Carol and Kono, Thomas Y and Takuno, Shohei and Morrell, Peter L and Smith, Kevin P},
+ journal={G3: Genes| Genomes| Genetics},
+ volume={3},
+ number={11},
+ pages={1945--1953},
+ year={2013},
+ publisher={Genetics Society of America}
+}
+
+
+@article{gerke2013genomic,
+ title={The genomic impacts of drift and selection for hybrid performance in maize},
+ author={Gerke, Justin P and Edwards, Jode W and Guill, Katherine E and Ross-Ibarra, Jeffrey and McMullen, Michael D},
+ journal={arXiv preprint arXiv:1307.7313},
+ year={2013}
+}
+
+
+@article{wright1931evolution,
+ title={Evolution in Mendelian populations},
+ author={Wright, Sewall},
+ journal={Genetics},
+ volume={16},
+ number={2},
+ pages={97},
+ year={1931},
+ publisher={Genetics Society of America}
+}
+@article{messmer2009drought,
+ title={Drought stress and tropical maize: QTL-by-environment interactions and stability of QTLs across environments for yield components and secondary traits},
+ author={Messmer, Rainer and Fracheboud, Yvan and B{\"a}nziger, Marianne and Vargas, Mateo and Stamp, Peter and Ribaut, Jean-Marcel},
+ journal={Theoretical and Applied Genetics},
+ volume={119},
+ number={5},
+ pages={913--930},
+ year={2009},
+ publisher={Springer}
+}
+
+
+@misc{NOAA_NCDC,
+ author       = {NOAA-NCDC}, 
+ title        = {National oceanic and atmospheric administration, National climate Data Center},
+  url          = {http://www.ncdc.noaa.gov/cdo-web/datatools/normals},
+ year         = {2015},
+}
+
+
+@article{gianola2013priors,
+ title={Priors in whole-genome regression: the Bayesian alphabet returns},
+ author={Gianola, Daniel},
+ journal={Genetics},
+ volume={194},
+ number={3},
+ pages={573--596},
+ year={2013},
+ publisher={Genetics Soc America}
+}
+@inproceedings{gonzalez1997teosinte,
+ title={Teosinte distribution in Mexico},
+ author={Gonzalez, J and Corral, J},
+ booktitle={Proceedings of a forum: gene flow among maize landraces, improved maize, varieties and Teosinte: implications for transgenic maize},
+ pages={18--39},
+ year={1997}
+}
+
+
+@article{boyer2013us,
+ title={The US drought of 2012 in perspective: a call to action},
+ author={Boyer, JS and Byrne, P and Cassman, KG and Cooper, M and Delmer, D and Greene, T and Gruis, F and Habben, J and Hausmann, N and Kenny, N and others},
+ journal={Global Food Security},
+ volume={2},
+ number={3},
+ pages={139--143},
+ year={2013},
+ publisher={Elsevier}
+}
+
+
+@article{cooper2014breeding,
+  title={Breeding drought-tolerant maize hybrids for the US corn-belt: discovery to product},
+  author={Cooper, Mark and Gho, Carla and Leafgren, Roger and Tang, Tom and Messina, Carlos},
+  journal={Journal of experimental botany},
+  pages={eru064},
+  year={2014},
+  publisher={Soc Experiment Biol}
+}

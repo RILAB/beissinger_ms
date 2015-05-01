@@ -1,0 +1,82 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Charlesworth et~al.(1993)Charlesworth, Morgan, and
+  Charlesworth]{charlesworth1993}
+B.~Charlesworth, M.~Morgan, and D.~Charlesworth.
+\newblock The effect of deleterious mutations on neutral molecular variation.
+\newblock \emph{Genetics}, 134\penalty0 (4):\penalty0 1289--1303, 1993.
+
+\bibitem[Chia et~al.(2012)Chia, Song, Bradbury, Costich, de~Leon, Doebley,
+  Elshire, Gaut, Geller, Glaubitz, et~al.]{chia2012}
+J.-M. Chia, C.~Song, P.~J. Bradbury, D.~Costich, N.~de~Leon, J.~Doebley, R.~J.
+  Elshire, B.~Gaut, L.~Geller, J.~C. Glaubitz, et~al.
+\newblock Maize hapmap2 identifies extant variation from a genome in flux.
+\newblock \emph{Nature genetics}, 44\penalty0 (7):\penalty0 803--807, 2012.
+
+\bibitem[Durinck et~al.(2005)Durinck, Moreau, Kasprzyk, Davis, De~Moor, Brazma,
+  and Huber]{durinck2005}
+S.~Durinck, Y.~Moreau, A.~Kasprzyk, S.~Davis, B.~De~Moor, A.~Brazma, and
+  W.~Huber.
+\newblock Biomart and bioconductor: a powerful link between biological
+  databases and microarray data analysis.
+\newblock \emph{Bioinformatics}, 21\penalty0 (16):\penalty0 3439--3440, 2005.
+
+\bibitem[Durinck et~al.(2009)Durinck, Spellman, Birney, and Huber]{durinck2009}
+S.~Durinck, P.~T. Spellman, E.~Birney, and W.~Huber.
+\newblock Mapping identifiers for the integration of genomic datasets with the
+  r/bioconductor package biomart.
+\newblock \emph{Nature protocols}, 4\penalty0 (8):\penalty0 1184--1191, 2009.
+
+\bibitem[Gutenkunst et~al.(2009)Gutenkunst, Hernandez, Williamson, and
+  Bustamante]{gutenkunst2009}
+R.~N. Gutenkunst, R.~D. Hernandez, S.~H. Williamson, and C.~D. Bustamante.
+\newblock Inferring the joint demographic history of multiple populations from
+  multidimensional snp frequency data.
+\newblock \emph{PLoS genetics}, 5\penalty0 (10):\penalty0 e1000695, 2009.
+
+\bibitem[Hernandez et~al.(2011)Hernandez, Kelley, Elyashiv, Melton, Auton,
+  McVean, Sella, Przeworski, et~al.]{hernandez2011}
+R.~D. Hernandez, J.~L. Kelley, E.~Elyashiv, S.~C. Melton, A.~Auton, G.~McVean,
+  G.~Sella, M.~Przeworski, et~al.
+\newblock Classic selective sweeps were rare in recent human evolution.
+\newblock \emph{science}, 331\penalty0 (6019):\penalty0 920--924, 2011.
+
+\bibitem[Korneliussen et~al.(2014)Korneliussen, Albrechtsen, and
+  Nielsen]{korneliussen2014}
+T.~S. Korneliussen, A.~Albrechtsen, and R.~Nielsen.
+\newblock Angsd: analysis of next generation sequencing data.
+\newblock \emph{BMC bioinformatics}, 15\penalty0 (1):\penalty0 356, 2014.
+
+\bibitem[McLaren et~al.(2010)McLaren, Pritchard, Rios, Chen, Flicek, and
+  Cunningham]{mclaren2010}
+W.~McLaren, B.~Pritchard, D.~Rios, Y.~Chen, P.~Flicek, and F.~Cunningham.
+\newblock Deriving the consequences of genomic variants with the ensembl api
+  and snp effect predictor.
+\newblock \emph{Bioinformatics}, 26\penalty0 (16):\penalty0 2069--2070, 2010.
+
+\bibitem[{R Core Team}(2014)]{R2014}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2014.
+\newblock URL \url{http://www.R-project.org/}.
+
+\bibitem[Sattath et~al.(2011)Sattath, Elyashiv, Kolodny, Rinott, and
+  Sella]{sattath2011}
+S.~Sattath, E.~Elyashiv, O.~Kolodny, Y.~Rinott, and G.~Sella.
+\newblock Pervasive adaptive protein evolution apparent in diversity patterns
+  around amino acid substitutions in drosophila simulans.
+\newblock \emph{PLoS genetics}, 7\penalty0 (2):\penalty0 e1001302, 2011.
+
+\bibitem[Schnable et~al.(2009)Schnable, Ware, Fulton, Stein, Wei, Pasternak,
+  Liang, Zhang, Fulton, Graves, et~al.]{schnable2009}
+P.~S. Schnable, D.~Ware, R.~S. Fulton, J.~C. Stein, F.~Wei, S.~Pasternak,
+  C.~Liang, J.~Zhang, L.~Fulton, T.~A. Graves, et~al.
+\newblock The b73 maize genome: complexity, diversity, and dynamics.
+\newblock \emph{science}, 326\penalty0 (5956):\penalty0 1112--1115, 2009.
+
+\end{thebibliography}
