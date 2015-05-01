@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  30 APR 2015 19:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 MAY 2015 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,19 +543,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
- ======================================================================== 
- C A R E F U L !!!!!
- 
- You have used \begin{figure}[h] !
- If there are any figures that appear earlier on the page
- they may be numbered incorrectly.
- 
- Please check this and every other page on which you have used 
- \begin{figure}[h] !
- 
- ======================================================================== 
-
+\figandtabbox0=\box60
 
 <FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png, id=4, 4015.0pt x 321
 2.0pt>
@@ -563,10 +551,10 @@ File: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png Graphic file (ty
 pe png)
  <use FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>
 Package pdftex.def Info: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.p
-ng used on input line 56.
+ng used on input line 72.
 (pdftex.def)             Requested size: 255.0pt x 203.98424pt.
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 56--64
+Overfull \hbox (6.75pt too wide) in paragraph at lines 72--80
  [][] 
  []
 
@@ -615,13 +603,13 @@ Overfull \hbox (47.93636pt too wide) in paragraph at lines 77--81
 
 ) [3] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 9578 strings out of 493315
- 167457 string characters out of 6137904
- 236710 words of memory out of 5000000
- 12820 multiletter control sequences out of 15000+600000
+ 9587 strings out of 493315
+ 167563 string characters out of 6137904
+ 236709 words of memory out of 5000000
+ 12829 multiletter control sequences out of 15000+600000
  14068 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,10n,53p,449b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,10n,53p,449b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
@@ -635,7 +623,7 @@ m/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfon
 t/lcircle1.pfb>
-Output written on manuscript.pdf (3 pages, 475258 bytes).
+Output written on manuscript.pdf (3 pages, 476983 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream

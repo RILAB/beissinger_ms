@@ -31,7 +31,23 @@ pretty neat too! This is where the introduction will live.
 \section{Results}
 \subsection{Patterns of variability differ between genic and
   nongenic regions of the genome}
-Text goes here
+Previous research of the maize domestication process has relied upon
+observations drawn from genic DNA \textcolor{red}{(several references
+  here)}. Our data were generated through whole genome sequencing,
+which eliminated this constraint. Importantly, we observed substantial
+differences in patterns of diversity between genic and non-genic regions
+of the genome for both maize and teosinte. For maize, mean pairwise
+diversity ($\pi$) within genes was significantly lower than at
+positions at least 5kb away from genes (0.00668 within, 0.00691 away, p$<$2e-44). The same
+pattern of significantly greater diversity outside of genes was observed in
+teosinte, but to a larger extent. For teosinte we observed $\pi$
+within genes to be 0.0088 and at least 5kb from genes it was 0.1153
+(p$\approx$0). These obserrvations suggest that genes are not evolving
+neutrally in maize or teosinte. Instead, some form of selection must
+be reducing diversity within genes. Additionally, these observations
+suggest that demographic inference, which relies on the assumption of
+neutrally evolving DNA, will be more accurate if it is based on
+observations from non-genic genetic material.
 
 \subsection{Hard sweeps do not shape maize (or teosinte) diversity}
 A mutation that is immediately beneficial and positively selected leaves a classical hard
@@ -42,7 +58,7 @@ sweeps was evaluated by comparing diversity
 surrounding non-synonymous and synonymous substitutions in maize and
 teosinte since divergence from tripsicum, roughly \textcolor{red}{ZZZ} years before
 present \textcolor{red}{(ref here)}. For both taxa, no difference in diversity
-surrounding these classes of substitutions was identified (Figure \ref{hardSweeps}). Additionally, diversity around maize substitutions 
+surrounding these classes of substitutions was identified (Figure \ref{hardSweeps}). Additionally, diversity around maize substitutions
 not seen in teosinte was investigated. These sites have the
 potential to correspond to recent maize sweeps, occuring after the
 split from teosinte. Again, no difference was observed
@@ -50,7 +66,7 @@ between diversity around synonymous and nonsynonymous
 substitutions \textcolor{red}{(Figure here)}. Together, these observations suggest that hard sweeps
 are not a primary form of selection for either maize or teosinte.
 
-\begin{figure}[h]
+\begin{figure}[b]
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.5\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized}
@@ -119,7 +135,7 @@ dearth of low-frequency alleles and Tajima's D
 to more positive values \textcolor{red}{(figure here)}. This is consistent with the aforementioned purifying
 selection and indicates that genic regions are not evolving
 neutrally. Therefore, for demographic modeling we restricted analysis
-to non-genic sites.  
+to non-genic sites.
 
 We used diffusion approximation as implemented in
 dadi \cite{gutenkunst2009} to find the domestication parameters that best explain
@@ -131,7 +147,7 @@ maize experienced an immediate effective population size change to
 $N_b$ individuals, followed by exponential growth to size
 $N_m$. Additionally, since the split a $M_{tm}$ individuals migrated
 from teosinte into maize and $M_{mt}$ individuals migrated from maize
-to teosinte. 
+to teosinte.
 
 The most likely model suggested an ancestral for $\theta$ ($4N\mu$) of
 0.014734, which is similar to previous estimates
@@ -145,7 +161,7 @@ individuals, $M_{tm} = 1.35$ migrants per generation from teosinte to
 maize, and $M_{mt} = 1.72$ migrants per generation from maize to
 teosinte \textcolor{red}{(figure here)}. We note that a population
 split over 15 thousand generations before present precedes estimates
-from 
+from
 archaeological data which suggests maize domestication began
 approximately 9,000 years before present \textcolor{red}{(reference
   here)}. This could result from multiple generations per year, or in
