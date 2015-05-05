@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 MAY 2015 11:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 MAY 2015 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,7 +567,7 @@ ic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Folded2_m
-anuscript.png used on input line 128.
+anuscript.png used on input line 129.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 <FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png, id=7, 
@@ -577,40 +577,66 @@ aphic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Singleton
-s_manuscript.png used on input line 128.
+s_manuscript.png used on input line 129.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>] [2 <./FigsAndFil
-es/distanceToGene_WithSignificance_Folded2_manuscript.png> <./FigsAndFiles/dist
-anceToGene_WithSignificance_Singletons_manuscript.png>] (./manuscript.bbl) [3]
-(./manuscript.aux) ) 
+ <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>]
+\figandtabbox1=\box62
+
+<FigsAndFiles/DomesticationModel/domesticationModel.pdf, id=23, 711.3185pt x 62
+5.96059pt>
+File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
+ pdf)
+ <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
+Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
+ used on input line 205.
+(pdftex.def)             Requested size: 255.0pt x 224.40004pt.
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 205--208
+ [][] 
+ []
+
+[2 <./FigsAndFiles/DomesticationModel/domesticationModel.pdf> <./FigsAndFiles/d
+istanceToGene_WithSignificance_Folded2_manuscript.png> <./FigsAndFiles/distance
+ToGene_WithSignificance_Singletons_manuscript.png>] (./manuscript.bbl [3]
+Overfull \vbox (4.31944pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (4.31944pt too high) has occurred while \output is active []
+
+)
+[4] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 9605 strings out of 493315
- 168390 string characters out of 6137904
- 238139 words of memory out of 5000000
- 12844 multiletter control sequences out of 15000+600000
+ 9621 strings out of 493315
+ 168797 string characters out of 6137904
+ 235877 words of memory out of 5000000
+ 12858 multiletter control sequences out of 15000+600000
  14377 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,10n,53p,550b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-sbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcir
-cle1.pfb>
-Output written on manuscript.pdf (3 pages, 1237740 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmss17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssi17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lci
+rcle1.pfb>
+Output written on manuscript.pdf (4 pages, 1275114 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
