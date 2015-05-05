@@ -127,7 +127,7 @@ underlying changes in selection pressure.
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png}
-\caption{Caption goes here}
+\caption{Relative level}
 \label{purify}
 \end{figure*}
 
