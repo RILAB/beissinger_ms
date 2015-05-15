@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 MAY 2015 16:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 MAY 2015 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -591,52 +591,48 @@ File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
  pdf)
  <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
 Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
- used on input line 205.
+ used on input line 216.
 (pdftex.def)             Requested size: 255.0pt x 224.40004pt.
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 205--208
+Overfull \hbox (6.75pt too wide) in paragraph at lines 216--223
  [][] 
  []
 
 [2 <./FigsAndFiles/DomesticationModel/domesticationModel.pdf> <./FigsAndFiles/d
 istanceToGene_WithSignificance_Folded2_manuscript.png> <./FigsAndFiles/distance
-ToGene_WithSignificance_Singletons_manuscript.png>] (./manuscript.bbl [3]
-Overfull \vbox (4.31944pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (4.31944pt too high) has occurred while \output is active []
-
-)
+ToGene_WithSignificance_Singletons_manuscript.png>] [3] (./manuscript.bbl)
 [4] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 9621 strings out of 493315
- 168797 string characters out of 6137904
- 235877 words of memory out of 5000000
- 12858 multiletter control sequences out of 15000+600000
- 14377 words of font info for 52 fonts, out of 8000000 for 9000
+ 9630 strings out of 493315
+ 168884 string characters out of 6137904
+ 236881 words of memory out of 5000000
+ 12864 multiletter control sequences out of 15000+600000
+ 15621 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,10n,53p,550b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,10n,53p,536b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmssi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmssi17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
-.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
-fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lci
-rcle1.pfb>
-Output written on manuscript.pdf (4 pages, 1275115 bytes).
+amsfonts/cm/cmbx8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+s10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssb
+x10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+i10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+i17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle
+1.pfb>
+Output written on manuscript.pdf (4 pages, 1290280 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
