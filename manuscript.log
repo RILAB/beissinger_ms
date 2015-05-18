@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 MAY 2015 16:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAY 2015 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,10 +551,10 @@ File: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png Graphic file (ty
 pe png)
  <use FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>
 Package pdftex.def Info: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.p
-ng used on input line 78.
+ng used on input line 86.
 (pdftex.def)             Requested size: 255.0pt x 203.98424pt.
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 78--86
+Overfull \hbox (6.75pt too wide) in paragraph at lines 86--94
  [][] 
  []
 
@@ -567,7 +567,7 @@ ic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Folded2_m
-anuscript.png used on input line 129.
+anuscript.png used on input line 137.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 <FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png, id=7, 
@@ -577,7 +577,7 @@ aphic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Singleton
-s_manuscript.png used on input line 129.
+s_manuscript.png used on input line 137.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -591,10 +591,10 @@ File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
  pdf)
  <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
 Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
- used on input line 216.
+ used on input line 224.
 (pdftex.def)             Requested size: 255.0pt x 224.40004pt.
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 216--223
+Overfull \hbox (6.75pt too wide) in paragraph at lines 224--231
  [][] 
  []
 
@@ -609,7 +609,7 @@ Here is how much of TeX's memory you used:
  12864 multiletter control sequences out of 15000+600000
  15621 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,10n,53p,536b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,10n,53p,536b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
@@ -629,7 +629,7 @@ fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle
 1.pfb>
-Output written on manuscript.pdf (4 pages, 1290280 bytes).
+Output written on manuscript.pdf (4 pages, 1290572 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
