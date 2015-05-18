@@ -2,15 +2,17 @@
 \usepackage{cite}
 \usepackage{color}
 \usepackage{pgf}
+\usepackage{hyperref}
+\newcommand{\jri}[1]{\textcolor{blue}{\emph{#1}} }
 
 \begin{document}
 
 \title{Demography and selection since maize domestication}
-\author{Timothy M. Beissinger\affil{1}{University of
-    California,Davis}, Li Wang\affil{2}{Iowa State University}, Arun
+\author{Timothy M. Beissinger\affil{1}{Dept. of Plant Sciences, University of
+    California, Davis, CA, USA}, Li Wang\affil{2}{Iowa State University, Ames, IA, USA}, Arun
   Durvasula\affil{1}{}, Kate Crosby\affil{1}{}, Matthew Hufford\affil{2}{}, \and Jeffrey
-  Ross-Ibrarra\affil{1}{}\affil{3}{Genome Center, UC
-    Davis}\affil{4}{Center for population biology, UC Davis} }
+  Ross-Ibrarra\affil{1}{}\affil{3}{Genome Center and Center for population biology, University of
+    California, Davis, CA, USA} }
 
 \significancetext{This work is insignificant ;-)}
 
@@ -62,7 +64,7 @@ that mutation is reduced as the haplotype where the mutation first
 arose increases in frequency to fixation. The prevalence of such hard
 sweeps was evaluated by comparing diversity
 surrounding non-synonymous and synonymous substitutions in maize and
-teosinte since divergence from tripsicum, roughly \textcolor{red}{ZZZ} years before
+teosinte since divergence from \emph{Tripsacum}, roughly \textcolor{red}{ZZZ} years before
 present \textcolor{red}{(ref here)}. For both taxa, no difference in diversity
 surrounding these classes of substitutions was identified (Figure \ref{hardSweeps}). Additionally, diversity around maize substitutions
 not seen in teosinte was investigated. These sites have the
@@ -77,11 +79,7 @@ are not a primary form of selection for either maize or teosinte.
 \centering
 \includegraphics[width=.5\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized}
 \caption{Pairwise diversity surrounding synonymous and nonsynonymous
-  substitutions in maize. Observe that the reduction of diversity
-  surrounding nonsynonymous subsitutions is no more severe than the
-  reduction of diversity surrounding synonymous substitutions. This
-  equivalency suggests that hard sweeps are not a primary driver of
-  maize diversity.}
+  substitutions in maize. \jri{needs larger legend/axis labels. x axis needs to say cM}}
 \label{hardSweeps}
 \end{figure}
 
@@ -133,7 +131,7 @@ underlying changes in selection pressure.
   diversity, which is most influenced by intermediate frequency
   alleles and therefore depicts more ancient evolutionary patterns,
   and \textbf{B} depicts singleton diversity, influenced by rare
-  alleles and thus depicting evolutionary patterns in the recent past.}
+  alleles and thus depicting evolutionary patterns in the recent past. \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure}}
 \label{purify}
 \end{figure*}
 
@@ -213,7 +211,7 @@ estimate downward.
 \begin{figure}[b]
 %\vspace*{.05in}
 \centering
-\includegraphics[width=.5\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
+\includegraphics[width=.4\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
 \caption{Parameters of domestication as estimated by dadi. Notably,
   the maize effective population size ($N_e$) during the domestication
   bottleneck appears to have consisted of approximately 5.26\%
@@ -301,15 +299,15 @@ To investigate diversity around substitutions, maize and teosinte pairwise diver
 calculated in 1,000 kb non-overlapping windows using ANGSD
 \cite{korneliussen2014}. This was performed separately for both maize and
 teosinte, using the same filters as employed for estimating the
-SFS. Next, SNPs and genotypes among maize, teosinte, and tripsicum were called. Tripsicum bam files
-were downloaded from (TRIPSICUM FILES), and then all SNPs with a
+SFS. Next, SNPs and genotypes among maize, teosinte, and \emph{Tripsacum} were called. \emph{Tripsacum}\emph{Tripsacum} bam files
+were downloaded from \url{}(TRIPSICUM FILES), and then all SNPs with a
 p-value less than 1e-6 were called using ANGSD. Quality filters were
 as the same as before, and genotypes were only called when the
 posterior probability was above 0.95. From the set of called SNPs and
 genotypes, substitutions between maize and tripsicum, as well as
-between teosinte and tripsicum were identified using R \cite{R2014} as all positions with
+between teosinte and \emph{Tripsacum} were identified using R \cite{R2014} as all positions with
 no more than 20\% missing data for which every maize or teosinte
-allele differed from the observed tripsicum allele. At each class of
+allele differed from the observed \emph{Tripsacum} allele. At each class of
 substitution, effects were estimated using the ensembl variant effects
 predictor \cite{mclaren2010}.
 
@@ -354,7 +352,7 @@ were identified.
 \end{materials}
 
 \begin{acknowledgments}
-Various thankyous will be in order.
+Various thankyous will be in order. \jri{Coop and his lab. funding from NSF Biology of Rare alleles -- need grant number.}
 \end{acknowledgments}
 
 
