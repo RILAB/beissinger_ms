@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAY 2015 16:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 MAY 2015 08:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,7 +601,7 @@ ToGene_WithSignificance_Singletons_manuscript.png>] [3] (./manuscript.bbl)
 Here is how much of TeX's memory you used:
  9635 strings out of 493315
  168935 string characters out of 6137904
- 236688 words of memory out of 5000000
+ 236687 words of memory out of 5000000
  12867 multiletter control sequences out of 15000+600000
  16322 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -627,7 +627,7 @@ fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pf
 b>
-Output written on manuscript.pdf (4 pages, 1317305 bytes).
+Output written on manuscript.pdf (4 pages, 1317315 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
