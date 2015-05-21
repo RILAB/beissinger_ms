@@ -108,29 +108,33 @@ selection for either maize or teosinte.
 Purifying selection refers to the situation where deleterious
 mutations arising in a population are continuously selected against. When this
 form of selection is operating, it can serve to reduce genetic
-variability at linked neutral sites, a phenomenon referred called
+variability at linked neutral sites, a phenomenon called
 background selection \cite{charlesworth1993}. Purifying and background selection lead
 to lower diversity within genes and other functional sites relative
 to neutral regions \textcolor{red}{(ref here)}. We investigated purifying
 selection in maize and teosinte by evaluating the average magnitude of reduced
 diversity within genes and recovery away from genes in both taxa. When standardized by neutral
-levels (which we defined as diversity at least \textcolor{red}{0.01} cM distal
-from genes), a stronger reduction of diversity
+levels, which were defined as mean diversity at postions at least 0.01 cM distal
+from genes, a stronger reduction of diversity
 and slower recovery was observed for teosinte than for maize, implying
 that purifying selection has left a more pronounced signature in the
 teosinte genome (Figure \ref{purify}). This conflicted with our \emph{a priori} hypothesis;
-we expected that strong artificial selection since domestication would
-have caused enhanced purifying selection for maize. We therefore
-conducted the same analysis based on singleton diversity. As a class,
+we expected that strong artificial selection since domestication may
+have elevated the intensity of purifying selection for maize. We therefore
+conducted a parallel analysis based on singleton diversity. As a class,
 singleton alleles depict the most recent patterns of evolution, but
 also have the lowest effect on pairwise diversity. Therefore, unlike
 pairwise diversity, patterns of singleton
-diversity reflect recent patterns of evolution. When
-evaluating the data in this manner, an opposite relationship was
-observed. Maize singleton diversity was lower than teosinte singleton
-diversity near genes, and recovered more slowly
+diversity reflect recent patterns of evolution. Maize was downsampled
+to reflect the expected level of singletons from a sample size of 13,
+equivalent to that of teosinte, and for singletons our definition of
+neutral diversity was modified to be mean diversity at positions at
+least 0.02 cM distal from genes. When
+evaluating the data in this manner, a very different pattern
+emerged. Maize singleton diversity was just as low as teosinte singleton
+diversity near genes, but recovered more slowly
 (Figure \ref{purify}), implying that in the
-recent past maize has been more influenced by purifying selection than
+recent past maize has been at least as influenced by purifying selection as
 teosinte. Together, these findings imply that demographic history has
 a strong influence on the effect of purifying selection. Historically,
 teosinte has had a larger population size than maize, and only
@@ -143,7 +147,7 @@ underlying changes in selection pressure.
 \begin{figure*}[b]
 %\vspace*{.05in}
 \centering
-\includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_manuscript.png}
+\includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_manuscript.png}
 \caption{Relative level of diversity versus distance to the nearest
   gene, in maize and teosinte. Two measures of diversity were
   investigated. \textbf{A} displays pairwise
@@ -318,7 +322,7 @@ To investigate diversity around substitutions, maize and teosinte pairwise diver
 calculated in 1,000 kb non-overlapping windows using ANGSD
 \cite{korneliussen2014}. This was performed separately for both maize and
 teosinte, using the same filters as employed for estimating the
-SFS. Next, SNPs and genotypes among maize, teosinte, and \emph{Tripsacum} were called. \emph{Tripsacum}\emph{Tripsacum} bam files
+SFS. Next, SNPs and genotypes among maize, teosinte, and \emph{Tripsacum} were called. \emph{Tripsacum} bam files
 were downloaded from \url{}(TRIPSICUM FILES), and then all SNPs with a
 p-value less than 1e-6 were called using ANGSD. Quality filters were
 as the same as before, and genotypes were only called when the
@@ -340,7 +344,7 @@ utilized. Unlike
 down-stream directions, but instead fit single curves encompassing
 both directions.
 
-\subsection{Evaluating diversity around genes and conserved sequences}
+\subsection{Evaluating diversity around genes}
 Two types of diversity surrounding genes were investigated. The first
 was pairwise diversity in 1kb windows, as described previously. The
 second was singleton diversity in 1kb windows. Singletons represent
@@ -349,20 +353,30 @@ collectively demonstrate the most recent patterns of evolution. Minor
 allele frequencies were estimated with ANGSD \cite{korneliussen2014} using the
 same quality filters previously described. Then, the number of
 singletons in each non-overlapping 1kb window was calculated with R
-\cite{R2014}. BiomaRt \cite{durinck2009, durinck2005} was then used to identify
-the center of each gene. Next, the distance from each diversity window
-to the nearest gene center was computed. Teosinte diversity is
+\cite{R2014}. For maize, we generated a parallel set of downsampled
+singleton data, for which binomial sampling within R was conducted
+based on allele frequencies at each site, to generate a singleton
+psuedo dataset of sample size 13, equivalent to our sample size for
+teosinte. BiomaRt \cite{durinck2009, durinck2005} was then used to identify
+the center of each gene. Next, the distance from each diversity window center
+to the nearest gene center was computed.
+
+Teosinte diversity is
 generally higher then maize diversity. Therefore, to enable comparisons between
 the reduction of diversity around genes in maize and teosinte, a
-neutral measure of pairwise and singleton diversity for each taxa was estimated according to
-mean pairwise and singleton diversity at windows greater than 0.01 cM from the nearest
-gene. Then, pairwise and singleton diversity at each window was
+neutral measure of pairwise and singleton diversity for each taxa was
+estimated. For pairwise diversity, this nuetral measure was defined according to
+mean pairwise diversity at windows greater than 0.01 cM from the nearest
+gene. For singletons, both maize and teosinte still showed reduced
+diversity at a distance of 1 cM, so neutral diversity in this case was
+defined as mean singleton diversity at positions 0.02 cM or greater
+from genes. Then, pairwise and singleton diversity at each window was
 standardized by dividing by the corresponding neutral
 measure. Separately for pairwise and singleton diversity in maize and
 teosinte, cubic smoothing splines were fit to
 describe diversity levels according to the distance to the nearest
 gene. Significant differences were assessed by taking 100 bootstrap
-samples and re-fitting the cubic smoothing spline to each. Then, the
+samples from each set of diversity windows and re-fitting the cubic smoothing spline to each. Then, the
 2.5\% and 97.5\% quantiles of values along the bootstrapped splines
 were identified.
 
