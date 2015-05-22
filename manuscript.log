@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 MAY 2015 17:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 MAY 2015 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,24 +567,25 @@ ic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Folded2_m
-anuscript.png used on input line 150.
+anuscript.png used on input line 151.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
-<FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_manuscript
-.png, id=7, 3011.25pt x 3011.25pt>
-File: FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_manus
-cript.png Graphic file (type png)
+<FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines
+_manuscript.png, id=7, 3011.25pt x 3011.25pt>
+File: FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_three
+Lines_manuscript.png Graphic file (type png)
 
-<use FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_manusc
-ript.png>
+<use FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeL
+ines_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Singleton
-s_Downsampled_manuscript.png used on input line 150.
+s_Downsampled_threeLines_manuscript.png used on input line 151.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
  [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>] [2 <./FigsAndFil
-es/distanceToGene_WithSignificance_Folded2_manuscript.png> <./FigsAndFiles/dist
-anceToGene_WithSignificance_Singletons_Downsampled_manuscript.png>]
+ <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>]
+[2 <./FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png> <./F
+igsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_m
+anuscript.png>]
 \figandtabbox1=\box62
 
 <FigsAndFiles/DomesticationModel/domesticationModel.pdf, id=32, 711.3185pt x 62
@@ -593,15 +594,15 @@ File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
  pdf)
  <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
 Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
- used on input line 237.
+ used on input line 238.
 (pdftex.def)             Requested size: 203.99689pt x 179.51813pt.
 
 [3 <./FigsAndFiles/DomesticationModel/domesticationModel.pdf>]
 (./manuscript.bbl) [4] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
  9635 strings out of 493315
- 168995 string characters out of 6137904
- 237925 words of memory out of 5000000
+ 169050 string characters out of 6137904
+ 238009 words of memory out of 5000000
  12867 multiletter control sequences out of 15000+600000
  16322 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -627,7 +628,7 @@ onts/cm/cmti7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/l
 atxfont/lcircle1.pfb>
-Output written on manuscript.pdf (4 pages, 1313922 bytes).
+Output written on manuscript.pdf (4 pages, 1370934 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
