@@ -3,44 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: manuscript.aux
 The style file: pnas.bst
 Database file #1: Reference.bib
-You've used 14 entries,
+Warning--I didn't find a database entry for "OTHERS?"
+Warning--I didn't find a database entry for "SOMETHING"
+Warning--I didn't find a database entry for "SOMETHINGS"
+You've used 21 entries,
             1757 wiz_defined-function locations,
-            562 strings with 6684 characters,
-and the built_in function-call counts, 3618 in all, are:
-= -- 282
-> -- 240
+            606 strings with 8362 characters,
+and the built_in function-call counts, 5553 in all, are:
+= -- 420
+> -- 397
 < -- 0
-+ -- 85
-- -- 71
-* -- 376
-:= -- 600
-add.period$ -- 28
-call.type$ -- 14
++ -- 140
+- -- 119
+* -- 586
+:= -- 931
+add.period$ -- 42
+call.type$ -- 21
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 128
-empty$ -- 289
-format.name$ -- 71
-if$ -- 719
+cite$ -- 21
+duplicate$ -- 191
+empty$ -- 429
+format.name$ -- 119
+if$ -- 1096
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 13
-newline$ -- 59
-num.names$ -- 14
-pop$ -- 16
+int.to.str$ -- 21
+missing$ -- 20
+newline$ -- 87
+num.names$ -- 21
+pop$ -- 23
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 15
+skip$ -- 22
 stack$ -- 0
-substring$ -- 343
-swap$ -- 45
+substring$ -- 510
+swap$ -- 66
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 37
-width$ -- 16
-write$ -- 128
+while$ -- 56
+width$ -- 23
+write$ -- 191
+(There were 3 warnings)

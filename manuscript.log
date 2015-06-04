@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 MAY 2015 16:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 JUN 2015 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,30 +490,41 @@ Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
-)) (./manuscript.aux)
+)) (/usr/local/texlive/2013/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box59
+\UL@hyphenbox=\box60
+\UL@skip=\skip52
+\UL@hook=\toks28
+\UL@height=\dimen168
+\UL@pe=\count136
+\UL@pixel=\dimen169
+\ULC@box=\box61
+Package: ulem 2012/05/18
+\ULdepth=\dimen170
+)
+(./manuscript.aux)
 \openout1 = `manuscript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/crop/crop.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/crop/crop.sty
 Package: crop 2003/05/20 v1.9 crop marks (mf)
-\stockwidth=\dimen168
-\stockheight=\dimen169
-\CROP@index=\count136
+\stockwidth=\dimen171
+\stockheight=\dimen172
+\CROP@index=\count137
 Package crop Info: requested driver: `' on input line 123.
 Package crop Info: detected driver: `pdftex' on input line 123.
-\CROP@offset=\count137
+\CROP@offset=\count138
 Package crop Info: Local config file crop.cfg used on input line 605.
 
 (/usr/local/texlive/2013/texmf-dist/tex/xelatex/xetexconfig/crop.cfg)
@@ -521,117 +532,145 @@ Package crop Info: using `pdftex' graphics driver on input line 607.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
-\scratchdimen=\dimen170
-\scratchbox=\box59
-\nofMPsegments=\count139
-\nofMParguments=\count140
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count141
-\MPscratchDim=\dimen171
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count139
+\scratchdimen=\dimen173
+\scratchbox=\box62
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen174
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks30
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\figandtabbox0=\box60
 
-<FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png, id=4, 4015.0pt x 321
-2.0pt>
+LaTeX Warning: Citation `OTHERS?' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `SOMETHING' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `SOMETHINGS' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `SOMETHING' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Citation `SOMETHING' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Citation `SOMETHING' on page 1 undefined on input line 70.
+
+
+LaTeX Warning: Citation `SOMETHINGS' on page 1 undefined on input line 71.
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+\figandtabbox0=\box63
+
+<FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png, id=20, 4015.0pt x 32
+12.0pt>
 File: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png Graphic file (ty
 pe png)
  <use FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>
 Package pdftex.def Info: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.p
-ng used on input line 99.
+ng used on input line 139.
 (pdftex.def)             Requested size: 255.0pt x 203.98424pt.
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 99--103
+Overfull \hbox (6.75pt too wide) in paragraph at lines 139--143
  [][] 
  []
 
-\dblfigandtabbox1=\box61
+\dblfigandtabbox1=\box64
 
-<FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png, id=6, 301
-1.25pt x 3011.25pt>
+<FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png, id=22, 30
+11.25pt x 3011.25pt>
 File: FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png Graph
 ic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Folded2_m
-anuscript.png used on input line 151.
+anuscript.png used on input line 191.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 <FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines
-_manuscript.png, id=7, 3011.25pt x 3011.25pt>
+_manuscript.png, id=23, 3011.25pt x 3011.25pt>
 File: FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_three
 Lines_manuscript.png Graphic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeL
 ines_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Singleton
-s_Downsampled_threeLines_manuscript.png used on input line 151.
+s_Downsampled_threeLines_manuscript.png used on input line 191.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+\figandtabbox1=\box65
 
- <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png>]
-[2 <./FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png> <./F
-igsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_m
-anuscript.png>]
-\figandtabbox1=\box62
-
-<FigsAndFiles/DomesticationModel/domesticationModel.pdf, id=32, 711.3185pt x 62
+<FigsAndFiles/DomesticationModel/domesticationModel.pdf, id=24, 711.3185pt x 62
 5.96059pt>
 File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
  pdf)
  <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
 Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
- used on input line 238.
+ used on input line 278.
 (pdftex.def)             Requested size: 203.99689pt x 179.51813pt.
 
-[3 <./FigsAndFiles/DomesticationModel/domesticationModel.pdf>]
-(./manuscript.bbl) [4] (./manuscript.aux) ) 
+[2 <./FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized.png> <./FigsAndFiles
+/DomesticationModel/domesticationModel.pdf> <./FigsAndFiles/distanceToGene_With
+Significance_Folded2_manuscript.png> <./FigsAndFiles/distanceToGene_WithSignifi
+cance_Singletons_Downsampled_threeLines_manuscript.png>] [3] (./manuscript.bbl)
+[4] (./manuscript.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 9635 strings out of 493315
- 169050 string characters out of 6137904
- 238009 words of memory out of 5000000
- 12867 multiletter control sequences out of 15000+600000
- 16322 words of font info for 59 fonts, out of 8000000 for 9000
+ 9730 strings out of 493315
+ 169994 string characters out of 6137904
+ 243939 words of memory out of 5000000
+ 12956 multiletter control sequences out of 15000+600000
+ 16736 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,10n,53p,722b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmss17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssi17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/l
-atxfont/lcircle1.pfb>
-Output written on manuscript.pdf (4 pages, 1370934 bytes).
+ 49i,11n,53p,722b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+Output written on manuscript.pdf (4 pages, 1381950 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

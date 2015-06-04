@@ -9,6 +9,43 @@ Ross-Ibarra, J, Morrell, P.~L,  \& Gaut, B.~S.
 \newblock (2007) {\em Proceedings of the National Academy of Sciences} {\bf
   104}, 8641--8648.
 
+\bibitem{hufford2012}
+Hufford, M.~B, Xu, X, Van~Heerwaarden, J, Pyh{\"a}j{\"a}rvi, T, Chia, J.-M,
+  Cartwright, R.~A, Elshire, R.~J, Glaubitz, J.~C, Guill, K.~E, Kaeppler, S.~M,
+   et~al.
+\newblock (2012) {\em Nature genetics} {\bf 44}, 808--811.
+
+\bibitem{he2011}
+He, Z, Zhai, W, Wen, H, Tang, T, Wang, Y, Lu, X, Greenberg, A.~J, Hudson, R.~R,
+  Wu, C.-I,  \& Shi, S.
+\newblock (2011) {\em PLoS genetics} {\bf 7}, e1002100.
+
+\bibitem{luikart2003}
+Luikart, G, England, P.~R, Tallmon, D, Jordan, S,  \& Taberlet, P.
+\newblock (2003) {\em Nature Reviews Genetics} {\bf 4}, 981--994.
+
+\bibitem{gutenkunst2009}
+Gutenkunst, R.~N, Hernandez, R.~D, Williamson, S.~H,  \& Bustamante, C.~D.
+\newblock (2009) {\em PLoS genetics} {\bf 5}, e1000695.
+
+\bibitem{li2012}
+Li, J, Li, H, Jakobsson, M, Li, S, Sj{\"O}Din, P,  \& Lascoux, M.
+\newblock (2012) {\em Molecular Ecology} {\bf 21}, 28--44.
+
+\bibitem{slotte2014}
+Slotte, T.
+\newblock (2014) {\em Briefings in functional genomics} {\bf 13}, 268--275.
+
+\bibitem{sella2009}
+Sella, G, Petrov, D.~A, Przeworski, M,  \& Andolfatto, P.
+\newblock (2009) {\em PLoS genetics} {\bf 5}, e1000495.
+
+\bibitem{gazave2014}
+Gazave, E, Ma, L, Chang, D, Coventry, A, Gao, F, Muzny, D, Boerwinkle, E,
+  Gibbs, R.~A, Sing, C.~F, Clark, A.~G,  et~al.
+\newblock (2014) {\em Proceedings of the National Academy of Sciences} {\bf
+  111}, 757--762.
+
 \bibitem{charlesworth1993}
 Charlesworth, B, Morgan, M,  \& Charlesworth, D.
 \newblock (1993) {\em Genetics} {\bf 134}, 1289--1303.
@@ -17,10 +54,6 @@ Charlesworth, B, Morgan, M,  \& Charlesworth, D.
 Chia, J.-M, Song, C, Bradbury, P.~J, Costich, D, de~Leon, N, Doebley, J,
   Elshire, R.~J, Gaut, B, Geller, L, Glaubitz, J.~C,  et~al.
 \newblock (2012) {\em Nature genetics} {\bf 44}, 803--807.
-
-\bibitem{gutenkunst2009}
-Gutenkunst, R.~N, Hernandez, R.~D, Williamson, S.~H,  \& Bustamante, C.~D.
-\newblock (2009) {\em PLoS genetics} {\bf 5}, e1000695.
 
 \bibitem{fu1993}
 Fu, Y.-X \& Li, W.-H.
