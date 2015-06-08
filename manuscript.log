@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  4 JUN 2015 16:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  8 JUN 2015 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,24 +580,23 @@ LaTeX Warning: Citation `SOMETHINGS' on page 1 undefined on input line 71.
 ]
 \dblfigandtabbox1=\box63
 
-<FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized_June.png, id=20, 3212.0pt
- x 2810.5pt>
-File: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized_June.png Graphic fil
-e (type png)
+<FigsAndFiles/plotDiversity_TvM_Folded2_Significance_June.png, id=20, 2409.0pt 
+x 2107.875pt>
+File: FigsAndFiles/plotDiversity_TvM_Folded2_Significance_June.png Graphic file
+ (type png)
 
-<use FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized_June.png>
-Package pdftex.def Info: FigsAndFiles/plotDiversity_TvM_Folded2_unNeutralized_J
-une.png used on input line 139.
-(pdftex.def)             Requested size: 229.49844pt x 200.78627pt.
+<use FigsAndFiles/plotDiversity_TvM_Folded2_Significance_June.png>
+Package pdftex.def Info: FigsAndFiles/plotDiversity_TvM_Folded2_Significance_Ju
+ne.png used on input line 139.
+(pdftex.def)             Requested size: 229.49844pt x 200.79698pt.
 
-<FigsAndFiles/plotDiversity_TvT_Folded2_unNeutralized_June.png, id=22, 3212.0pt
- x 2810.5pt>
-File: FigsAndFiles/plotDiversity_TvT_Folded2_unNeutralized_June.png Graphic fil
-e (type png)
-
-<use FigsAndFiles/plotDiversity_TvT_Folded2_unNeutralized_June.png>
-Package pdftex.def Info: FigsAndFiles/plotDiversity_TvT_Folded2_unNeutralized_J
-une.png used on input line 139.
+<FigsAndFiles/plotDiversity_TvT_Folded2_Significance_June.png, id=22, 3212.0pt 
+x 2810.5pt>
+File: FigsAndFiles/plotDiversity_TvT_Folded2_Significance_June.png Graphic file
+ (type png)
+ <use FigsAndFiles/plotDiversity_TvT_Folded2_Significance_June.png>
+Package pdftex.def Info: FigsAndFiles/plotDiversity_TvT_Folded2_Significance_Ju
+ne.png used on input line 140.
 (pdftex.def)             Requested size: 229.49844pt x 200.78627pt.
 \dblfigandtabbox2=\box64
 
@@ -608,7 +607,7 @@ ic file (type png)
 
 <use FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Folded2_m
-anuscript.png used on input line 192.
+anuscript.png used on input line 193.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 
 <FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines
@@ -619,7 +618,7 @@ Lines_manuscript.png Graphic file (type png)
 <use FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeL
 ines_manuscript.png>
 Package pdftex.def Info: FigsAndFiles/distanceToGene_WithSignificance_Singleton
-s_Downsampled_threeLines_manuscript.png used on input line 192.
+s_Downsampled_threeLines_manuscript.png used on input line 193.
 (pdftex.def)             Requested size: 229.49844pt x 229.46388pt.
 \figandtabbox0=\box65
 
@@ -629,14 +628,14 @@ File: FigsAndFiles/DomesticationModel/domesticationModel.pdf Graphic file (type
  pdf)
  <use FigsAndFiles/DomesticationModel/domesticationModel.pdf>
 Package pdftex.def Info: FigsAndFiles/DomesticationModel/domesticationModel.pdf
- used on input line 279.
+ used on input line 280.
 (pdftex.def)             Requested size: 203.99689pt x 179.51813pt.
 
 [2 <./FigsAndFiles/DomesticationModel/domesticationModel.pdf> <./FigsAndFiles/p
-lotDiversity_TvM_Folded2_unNeutralized_June.png> <./FigsAndFiles/plotDiversity_
-TvT_Folded2_unNeutralized_June.png>] [3 <./FigsAndFiles/distanceToGene_WithSign
-ificance_Folded2_manuscript.png> <./FigsAndFiles/distanceToGene_WithSignificanc
-e_Singletons_Downsampled_threeLines_manuscript.png>] (./manuscript.bbl [4])
+lotDiversity_TvM_Folded2_Significance_June.png> <./FigsAndFiles/plotDiversity_T
+vT_Folded2_Significance_June.png>] [3 <./FigsAndFiles/distanceToGene_WithSignif
+icance_Folded2_manuscript.png> <./FigsAndFiles/distanceToGene_WithSignificance_
+Singletons_Downsampled_threeLines_manuscript.png>] (./manuscript.bbl [4])
 [5] (./manuscript.aux)
 
 LaTeX Warning: There were undefined references.
@@ -644,8 +643,8 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  9734 strings out of 493315
- 170346 string characters out of 6137904
- 244633 words of memory out of 5000000
+ 170336 string characters out of 6137904
+ 243635 words of memory out of 5000000
  12959 multiletter control sequences out of 15000+600000
  16736 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -670,7 +669,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/te
 xmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on manuscript.pdf (5 pages, 1571196 bytes).
+Output written on manuscript.pdf (5 pages, 1733406 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
