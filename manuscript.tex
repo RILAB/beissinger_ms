@@ -124,7 +124,7 @@ surrounding non-synonymous and synonymous substitutions in maize and
 teosinte since divergence from \emph{Tripsacum}, roughly \textcolor{red}{ZZZ} years before
 present \textcolor{red}{(ref here)}. For both taxa, no difference in diversity
 surrounding these classes of substitutions was identified (Figure
-\ref{hardSweeps}). Additionally, diversity around maize substitutions
+\ref{fig:hardSweeps}). Additionally, diversity around maize substitutions
 not seen in teosinte was investigated. These sites have the potential
 to correspond to recent maize sweeps, occuring after the split from
 teosinte. Again, no difference was observed between diversity around
@@ -140,8 +140,7 @@ selection for either maize or teosinte.
 \hspace{0.05\textwidth} \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvT_Folded2_Significance_June}
 \caption{Pairwise diversity surrounding synonymous and nonsynonymous
   substitutions in maize and teosinte. A: Maize diversity; B: Teosinte
-diversity.}
-\label{hardSweeps}
+diversity. \label{fig:hardSweeps}}
 \end{figure*}
 
 
@@ -160,7 +159,7 @@ levels, which were defined as mean diversity at postions at least 0.01 cM distal
 from genes, a stronger reduction of diversity
 and slower recovery was observed for teosinte than for maize, implying
 that purifying selection has left a more pronounced signature in the
-teosinte genome (Figure \ref{purify}). This conflicted with our \emph{a priori} hypothesis;
+teosinte genome (Figure \ref{fig:purify}). This conflicted with our \emph{a priori} hypothesis;
 we expected that strong artificial selection since domestication may
 have elevated the intensity of purifying selection for maize. We therefore
 conducted a parallel analysis based on singleton diversity. As a class,
@@ -176,7 +175,7 @@ least 0.02 cM distal from genes. When
 evaluating the data in this manner, a very different pattern
 emerged. Maize singleton diversity was just at least as low as teosinte singleton
 diversity near genes, but recovered more slowly
-(Figure \ref{purify}), implying that in the
+(Figure \ref{fig:purify}), implying that in the
 recent past maize has been at least as influenced by purifying selection as
 teosinte. Together, these findings suggest that demographic history has
 a strong influence on the effect of purifying selection. Historically,
@@ -197,8 +196,8 @@ underlying changes in selection pressure.
   diversity, which is most influenced by intermediate frequency
   alleles and therefore depicts more ancient evolutionary patterns,
   and \textbf{B} depicts singleton diversity, influenced by rare
-  alleles and thus depicting evolutionary patterns in the recent past. \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure}}
-\label{purify}
+  alleles and thus depicting evolutionary patterns in the recent
+  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure}}
 \end{figure*}
 
 
@@ -247,7 +246,7 @@ effective populations size of $N_b = 6,455$ individuals (5.26\% of
 $N_a$), a modern maize effective population size of $N_m = 366,973$
 individuals, $M_{tm} = 1.35$ migrants per generation from teosinte to
 maize, and $M_{mt} = 1.72$ migrants per generation from maize to
-teosinte (Figure \ref{bottleneck}). We note that a population
+teosinte (Figure \ref{fig:bottleneck}). We note that a population
 split over 15 thousand generations before present precedes estimates
 from
 archaeological data which suggests maize domestication began
@@ -261,14 +260,14 @@ most evidenced by rare alleles, and since these data provide low
 power to detect rare alleles, we expect that the estimate of  $N_m =
 366,973$, or $\sim 3N_a$, is likely an underestimate.
 
-We utilized a complementary dataset of 4,808 maize landrace samples collected
+We utilized a complementary dataset of 4,021 maize landrace individuals collected
 from across the Americas \textcolor{red}{(SeeDs reference here)} to
 obtain a less downward-biased estimate of the current maize effective
 population size. According to a singleton-based estimate of $\theta$
 \cite{fu1993}, which was chosen since rapid post-bottleneck expansion
 implies that rare alleles will most accurately reflect current maize
 demography, we obtained the estimate \textcolor{red}{$N_e =
-  1,011,686$}. Although less biased than the previously mentioned
+  992,713.5$}. Although less biased than the previously mentioned
 esitmate, we note that ascertainment bias of the
 genotyping platform used to generate these data again biases this
 estimate downward.
@@ -282,9 +281,9 @@ estimate downward.
   the maize effective population size ($N_e$) during the domestication
   bottleneck appears to have consisted of approximately 5.26\%
   the ancestral $N_e$, before recovering two at least 2.98
-  times as large as the ancestral $N_e$.}
-\label{bottleneck}
+  times as large as the ancestral $N_e$. \label{fig:bottleneck} }
 \end{figure}
+
 
 
 \subsection{Simulations confirm the relationship between demographic
@@ -335,7 +334,7 @@ between the unlabeled position and the flanking anchors.
 \subsection{Estimating the site frequency spectrum}
 To estimate individual  and joint site frequency spectra (SFS) for
 maize and teosinte from inbred lines, each inbred individual was treated as representing
-a single haplotype from its population. These were
+a single haplotype from its population. SFS were
 separately computed for genic and intergenic regions, as well as for
 the whole genome together. First, genic and intergenic regions were isolated using
 the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014}. Genic
@@ -347,8 +346,7 @@ estimated using all positions observed in at least 80\% of the
 individuals in the population, and joint SFS were estimated using all
 positions observed in at least 80\% of individuals in both
 populations. Individuals were
-assumed to be fully inbred (-doSaf 2), and subsequently allele frequencies were
-divided by two to indicate haplotype frequencies. Quality filters were
+assumed to be fully inbred (-doSaf 2). Quality filters were
 employed such that reads with quality score below 30 and bases with
 quality score below 20 were discarded (-minMapq 30 and -minQ 20), as were reads that didn't map
 uniquely (-uniqueOnly 0). Quality scores around indels were adjusted
@@ -359,6 +357,56 @@ maize reference genome was used for polarization and then unfolded spectra
 were folded using dadi \cite{gutenkunst2009}.
 
 \subsection{Demographic inference}
+We used dadi \cite{gutenkunst2009} to estimate the parameters of maize
+domestication based on diffusion approximation of the 2-dimensional
+SFS for maize and teosinte. Our first step was to specify a model, as
+shown in (Figure \ref{fig:bottleneck}). In words, our model began with an ancestral teosinte
+population with effective population size $N_a$ individuals. The
+ancestral population split into
+two distinct populations, one of maize and the other of teosinte,
+$T_b$ generations in the past. The maize population immediately shrank
+to size $N_b$, and then grew exponentially to size $N_{maize}$
+today. From the split until today, the teosinte effective population
+size remained constant. Each year, $M_{mt}$ individuals migrated from
+maize to teosinte, and $M_{tm}$ individuals migrated from teosinte to
+maize.The free parameters of our model were $N_a, N_b, N_{maize}, T_b,
+M_{mt}, \text{and } M_{tm} $. Python code specifying this model is
+provided in \textcolor{red}{(SUPPLEMENT)}. We implimented 1,000 dadi
+optimizations of this model using the ``dadi.Inference.optimize\_log\_fmin''
+optimizer. In dadi optimizations,
+initial values for $N_b, N_{maize}, T_b,
+M_{mt}, \text{and } M_{tm}$, respectively, were randomly perturbed up
+to a factor of two from 0.02, 3, 0.04, 1e-5, and 1e-5. Lower
+bounds were set at 1e-7, 1e-7,  0, 1e-10, and
+1e-10, respecively, while upper bounds were respectively set at 2,
+200, 1, .001, and .001. $N_a$ did not have an initial value, upper, or
+lower bounds because it is estimated from equilibrium ancestral theta
+($\theta = 4N_a\mu$), which dadi determines automatically regardless
+of model. Population sizes were converted from dadi's
+units using a mutation rate estimate of 3e-8
+\textcolor{red}{(REFERENCE)}. Among the 1,000 dadi runs, parameters
+from that with the lowest log-likelihood were taken as estimates of
+the parameters of the domestication process.
+
+Recent population expansion, as is observed for maize, most influences
+the abundance of rare alleles. However, our demographic parameter
+estimation using dadi suffered from a relatively small sample size of
+23 maize individuals. Therefore, our approach likely underestimated
+current maize effective population size. To address this, we utilized
+a complimentary dataset of 4,021 maize landrace individuals collected
+from across the Americas \textcolor{red}{(SeeDs reference here)} to
+generate an independent estimate of
+$N_{maize}$. These individuals were genotyped using GBS
+\cite{elshire2011}, a protocol that suffers from a high rate of
+missing data \cite{beissinger2013}. To minimiaze biases imposed from
+missing data, we used R to isolate only those SNPs that
+were observed in at least 1,500 individuals and subsequently projected the
+SFS down to a sample of 500 individuals. Then, we utilized the singleton-based estimate of
+theta ($\theta = 4N_e\mu = \frac{S}{L}$) to estimate
+modern maize $N_e$ \cite{fu1993}, where $S$ is the total number of
+singletons and $L$ is the total length of DNA sequenced. Based on the
+GBS protocol implemented \cite{elshire2011}, $L$ is equal to the total
+number of SNPs in the dataset.
 
 \subsection{Evaluating diversity around substitutions}
 To investigate diversity around substitutions, maize and teosinte pairwise diversity was first

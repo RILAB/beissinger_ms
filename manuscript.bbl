@@ -46,14 +46,14 @@ Gazave, E, Ma, L, Chang, D, Coventry, A, Gao, F, Muzny, D, Boerwinkle, E,
 \newblock (2014) {\em Proceedings of the National Academy of Sciences} {\bf
   111}, 757--762.
 
-\bibitem{charlesworth1993}
-Charlesworth, B, Morgan, M,  \& Charlesworth, D.
-\newblock (1993) {\em Genetics} {\bf 134}, 1289--1303.
-
 \bibitem{chia2012}
 Chia, J.-M, Song, C, Bradbury, P.~J, Costich, D, de~Leon, N, Doebley, J,
   Elshire, R.~J, Gaut, B, Geller, L, Glaubitz, J.~C,  et~al.
 \newblock (2012) {\em Nature genetics} {\bf 44}, 803--807.
+
+\bibitem{charlesworth1993}
+Charlesworth, B, Morgan, M,  \& Charlesworth, D.
+\newblock (1993) {\em Genetics} {\bf 134}, 1289--1303.
 
 \bibitem{fu1993}
 Fu, Y.-X \& Li, W.-H.
@@ -81,6 +81,16 @@ Durinck, S, Moreau, Y, Kasprzyk, A, Davis, S, De~Moor, B, Brazma, A,  \& Huber,
 \bibitem{korneliussen2014}
 Korneliussen, T.~S, Albrechtsen, A,  \& Nielsen, R.
 \newblock (2014) {\em BMC bioinformatics} {\bf 15}, 356.
+
+\bibitem{elshire2011}
+Elshire, R.~J, Glaubitz, J.~C, Sun, Q, Poland, J.~A, Kawamoto, K, Buckler,
+  E.~S,  \& Mitchell, S.~E.
+\newblock (2011) {\em PloS one} {\bf 6}, e19379.
+
+\bibitem{beissinger2013}
+Beissinger, T.~M, Hirsch, C.~N, Sekhon, R.~S, Foerster, J.~M, Johnson, J.~M,
+  Muttoni, G, Vaillancourt, B, Buell, C.~R, Kaeppler, S.~M,  \& de~Leon, N.
+\newblock (2013) {\em Genetics} {\bf 193}, 1073--1081.
 
 \bibitem{mclaren2010}
 McLaren, W, Pritchard, B, Rios, D, Chen, Y, Flicek, P,  \& Cunningham, F.
