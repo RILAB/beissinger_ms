@@ -109,7 +109,8 @@ positions at least 5kb away from genes (0.00668 within, 0.00691 away, p$<$2e-44)
 pattern of significantly greater diversity outside of genes was observed in
 teosinte, but to a larger extent. For teosinte we observed $\pi$
 within genes to be 0.0088 and at least 5kb from genes it was 0.1153
-(p$\approx$0). These obserrvations suggest that genes are not evolving
+(p$\approx$0). \jri{that number is impossible, check again. off by maybe an order of magnitude!}
+These observations suggest that genes are not evolving
 neutrally in maize or teosinte. Instead, some form of selection is likely
 reducing diversity within genes. Additionally, these observations
 suggest that demographic inference, which relies on the assumption of
@@ -126,14 +127,14 @@ surrounding non-synonymous and synonymous substitutions in maize and
 teosinte since divergence from \emph{Tripsacum}, roughly \textcolor{red}{ZZZ} years before
 present \textcolor{red}{(ref here)}. For both taxa, no difference in diversity
 surrounding these classes of substitutions was identified (Figure
-\ref{fig:hardSweeps}). Additionally, diversity around maize substitutions
-not seen in teosinte was investigated. These sites have the potential
+\ref{fig:hardSweeps}). \jri{weird formatting that the first figure referenced is fig. 2. something about PNAS style and methods?}Additionally, diversity around maize substitutions not seen in teosinte was investigated. 
+These sites have the potential
 to correspond to recent maize sweeps, occuring after the split from
 teosinte. Again, no difference was observed between diversity around
 synonymous and nonsynonymous substitutions
 \textcolor{red}{(Supplemental figure here)}. Together, these
 observations suggest that hard sweeps are not a primary form of
-selection for either maize or teosinte.
+selection for either maize or teosinte. \jri{add Enard citation and GERP results (supp. figures)}
 
 \begin{figure*}[b]
 %\vspace*{.05in}
@@ -310,33 +311,27 @@ Text goes here
 Text goes here
 
 \begin{materials}
+
+\jri{either we need to provide all scripts in a single github repo with a readme, or provide links to individual scripts in the methods as we go along}
+
 \subsection{Plant materials}
 Accessions studied were selected from the Maize HapMap2
-panel \cite{chia2012} . Principal component analysis was employed to ensure that
-closely related individuals were not included due to their potential
-to bias results \textcolor{red}{(maybe a supplemental figure here)}. Ultimately, 23 maize inbreds derived from a diverse
-assortment of landraces were selected for inclusion. Thirteen teosinte
-inbred lines, all members of the subspecies Z. \emph{mays}
-ssp. \emph{parviglumis}, were utilized. Sequences were mapped to the
-maize B73 version 3 reference genome \cite{schnable2009}
-(ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/).
+panel \cite{chia2012}. \jri{aren't you using the high coverage teosinte? if so I think you need to cite Lemmon 2014 Plos Gen} 
+Principal component analysis was employed to ensure that closely related individuals were not included due to their potential to bias results \textcolor{red}{(maybe a supplemental figure here)}. \jri{yes supp. figure good idea}
+Ultimately, 23 maize inbreds derived from a diverse assortment of landraces were selected for inclusion. 
+Thirteen teosinte inbred lines, all members of  subspecies Z. \emph{mays}
+ssp. \emph{parviglumis}, were utilized. 
+Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} \url(ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/).
 
 \subsection{Interpolating genetic position}
-For many of the following analyses, physical position along a
-chromosome was a less relevant measure of map location than was genetic
-position. Therefore, physical positions were converted to genetic
-positions by interpolating from the NAM genetic map (REFERENCE), which
-provides a 1 cM resolution for physical to genetic conversion. Within
-R \cite{R2014}, physical positions with corresponding genetic positions in
-the NAM map were used as anchors. Physical positions in our dataset
-wihout corresponding genetic position were assigned genetic positions by scaling
-the anchored genetic positions according to the physical distance
-between the unlabeled position and the flanking anchors.
+For many of the following analyses, physical position along a chromosome was a less relevant measure of map location than was genetic position. 
+Therefore, physical positions were converted to genetic positions by interpolating from the NAM genetic map \citex \jri{Wallace 2014 no?}, which provides a 1 cM resolution for physical to genetic conversion. 
+Within R \cite{R2014}, physical positions with corresponding genetic positions in the NAM map were used as anchors. 
+Physical positions in our dataset wihout corresponding genetic position were assigned genetic positions by scaling the anchored genetic positions according to the physical distance between the unlabeled position and the flanking anchors.
 
 \subsection{Estimating the site frequency spectrum}
-To estimate individual  and joint site frequency spectra (SFS) for
-maize and teosinte from inbred lines, each inbred individual was treated as representing
-a single haplotype from its population. SFS were
+To estimate individual  and joint site frequency spectra (SFS) for maize and teosinte from inbred lines, each inbred individual was treated as representing a single haplotype from its population. 
+SFS were
 separately computed for genic and intergenic regions, as well as for
 the whole genome together. First, genic and intergenic regions were isolated using
 the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014}. Genic
