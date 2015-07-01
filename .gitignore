@@ -1,2 +1,7 @@
+*.aux
+*.blg
+*.out
+*.synctex.gz
+*.bbl
 *.log
 TSW*
