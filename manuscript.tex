@@ -146,27 +146,30 @@ selection for either maize or teosinte. \jri{add Enard citation and GERP results
 diversity. \label{fig:hardSweeps}}
 \end{figure*}
 
+{\bf Outline}
+\begin{enumerate}
+\item Diversity differs between genes, not genes
+\item No hard sweeps
+\item soft sweeps? (putting it here means if we find a lot we may have to redo stuff below on the subset of genes w/o evidence of soft sweeps.)
+\item purifying selection differs ($\pi$)
+\item Estimating the bneck
+\item purifying selection (singletons)
+\item fit the B curve
+\item simulations
+\end{enumerate}
 
-\subsection{Patterns of purifying and background selection are
+\subsection{Patterns of purifying and background selection \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}are
   influenced by demographic history}
-Purifying selection refers to the situation where deleterious
-mutations arising in a population are continuously selected against. When this
-form of selection is operating, it can serve to reduce genetic
-variability at linked neutral sites, a phenomenon called
-background selection \cite{charlesworth1993}. Purifying and background selection lead
-to lower diversity within genes and other functional sites relative
-to neutral regions \textcolor{red}{(ref here)}. We investigated purifying
-selection in maize and teosinte by evaluating the average magnitude of reduced
-diversity within genes and recovery away from genes in both taxa. When standardized by neutral
-levels, which were defined as mean diversity at postions at least 0.01 cM distal
-from genes, a stronger reduction of diversity
-and slower recovery was observed for teosinte than for maize, implying
-that purifying selection has left a more pronounced signature in the
-teosinte genome (Figure \ref{fig:purify}). This conflicted with our \emph{a priori} hypothesis;
-we expected that strong artificial selection since domestication may
-have elevated the intensity of purifying selection for maize. We therefore
-conducted a parallel analysis based on singleton diversity. As a class,
-singleton alleles depict the most recent patterns of evolution, but
+Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against. 
+When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}. 
+We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa. 
+When standardized by neutral levels, which were defined as mean diversity at postions at least 0.01 cM distal
+from genes, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature in the teosinte genome (Figure \ref{fig:purify}). 
+This conflicted with our \emph{a priori} hypothesis;
+we expected that strong artificial selection since domestication may \jri{don't think we should say this; this wasn't my a priori prediction}
+have elevated the intensity of purifying selection for maize. 
+We therefore conducted a parallel analysis based on singleton diversity. \jri{disagree singletons should go here. see outline above.}
+As a class, singleton alleles depict the most recent patterns of evolution, but
 also have the lowest effect on pairwise diversity. Therefore, unlike
 pairwise diversity, patterns of singleton
 diversity reflect recent patterns of evolution. Since our sample size
@@ -200,7 +203,7 @@ underlying changes in selection pressure.
   alleles and therefore depicts more ancient evolutionary patterns,
   and \textbf{B} depicts singleton diversity, influenced by rare
   alleles and thus depicting evolutionary patterns in the recent
-  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure}}
+  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.'' }
 \end{figure*}
 
 
@@ -224,8 +227,8 @@ dearth of low-frequency alleles and Tajima's D
 \textcolor{red}{(reference here)} was therefore shifted
 to more positive values \textcolor{red}{(figure here)}. This is consistent with the aforementioned purifying
 selection and indicates that genic regions are not evolving
-neutrally. Therefore, for demographic modeling we restricted analysis
-to non-genic sites.
+neutrally. \jri{need to cite Hufford 2012 here as we made this observation in that paper} Therefore, for demographic modeling we restricted analysis
+to non-genic sites. \jri{need to clarify 5kb from genes}
 
 We used diffusion approximation as implemented in
 dadi \cite{gutenkunst2009} to find the domestication parameters that best explain
@@ -254,7 +257,7 @@ split over 15 thousand generations before present precedes estimates
 from
 archaeological data which suggests maize domestication began
 approximately 9,000 years before present \textcolor{red}{(reference
-  here)}. This could result from multiple generations per year, or in
+  here)}. This could result from multiple generations per year \jri{this seems unlikely, i'd probably drop multiple generations as an explanation}, or in
 may reflect teosinte population structure that was present before
 domestication. Also, note that the genetic time of the population
 split must precede morphological changes that could be identified
@@ -273,7 +276,7 @@ demography, we obtained the estimate \textcolor{red}{$N_e =
   992,713.5$}. Although less biased than the previously mentioned
 esitmate, we note that ascertainment bias of the
 genotyping platform used to generate these data again biases this
-estimate downward.
+estimate downward. 
 
 
 \begin{figure}[b]
@@ -306,6 +309,7 @@ GOES HERE, BUT WHAT IS WRITTEN NOW CAN FRAME THINGS.}
 \section{Discussion}
 \subsection{Discussion 1}
 Text goes here
+\jri{include back of envelope calculatio based on land area!}
 
 \subsection{Discussion 2}
 Text goes here
