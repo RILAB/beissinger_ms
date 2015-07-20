@@ -4,9 +4,9 @@
 \usepackage{pgf}
 %\usepackage{hyperref}
 \usepackage[normalem]{ulem}
-\newcommand{\jri}[1]{\textcolor{red}{\emph{#1}} }
-\newcommand{\citex}{\textcolor{red}{\bf CITE}}
-\newcommand{\X}{\textcolor{red}{\bf X}}
+\newcommand{\jri}[1]{\textcolor{blue}{\emph{#1}} }
+\newcommand{\citex}{\textcolor{blue}{\bf CITE}}
+\newcommand{\X}{\textcolor{blue}{\bf X}}
 
 \begin{document}
 
@@ -28,7 +28,7 @@ This is the abstract. It should probably be longer than a tweet and shorter than
 \end{abstract}
 
 \dropcap{D}omesticated plant species evolve in a unique fashion
-compared to their wild relatives \textcolor{red}{(ref here)}. This
+compared to their wild counterparts \textcolor{red}{(ref here)}. This
 is a result of both the anthropomorphic nature of artificial selection on
 domesticates \cite{purugganan2009} as well as the demographic characteristics of the domestication
 bottleneck(s) that they tend to have experienced
@@ -96,7 +96,7 @@ sequenced as part of the Maize HapMap 2 panel \cite{chia2012}.
 
 
 \section{Results}
-\subsection{Patterns of variability differ between genic and
+\subsection{Patterns of diversity differ between genic and
   nongenic regions of the genome}
 Previous research of the maize domestication process has relied upon
 observations drawn from genic DNA \textcolor{red}{(several references
@@ -108,9 +108,8 @@ diversity ($\pi$) within genes was significantly lower than at
 positions at least 5kb away from genes (0.00668 within, 0.00691 away, p$<$2e-44). The same
 pattern of significantly greater diversity outside of genes was observed in
 teosinte, but to a larger extent. For teosinte we observed $\pi$
-within genes to be 0.0088 and at least 5kb from genes it was 0.1153
-(p$\approx$0). \jri{that number is impossible, check again. off by maybe an order of magnitude!}
-These observations suggest that genes are not evolving
+within genes to be 0.0088 and at least 5kb from genes it was 0.0115
+(p$\approx$0). These observations suggest that genes are not evolving
 neutrally in maize or teosinte. Instead, some form of selection is likely
 reducing diversity within genes. Additionally, these observations
 suggest that demographic inference, which relies on the assumption of
@@ -124,17 +123,16 @@ that mutation is reduced as the haplotype where the mutation first
 arose increases in frequency to fixation. The prevalence of such hard
 sweeps was evaluated by comparing diversity
 surrounding non-synonymous and synonymous substitutions in maize and
-teosinte since divergence from \emph{Tripsacum}, roughly \textcolor{red}{ZZZ} years before
-present \textcolor{red}{(ref here)}. For both taxa, no difference in diversity
+teosinte since divergence from \emph{Tripsacum}, roughly 1-1.2 million years before
+present \cite{ross2009}. For both taxa, no difference in diversity
 surrounding these classes of substitutions was identified (Figure
-\ref{fig:hardSweeps}). \jri{weird formatting that the first figure referenced is fig. 2. something about PNAS style and methods?}Additionally, diversity around maize substitutions not seen in teosinte was investigated. 
-These sites have the potential
-to correspond to recent maize sweeps, occuring after the split from
-teosinte. Again, no difference was observed between diversity around
-synonymous and nonsynonymous substitutions
-\textcolor{red}{(Supplemental figure here)}. Together, these
-observations suggest that hard sweeps are not a primary form of
-selection for either maize or teosinte. \jri{add Enard citation and GERP results (supp. figures)}
+\ref{fig:hardSweeps}). This observation suggests that hard sweeps are not a primary form of
+selection for either maize or teosinte.
+
+To ensure that this analysis is resilient to the intricacies of our sample, we investigated diversity surrounding the maize gene tga1, one of the few known instances of a hard sweep corresponding to a causal nonsynonymous mutuation in maize \cite{wang2015}. In the case of this known sweep, we observed a reduction in diversity surrounding the causitive substitution to levels much lower than seen for synonymous substitutions \textcolor{red}{(SUPP FIG)}, confirming that this method should be informative if hard sweeps were the prevaling mode of selection in maize. Still, to ensure that the approach is robust to potential shortcomings such as limited power in the face of background selection \cite{enard2014}, we sought to determine if patterns of diversity surrounding synonymous and non-synonymous substitutions differ when we restrict our analysis to the most- or least-conserved genes in maize. When we re-analyzed subsets of genes with the 10\% highest and 10\% lowest genomic evolutionary rate profile (GERP) score \cite{davydov2010, cooper2005, rodgers2015}, we again saw no significant difference in diversity surrounding synonymous and non-synonymous sites \textcolor{red}{(SUPP FIG)}.
+
+\subsection{Soft Sweeps?}
+In this section, I'll write about what we did to look for soft sweeps...
 
 \begin{figure*}[b]
 %\vspace*{.05in}
@@ -146,28 +144,34 @@ selection for either maize or teosinte. \jri{add Enard citation and GERP results
 diversity. \label{fig:hardSweeps}}
 \end{figure*}
 
-{\bf Outline}
-\begin{enumerate}
-\item Diversity differs between genes, not genes
-\item No hard sweeps
-\item soft sweeps? (putting it here means if we find a lot we may have to redo stuff below on the subset of genes w/o evidence of soft sweeps.)
-\item purifying selection differs ($\pi$)
-\item Estimating the bneck
-\item purifying selection (singletons)
-\item fit the B curve
-\item simulations
-\end{enumerate}
+%%%%
+%%%% This outline no longer needed in-text because results headers follow
+%%%%
+% \jri{
+% {\bf Outline}
+% \begin{enumerate}
+% \item Diversity differs between genes, not genes
+% \item No hard sweeps
+% \item soft sweeps? (putting it here means if we find a lot we may have to redo stuff below on the subset of genes w/o evidence of soft sweeps.)
+% \item purifying selection differs ($\pi$)
+% \item Estimating the bneck
+% \item purifying selection (singletons)
+% \item fit the B curve
+% \item simulations
+% \end{enumerate}
+% }
 
-\subsection{Patterns of purifying and background selection \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}are
+\subsection{Patterns of purifying and background selection are
   influenced by demographic history}
-Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against. 
-When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}. 
-We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa. 
+ \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}
+Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against.
+When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}.
+We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa.
 When standardized by neutral levels, which were defined as mean diversity at postions at least 0.01 cM distal
-from genes, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature in the teosinte genome (Figure \ref{fig:purify}). 
+from genes, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature in the teosinte genome (Figure \ref{fig:purify}).
 This conflicted with our \emph{a priori} hypothesis;
 we expected that strong artificial selection since domestication may \jri{don't think we should say this; this wasn't my a priori prediction}
-have elevated the intensity of purifying selection for maize. 
+have elevated the intensity of purifying selection for maize.
 We therefore conducted a parallel analysis based on singleton diversity. \jri{disagree singletons should go here. see outline above.}
 As a class, singleton alleles depict the most recent patterns of evolution, but
 also have the lowest effect on pairwise diversity. Therefore, unlike
@@ -203,12 +207,8 @@ underlying changes in selection pressure.
   alleles and therefore depicts more ancient evolutionary patterns,
   and \textbf{B} depicts singleton diversity, influenced by rare
   alleles and thus depicting evolutionary patterns in the recent
-  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.'' }
+  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.'' }}
 \end{figure*}
-
-
-\textcolor{red}{This might be a good place to stick in a paragraph
-  about curve fitting B to estimate s, mu.}
 
 
 \subsection{Demography of maize domestication}
@@ -276,7 +276,7 @@ demography, we obtained the estimate \textcolor{red}{$N_e =
   992,713.5$}. Although less biased than the previously mentioned
 esitmate, we note that ascertainment bias of the
 genotyping platform used to generate these data again biases this
-estimate downward. 
+estimate downward.
 
 
 \begin{figure}[b]
@@ -290,10 +290,19 @@ estimate downward.
   times as large as the ancestral $N_e$. \label{fig:bottleneck} }
 \end{figure}
 
+\section{purifying selection (singletons)}
+If this is separated out from the previous purifying selection section
+and placed after the demography section, it should go here.
+
+
 
 
 \subsection{Simulations confirm the relationship between demographic
   processes and background selection}
+\textcolor{red}{This might be a good place to stick in a paragraph
+  about curve fitting B to estimate s, mu.}
+
+
 \textcolor{red}{We explored whether or not the demographic patterns
   that correspond to maize domestication are capable of generating the
   interesting pattern of background selection that is observed. That
@@ -320,21 +329,20 @@ Text goes here
 
 \subsection{Plant materials}
 Accessions studied were selected from the Maize HapMap2
-panel \cite{chia2012}. \jri{aren't you using the high coverage teosinte? if so I think you need to cite Lemmon 2014 Plos Gen} 
-Principal component analysis was employed to ensure that closely related individuals were not included due to their potential to bias results \textcolor{red}{(maybe a supplemental figure here)}. \jri{yes supp. figure good idea}
-Ultimately, 23 maize inbreds derived from a diverse assortment of landraces were selected for inclusion. 
+panel \cite{chia2012, lemmon2014}. Principal component analysis was employed to ensure that closely related individuals were not included due to their potential to bias results \textcolor{red}{(maybe a supplemental figure here)}. \jri{yes supp. figure good idea}
+Ultimately, 23 maize inbreds derived from a diverse assortment of landraces were selected for inclusion.
 Thirteen teosinte inbred lines, all members of  subspecies Z. \emph{mays}
-ssp. \emph{parviglumis}, were utilized. 
+ssp. \emph{parviglumis}, were utilized.
 Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} \url(ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/).
 
 \subsection{Interpolating genetic position}
-For many of the following analyses, physical position along a chromosome was a less relevant measure of map location than was genetic position. 
-Therefore, physical positions were converted to genetic positions by interpolating from the NAM genetic map \citex \jri{Wallace 2014 no?}, which provides a 1 cM resolution for physical to genetic conversion. 
-Within R \cite{R2014}, physical positions with corresponding genetic positions in the NAM map were used as anchors. 
+For many of the following analyses, physical position along a chromosome was a less relevant measure of map location than was genetic position.
+Therefore, physical positions were converted to genetic positions by interpolating from the NAM genetic map \citex \jri{Wallace 2014 no?}, which provides a 1 cM resolution for physical to genetic conversion.
+Within R \cite{R2014}, physical positions with corresponding genetic positions in the NAM map were used as anchors.
 Physical positions in our dataset wihout corresponding genetic position were assigned genetic positions by scaling the anchored genetic positions according to the physical distance between the unlabeled position and the flanking anchors.
 
 \subsection{Estimating the site frequency spectrum}
-To estimate individual  and joint site frequency spectra (SFS) for maize and teosinte from inbred lines, each inbred individual was treated as representing a single haplotype from its population. 
+To estimate individual  and joint site frequency spectra (SFS) for maize and teosinte from inbred lines, each inbred individual was treated as representing a single haplotype from its population.
 SFS were
 separately computed for genic and intergenic regions, as well as for
 the whole genome together. First, genic and intergenic regions were isolated using
@@ -486,69 +494,6 @@ were identified.
 \begin{acknowledgments}
 Various thankyous will be in order. \jri{Coop and his lab. funding from NSF Biology of Rare alleles -- need grant number.}
 \end{acknowledgments}
-
-
-% \begin{thebibliography}{10}
-% \bibitem{dadi}
-% R.~Gutenkunst, R.~Hernandez,S.~Williamson, and C.~Bustamante, {\em
-%   Inferring the joint demographic history of multiple populations from
-%   multidimensional SNP frequency data}, PLoS Genetics., 5:10 (2009), e1000695.
-
-% \bibitem{hapmap2}
-% J.~Chia, C.~Song, P.~Bradbury, D.~Costich, N.~de~Leon, and others,
-% \emph{Maize HapMap2 identifies extant variation from a genome in
-%   flux}, Nature Genetics., 44 (2012), 803-807.
-
-% \bibitem{maizeGenome}
-% P.~Schnable, D.~Ware, R.~Fulton, J.~Stein, F.~Wei, \emph{The B73 maize
-% genome:complexity, diversity, and dynamics}, Science., 326:5956
-% (2009), 1112-1115.
-
-% \bibitem{angsd}
-% T.~Korneliussen, A.~Albrechtsen, and R.~Nielsen, \emph{ANGSD: Analysis of
-% next generation sequencing data}, BMC Bioinformatics., 15:356 (2014),
-% 10.1186/s12859-014-0356-4.
-
-% \bibitem{R}
-% R Core Team, \emph{R: A language and environment for statistical
-%   computing}, R Foundation for Statistical Computing., Vienna,
-% Austria.
-
-% \bibitem{biomaRt1}
-% S.~Durinck, P.T.~Soekknabm E.~Birney, and W.~Huber, \emph{Mapping
-%   identifiers for the integration of genomic datasets with the
-%   R/Bioconductor package biomaRt}, Nature Protocols., 4 (2009),
-% 1184-1191.
-
-% \bibitem{biomaRt2}
-% S.~Durinck, Y.~Moreau, A.~Kasprzyk, S.~Davis, B.~De~Moor, and others,
-% \emph{BioMart and Bioconductor: a powerful link between biological
-%   databases and microarray data analysis}, Bioinformatics, 21 (2005),
-% 3439-3440.
-
-% \bibitem{vep}
-% W.~McLaren, B.~Pritchard, D.~Rios, Y.~Chen, P.~Flicek, and
-% F.~Cunningham, \emph{Deriving the consequences of genomic variants
-%   with the Ensembl API and SNP Effect Predictor}, Bioinformatics,
-% 26:16 (2010), 2069-2070.
-
-% \bibitem{hernandez11}
-% R.D.~Hernandez, J.L.~Kelley, E.~Elyashiv, S.C.~Melton, A.~Auton, and
-% others, \emph{Classic selective sweeps were rare in recent human
-%   evolution}, Science, 331:6019 (2011), 920-924.
-
-% \bibitem{sattath11}
-% S.~Sattath, E.~Elyashiv, O.~Kolodny, Y.~Rinott, and G.~Sella,
-% \emph{Pervasive adaptative protein evolution apparent in diversity
-%   patterns around amino acid substitutions in Drosophila simulans},
-% PLoS Genetics, 7:2 (2011), e1001302.
-
-% \bibitem{charlesworth93}
-% B.~Charlesworth, M.~T.~Morgan, and D.~Charlesworth, \emph{The Effect
-%   of Deleterious Mutations on Neutral Molecular Variation}, Genetics,
-% 134 (1993), 1289-1303.
-
-% \end{thebibliography}
 
 \bibliography{Reference}
 \bibliographystyle{pnas}
