@@ -161,39 +161,13 @@ diversity. \label{fig:hardSweeps}}
 % \end{enumerate}
 % }
 
-\subsection{Patterns of purifying and background selection are
-  influenced by demographic history}
- \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}
+\subsection{Pairwise diversity is heavily influenced by purifying selection}
+% \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}
 Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against.
 When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}.
 We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa.
-When standardized by neutral levels, which were defined as mean diversity at postions at least 0.01 cM distal
-from genes, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature in the teosinte genome (Figure \ref{fig:purify}).
-This conflicted with our \emph{a priori} hypothesis;
-we expected that strong artificial selection since domestication may \jri{don't think we should say this; this wasn't my a priori prediction}
-have elevated the intensity of purifying selection for maize.
-We therefore conducted a parallel analysis based on singleton diversity. \jri{disagree singletons should go here. see outline above.}
-As a class, singleton alleles depict the most recent patterns of evolution, but
-also have the lowest effect on pairwise diversity. Therefore, unlike
-pairwise diversity, patterns of singleton
-diversity reflect recent patterns of evolution. Since our sample size
-for maize (n=23) was larger than teosite (n=13), maize singletons were
-analyzed directly as well as downsampled to reflect the sample size of
-teosinte. For singletons, our definition of
-neutral diversity was modified to be mean diversity at positions at
-least 0.02 cM distal from genes. When
-evaluating the data in this manner, a very different pattern
-emerged. Maize singleton diversity was just at least as low as teosinte singleton
-diversity near genes, but recovered more slowly
-(Figure \ref{fig:purify}), implying that in the
-recent past maize has been at least as influenced by purifying selection as
-teosinte. Together, these findings suggest that demographic history has
-a strong influence on the effect of purifying selection. Historically,
-teosinte has had a larger population size than maize, and only
-recently has maize population size overcome that of teosinte. Since
-the efficacy of purifying selection scales with population size,
-these results likely reflect changes in $N_e$ more than they reflect
-underlying changes in selection pressure.
+To enable comparisons between maize and teosinte, we standardized by neutral levels within each taxa, where neutral levels were defined as mean diversity at positions far from genes at least 0.01 cM distal from genes). For both maize and teosinte, pairwise diversity was reduced within genes and a recovery of diversity away from genes was observed. Interestingly, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature on pairwise diversity in the teosinte genome (Figure \ref{fig:purify}).
+
 
 
 \begin{figure*}[b]
@@ -213,7 +187,7 @@ underlying changes in selection pressure.
 
 \subsection{Demography of maize domestication}
 To explore whether differences in purifying selection between maize
-and teosinte can be explained purely by demographic processes, we
+and teosinte can be explained by demographic processes, we
 first estimated the parameters of maize domestication using large-scale
 sequencing data involving 23 inbred maize
 landraces and 13 teosinte inbred lines included in the HapMap 2 panel
@@ -227,8 +201,8 @@ dearth of low-frequency alleles and Tajima's D
 \textcolor{red}{(reference here)} was therefore shifted
 to more positive values \textcolor{red}{(figure here)}. This is consistent with the aforementioned purifying
 selection and indicates that genic regions are not evolving
-neutrally. \jri{need to cite Hufford 2012 here as we made this observation in that paper} Therefore, for demographic modeling we restricted analysis
-to non-genic sites. \jri{need to clarify 5kb from genes}
+neutrally. This observation is consistent with previous research \cite{hufford2012}. Therefore, for demographic modeling we restricted analysis
+to sites at least 5kb from gene start/stop postions.
 
 We used diffusion approximation as implemented in
 dadi \cite{gutenkunst2009} to find the domestication parameters that best explain
@@ -257,8 +231,7 @@ split over 15 thousand generations before present precedes estimates
 from
 archaeological data which suggests maize domestication began
 approximately 9,000 years before present \textcolor{red}{(reference
-  here)}. This could result from multiple generations per year \jri{this seems unlikely, i'd probably drop multiple generations as an explanation}, or in
-may reflect teosinte population structure that was present before
+  here)}. This could reflect teosinte population structure that was present before
 domestication. Also, note that the genetic time of the population
 split must precede morphological changes that could be identified
 morphologically.   Additionally, because recent expansion is
@@ -274,7 +247,7 @@ population size. According to a singleton-based estimate of $\theta$
 implies that rare alleles will most accurately reflect current maize
 demography, we obtained the estimate \textcolor{red}{$N_e =
   992,713.5$}. Although less biased than the previously mentioned
-esitmate, we note that ascertainment bias of the
+estimate, we note that ascertainment bias of the
 genotyping platform used to generate these data again biases this
 estimate downward.
 
@@ -290,29 +263,34 @@ estimate downward.
   times as large as the ancestral $N_e$. \label{fig:bottleneck} }
 \end{figure}
 
-\section{purifying selection (singletons)}
-If this is separated out from the previous purifying selection section
-and placed after the demography section, it should go here.
+\section{Post-domestiction expansion is apparent in patterns of singleton diversity}
+Motivated by the rapid post-domestication expansion in maize that is apparent from our demographic analysis, we conducted an analysis of genome-wide patterns of singleton diversity. Singleton diversity measures the abundance of alleles that are only observed in one individual among the sample. As a class, singleton alleles depict the most recent patterns of evolution, but
+they also have the lowest effect on pairwise diversity. Therefore, unlike
+pairwise diversity, patterns of singleton
+diversity reflect recent patterns of evolution. Since our sample size
+for maize (n=23) was larger than teosite (n=13), maize singletons were
+analyzed directly as well as downsampled to reflect the sample size of
+teosinte. For singletons, our definition of
+neutral diversity was modified to be mean diversity at positions at
+least 0.02 cM distal from genes. When
+evaluating the data in this manner, a very different pattern
+emerged compared to what we saw with respect to pairwise diversity. Maize singleton diversity was at least as reduced low as teosinte singleton
+diversity near genes, but recovered more slowly
+(Figure \ref{fig:purify}), implying that in the
+recent past maize has been more influenced by purifying selection than has
+teosinte.
 
+Together, these findings suggest that demographic history has
+a strong influence on the effect of purifying selection. Historically,
+teosinte has had a larger population size than maize, and only
+recently has maize population size overcome that of teosinte. Since
+the efficacy of purifying selection scales with population size,
+these results likely reflect changes in $N_e$ more than they reflect
+underlying changes in selection pressure.
 
+\subsection{Purifying seleciton results are robust to soft-sweeps}
+As a category, instances of soft-sweeps, or cases of selection on alleles that have already reached intermediate frequency before becoming advantageous, are difficult to identify \textcolor{red}{(refs here)}. However, this form of selection is likely to be frequent during crop domestication \textcolor{red}{(refs here)}. We were concerned that the disparate patterns of pairwise and singleton diversity in maize and teosinte, which seem to reflect differences in demographic history, may instead reflect differences in the location and abundance of soft-sweeps. Therefore, we re-analyzed patterns of pairwise and singleton diversity in maize and teosinte including only a subset of sites that are least likely to correspond to soft-sweeps. To achieve this, we performed a genome-wide scan for soft or hard sweeps in maize or teosinte based on the H12 statistic \cite{garud2015}. H12 is sensitive to both hard and soft sweeps. Sites nearest to genes that displayed among the top 20\% of H12 values in either maize or teosinte were removed from our dataset, and both pairwise and singleton diversity at remaining sites, as a function of the distance to the nearest gene, was calculated \textcolor{red}{(Supp Fig)}. This subset of the data has the potentially confounding effects of soft-sweeps removed, and again we see nearly identical patterns of pairwise and singleton diversity surrounding genes. This provides further evidence that the patterns of diversity we observe in maize as compared to teosinte are the result of rapid population expansion as opposed to differing selective patterns in the domesticated and wild taxa.
 
-
-\subsection{Simulations confirm the relationship between demographic
-  processes and background selection}
-\textcolor{red}{This might be a good place to stick in a paragraph
-  about curve fitting B to estimate s, mu.}
-
-
-\textcolor{red}{We explored whether or not the demographic patterns
-  that correspond to maize domestication are capable of generating the
-  interesting pattern of background selection that is observed. That
-  is, does demography alone explain the weak effect of background
-  selection on pairwise diversity in maize? We begain by estimating
-  the distribution of fitness effects and mutation rate in both maize and teosinte from
-  (formulas)... These were observed to be ZZZZZZ. Then, we simulated
-  mating according to our estimated demographic model and evaluated
-  the resulting levels of pairwise and singleton diversity. A LOT MORE
-GOES HERE, BUT WHAT IS WRITTEN NOW CAN FRAME THINGS.}
 
 
 \section{Discussion}
