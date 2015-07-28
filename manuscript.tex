@@ -17,14 +17,14 @@
   Ross-Ibrarra\affil{1}{}\affil{3}{Genome Center and Center for population biology, University of
     California, Davis, CA, USA} }
 
-\significancetext{patterns of linked selection have been carefully evaluated in only a few species. how demography interacts with selection to impact genome-wide pattersn of diversity is still not well understood. also this work is significant (Beissinger b-test, p<0.01) }
+\significancetext{Patterns of linked selection, or the impact of selection on sites that neighbor the functional variant, have been carefully evaluated in only a few species. In this work, we demonstrate that selection against deleterious mutations leaves a pronounced signature on the maize genome, reducing diversity in and immediately around genes. We show how demography interacts with selection to impact genome-wide patterns of diversity, including the important observation that rapid population expansion can increase the efficiency of selection as much as a sudden population bottleneck can weaken it. Along the way, we develop the first estimate the domegraphic parameters of the maize domestication from whole genome sequence data.}
 
 \maketitle
 
 \begin{article}
 
 \begin{abstract}
-This is the abstract. It should probably be longer than a tweet and shorter than 250 words.
+  Unique selective and demographic forces operate on plants during domestication. These forces interact to generate the patterns of DNA variability that are persistent in crop species today. To quantify this interplay, we investigated genetic diversity in maize, one of the most important crops for food, feed, and fuel world-wide. We utilized whole genome sequence data from 23 maize and 13 teosinte individuals to make inferences.  We obtained a complete estimate of the population size fluctuation and other demographic parameters experienced by maize as it was domesticated from teosinte. Here, we show that maize experienced a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid population size expansion post-domestication. We observe that hard sweeps, specifically positive selection on new genic mutations, are not the primary force driving maize and teosinte apart. Also, we find that reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize. However, expansion after domestication has since increased the efficiency of purifying selection to levels superior to those seen in teosinte. Our results demonstrate that in domesticated species, demography and selection are constantly fluctuating through time.
 \end{abstract}
 
 \dropcap{D}omesticated plant species evolve in a unique fashion
@@ -129,10 +129,7 @@ surrounding these classes of substitutions was identified (Figure
 \ref{fig:hardSweeps}). This observation suggests that hard sweeps are not a primary form of
 selection for either maize or teosinte.
 
-To ensure that this analysis is resilient to the intricacies of our sample, we investigated diversity surrounding the maize gene tga1, one of the few known instances of a hard sweep corresponding to a causal nonsynonymous mutuation in maize \cite{wang2015}. In the case of this known sweep, we observed a reduction in diversity surrounding the causitive substitution to levels much lower than seen for synonymous substitutions \textcolor{red}{(SUPP FIG)}, confirming that this method should be informative if hard sweeps were the prevaling mode of selection in maize. Still, to ensure that the approach is robust to potential shortcomings such as limited power in the face of background selection \cite{enard2014}, we sought to determine if patterns of diversity surrounding synonymous and non-synonymous substitutions differ when we restrict our analysis to the most- or least-conserved genes in maize. When we re-analyzed subsets of genes with the 10\% highest and 10\% lowest genomic evolutionary rate profile (GERP) score \cite{davydov2010, cooper2005, rodgers2015}, we again saw no significant difference in diversity surrounding synonymous and non-synonymous sites \textcolor{red}{(SUPP FIG)}.
-
-\subsection{Soft Sweeps?}
-In this section, I'll write about what we did to look for soft sweeps...
+To ensure that this analysis is resilient to the intricacies of our sample, we investigated diversity surrounding the maize gene tga1, one of the few known instances of a hard sweep corresponding to a causal nonsynonymous mutuation in maize \cite{wang2015}. In the case of this known sweep, we observed a reduction in diversity surrounding the causitive substitution to levels much lower than seen for synonymous substitutions \textcolor{red}{(SUPP FIG)}, confirming that this method should be informative if hard sweeps were the prevaling mode of selection in maize. Still, to ensure that the approach is robust to potential shortcomings such as limited power in the face of background selection \cite{enard2014}, we sought to determine if patterns of diversity surrounding synonymous and non-synonymous substitutions differ when we restrict our analysis to the most- or least-conserved genes in maize. When we re-analyzed subsets of genes with the 10\% highest and 10\% lowest genomic evolutionary rate profile (GERP) score, putatively corresponding to genes undergoing the strongest and weakest purifying selection \cite{davydov2010, cooper2005, rodgers2015}, we again saw no significant difference in diversity surrounding synonymous and non-synonymous sites \textcolor{red}{(SUPP FIG)}.
 
 \begin{figure*}[b]
 %\vspace*{.05in}
@@ -140,8 +137,8 @@ In this section, I'll write about what we did to look for soft sweeps...
 \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_June}
 \hspace{0.05\textwidth} \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvT_Folded2_Significance_June}
 \caption{Pairwise diversity surrounding synonymous and nonsynonymous
-  substitutions in maize and teosinte. A: Maize diversity; B: Teosinte
-diversity. \label{fig:hardSweeps}}
+  substitutions in maize and teosinte. {\bf A:} Maize diversity; {\bf B:} Teosinte
+diversity. Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
 %%%%
@@ -164,13 +161,13 @@ diversity. \label{fig:hardSweeps}}
 \subsection{Pairwise diversity is heavily influenced by purifying selection}
 % \jri{we will need to define background selection and be careful about ``purifying selection'' vs ``background selection'', as technically background selection does not include very weak deleterious alleles.}
 Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against.
-When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}.
+When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon often called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions \textcolor{red}{(ref here)}.
 We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa.
-To enable comparisons between maize and teosinte, we standardized by neutral levels within each taxa, where neutral levels were defined as mean diversity at positions far from genes at least 0.01 cM distal from genes). For both maize and teosinte, pairwise diversity was reduced within genes and a recovery of diversity away from genes was observed. Interestingly, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature on pairwise diversity in the teosinte genome (Figure \ref{fig:purify}).
+To enable comparisons between maize and teosinte, we standardized by neutral levels within each taxa, where neutral levels were defined as mean diversity at positions far from genes at least 0.01 cM distal from genes. For both maize and teosinte, pairwise diversity was reduced within genes and a recovery of diversity away from genes was observed. Interestingly, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature on pairwise diversity in the teosinte genome (Figure \ref{fig:purify}).
 
 
 
-\begin{figure*}[b]
+\begin{figure*}[t]
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
@@ -181,7 +178,7 @@ To enable comparisons between maize and teosinte, we standardized by neutral lev
   alleles and therefore depicts more ancient evolutionary patterns,
   and \textbf{B} depicts singleton diversity, influenced by rare
   alleles and thus depicting evolutionary patterns in the recent
-  past. \label{fig:purify} \jri{are these done with latest values we used for curve fitting? should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.'' }}
+  past. Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a smaller range on the x-axis. \label{fig:purify} \jri{should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.'' }}
 \end{figure*}
 
 
@@ -243,7 +240,7 @@ We utilized a complementary dataset of 4,021 maize landrace individuals collecte
 from across the Americas \textcolor{red}{(SeeDs reference here)} to
 obtain a less downward-biased estimate of the current maize effective
 population size. According to a singleton-based estimate of $\theta$
-\cite{fu1993}, which was chosen since rapid post-bottleneck expansion
+\cite{fu1993}, which was utilized since rapid post-bottleneck expansion
 implies that rare alleles will most accurately reflect current maize
 demography, we obtained the estimate \textcolor{red}{$N_e =
   992,713.5$}. Although less biased than the previously mentioned
@@ -264,7 +261,7 @@ estimate downward.
 \end{figure}
 
 \section{Post-domestiction expansion is apparent in patterns of singleton diversity}
-Motivated by the rapid post-domestication expansion in maize that is apparent from our demographic analysis, we conducted an analysis of genome-wide patterns of singleton diversity. Singleton diversity measures the abundance of alleles that are only observed in one individual among the sample. As a class, singleton alleles depict the most recent patterns of evolution, but
+Motivated by the rapid post-domestication expansion in maize is seen in our demographic analysis, we conducted an analysis of genome-wide patterns of singleton diversity. Singleton diversity measures the abundance of alleles that are only observed in one individual among the sample. As a class, singleton alleles depict the most recent patterns of evolution, but
 they also have the lowest effect on pairwise diversity. Therefore, unlike
 pairwise diversity, patterns of singleton
 diversity reflect recent patterns of evolution. Since our sample size
@@ -274,7 +271,7 @@ teosinte. For singletons, our definition of
 neutral diversity was modified to be mean diversity at positions at
 least 0.02 cM distal from genes. When
 evaluating the data in this manner, a very different pattern
-emerged compared to what we saw with respect to pairwise diversity. Maize singleton diversity was at least as reduced low as teosinte singleton
+emerged compared to what we saw with respect to pairwise diversity. Maize singleton diversity was at least as reduced as teosinte singleton
 diversity near genes, but recovered more slowly
 (Figure \ref{fig:purify}), implying that in the
 recent past maize has been more influenced by purifying selection than has
@@ -288,18 +285,31 @@ the efficacy of purifying selection scales with population size,
 these results likely reflect changes in $N_e$ more than they reflect
 underlying changes in selection pressure.
 
+Similarly, to complement our investigation of pairwise diversity surrounding substitutions, we studied patterns of singleton diversity surrounding synonymous and nonsynonymous substitutions in maize \textcolor{red}{(Supplemental Fig)}. A nearly identical pattern to that shown in Figure \ref{fig:hardSweeps} was observed. This further demonstrates that even the most recent selection patterns in maize are not dominated by hard sweeps.
+
+
+
 \subsection{Purifying seleciton results are robust to soft-sweeps}
-As a category, instances of soft-sweeps, or cases of selection on alleles that have already reached intermediate frequency before becoming advantageous, are difficult to identify \textcolor{red}{(refs here)}. However, this form of selection is likely to be frequent during crop domestication \textcolor{red}{(refs here)}. We were concerned that the disparate patterns of pairwise and singleton diversity in maize and teosinte, which seem to reflect differences in demographic history, may instead reflect differences in the location and abundance of soft-sweeps. Therefore, we re-analyzed patterns of pairwise and singleton diversity in maize and teosinte including only a subset of sites that are least likely to correspond to soft-sweeps. To achieve this, we performed a genome-wide scan for soft or hard sweeps in maize or teosinte based on the H12 statistic \cite{garud2015}. H12 is sensitive to both hard and soft sweeps. Sites nearest to genes that displayed among the top 20\% of H12 values in either maize or teosinte were removed from our dataset, and both pairwise and singleton diversity at remaining sites, as a function of the distance to the nearest gene, was calculated \textcolor{red}{(Supp Fig)}. This subset of the data has the potentially confounding effects of soft-sweeps removed, and again we see nearly identical patterns of pairwise and singleton diversity surrounding genes. This provides further evidence that the patterns of diversity we observe in maize as compared to teosinte are the result of rapid population expansion as opposed to differing selective patterns in the domesticated and wild taxa.
-
-
+As a category, instances of soft-sweeps, or cases of selection on alleles that have already reached intermediate frequency before becoming advantageous, are difficult to identify \textcolor{red}{(refs here)}. However, this form of selection is likely to be frequent during crop domestication \textcolor{red}{(refs here)}. We were concerned that the disparate patterns of pairwise and singleton diversity in maize and teosinte, which seem to reflect differences in the efficiency of purifying selection due to demographic history, may instead reflect differences in the location and abundance of soft-sweeps. Therefore, we re-analyzed patterns of pairwise and singleton diversity in maize and teosinte including only a subset of sites that are least likely to correspond to soft-sweeps. To achieve this, we performed a genome-wide scan for soft or hard sweeps in maize or teosinte based on the H12 statistic \cite{garud2015}. H12 is sensitive to both hard and soft sweeps. Sites nearest to genes that displayed among the top 20\% of H12 values in either maize or teosinte were removed from our dataset, and both pairwise and singleton diversity at remaining sites, as a function of the distance to the nearest gene, was calculated \textcolor{red}{(Supp Fig)}. This subset of the data in no longer subject to the potentially confounding effects of soft-sweeps, and nearly identical patterns of pairwise and singleton diversity surrounding genes are observed. This provides further evidence that the patterns of diversity we observe in maize as compared to teosinte are the result of rapid population expansion as opposed to differing selective patterns in the domesticated and wild taxa.
 
 \section{Discussion}
-\subsection{Discussion 1}
-Text goes here
-\jri{include back of envelope calculatio based on land area!}
+\subsection{Little positive selection on new genic mutations}
+Our findings indicate that hard selective sweeps have not contributed substantially to genome-wide patterns of diversity in maize. More specifically, we observe that positive selection on new genic mutations in maize is not common compared to other drivers of diversity. This finding does not exclude the possibility that hard sweeps have taken place at non-genic sites, such as in those in enhancer regions. One known example of positive selection on a non-genic mutation involves the \emph{tb1} locus of maize, which is one of the best characterized examples of positive selection on a ``domestication gene'' in any crop \cite{clark2006}. However, the maize \emph{tb1} allele was already present in teosinte before domestication \cite{studer2011}, so this even this example demonstrates supports our finding that hard sweeps are rare. The \emph{gt1} locus is another well-characterized case of positive selection operating on standing variation at an enhancer region \cite{wills2013}. Instances of selection on standing variation such as these, often called soft sweeps, may be a major contributor to maize patterns of diversity \cite{beissinger2014}, and this could be part of the explanation as to why hard sweeps appear to be so rare, despite obvious morphological differences between maize and teosinte.
 
-\subsection{Discussion 2}
-Text goes here
+Unfortunately, our ability to accurately identify soft sweeps, and particularly to distinguish them from hard sweeps, remains limited \cite{innan2004,messer2013}. However, we implemented a scan based on the H12 statistic, which is designed to identify both hard and soft sweeps with reasonable power \cite{garud2015}. Although the goal of this study was not to identify specific sweeps, it may be that the outlier sites distinguished by H12 are primarily composed of soft sweeps instead of hard. Similarly, previous studies scanning for evidence of positive selection in maize \cite{hufford2012} may have picked up primarily evidence of soft sweeps. In domesticated species, artificial selection beginning at the onset of domestication represents a drastic shift in selective pressure. One can easily imagine a scenario in which previously neutral or slightly deleterious variants that were segregating in the population when this shift took place suddenly became beneficial, leading to soft sweeps. As appealing as this explanation is, however, our data do not speak to the abundance of soft sweeps, beyond demonstrating that they are one possibility for the lack of observed hard sweeps.
+
+We should additionally note that our observations do not exclude the possibility of infrequent hard sweeps having taken place during maize evolution. In fact, there is one maize locus, \emph{tga1}, that has been shown to correspond to a hard sweep at an amino-acid changing mutation \cite{wang2015}. Surrounding \emph{tga1},  our data demonstrate a pattern consistent with a hard sweep. But, our data do demonstrate that instances such as this are infrequent. This contrasts sharply with \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, where differences in diversity surrounding synonymous and nonsynonymous substitutions are clear. However, it agrees with what has been seen for humans \cite{hernandez2011}. 
+
+\subsection{Demography of domestication}
+Since we observed that classical hard sweeps do not explain patterns of maize diversity, it is perhaps unsurprising that we instead found evidence of demographic history contributing substantially to genetic diversity. Our estimate of the demographic history of maize, which is the first estimate of maize demographic history to utilize whole-genome-sequence (WGS) data, allowed us to disentangle the confounding parameters of bottleneck strength and bottleneck intensity. This confounding limited previous domestication estimates \cite{wright2005}. By utilizing the two-dimensional site frequency spectrum (SFS) between maize and teosinte for inference \cite{gutenkunst2009} we estimate that the maize effective population size during the bottleneck was approximately 5\% that of teosinte. Elevated drift during a bottleneck of this magnitude may have enabled moderately deleterious alleles to reach intermediate frequency in maize, while also increasing the probability that strongly deleterious alleles segregating at low frequency in teosinte were purged from the maize gene pool, as is predicted during a domestication bottleneck \cite{somebody}.
+
+After the initial bottleneck, our analysis suggests that maize $N_e$ expanded to reach levels much greater than that of teosinte. Our WGS-based estimate shows that the $N_e$ of landrace maize is at least 3X that of ancestral teosinte, while our singleton-based estimate from the the SeeDs project data \cite{somebody} implies an $N_e$ of close to 1 million individuals, or $\sim$8X that of ancestral teosinte. From the perspective of a new mutation, both of these estimates are biased downward, since they represent past reductions in diversity due to the aforementioned bottleneck. A back-of-the-envelope calculation of modern $N_e$ can be made by assuming there are 47.9 million ha of landrace maize in production \cite{cimmyt1999}, 42,000 plants per ha for open pollinated maize varieties \cite{van2010}, and conservatively that no more than one in 1,000 plants contribute gametes to the next generation. This calculation implies a modern $N_e \geq  2$ billion individuals, and incorporates no individuals from hybrid breeding programs. If for some reason this back-of-the-envelope calculation is an overestimate, even by several orders of magnitude, it is clear that the post-domesticaiton expansion in maize $N_e$ is enormous. Patterns of singleton diversity in maize, as discussed in more detail in the next section, demonstrate that this recent expansion has a notable impact on the maize genome.
+
+
+\subsection{Demography strongly impacts efficiency of purifying selection}
+Explain that singleton patterns are flipped compared to pi. Put this in the context of large pop recent, small pop past, so efficient selection recent, inefficient selection past. Explain the importance that this has on old deleterious alleles (potential for many due to drift during bottleneck) and recent deleterious alleles (efficiently purged from population).
+
+
 
 \begin{materials}
 
@@ -464,8 +474,6 @@ were identified.
 % do a standard DFE! this gives us the proportion of mutations in categories of Ns. Can use Eyre-Walker software.
 % i think we do need to say something about load. add up GERP scores like Li?
 
-
-\subsection{Simulations}
 
 \end{materials}
 
