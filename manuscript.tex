@@ -4,9 +4,10 @@
 \usepackage{pgf}
 %\usepackage{hyperref}
 \usepackage[normalem]{ulem}
-\newcommand{\jri}[1]{\textcolor{red}{\emph{#1}} }
+\newcommand{\jri}[1]{\textcolor{red}{\scriptsize #1}}
 \newcommand{\citex}{\textcolor{red}{\bf CITE}}
 \newcommand{\X}{\textcolor{red}{\bf X}}
+\usepackage{multibib}
 
 \begin{document}
 
@@ -488,11 +489,14 @@ Additionally, we performed a parallel implementation of the above analysis after
 \end{materials}
 
 \begin{acknowledgments}
-We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. Funding was provided by \textcolor{red}{NSF Grant number ZZZZZZZZZ}.
+We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. Funding was provided by NSF Plant Genome Research Project 1238014.
 \end{acknowledgments}
 
 \bibliography{Reference}
 \bibliographystyle{pnas}
+
+\onecolumn
+\input{supportingInfo} 
 %\nocite{*}
 
 \end{article}

@@ -26,6 +26,28 @@
 %% the directory where the .tfm files are stored you should
 %% be able to make the appropriate substitution.
 
+%%% JRI ADDITIONS
+\newcommand{\suppl}
+{
+\clearpage
+\onecolumn
+  \setcounter{equation}{0}
+  \setcounter{figure}{0}
+  \setcounter{table}{0}
+  \setcounter{page}{1}
+  %\renewcommand\tablename{\textbf{SUPPLEMENTAL TABLE}}
+  %\renewcommand\figurename{SUPPLEMENTAL FIGURE}
+  \renewcommand\tablename{\textbf{TABLE}}
+  \renewcommand\figurename{FIGURE}
+  \renewcommand{\theequation}{\arabic{equation}}
+  \renewcommand{\thefigure}{\arabic{figure}}
+  \renewcommand{\thetable}{\arabic{table}}
+\fancyhead[LE,RO]{}
+\fancyhead[CE]{}
+\fancyhead[CO]{}
+\fancyfoot[CE,CO]{\thepage}
+}
+%%%%%%%%%%%%
 
 %%  Change these definitions, if necessary ====>
 

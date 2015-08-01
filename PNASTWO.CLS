@@ -26,6 +26,7 @@ Written by Amy Hendrickson, TeXnology, Inc., 9/04^^J
 This version is dated \currversion^^J^^J}
 
 \ProvidesClass{pnastwo}
+
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -3353,6 +3354,11 @@ in keywords
 dec 4, 2006: fixed bug in table notes, by
 resetting tablenotenum every time tabular
 is used
+
+
+
+
+
 
 %\def\currversion{October 18, 2006}
 %\def\currversion{July 10, 2006}
