@@ -11,14 +11,14 @@
 
 \begin{document}
 
-\title{Domestication and the impacts of linked selection on the maize genome}
+\title{Demography and linked selection in wild and domesticated maize}
 \author{Timothy M. Beissinger\affil{1}{Dept. of Plant Sciences, University of
     California, Davis, CA, USA}\affil{2}{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}\affil{3}{Division of Plant Sciences, University of Missouri, Columbia, MO, USA} Li Wang\affil{4}{Iowa State University, Ames, IA, USA}, Kate Crosby\affil{1}{}, Arun
   Durvasula\affil{1}{}, Matthew Hufford\affil{4}{}, \and Jeffrey
   Ross-Ibarra\affil{1}{}\affil{5}{Genome Center and Center for population biology, University of
     California, Davis, CA, USA} }
 
-\significancetext{Patterns of linked selection, or the impact of selection on sites that neighbor a functional variant, have been carefully evaluated in only a few species. \jri{not really. we need to cite the Corbett-Detig plos-bio paper here -- he looked at a lot of species including maize!} In this work, we demonstrate that selection against deleterious mutations leaves a pronounced signature on the maize genome, reducing diversity in and immediately around genes. We show how demography interacts with selection to impact genome-wide patterns of diversity, including the important observation that rapid population expansion can increase the efficiency of selection as much as a sudden population bottleneck can weaken it. Along the way, we develop the first estimate the demographic parameters of the maize domestication from whole genome sequence data. }
+\significancetext{Patterns of linked selection, or the impact of selection on sites that neighbor a functional variant, have been carefully evaluated in only a few species. \jri{not really. we need to rephrase here and cite the Corbett-Detig plos-bio paper somewhere -- they looked at a lot of species including maize!} In this work, we demonstrate that selection against deleterious mutations leaves a pronounced signature on the maize genome, reducing diversity in and immediately around genes. We show how demography interacts with selection to impact genome-wide patterns of diversity, including the important observation that rapid population expansion can increase the efficiency of selection as much as a sudden population bottleneck can weaken it. Along the way, we develop the first estimate the demographic parameters of the maize domestication from whole genome sequence data. }
 
 \maketitle
 
@@ -323,89 +323,36 @@ Ultimately, we have shown that purifying selection in maize has operated very di
 \begin{materials}
 
   \subsection{BASH, R, and Python scripts}
-All analysis scripts are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.}
+All scripts used for analysis are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.} 
 
 \subsection{Plant materials}
-Accessions studied were selected from the Maize HapMap2
-panel \cite{chia2012, lemmon2014}. \jri{this needs slight clarification. cite chia for hapmap, but that we used higher-coverage of the teosinte from lemmon. if possible, include link to fastq or bamfiles used} Principal component analysis was employed to ensure that closely related individuals were not included due to their potential to bias results (Figure S5). Ultimately, 23 maize inbreds derived from a diverse assortment of landraces were selected for inclusion. 
-Thirteen teosinte inbred lines, all members of  subspecies Z. \emph{mays}
-ssp. \emph{parviglumis}, were utilized. Included lines are listed in (Table S1).
-Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{chia2012}.\jri{did we use their bams? I thought we used bwa bams, which are not listed and weren't used for hapmap2. if that's the case, we need to mention this difference.}
+We made use of published sequence of inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap2 panel \cite{chia2012, lemmon2014}. 
+We removed \X teosinte and \X maize individuals that appeared as outliers in an initial principal component analysis  (Figure S5), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table S1).
 
-\subsection{Interpolating genetic position}
-
-Physical positions were converted to genetic positions by interpolating from the NAM genetic map \cite{glaubitz2014}, \jri{does jeff's paper really have the NAM map? I didn't think so and quick look didn't find it. i thought this came from wallace?} which provides a 1 cM resolution for physical to genetic conversion.
-Within R \cite{R2014}, physical positions with corresponding genetic positions in the NAM map were used as anchors.
-Physical positions in our dataset without corresponding genetic position were assigned genetic positions by scaling the anchored genetic positions according to the physical distance between the unlabeled position and the flanking anchors.
+\subsection{Physical and genetic maps}
+Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{chia2012}.\jri{did we use their bams? I thought we used bwa bams, which are not listed and weren't used for hapmap2. if that's the case, we need to mention this difference. either way, we need to include a link to the bamfiles too.}
+All analyses made use of uniquely mapping reads with mapping quality score $\geq 30$ and bases with base quality score $\geq 20$, adjusting quality scores around indels. 
+We converted physical coordinates to genetic coordinates via linear interpolation of the 1cM resolution NAM genetic map \cite{glaubitz2014}, \jri{i thought this should be wallace not glaubitz? need to specify what you do with physical positions before and after last marker on each chrom and markers, if any, that have physical and genetic order that disagree}.
 
 \subsection{Estimating the site frequency spectrum}
-To estimate individual  and joint site frequency spectra (SFS) for maize and teosinte from inbred lines, each inbred individual was treated as representing a single haplotype from its population.
-SFS were
-separately computed for genic and intergenic regions, as well as for
-the whole genome together. First, genic and intergenic regions were isolated using
-the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014}. Genic
-regions were defined as DNA between the start and stop position of a \jri{you meant transcription start/stop not translation, right?}
-gene, while intergenic regions were required to be at least 5kb up- or
-down-stream from a gene start/stop. With regions defined, SFS were
-estimated with ANGSD \cite{korneliussen2014}. Individual population SFS were
-estimated using all positions observed in at least 80\% of the
-individuals in the population, and joint SFS were estimated using all
-positions observed in at least 80\% of individuals in both
-populations. Individuals were
-assumed to be fully inbred (-doSaf 2). Quality filters were
-employed such that reads with quality score below 30 and bases with
-quality score below 20 were discarded (-minMapq 30 and -minQ 20), as were reads that didn't map
-uniquely (-uniqueOnly 0). Quality scores around indels were adjusted
-as in Samtools (-baq 0). Genotype likelihoods were estimated using the samtools
-method (-GL 1). Major and minor alleles were inferred from the data
-(-doMaf 1). Because ANGSD cannot calculate a folded joint SFS, the
-maize reference genome was used for polarization and then unfolded spectra
-were folded using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
+We estimated both the genome-wide site frequency spectrum (SFS) as well as a separate SFS for genic (within annotated transcript) and intergenic ($\geq 5kb$ from a transcript) regions. 
+We used the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014} to parse annotations from the \X annotation \jri{include annotation version number and link to ENSEMBL annotation used}. 
+We estimated single population and joint SFS with the software ANGSD \cite{korneliussen2014}, including all positions with at least one aligned read in $\geq 80\%$ of samples in one or both populations.
+We assumed individuals were fully inbred and treated each line as a single haplotype. \jri{is doSaf -2 equivalent to using the inbreeding coefficient? in general i removed the options because they don't make sense to casual reader and the interested reader can find the script}
+Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
 
 \subsection{Demographic inference}
-We used $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate the parameters of maize
-domestication based on diffusion approximation of the 2-dimensional
-SFS for maize and teosinte. Our first step was to specify a model, as
-shown in (Figure \ref{fig:bottleneck}). In words, our model began with an ancestral teosinte
-population with effective population size $N_a$ individuals. The
-ancestral population split into
-two distinct populations, one of maize and the other of teosinte,
-$T_b$ generations in the past. The maize population immediately shrank
-to size $N_b$, and then grew exponentially to size $N_{maize}$
-today. From the split until today, the teosinte effective population
-size remained constant. Each year, $M_{mt}$ individuals migrated from
-maize to teosinte, and $M_{tm}$ individuals migrated from teosinte to
-maize.The free parameters of our model were $N_a, N_b, N_{maize}, T_b,
-M_{mt}, \text{and } M_{tm} $. We implimented 1,000 $\delta\alpha\delta{i}$
-optimizations of this model using the ``$\delta\alpha\delta{i}$.Inference.optimize\_log\_fmin''
-optimizer. In $\delta\alpha\delta{i}$ optimizations,
-initial values for $N_b, N_{maize}, T_b,
-M_{mt}, \text{and } M_{tm}$, respectively, were randomly perturbed up
-to a factor of two from 0.02, 3, 0.04, 1e-5, and 1e-5. Lower
-bounds were set at 1e-7, 1e-7,  0, 1e-10, and
-1e-10, respecively, while upper bounds were respectively set at 2,
-200, 1, .001, and .001. $N_a$ did not have an initial value, upper, or
-lower bounds because it is estimated from equilibrium ancestral theta
-($\theta = 4N_a\mu$), which $\delta\alpha\delta{i}$ determines automatically regardless
-of model. Population sizes were converted from $\delta\alpha\delta{i}$'s
-units using a mutation rate estimate of 3e-8
-\cite{clark2005}. Among the 1,000 $\delta\alpha\delta{i}$ runs, parameters
-from the run with the lowest log-likelihood were taken as estimates of
-the parameters of the domestication process.
+We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS.
+We modeled an a teosinte of constant effective population size $N_a$ individuals that at time $T_b$ generations in the past gives rise to a maize population of size $N_b$ which grows exponentially to size $N_{maize}$ in the present (Figure \ref{fig:bottleneck})
+The model includes migration each generation of $M_{mt}$ individuals from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  
+We fixed $N_a$ using $\delta\alpha\delta{i}$'s estimation of the population mutation rate $\theta=4N_a\mu$ and a mutation rate of $3 \times 10^{-8}$ \cite{clark2005}. 
+We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations of the model using ``$\delta\alpha\delta{i}$.Inference.optimize\_log\_fmin'' optimizer \jri{is this last bit about the optimizer in your code? if so, i'd ditch} setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_{maize}}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_{maize}}{N_a})(T_b-i)}{T_b}}$.
+\jri{make sure these are right (e.g. is it 2Na or 4Na for Tb?). note that we have to redo this in fractions or words because above you call Nb a population size when in reality we are estimating a proportion}
+We allowed initial values to be randomly purterbed by a factor of 2, and set upper and lower bounds such that $10^{-7} \eq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_{maize}}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
+We report parameter estimates from the optimization run with the highest log-likelihood.
 
-Recent population expansion, as is observed for maize, most influences
-the abundance of rare alleles. However, our demographic parameter
-estimation using $\delta\alpha\delta{i}$ suffered from a relatively small sample size of
-23 maize individuals. Therefore, our approach likely underestimated
-current maize effective population size. To address this, we utilized
-a complimentary dataset of 4,021 maize landrace individuals collected
-from across the Americas \textcolor{red}{(SeeDs reference here)} to
-generate an independent estimate of
-$N_{maize}$. These individuals were genotyped using GBS
-\cite{elshire2011}, a protocol that suffers from a high rate of
-missing data \cite{beissinger2013}. To minimize biases imposed from
-missing data, we used R to isolate only those SNPs that
-were observed in at least 1,500 individuals and subsequently projected the
+We additionally made use of the large genotyping data set of more than 4,000 maize landraces \citex to calculate a singleton-base estimate of the modern maize effective population size.   
+We filtered these data to include only SNPs observed in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals. \jri{cite or mention how projection was done}. 
 SFS down to a sample of 500 individuals. Then, we utilized the singleton-based estimate of
 theta ($\theta = 4N_e\mu = \frac{S}{L}$) to estimate
 modern maize $N_e$ \cite{fu1993}, where $S$ is the total number of
