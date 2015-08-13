@@ -246,7 +246,7 @@ estimate downward.
   the maize effective population size ($N_e$) during the domestication
   bottleneck appears to have consisted of approximately 5.26\%
   the ancestral $N_e$, before recovering two at least 2.98
-  times as large as the ancestral $N_e$. \label{fig:bottleneck} }
+  times as large as the ancestral $N_e$ \jri{$M_{mt}$ and $tm$ are the reverse of what is described in text}. \label{fig:bottleneck} }
 \end{figure}
 
 \section{Post-domestication expansion is apparent in patterns of singleton diversity}
@@ -315,28 +315,28 @@ We removed \X teosinte and \X maize individuals that appeared as outliers in an 
 
 \subsection{Physical and genetic maps}
 Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{chia2012}.\jri{did we use their bams? I thought we used bwa bams, which are not listed and weren't used for hapmap2. if that's the case, we need to mention this difference. either way, we need to include a link to the bamfiles too.}
-All analyses made use of uniquely mapping reads with mapping quality score $\geq 30$ and bases with base quality score $\geq 20$, adjusting quality scores around indels. 
+All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following \cite{li2011statistical}.
 We converted physical coordinates to genetic coordinates via linear interpolation of the 1cM resolution NAM genetic map \cite{glaubitz2014}, \jri{i thought this should be wallace not glaubitz? need to specify what you do with physical positions before and after last marker on each chrom and markers, if any, that have physical and genetic order that disagree}.
 
 \subsection{Estimating the site frequency spectrum}
 We estimated both the genome-wide site frequency spectrum (SFS) as well as a separate SFS for genic (within annotated transcript) and intergenic ($\geq 5kb$ from a transcript) regions. 
 We used the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014} to parse annotations from the \X annotation \jri{include annotation version number and link to ENSEMBL annotation used}. 
 We estimated single population and joint SFS with the software ANGSD \cite{korneliussen2014}, including all positions with at least one aligned read in $\geq 80\%$ of samples in one or both populations.
-We assumed individuals were fully inbred and treated each line as a single haplotype. \jri{is doSaf -2 equivalent to using the inbreeding coefficient? in general i removed the options because they don't make sense to casual reader and the interested reader can find the script}
+We assumed individuals were fully inbred and treated each line as a single haplotype. \jri{i removed options details because they don't make sense to casual reader and the interested reader can find the script}
 Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
 
 \subsection{Demographic inference}
 We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS.
-We modeled an a teosinte of constant effective population size $N_a$ individuals that at time $T_b$ generations in the past gives rise to a maize population of size $N_b$ which grows exponentially to size $N_{maize}$ in the present (Figure \ref{fig:bottleneck})
-The model includes migration each generation of $M_{mt}$ individuals from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  
-We fixed $N_a$ using $\delta\alpha\delta{i}$'s estimation of the population mutation rate $\theta=4N_a\mu$ and a mutation rate of $3 \times 10^{-8}$ \cite{clark2005}. 
-We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations of the model using ``$\delta\alpha\delta{i}$.Inference.optimize\_log\_fmin'' optimizer \jri{is this last bit about the optimizer in your code? if so, i'd ditch} setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_{maize}}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_{maize}}{N_a})(T_b-i)}{T_b}}$.
+We modeled a teosinte population of constant effective size $N_a$, that at time $T_b$ generations in the past gives rise to a maize population of size $N_b$ which grows exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck})
+The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  
+We fixed $N_a$ using $\delta\alpha\delta{i}$'s estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $3 \times 10^{-8}$ \cite{clark2005}. 
+We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations, setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_m}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_m}{N_a})(T_b-i)}{T_b}}$.
 \jri{make sure these are right (e.g. is it 2Na or 4Na for Tb?). note that we have to redo this in fractions or words because above you call Nb a population size when in reality we are estimating a proportion}
-We allowed initial values to be randomly purterbed by a factor of 2, and set upper and lower bounds such that $10^{-7} \eq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_{maize}}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
+We allowed initial values to be randomly purterbed by a factor of 2, and set upper and lower bounds such that $10^{-7} \leq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_m}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
 We report parameter estimates from the optimization run with the highest log-likelihood.
 
-We additionally made use of the large genotyping data set of more than 4,000 maize landraces \citex to calculate a singleton-base estimate of the modern maize effective population size.   
-We filtered these data to include only SNPs observed in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals. \jri{cite or mention how projection was done}. 
+We additionally made use of a large genotyping data set of more than 4,000 maize landraces \cite{Hearne2015} to calculate the modern maize $N_e$ from singleton counts \cite{fu1993}.
+We filtered these data to include only SNPs observed in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals.\jri{cite or mention how projection was done}. 
 SFS down to a sample of 500 individuals. Then, we utilized the singleton-based estimate of
 theta ($\theta = 4N_e\mu = \frac{S}{L}$) to estimate
 modern maize $N_e$ \cite{fu1993}, where $S$ is the total number of
