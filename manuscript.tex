@@ -137,8 +137,8 @@ To ensure that this analysis is resilient to the intricacies of our sample, we i
 \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_Aug}
 \hspace{0.05\textwidth} \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvT_Folded2_Significance_Aug}
 \caption{Pairwise diversity surrounding synonymous and non-synonymous
-  substitutions in maize and teosinte. {\bf A:} Maize diversity; {\bf B:} Teosinte
-diversity. Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
+  substitutions in maize and teosinte. {\bf A:} Maize diversity; {\bf B:} Teosinte diversity. Diversity axes show both absolute values and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution. \jri{is this correct or did i confuse things?}
+ Lines depict a loess curve (span of 0.01)  and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
 
@@ -155,14 +155,11 @@ To enable comparisons between maize and teosinte, we standardized by neutral lev
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
-\caption{Relative level of diversity versus distance to the nearest
-  gene, in maize and teosinte. Two measures of diversity were
-  investigated. \textbf{A} displays pairwise
-  diversity, which is most influenced by intermediate frequency
-  alleles and therefore depicts more ancient evolutionary patterns,
-  and \textbf{B} depicts singleton diversity, influenced by rare
-  alleles and thus depicting evolutionary patterns in the recent
-  past. Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a smaller range on the x-axis. \label{fig:purify}
+\caption{Relative diversity versus distance to nearest gene in maize and teosinte. 
+Shown are \textbf{A} pairwise nucleotide diversity and \textbf{B} singleton diversity.  Relative diversity is calculated compared to the mean diversity in windows $\geq 0.01 cM$ or $\geq 0.02 cM$ from the nearest
+gene for pairwise diversity and singletons, respectively. 
+  Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. 
+  Inset plots depict a smaller range on the x-axis. \label{fig:purify}
   %\jri{should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.''}
   }
 \end{figure*}
@@ -311,10 +308,10 @@ All scripts used for analysis are available in an online repository at \textcolo
 
 \subsection{Plant materials}
 We made use of published sequence of inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap2 panel \cite{chia2012, lemmon2014}. 
-We removed \X teosinte and \X maize individuals that appeared as outliers in an initial principal component analysis  (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table sTab:list}).
+We removed \X teosinte and \X maize individuals that appeared as outliers in an initial principal component analysis  (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}).
 
 \subsection{Physical and genetic maps}
-Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{chia2012}.\jri{did we use their bams? I thought we used bwa bams, which are not listed and weren't used for hapmap2. if that's the case, we need to mention this difference. either way, we need to include a link to the bamfiles too.}
+Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{chia2012}.\jri{did we use their bams? I thought we used bwa bams, which are not listed and weren't used for hapmap2. if that's the case, we need to mention this difference and acknowledge Robert for providing those bams. either way, we need to include a link to the bamfiles too. somewhere here or above mention URL for Tripsacum bams. did we align those too or download someone else's?}
 All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following \cite{li2011statistical}.
 We converted physical coordinates to genetic coordinates via linear interpolation of the 1cM resolution NAM genetic map \cite{glaubitz2014}, \jri{i thought this should be wallace not glaubitz? need to specify what you do with physical positions before and after last marker on each chrom and markers, if any, that have physical and genetic order that disagree}.
 
@@ -322,7 +319,7 @@ We converted physical coordinates to genetic coordinates via linear interpolatio
 We estimated both the genome-wide site frequency spectrum (SFS) as well as a separate SFS for genic (within annotated transcript) and intergenic ($\geq 5kb$ from a transcript) regions. 
 We used the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014} to parse annotations from the \X annotation \jri{include annotation version number and link to ENSEMBL annotation used}. 
 We estimated single population and joint SFS with the software ANGSD \cite{korneliussen2014}, including all positions with at least one aligned read in $\geq 80\%$ of samples in one or both populations.
-We assumed individuals were fully inbred and treated each line as a single haplotype. \jri{i removed options details because they don't make sense to casual reader and the interested reader can find the script}
+We assumed individuals were fully inbred and treated each line as a single haplotype. \jri{i removed options details because they don't make sense to casual reader and the interested reader can find the script. }
 Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
 
 \subsection{Demographic inference}
@@ -330,85 +327,66 @@ We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate p
 We modeled a teosinte population of constant effective size $N_a$, that at time $T_b$ generations in the past gives rise to a maize population of size $N_b$ which grows exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck})
 The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  
 We fixed $N_a$ using $\delta\alpha\delta{i}$'s estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $3 \times 10^{-8}$ \cite{clark2005}. 
-We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations, setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_m}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_m}{N_a})(T_b-i)}{T_b}}$.
-\jri{make sure these are right (e.g. is it 2Na or 4Na for Tb?). note that we have to redo this in fractions or words because above you call Nb a population size when in reality we are estimating a proportion}
-We allowed initial values to be randomly purterbed by a factor of 2, and set upper and lower bounds such that $10^{-7} \leq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_m}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
+We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations and allowing initial values to be randomly perturbed by a factor of 2.  
+Initial values and upper and lower bounds can be found in table \X. \jri{this looked terrible in text, please make a supp. table.  keep track of notation as e.g. we explain $N_b$ as population size of bneck, but in reality parameter we fit is $\frac{N_b}{N_a}$}
+%, setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_m}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_m}{N_a})(T_b-i)}{T_b}}$.
+%\jri{make sure these are right (e.g. is it 2Na or 4Na for Tb?). note that we have to redo this in fractions or words because above you call Nb a population size when in reality we are estimating a proportion}
+%We allowed initial values to be , and set upper and lower bounds such that $10^{-7} \leq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_m}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
 We report parameter estimates from the optimization run with the highest log-likelihood.
 
-We additionally made use of a large genotyping data set of more than 4,000 maize landraces \cite{Hearne2015} to calculate the modern maize $N_e$ from singleton counts \cite{fu1993}.
-We filtered these data to include only SNPs observed in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals.\jri{cite or mention how projection was done}. 
-SFS down to a sample of 500 individuals. Then, we utilized the singleton-based estimate of
-theta ($\theta = 4N_e\mu = \frac{S}{L}$) to estimate
-modern maize $N_e$ \cite{fu1993}, where $S$ is the total number of
-singletons and $L$ is the total length of DNA sequenced. Based on the
-GBS protocol implemented \cite{elshire2011}, $L$ is equal to the total
-number of SNPs in the dataset.
+We further made use of a large genotyping data set of more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts.
+We filtered these data to include only SNPs with data in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals.\jri{cite or mention how projection was done}. 
+We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{clark2005} and the relation  $4N_e\mu = \frac{S}{L}$ \cite{fu1993}, where where $S$ is the total number of singleton SNPs and $L$ is the total number of SNPs in the dataset.
 
-\subsection{Evaluating diversity around substitutions}
-To investigate diversity around substitutions, maize and teosinte pairwise diversity was first
-calculated in 1,000 kb non-overlapping windows using ANGSD
-\cite{korneliussen2014}. This was performed separately for both maize and
-teosinte, using the same filters as employed for estimating the
-SFS. Next, SNPs and genotypes among maize, teosinte, and \emph{Tripsacum} were called. \emph{Tripsacum} bam files
-were downloaded from \textcolor{red}{(TRIPSICUM FILES)}, and then all SNPs with a
-p-value less than 1e-6 were called using ANGSD. Quality filters were
-as the same as before, and genotypes were only called when the
-posterior probability was above 0.95. From the set of called SNPs and
-genotypes, substitutions between maize and tripsicum, as well as
-between teosinte and \emph{Tripsacum} were identified using R \cite{R2014} as all positions with
-no more than 20\% missing data for which every maize or teosinte
-allele differed from the observed \emph{Tripsacum} allele. At each
-substitution, effects were estimated using the ensembl variant effects
-predictor \cite{mclaren2010}.
+Finally, \jri{MSMC text here}
 
-For each diversity window with at least 100 bps observed, the distance from the window center to the
-nearest synonymous and missense substitution was
-computed. Then, following the methods of \cite{hernandez2011}, a loess
-curve was plotted for diversity values against the distance to the
-nearest synonymous or nonsynonymous substitution. A span of 0.01 was
-utilized.
+\subsection{Diversity}
+We made use of the software ANGSD \cite{korneliussen2014} for diversity calculations and genotype calling. 
+We calculated diversity statistics in maize and teosinte in 100bp non-overlapping windows using filters as described above for the SFS. \jri{this said 1,000 kb which is 1Mb, but should say 100bp right?}
+We used allele counts to estimate the number of singleton polymorphisms in each window, and used binomial sampling to create a second maize data set down-sampled to have the same number of samples as teosinte.
+We called genotypes in maize, teosinte, and \emph{Tripsacum} at sites with a SNP p-value $<10^{-6}$ and when the genotype posterior probability $>0.95$.
+We identified substitutions in maize and teosinte as all sites with a fixed difference with \emph{Tripsacum} and $\leq 20\%$ missing data. 
+Substitutions were classified as synonymous, missense, or noncoding using the ensembl variant effects predictor \cite{mclaren2010}.
+For each window with $\geq 100bp$ of data we computed the genetic distance between the window center and the nearest synonymous and missense substitution as well as the genetic distance to the nearest gene transcript. \jri{this said gene center, but we're not using gene center anymore, right?} 
 
-To verify that this approach is robust to the criticisms of \cite{enard2014}, which involve reduced power at highly conserved sites, we applied the method to subsets of sites that included only positions nearest to the  most- or least-conserved 10\% of genes data. This was achieved by assigning every gene a GERP score corresponding to the average score observed across it \cite{rodgers2015}. Next, genes ing the top and bottom 10\% quantiles of GERP score were isolated. Two datasets were created, each including all diversity windows who's nearest gene was in the high or low GERP score sets. Finally, Loess fits of diversity vs. distance to gene were computed from sites within each GERP score.
+%Teosinte diversity is
+%generally higher then maize diversity. Therefore, to enable comparisons between
+%the reduction of diversity around genes in maize and teosinte, a
+%neutral measure of pairwise and singleton diversity for each taxa was
+%estimated. For pairwise diversity, this neutral measure was defined according to
+%mean pairwise diversity at windows greater than 0.01 cM from the nearest
+%gene. For singletons, both maize and teosinte still showed reduced
+%diversity at a distance of 1 cM, so neutral diversity in this case was
+%defined as mean singleton diversity at positions 0.02 cM or greater
+%from genes. Then, pairwise and singleton diversity at each window was
+%standardized by dividing by the corresponding neutral
+%measure. Separately for pairwise and singleton diversity in maize and
+%teosinte, . Significant differences were assessed by taking 100 bootstrap
+%samples from each set of diversity windows and re-fitting the cubic smoothing spline to each. Then, the
+%2.5\% and 97.5\% quantiles of values along the bootstrapped splines
+%were identified.
 
+%To verify that this approach is robust to reduced power at highly conserved sites \cite{enard2014}, we applied the method to subsets of sites that included only positions nearest to the  most- or least-conserved 10\% of genes data. This was achieved by assigning every gene a GERP score corresponding to the average score observed across it \cite{rodgers2015}. Next, genes in the top and bottom 10\% quantiles of GERP score were isolated. Two datasets were created, each including all diversity windows who's nearest gene was in the high or low GERP score sets. Finally, Loess fits of diversity vs. distance to gene were computed from sites within each GERP score.
 
+%In addition  next Two types of diversity surrounding genes were investigated. The first
+%was pairwise diversity in 1kb windows, as described previously. The
+%second was singleton diversity in 1kb windows. Singletons represent
+%the rarest class of alleles that this dataset can identify, and
+%collectively demonstrate the most recent patterns of evolution. Minor
+%allele frequencies were estimated with ANGSD \cite{korneliussen2014} using the
+%same quality filters previously described. Then, the number of
+%singletons in each non-overlapping 1kb window was calculated with R
+%for both maize and teosinte \cite{R2014}. For maize, we also generated a parallel set of downsampled
+%singleton data, for which binomial sampling within R was conducted
+%based on allele frequencies at each site, to generate a singleton
+%psuedo dataset of sample size 13, equivalent to our sample size for
+%teosinte. BiomaRt \cite{durinck2009, durinck2005} was then used to identify
+%the center of each gene. Next, the distance from each diversity window center
+%to the nearest gene center was computed.
 
-\subsection{Evaluating diversity around genes}
-Two types of diversity surrounding genes were investigated. The first
-was pairwise diversity in 1kb windows, as described previously. The
-second was singleton diversity in 1kb windows. Singletons represent
-the rarest class of alleles that this dataset can identify, and
-collectively demonstrate the most recent patterns of evolution. Minor
-allele frequencies were estimated with ANGSD \cite{korneliussen2014} using the
-same quality filters previously described. Then, the number of
-singletons in each non-overlapping 1kb window was calculated with R
-for both maize and teosinte \cite{R2014}. For maize, we also generated a parallel set of downsampled
-singleton data, for which binomial sampling within R was conducted
-based on allele frequencies at each site, to generate a singleton
-psuedo dataset of sample size 13, equivalent to our sample size for
-teosinte. BiomaRt \cite{durinck2009, durinck2005} was then used to identify
-the center of each gene. Next, the distance from each diversity window center
-to the nearest gene center was computed.
+\subsection{Selection scan}
+We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
 
-Teosinte diversity is
-generally higher then maize diversity. Therefore, to enable comparisons between
-the reduction of diversity around genes in maize and teosinte, a
-neutral measure of pairwise and singleton diversity for each taxa was
-estimated. For pairwise diversity, this nuetral measure was defined according to
-mean pairwise diversity at windows greater than 0.01 cM from the nearest
-gene. For singletons, both maize and teosinte still showed reduced
-diversity at a distance of 1 cM, so neutral diversity in this case was
-defined as mean singleton diversity at positions 0.02 cM or greater
-from genes. Then, pairwise and singleton diversity at each window was
-standardized by dividing by the corresponding neutral
-measure. Separately for pairwise and singleton diversity in maize and
-teosinte, cubic smoothing splines were fit to
-describe diversity levels according to the distance to the nearest
-gene. Significant differences were assessed by taking 100 bootstrap
-samples from each set of diversity windows and re-fitting the cubic smoothing spline to each. Then, the
-2.5\% and 97.5\% quantiles of values along the bootstrapped splines
-were identified.
-
-Additionally, we performed a parallel implementation of the above analysis after excluding sites potentially experiencing positive selection in the form of either hard- or soft-sweeps. To isolate these sites, we performed genome-scans separately for maize and teosinte based on the H12 statistic \cite{garud2015}. SNPs within each taxa were called in ANGSD \cite{korneliussen2014} using the previously specified SNP calling parameters. H12 was computed with a window size of 200 SNPs and a jump of 25 SNPs. H12 windows in the highest 20\% for maize or teosinte were identified and considered as regions most likely to be under positive selection. Finally, levels of pairwise and singleton diversity vs. distance to gene was computed using only sites that were not nearest to selected sites in either maize or teosinte.
 
 %JRI IDEAS:
 % look at SFS of SNPs by GERP score in maize vs teosinte. shift to lower freq. should be seen at lower GERP scores in maize
