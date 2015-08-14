@@ -117,15 +117,6 @@ To evaluate whether patterns of such ``hard sweeps'' could explain observed diff
 \ref{fig:hardSweeps}).
 If a proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
 We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}.
-Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
-Previous analyses in humans have suggested that this approach is limited by fact that a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
-To address this concern we took advantage of a measure of evolutionary constraint using genomic evolutionary rate profile (GERP) scores \cite{davydov2010} calculated across the maize genome \cite{rodgers2015}. 
-We re-analyzed substitutions in subsets of genes with the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
-As expected, we see higher overall diversity around substitutions in genes under weak purifying selection, but we still see no difference between synonymous and missense substitutions in either subset of the data.
-Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
-
-%To ensure that this analysis is resilient to the intricacies of our sample, we investigated diversity surrounding the maize gene \emph{tga1}, one of the few known instances of a hard sweep corresponding to a causal missense substitution in maize \cite{wang2015}. In the case of this known sweep, we observed a reduction in diversity surrounding the causative substitution to levels much lower than seen for synonymous substitutions (Figure \ref{sFig:tga1}), confirming that this method should be informative if hard sweeps were the prevailing mode of selection in maize. 
-%Still, to ensure that the approach is robust to potential shortcomings such as limited power in the face of background selection \cite{enard2014}, we sought to determine if patterns of diversity surrounding synonymous and non-synonymous substitutions differ when we restrict our analysis to the most- or least-conserved genes in maize. When we re-analyzed subsets of genes with the 10\% highest and 10\% lowest genomic evolutionary rate profile (GERP) score, putatively corresponding to genes undergoing the strongest and weakest purifying selection \cite{davydov2010, cooper2005, rodgers2015}, we again saw no significant difference in diversity surrounding synonymous and non-synonymous sites (Figure \ref{sFig:consUncons}).
 
 \begin{figure*}[!htb]
 %\vspace*{.05in}
@@ -136,6 +127,15 @@ Taken together, these data suggest hard sweeps do not play a major role in patte
   substitutions in {\bf A} maize and {\bf B} teosinte. Axes show both absolute diversity values and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution. \jri{is this correct or did i confuse things?}
  Lines depict a loess curve (span of 0.01)  and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
+
+Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
+Previous analyses in humans have suggested that this approach is limited by fact that a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
+To address this concern we took advantage of a measure of evolutionary constraint using genomic evolutionary rate profile (GERP) scores \cite{davydov2010} calculated across the maize genome \cite{rodgers2015}. 
+We re-analyzed substitutions in subsets of genes with the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
+As expected, we see higher overall diversity around substitutions in genes under weak purifying selection, but we still see no difference between synonymous and missense substitutions in either subset of the data.
+Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
+
+
 
 
 \subsection{Pairwise diversity is heavily influenced by purifying selection}
