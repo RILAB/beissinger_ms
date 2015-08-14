@@ -105,7 +105,7 @@ Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p<X$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead reduced by the impacts of selection on linked sites. 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=.5\textwidth]{FigsAndFiles/SFS_and_Tajima.png}
 \caption{The folded SFS and Tajimas D were calculated both inside and outside of genes for maize and teosinte. In both taxa, a dearth of rare alleles was observed within genes relative to outside of genes, which led to higher values of Tajima's D outside of genes than inside.{\bf A:} Folded SFS for maize; {\bf B:} Folded SFS for teosinte; {\bf C:} Maize Tajima's D; {\bf D:} Teosinte Tajima's D.  \label{fig:diversity} \jri{skip the SFS and make this a panel plot of pi and TajD in maize and teosinte} } 
@@ -117,8 +117,9 @@ To evaluate whether patterns of such ``hard sweeps'' could explain observed diff
 \ref{fig:hardSweeps}).
 If a proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
 We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}.
+Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
 
-\begin{figure*}[!htb]
+\begin{figure*}[h]
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_Aug}
@@ -128,7 +129,6 @@ We observe this pattern around the causative amino acid substitution in the the 
  Lines depict a loess curve (span of 0.01)  and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
-Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
 Previous analyses in humans have suggested that this approach is limited by fact that a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
 To address this concern we took advantage of a measure of evolutionary constraint using genomic evolutionary rate profile (GERP) scores \cite{davydov2010} calculated across the maize genome \cite{rodgers2015}. 
 We re-analyzed substitutions in subsets of genes with the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
