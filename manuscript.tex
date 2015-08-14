@@ -95,7 +95,6 @@ neutral. We achieve these objectives by utilizing
 whole-genome-sequence information from 23 maize and 13 teosinte lines
 sequenced as part of the Maize HapMap 2 panel \cite{chia2012}.
 
-
 \section{Results}
 \subsection{Patterns of diversity differ between genic and
   non-genic regions of the genome}
@@ -105,7 +104,7 @@ Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p<X$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead reduced by the impacts of selection on linked sites. 
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \includegraphics[width=.5\textwidth]{FigsAndFiles/SFS_and_Tajima.png}
 \caption{The folded SFS and Tajimas D were calculated both inside and outside of genes for maize and teosinte. In both taxa, a dearth of rare alleles was observed within genes relative to outside of genes, which led to higher values of Tajima's D outside of genes than inside.{\bf A:} Folded SFS for maize; {\bf B:} Folded SFS for teosinte; {\bf C:} Maize Tajima's D; {\bf D:} Teosinte Tajima's D.  \label{fig:diversity} \jri{skip the SFS and make this a panel plot of pi and TajD in maize and teosinte} } 
@@ -119,35 +118,31 @@ If a proportion of missense mutations have been fixed due to hard sweeps, divers
 We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}.
 Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
 
-\begin{figure*}[h]
+\begin{figure*}
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_Aug}
 \hspace{0.05\textwidth} \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvT_Folded2_Significance_Aug}
 \caption{Pairwise diversity surrounding synonymous and non-synonymous
   substitutions in {\bf A} maize and {\bf B} teosinte. Axes show both absolute diversity values and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution. \jri{is this correct or did i confuse things?}
- Lines depict a loess curve (span of 0.01)  and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
+ Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
-Previous analyses in humans have suggested that this approach is limited by fact that a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
-To address this concern we took advantage of a measure of evolutionary constraint using genomic evolutionary rate profile (GERP) scores \cite{davydov2010} calculated across the maize genome \cite{rodgers2015}. 
+Previous analyses have suggested that this approach may have limited power because a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus with higher genetic diversity \cite{enard2014}. 
+To address this concern, we took advantage of genomic evolutionary rate profile (GERP) scores \cite{davydov2010}, a measure of evolutionary constraint, calculated across the maize genome \cite{rodgers2015}. 
 We re-analyzed substitutions in subsets of genes with the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
-As expected, we see higher overall diversity around substitutions in genes under weak purifying selection, but we still see no difference between synonymous and missense substitutions in either subset of the data.
+As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still see no difference between synonymous and missense substitutions in either subset of the data.
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
+\subsection{Diversity is strongly influenced by purifying selection}
 
+Selection can also reduce diversity in functional regions of the genome via removal of deleterious mutations, a process known to as purifying or background selection \cite{charlesworth1993}.
+We investigated purifying selection in maize and teosinte by evaluating the reduction of diversity within genes.
+Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in maize \citex. 
+The reduction in relative diversity is more pronounced in teosinte, however, reaching lower levels in genes and occurring over a wider region.  \jri{make sure we have tense consistent throughout. is/was etc.}
+We interpret this difference to imply that purifying selection has left a more pronounced signature in the teosinte genome . \jri{not sure this is quite right. is ``more pronounced signature'' same as ``ne is bigger and selection is stronger''? do we want to say this differently?}
 
-
-\subsection{Pairwise diversity is heavily influenced by purifying selection}
-
-Purifying selection refers to the situation where deleterious mutations arising in a population are continuously selected against.
-When this form of selection is operating, it can serve to reduce genetic variability at linked neutral sites, a phenomenon often called background selection \cite{charlesworth1993}. Purifying and background selection lead to lower diversity within genes and other functional sites relative to neutral regions.
-We investigated purifying selection in maize and teosinte by evaluating the average magnitude of reduced diversity within genes and recovery away from genes in both taxa.
-To enable comparisons between maize and teosinte, we standardized by neutral levels within each taxa, where neutral levels were defined as mean diversity at positions at least 0.01 cM distal from genes. For both maize and teosinte, pairwise diversity was reduced within genes and a recovery of diversity away from genes was observed. Interestingly, a stronger reduction of diversity and slower recovery was observed for teosinte than for maize, implying that purifying selection has left a more pronounced signature on pairwise diversity in the teosinte genome (Figure \ref{fig:purify}).
-
-
-
-\begin{figure*}[!htb]
+\begin{figure*}
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
@@ -156,87 +151,25 @@ Shown are \textbf{A} pairwise nucleotide diversity and \textbf{B} singleton dive
 gene for pairwise diversity and singletons, respectively. 
   Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. 
   Inset plots depict a smaller range on the x-axis. \label{fig:purify}
-  %\jri{should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.''}
   }
 \end{figure*}
 
-
 \subsection{Demography of maize domestication}
-To explore whether differences in purifying selection between maize
-and teosinte can be explained by demographic processes, we
-first estimated the parameters of maize domestication using large-scale
-sequencing data involving 23 inbred maize
-landraces and 13 teosinte inbred lines included in the HapMap 2 panel
-\cite{chia2012}. The maize
-lines were collected from across the Americas and the teosinte lines
-came from central Mexico. Before estimating demography, we compared
-the site frequency spectrum (SFS) in genic and non-genic regions, and
-observed substantial differences in the evolution of these classes of
-sites. For both maize and teosinte, the SFS within genes showed a
-dearth of low-frequency alleles and Tajima's D
-\cite{tajima1989} was therefore shifted
-to more positive values, as previously shown (Figure \ref{fig:purify}). This is consistent with the aforementioned purifying
-selection and indicates that genic regions are not evolving
-neutrally. Therefore, for demographic modeling we restricted analysis
-to sites at least 5 kb from gene start/stop positions.
+To explore whether differences in the efficacy of purifying selection between maize and teosinte can be explained by demographic processes, we estimated the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). 
+The most likely model estimates an ancestral $\theta$ of 0.0147 per bp, which translates to an effective population size of , which approximately matches a previous independent estimate \cite{eyre1998}. Assuming a mutation rate of $N_a \approx 123,000$ individuals given the mutation rate \cite{clark2005}.
+The maize population splits from teosinte $\approx 15,000$ generations in the paste with an initial size of only $\approx 5\%$ of ancestral $N_a$. 
+Following domestication we estimate considerable gene flow between the populations, estimating $M_{tm} = 1.35$  migrants per generation from teosinte to maize and $M_{mt} = 1.72$ migrants from maize to teosinte.
+Our model posits exponential growth in maize following its split from teosinte, and estimates a final modern effective population size of $N_m \approx 370,00$.
 
-
-
-
-We used diffusion approximation as implemented in
-$\delta\alpha\delta{i}$ \cite{gutenkunst2009} to find the domestication parameters that best explain
-the joint site frequency spectrum of maize and teosinte.  The model we optimized began with an
-equilibrium ancestral population of size $N_a$
-splitting into separate maize and teosinte populations $T_B$ generations in the past. Moving forward in
-time from the split, teosinte maintained the ancestral population size, while
-maize experienced an immediate effective population size change to
-$N_b$ individuals, followed by exponential growth to size
-$N_m$. Additionally, since the split $M_{tm}$ individuals migrated
-from teosinte into maize and $M_{mt}$ individuals migrated from maize
-to teosinte.
-
-The most likely model suggested an ancestral $\theta$ ($4N\mu$) per base pair of
-0.014734, which approximately matches a previous independent estimate \cite{eyre1998}. Assuming a mutation rate of $\mu =
-3 \times 10^{-8}$ \cite{clark2005}, this suggests an effective
-population size of $N_a = 122,783$ individuals, a population split
-$T_B = 15,523$ generations in the past, a maize bottleneck
-effective populations size of $N_b = 6,455$ individuals (5.26\% of
-$N_a$), a modern maize effective population size of $N_m = 366,973$
-individuals, $M_{tm} = 1.35$ migrants per generation from teosinte to
-maize, and $M_{mt} = 1.72$ migrants per generation from maize to
-teosinte (Figure \ref{fig:bottleneck}). We note that a population
-split over 15 thousand generations before present precedes estimates
-from
-archaeological data, which suggest maize domestication began
-no more than 10,000 years before present \cite{smith1995}. This could reflect teosinte population structure that was present before
-domestication. Also, note that the genetic time of the population
-split must precede physiological changes that could be identified
-archaelogically.   Additionally, because recent expansion is
-most evidenced by rare alleles, and since our limited sample size provides low
-power to detect rare alleles, we expect that the estimate of  $N_m = 366,973$, or $\sim 3N_a$, is likely an underestimate.
-
-Therefore, we utilized a complementary data set of 4,021 maize land-race individuals collected
-from across the Americas \textcolor{red}{(SeeDs reference here)} to
-obtain a less downward-biased estimate of the current maize effective
-population size. According to a singleton-based estimate of $\theta$
-\cite{fu1993}, which was utilized since rapid post-bottleneck expansion
-implies that rare alleles will most accurately reflect current maize
-demography, we obtained the estimate $N_e =
-  992,713.5$. Although less biased than the previously mentioned
-estimate, we note that ascertainment bias of the
-genotyping platform used to generate these data again biases this
-estimate downward.
-
-\begin{figure}[!htb]
+\begin{figure}
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.4\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
-\caption{Parameters of domestication as estimated by $\delta\alpha\delta{i}$. Notably,
-  the maize effective population size ($N_e$) during the domestication
-  bottleneck appears to have consisted of approximately 5.26\%
-  the ancestral $N_e$, before recovering two at least 2.98
-  times as large as the ancestral $N_e$ \jri{$M_{mt}$ and $tm$ are the reverse of what is described in text}. \label{fig:bottleneck} }
+\caption{Parameter estimates for a simple bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
 \end{figure}
+
+Because our relatively small sample size limits our ability to characterize the rare variants that are most informative of population expansion, we took advantage of a complementary data set of more than 4,000 maize landraces collected from across the Americas \cite{Hearne2015} to estimate the modern maize effective population size from low frequency variants. 
+This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 
 \subsection{Post-domestication expansion is apparent in patterns of singleton diversity}
 Motivated by the rapid post-domestication expansion in maize that is evident from our demographic analysis, we conducted an analysis of genome-wide patterns of singleton diversity. Singleton diversity measures the abundance of alleles that are only observed in one individual among the sample. As a class, singleton alleles depict the most recent patterns of evolution, but
@@ -282,10 +215,14 @@ We should additionally note that our observations do not exclude the possibility
 \jri{add note that demography inference will require regions far from genes, compare to \cite{wright2005,wang1999,eyre1998}. cite some theory or empirical paper showing this to be the case in humans/drosophila}
 Since we observed that classical hard sweeps do not explain patterns of maize diversity, it is perhaps unsurprising that we instead found evidence of demographic history contributing substantially to genetic diversity. Our estimate of the demographic history of maize, which is the first estimate of maize demographic history to utilize whole-genome-sequence (WGS) data, allowed us to disentangle the confounding parameters of bottleneck strength and bottleneck intensity. This confounding limited previous domestication estimates \cite{wright2005}. By utilizing the two-dimensional site frequency spectrum (SFS) between maize and teosinte for inference \cite{gutenkunst2009} we estimate that the maize effective population size during the bottleneck was approximately 5\% that of teosinte. A bottleneck of this magnitude may have enabled moderately deleterious alleles to reach intermediate frequency in maize, while also increasing the probability that strongly deleterious alleles segregating at low frequency in teosinte were purged from the maize gene pool, due to elevated drift as is predicted during a domestication bottleneck \cite{tajima1989}.
 
-After the initial bottleneck, our analysis suggests that maize $N_e$ expanded to reach levels much greater than that of teosinte. Our WGS-based estimate shows that the $N_e$ of landrace maize is at least 3X that of ancestral teosinte, while our singleton-based estimate from the the SeeDs project data \textcolor{red}{(citation)} implies an $N_e$ of close to 1 million individuals, or $\sim$8X that of ancestral teosinte. From the perspective of a new mutation, both of these estimates are biased downward, since they represent past reductions in diversity due to the aforementioned bottleneck. A back-of-the-envelope calculation of modern $N_e$ can be made by assuming there are 47.9 million ha of landrace maize in production \cite{cimmyt1999}, 42,000 plants per ha for open pollinated maize varieties \cite{van2010}, and conservatively that no more than one in 1,000 plants contribute gametes to the next generation. This calculation implies a modern $N_e \geq  2$ billion individuals, and incorporates no individuals from hybrid breeding programs. If for some reason this back-of-the-envelope calculation is an overestimate, even by several orders of magnitude, it is clear that the post-domestication expansion in maize $N_e$ is enormous. Patterns of singleton diversity in maize, as discussed in more detail in the next section, demonstrate that this recent expansion has a notable impact on the maize genome.
+\jri{add note here that We note that a population split over 15 thousand generations before present precedes estimates from archaeological data, which suggest maize domestication began no more than 10,000 years before present \cite{smith1995}. 
+This could reflect teosinte population  structure that was present before domestication. 
+Also, note that the genetic time of the population split must precede physiological changes that could be identified archaelogically. }
+
+After the initial bottleneck, our analysis suggests that maize $N_e$ expanded to reach levels much greater than that of teosinte. Our WGS-based estimate shows that the $N_e$ of landrace maize is at least 3X that of ancestral teosinte, while our singleton-based estimate from the the SeeDs project data \textcolor{red}{(citation)} implies an $N_e$ of close to 1 million individuals, or $\approx 8X$ that of ancestral teosinte. \jri{note ascertainment of GBS biases it downward} From the perspective of a new mutation, both of these estimates are biased downward, since they represent past reductions in diversity due to the aforementioned bottleneck. A back-of-the-envelope calculation of modern $N_e$ can be made by assuming there are 47.9 million ha of landrace maize in production \cite{cimmyt1999}, 42,000 plants per ha for open pollinated maize varieties \cite{van2010}, and conservatively that no more than one in 1,000 plants contribute gametes to the next generation. This calculation implies a modern $N_e \geq  2$ billion individuals, and incorporates no individuals from hybrid breeding programs. If for some reason this back-of-the-envelope calculation is an overestimate, even by several orders of magnitude, it is clear that the post-domestication expansion in maize $N_e$ is enormous. Patterns of singleton diversity in maize, as discussed in more detail in the next section, demonstrate that this recent expansion has a notable impact on the maize genome.
 
 
-\subsection{Demography strongly impacts efficiency of purifying selection}
+\subsection{Demography influences the efficiency of purifying selection}
 The observation that maize pairwise diversity is less impacted by the distance to the nearest gene than is teosinte pairwise diversity is reasonable from a long-term evolutionary standpoint. Theory has established that purifying selection is more efficient in a large population than in a small one \cite{kimura1984}, and this observation most likely reflects that prediction. More specifically, if teosinte $N_e$ remained relatively constant while maize bottlenecked and recovered exponentially, this provides that the average $N_e$ of maize over the previous several thousand generations is much smaller than that of teosinte, regardless of how much maize has ballooned in the recent past. Therefore, our observation shows that purifying selection in maize has not purged deleterious alleles, or the neutral alleles they are linked to, as effectively as in teosinte.
 
 The reversal of this trend when we analyze only singleton diversity instead of pairwise diversity, however, stands out as a notable observation. Every mutation begins as a singleton (an allele present in only one individual), and therefore singletons are, on average, the youngest class of alleles that can be observed. Therefore unlike pairwise patterns of diversity, which are most heavily influenced by intermediate frequency alleles based on the definition of $\pi$ \cite{nei1979}, singleton diversity is most influenced by recent patterns of evolution. Hence, because our demographic estimation indicates dramatic expansion of maize $N_e$ in the recent past, we expect for purifying selection to presently operate more efficiently in maize than in teosinte. This observation is very clearly demonstrated by the fact that singleton diversity in maize is more impacted by the distance to the nearest gene than it is in teosinte, as was shown in Figure \ref{fig:purify}.
@@ -316,15 +253,12 @@ We assumed individuals were fully inbred and treated each line as a single haplo
 Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
 
 \subsection{Demographic inference}
-We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS.
+We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS, using only sites $>5 kb$ from a gene to ameliorate the effects of linked selection.
 We modeled a teosinte population of constant effective size $N_a$, that at time $T_b$ generations in the past gives rise to a maize population of size $N_b$ which grows exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck})
-The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  
+The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  \jri{$M_{mt}$ and $tm$ are the reverse of what are in figure}
 We fixed $N_a$ using $\delta\alpha\delta{i}$'s estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $3 \times 10^{-8}$ \cite{clark2005}. 
 We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations and allowing initial values to be randomly perturbed by a factor of 2.  
-Initial values and upper and lower bounds can be found in table \X. \jri{this looked terrible in text, please make a supp. table.  keep track of notation as e.g. we explain $N_b$ as population size of bneck, but in reality parameter we fit is $\frac{N_b}{N_a}$}
-%, setting initial parameter values at $\frac{N_b}{N_a}=0.02$, $\frac{N_m}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_m}{N_a})(T_b-i)}{T_b}}$.
-%\jri{make sure these are right (e.g. is it 2Na or 4Na for Tb?). note that we have to redo this in fractions or words because above you call Nb a population size when in reality we are estimating a proportion}
-%We allowed initial values to be , and set upper and lower bounds such that $10^{-7} \leq \frac{N_b}{N_a} \leq 2$, $10^{-7} \leq \frac{N_m}{N_a} \leq{200}$, $0 \leq \frac{T_b}{2N_a} \leq 1$, $10^{-10}\leq \frac{M_{tm}}{N_a}\leq 10^{-3}$, and $10^{-10}\leq \frac{M_{mt}}{N_c}\leq 10^{-3}$
+Initial values and upper and lower bounds can be found in table \X. \jri{this looked terrible in text, please make a supp. table.  keep track of notation as e.g. we explain $N_b$ as population size of bneck, but in reality parameter we fit is $\frac{N_b}{N_a}$. my stab at notation is $\frac{N_b}{N_a}=0.02$, $\frac{N_m}{N_a}=3$, $\frac{T_b}{2N_a}=0.04$, and $\frac{M_{mt}}{N_c}=\frac{M_{tm}}{N_a}=10^{-5}$, where the maize population size $Nc$ at time $i$ generations in the past is $N_c=N_ae^{\frac{ln(\frac{N_m}{N_a})(T_b-i)}{T_b}}$ but if you use these make sure they are right (e.g. is it 2Na or 4Na for Tb?).}
 We report parameter estimates from the optimization run with the highest log-likelihood.
 
 We further made use of a large genotyping data set of more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts.
@@ -342,51 +276,18 @@ We identified substitutions in maize and teosinte as all sites with a fixed diff
 Substitutions were classified as synonymous, missense, or noncoding using the ensembl variant effects predictor \cite{mclaren2010}.
 For each window with $\geq 100bp$ of data we computed the genetic distance between the window center and the nearest synonymous and missense substitution as well as the genetic distance to the nearest gene transcript. \jri{this said gene center, but we're not using gene center anymore, right?} 
 
-%Teosinte diversity is
-%generally higher then maize diversity. Therefore, to enable comparisons between
-%the reduction of diversity around genes in maize and teosinte, a
-%neutral measure of pairwise and singleton diversity for each taxa was
-%estimated. For pairwise diversity, this neutral measure was defined according to
-%mean pairwise diversity at windows greater than 0.01 cM from the nearest
-%gene. For singletons, both maize and teosinte still showed reduced
-%diversity at a distance of 1 cM, so neutral diversity in this case was
-%defined as mean singleton diversity at positions 0.02 cM or greater
-%from genes. Then, pairwise and singleton diversity at each window was
-%standardized by dividing by the corresponding neutral
-%measure. Separately for pairwise and singleton diversity in maize and
-%teosinte, . Significant differences were assessed by taking 100 bootstrap
-%samples from each set of diversity windows and re-fitting the cubic smoothing spline to each. Then, the
-%2.5\% and 97.5\% quantiles of values along the bootstrapped splines
-%were identified.
-
-%To verify that this approach is robust to reduced power at highly conserved sites \cite{enard2014}, we applied the method to subsets of sites that included only positions nearest to the  most- or least-conserved 10\% of genes data. This was achieved by assigning every gene a GERP score corresponding to the average score observed across it \cite{rodgers2015}. Next, genes in the top and bottom 10\% quantiles of GERP score were isolated. Two datasets were created, each including all diversity windows who's nearest gene was in the high or low GERP score sets. Finally, Loess fits of diversity vs. distance to gene were computed from sites within each GERP score.
-
-%In addition  next Two types of diversity surrounding genes were investigated. The first
-%was pairwise diversity in 1kb windows, as described previously. The
-%second was singleton diversity in 1kb windows. Singletons represent
-%the rarest class of alleles that this dataset can identify, and
-%collectively demonstrate the most recent patterns of evolution. Minor
-%allele frequencies were estimated with ANGSD \cite{korneliussen2014} using the
-%same quality filters previously described. Then, the number of
-%singletons in each non-overlapping 1kb window was calculated with R
-%for both maize and teosinte \cite{R2014}. For maize, we also generated a parallel set of downsampled
-%singleton data, for which binomial sampling within R was conducted
-%based on allele frequencies at each site, to generate a singleton
-%psuedo dataset of sample size 13, equivalent to our sample size for
-%teosinte. BiomaRt \cite{durinck2009, durinck2005} was then used to identify
-%the center of each gene. Next, the distance from each diversity window center
-%to the nearest gene center was computed.
-
 \subsection{Selection scan}
 We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
 
-
-%JRI IDEAS:
-% look at SFS of SNPs by GERP score in maize vs teosinte. shift to lower freq. should be seen at lower GERP scores in maize
-% discuss our estimates of deleterious mutation rate from B stuff.  these suggest only ~25% of mutations are deleterious, which contrasts results from a standard DFE
-% do a standard DFE! this gives us the proportion of mutations in categories of Ns. Can use Eyre-Walker software.
-% i think we do need to say something about load. add up GERP scores like Li?
-
+\color{red}
+{\bf Notes:}
+\begin{itemize}
+ 
+ \item should also add the singleton vs pi comparison within species as a supplemental figure. if $\pi$/singleton curves {\bf don't} match, will need to explain this suggests teosinte not in equilibrium.  good justification i think for msmc model, which we then use to say ``gee whiz, not perfect equilibrium but who cares because the big interesting demography is in maize.''
+ 
+ 
+ \end{itemize}
+\color{black}
 
 \end{materials}
 
