@@ -153,7 +153,8 @@ We interpret these combined results as suggesting that purifying selection has l
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
 \caption{Relative diversity versus distance to nearest gene in maize and teosinte. 
-Shown are \textbf{A} pairwise nucleotide diversity and \textbf{B} singleton diversity.  Relative diversity is calculated compared to the mean diversity in windows $\geq 0.01 cM$ or $\geq 0.02 cM$ from the nearest
+Shown are \textbf{A} pairwise nucleotide diversity and \textbf{B} singleton diversity.  
+Relative diversity is calculated compared to the mean diversity in windows $\geq 0.01 cM$ or $\geq 0.02 cM$ from the nearest
 gene for pairwise diversity and singletons, respectively. 
   Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. 
   Inset plots depict a smaller range on the x-axis. \label{fig:purify}
@@ -162,10 +163,10 @@ gene for pairwise diversity and singletons, respectively.
 
 \subsection{Demography of maize domestication}
 To explore whether differences in the efficacy of purifying selection between maize and teosinte can be explained by demographic processes, we estimated the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). 
-The most likely model estimates an ancestral $\theta$ of 0.0147 per bp, which translates to an effective population size of , which approximately matches a previous independent estimate \cite{eyre1998}. Assuming a mutation rate of $N_a \approx 123,000$ individuals given the mutation rate \cite{clark2005}.
+The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ individuals given the mutation rate \cite{clark2005}.
 The maize population splits from teosinte $\approx 15,000$ generations in the paste with an initial size of only $\approx 5\%$ of ancestral $N_a$. 
-Following domestication we estimate considerable gene flow between the populations, estimating $M_{tm} = 1.35$  migrants per generation from teosinte to maize and $M_{mt} = 1.72$ migrants from maize to teosinte.
-Our model posits exponential growth in maize following its split from teosinte, and estimates a final modern effective population size of $N_m \approx 370,00$.
+Following domestication we estimate considerable gene flow between the populations: $M_{tm} = 1.35$  migrants per generation from teosinte to maize and $M_{mt} = 1.72$ migrants from maize to teosinte. \jri{do you get these numbers by multiplying estimates by Na and modern N_maize? if so we should probably report the proportions not the absolute number of inds.}
+After its split from teosinte our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,00$.
 
 \begin{figure}
 %\vspace*{.05in}
@@ -177,35 +178,20 @@ Our model posits exponential growth in maize following its split from teosinte, 
 Because our relatively small sample size limits our ability to characterize the rare variants that are most informative of population expansion, we took advantage of a complementary data set of more than 4,000 maize landraces collected from across the Americas \cite{Hearne2015} to estimate the modern maize effective population size from low frequency variants. 
 This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 
-\subsection{Post-domestication expansion is apparent in patterns of singleton diversity}
-Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and thuse younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
-We thus repeated our analysis of diversity
- an analysis of genome-wide patterns of diversity using alleles present in only a single individual in the sample. 
-These ingleton diversity measures the abundance of alleles that are only observed in one individual among the sample. As a class, singleton alleles depict the most recent patterns of evolution, but
-they also have the lowest effect on pairwise diversity. Therefore, unlike
-pairwise diversity, patterns of singleton
-diversity reflect recent patterns of evolution. Since our sample size
-for maize (n=23) was larger than teosinte (n=13), maize singletons were
-analyzed directly as well as down-sampled to reflect the sample size of
-teosinte. For singletons, our definition of
-neutral diversity was defined as diversity at positions at
-least 0.02 cM distal from genes. When
-evaluating the data in this manner, a very different pattern
-emerged compared to what we saw with respect to pairwise diversity. Maize singleton diversity was at least as reduced as teosinte singleton
-diversity near genes, but recovered more slowly
-(Figure \ref{fig:purify}), implying that in the
-recent past maize has been more influenced by purifying selection than has
-teosinte.
+\subsection{Population expansion leads to stronger purifying selection in modern maize}
+Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and thus on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
+We thus repeated our analysis of diversity using alleles present in only a single individual in the sample.
+In direct contrast to patterns observed for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B).  
+This pattern remained after downsampling our maize data to account for differences in sample size. 
+Taken together, these results suggest that demographic history and population size change have impacted the efficacy of purifying selection during maize evolution.
 
-Together, these findings suggest that demographic history has
-a strong influence on the effect of purifying selection. Historically,
-teosinte has had a larger population size than maize, and only
-recently has maize population size overcome that of teosinte. Since
-the efficacy of purifying selection scales with population size,
-these results likely reflect changes in $N_e$ more than they reflect
-underlying changes in selection pressure.
+Patterns of diversity around substitutions, however
 
-Similarly, to complement our investigation of pairwise diversity surrounding substitutions, we studied patterns of singleton diversity surrounding synonymous and non-synonymous substitutions in maize (Figure \ref{sFig:singleton}). A nearly identical pattern to that shown in Figure \ref{fig:hardSweeps} was observed. This further demonstrates that even the most recent selection patterns in maize are not dominated by hard sweeps.
+
+
+
+
+
 
 
 \section{Discussion}
