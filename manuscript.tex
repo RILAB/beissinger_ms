@@ -117,8 +117,7 @@ We investigated purifying selection in maize and teosinte by evaluating the redu
 Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in maize \cite{tenaillon2002,chia2012}. 
 The reduction in relative diversity is more pronounced in teosinte, however, reaching lower levels in genes and occurring over a wider region.  
 
-Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation. \jri{need a citation?}
-Such ``soft sweeps'', however, are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes.
+Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. Such ``soft sweeps'', however, are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes.
 To test this possibility, we performed a genome-wide scan for selection using a method expected to be reasonably sensitive to both hard and soft sweeps \cite{garud2015}. 
 Even after removing genes in the top 20\% of the H12 statistic used to identify targets of selection, however, qualitative differences between maize and teosinte in patterns of diversity in and near genes remained unchanged (Figure \ref{sFig:H12}).
 
@@ -158,7 +157,7 @@ Finally, we reconstructed the demographic history of maize and teosinte using a 
 Though this analysis does highlight a potential weakness with our assumption of a constant size for teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \X). 
 
 \subsection{Population expansion leads to stronger purifying selection in modern maize}
-Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and thus on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
+Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and therefore on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
 We thus repeated our analysis of diversity using alleles present in only a single individual in the sample.
 In direct contrast to patterns observed for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B), even after downsampling our maize data to account for differences in sample size. %\jri{we should test singleton curve for genes not in 20\% highest H12 also!} I don
 Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, as indicated by our coalescent-based demographic analysis, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). 
@@ -167,30 +166,14 @@ These results suggest that demographic history and population size change have i
 In contrast, analysis of singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) provides a nearly identical pattern to that shown in Figure \ref{fig:hardSweeps}, providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize.  
 
 \section{Discussion}
+
 \subsection{Hard sweeps do not shape genome-wide diversity in maize}
 
-\color{blue}
+Our findings demonstrate that hard selective sweeps have not contributed substantially to genome-wide patterns of diversity in maize, and our analysis restricting to sites undergoing the strongest and weakest purifying selection confirm this result is robust to previously highlighted limitations \cite{enard2014}. Our approach does not address sweeps on noncoding variants, but it agrees with a growing body of previous evidence arguing against hard sweeps shaping maize variability. For instance, population genetic studies of local adaptation \cite{Takuno15062015} and modern breeding \cite{beissinger2014} demonstrate the importance of selection on standing variation as opposed to on new mutations. Even during domestication, very few differences between maize and teosinte were fixed \cite{hufford2012}. Moreover, of domestication loci that have been well studied from a population genetics standpoint, only one shows a signal of a hard sweep \cite{wang2015}, although there are several consistent with selection on standing variation \cite{studer2011,wills2013} or selection on multiple mutations \cite{wills2013}.
 
-no strong evidence for hard sweeps, even considering constraint (GERP).
-although this is not super powerful test as misses sweeps on noncoding and only has power if substantial proportion of missense sites are swept, much previous evidence argues against hard sweeps in maize.  
-popgen studies of local adaptation \cite{Takuno15062015} and modern breeding \cite{beissinger2014} show importance of standing variation. 
-even in domestication, few fixed differences between maize and teo \cite{hufford2012}, and of domestication loci that have been well studied from a popgen standpoint only one shows hard sweep \cite{wang2015} while there are multiple examples of standing variation \cite{studer2011, wills2013} or selection on multiple mutations \cite{wills2013}. \jri{maybe others? barren stalk 1 (gallavotti 2004)? ramosa 1 (sigmon 2010)? }
+The lack of hard sweeps patterning diversity differs from drosophila \cite{sattath2011} and capsella \cite{williamson2014},but is consistent with humans \cite{hernandez2011}. In a related study, \cite{corbett2015} showed that selection tends to have an elevated impact on reducing diversity in species with large population size compared to small. This may explain why maize and humans, both bottlenecked species, show similar patterns while drosophila and capsella are different. However, we also do not observe abundant hard sweeps in teosinte, which calls this hypothesis into question.
 
-this lack of hard sweeps patterning diversity differs from drosophila \citex and capsella \citex and many species with high Ne \jri{cite corbet-detig}. \jri{add something about corbet-dettig results for maize}
-but is consistent with humans \cite{hernandez2011}
-discussion of whether we expect hard vs soft in maize \cite{messer2013population}.
-$\theta_b = 2N\mu_b$ with $mu_b$ being mutation rate of beneficial alleles of selection coefficient s. 
-if $\theta_b > \frac{1}{log{Ns_b}}$ then adaptation from multiple mutations should be common. 
-if  $\theta_b > \frac{1}{log{2Ns_b}}$ then adaptation from standing neutral variation should be common, or if $\theta > \frac{1}{log(1+\frac{2Ns_b}{2Ns_d + 1}}$ for standing deleterious variation with selection coefficient $s_d$. \jri{i think this latter assumes codominance} codominant?) 
-
-%Our findings indicate that hard selective sweeps have not contributed substantially to genome-wide patterns of diversity in maize.
-%One known example of positive selection on a non-genic mutation involves the \emph{tb1} locus of maize, which is one of the best characterized examples of positive selection on a ``domestication gene'' in any crop \cite{clark2006}. However, the maize \emph{tb1} allele was already present in teosinte before domestication \cite{studer2011}, so this this example is in agreement with our finding that hard sweeps are rare. The \emph{gt1} locus is another well-characterized case of positive selection operating on standing variation at an enhancer region \cite{wills2013}. Instances of selection on standing variation such as these, often called soft sweeps, may be a major contributor to maize patterns of diversity \cite{beissinger2014}, and this could be part of the explanation as to why hard sweeps appear to be so rare, despite obvious morphological differences between maize and teosinte.
-
-%Unfortunately, our ability to accurately identify soft sweeps, and particularly to distinguish them from hard sweeps, remains limited \cite{innan2004,messer2013}. However, we implemented a scan based on the H12 statistic, which is designed to identify both hard and soft sweeps with reasonable power \cite{garud2015}. Although the goal of this study was not to identify specific sweeps, it may be that the outlier sites distinguished by H12 are primarily composed of soft sweeps instead of hard. Similarly, previous studies scanning for evidence of positive selection in maize \cite{hufford2012} may have picked up primarily evidence of soft sweeps.
-
-%We should additionally note that our observations do not exclude the possibility of infrequent hard sweeps having taken place during maize evolution. In fact, the maize locus \emph{tga1} that has been shown to correspond to a hard sweep at an amino-acid changing mutation \cite{wang2015}. Surrounding \emph{tga1},  our data demonstrate a pattern consistent with a hard sweep. But, our data demonstrate that instances such as this are infrequent. This contrasts sharply with \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, where differences in diversity surrounding synonymous and non-synonymous substitutions are clear suggesting hard-sweeps are abundant. However, it agrees with what has been seen for humans \cite{hernandez2011}. 
-
-\color{black}
+Another possibility is that maize and teosinte don't show evidence of abundant hard sweeps because instead positive selection tends to operate in the form of soft sweeps. The theory of when soft sweeps are expected was worked out by \cite{messer2013population}. They showed that for $\theta_b = 2N\mu_b$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b > 0$, if $\theta_b > \frac{1}{log({Ns_b})}$, then soft sweeps in the form of adaptation from multiple mutations should be common. Conversely, for neutral sites that somehow become beneficial (e.g. change in environment), if $\theta_b > \frac{1}{log({2Ns_b})}$ then soft sweeps in the form of adaptation from standing neutral variation should be common. Alternatively, for previously deleterious sites that become beneficial, if $\theta > \frac{1}{log \left(1+\frac{2Ns_b}{2Ns_d + 1} \right)}$, where $s_d$ is the previous selection coefficient, soft sweeps again the form of adaptation from standing variation should be common. The implications of this theory are that soft sweeps are common when $\theta_b \geq 1$, which can be achieved through a large population size or a high mutation rate. If $\mu = 3 \times 10^{-8}$  \cite{clark2005}, this implies a population size of $\geq$ 16.67 million, which our demographic analysis shows is larger than that of teosinte but not out of the question for modern maize.
 
 
 \subsection{Demography of domestication}
@@ -207,7 +190,7 @@ Although we estimate the maize population split $\approx 5,000$ years earlier th
 We first note that the timing of the genetic split between populations likely preceded the anatomical changes that can be identified in the archaeological record. 
 We also caution, however, that our estimate may be inflated by population structure as our geographically diverse sample may include populations diverged from those that gave rise to maize.
 
-Although we estimate that the modern effective size of maize is three times that of teosinte, the small size of our sample dramatically reduces our power to estimate rapid population growth \citex.  
+Although we estimate that the modern effective size of maize is three times that of teosinte, the small size of our sample dramatically reduces our power to estimate rapid population growth since rapid growth is most evidenced by rare alleles\cite{keinan2012}.  
 A better estimate of the effective size of modern maize comes from our analysis of singleton diversity in a large sample of maize landraces \cite{Hearne2015}.
 These data suggest a modern effective size of nearly 1 million, nearly eight times higher than modern teosinte.
 Nonetheless, missing data, sample size, and ascertainment bias in the genotyping data all bias this estimate downward as well.
@@ -233,12 +216,11 @@ A consequence of the inefficient purifying selection that maize experienced duri
 All scripts used for analysis are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.} 
 
 \subsection{Plant materials}
-We made use of published sequences from inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap2 panel as part of the Panzea project (bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}) \cite{chia2012, lemmon2014}. 
-From these data, we removed 4 teosinte individuals that were not ssp. \emph{parviglumis} or appeared as outliers in an initial principal component analysis (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single tripsacum (\emph{T. dactyloides}) individual as an outgroup (bam file available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}).
+We made use of published sequences from inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project (bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}) \cite{chia2012, lemmon2014,hapmap3}. 
+From these data, we removed 4 teosinte individuals that were not ssp. \emph{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single tripsacum (\emph{T. dactyloides}) individual as an outgroup (bam file available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}).
 
 \subsection{Physical and genetic maps}
-Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/). \textcolor{red}{(I think we need more details here, but Robert did it... what to cite? also, notice Robert is in acknowledgements.)}
-All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following Li \emph{et al.} \cite{li2011statistical}.
+Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{hapmap3}. All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following Li \emph{et al.} \cite{li2011statistical}.
 We converted physical coordinates to genetic coordinates via linear interpolation of the previously published 1cM resolution NAM genetic map \cite{glaubitz2014}. 
 
 \subsection{Estimating the site frequency spectrum}
@@ -276,7 +258,7 @@ We scanned the genome to identify sites that have experienced recent positive se
 \end{materials}
 
 \begin{acknowledgments}
-We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. \textcolor{red}{We thank Robert Bukowski for providing Panzea data.} Funding was provided by NSF Plant Genome Research Project 1238014.
+We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. \textcolor{red}{We thank Robert Bukowski and Qi Sun for providing early-access Panzea data.} Funding was provided by NSF Plant Genome Research Project 1238014.
 \end{acknowledgments}
 
 \bibliography{Reference}
