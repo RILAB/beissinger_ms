@@ -76,7 +76,7 @@ maize domestication bottleneck.  \cite{chia2012}.
 \section{Results}
 \subsection{Patterns of diversity differ between genic and  non-genic regions of the genome}
 To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we reanalyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 project \cite{chia2012}.
-We find broad differences in genic and non-genic diversity consistent with earlier results  \cite{hufford2012} (Figure \ref{fig:diversity}).  
+We find broad differences in genic and non-genic diversity consistent with earlier results  \cite{hufford2012} (Figure \ref{fig:diversity}\jri{pi graph should use greek letter $\pi$}).  
 In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at positions at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
@@ -85,11 +85,10 @@ These observations suggest that diversity in genes is not evolving neutrally, bu
 
 \begin{figure}
 \begin{center}
-  \includegraphics[width=.5\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
+  \includegraphics[width=.4\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
-\caption{Pairwise diversity (Pi) and Tajimas D were calculated inside and outside of genes for maize and teosinte. In both taxa, a dearth of rare alleles was observed within genes relative to outside of genes, which led to higher values of Tajima's D outside of genes than inside.{\bf A:} Mean and standard deviation of pi for 1 kb genic and non-genic windows of maize; {\bf B:} Mean and standard deviation of pi for 1 kb genic and non-genic windows of teosinte  {\bf C:} Histogram of Tajima's D in 1 kb windows in maize; {\bf D:} Histogram of Tajima's D in 1 kb windows in teosinte.  \label{fig:diversity} }
+\caption{Pairwise diversity $\pi$ (A,B) and Tajimas D (C,D) in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means and one standard deviation.   \label{fig:diversity} }
 \end{figure}
-
 
 \subsection{Hard sweeps do not explain diversity differences}
 Selection acting to increase the frequency of a new beneficial mutation will leave a signature of reduced diversity at surrounding linked sites \cite{smith1974}.
@@ -146,12 +145,12 @@ The maize population splits from teosinte $\approx 15,000$ generations in the pa
 Following domestication we estimate considerable gene flow between the populations: $M_{tm} = N_a \times 1.1 \times 10^{-5}$  migrants per generation from teosinte to maize and $M_{mt} = N_a \times 1.4 \times 10^{-5}$ migrants from maize to teosinte. 
 After its split from teosinte our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
 
-\begin{figure}
+\begin{figure*}
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.4\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
 \caption{Parameter estimates for a simple bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
-\end{figure}
+\end{figure*}
 
 Because our relatively small sample size limits our ability to characterize the rare variants that are most informative of population expansion, we took advantage of a complementary data set of more than 4,000 maize landraces collected from across the Americas \cite{Hearne2015} to estimate the modern maize effective population size from low frequency variants. 
 This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
