@@ -48,7 +48,7 @@ selection have on whole-genome patterns of genetic variability remains limited.
 
 
 Maize represents an excellent organism to study these
-phenomena. Maize is a species of tremendous importance worldwide as
+phenomena. Maize is a species of tremendous importance worldwide as 
 both a staple crop \cite{shiferaw2011} and as a model for
 understanding plant evolution \cite{strable2009}. Broadly speaking, archaeological and genetic studies have
 established that maize domestication is likely to have taken place in
@@ -120,10 +120,12 @@ We investigated purifying selection in maize and teosinte by evaluating the redu
 Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in maize \cite{tenaillon2002,chia2012}. 
 The reduction in relative diversity is more pronounced in teosinte, however, reaching lower levels in genes and occurring over a wider region.  
 
-Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. Such ``soft sweeps'', however, are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. To test this possibility, we performed a genome-wide scan for selection using a method expected to be reasonably sensitive to both hard and soft sweeps \cite{garud2015}; 
-after removing genes in the top 20\% of the H12 statistic used to identify targets of selection, we observe that qualitative differences between maize and teosinte in patterns of diversity in and near genes remained unchanged (Figure \ref{sFig:H12}A).
+Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. 
+Such ``soft sweeps'', however, are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. 
+To test this possibility, we performed a genome-wide scan for selection using a method expected to be reasonably sensitive to both hard and soft sweeps \cite{garud2015}. 
+After removing genes in the top 20\% of the H12 statistic used to identify targets of selection, we observe that qualitative differences between maize and teosinte in patterns of diversity in and near genes remained unchanged (Figure \ref{sFig:H12}A).
 
-We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size. 
+We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.\jri{weird that this is a 1-sentence paragraph?} 
 
 \begin{figure*}
 %\vspace*{.05in}
@@ -142,7 +144,7 @@ gene for pairwise diversity and singletons, respectively.
 To explore whether differences in the efficacy of purifying selection between maize and teosinte can be explained by demographic processes, we estimated the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). 
 The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ individuals given the mutation rate \cite{clark2005}.
 The maize population splits from teosinte $\approx 15,000$ generations in the past with an initial size of only $\approx 5\% $ of ancestral $N_a$. 
-Following domestication we estimate considerable gene flow between the populations: $M_{tm} = N_a \times 1.1 \times 10^{-5}$  migrants per generation from teosinte to maize and $M_{mt} = N_a \times 1.4 \times 10^{-5}$ migrants from maize to teosinte. 
+Following domestication we estimate considerable gene flow between the populations: $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
 After its split from teosinte our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
 
 \begin{figure*}
@@ -155,16 +157,15 @@ After its split from teosinte our model posits exponential population growth in 
 Because our relatively small sample size limits our ability to characterize the rare variants that are most informative of population expansion, we took advantage of a complementary data set of more than 4,000 maize landraces collected from across the Americas \cite{Hearne2015} to estimate the modern maize effective population size from low frequency variants. 
 This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 
-\color{blue}
-Finally, we reconstructed the demographic history of maize and teosinte using a recently developed coalescent approach \citex that does not require conditioning on a particular model (Figure \X).
-Though this analysis does highlight a potential weakness with our assumption of a constant size for teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \X). 
-\color{black}
+%MSMC results
+%Finally, we reconstructed the demographic history of maize and teosinte using a recently developed coalescent approach \citex that does not require conditioning on a particular model (Figure \X).
+%Though this analysis does highlight a potential weakness with our assumption of a constant size for teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \X). 
 
 \subsection{Population expansion leads to stronger purifying selection in modern maize}
 Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and therefore on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
 We thus repeated our analysis of diversity using alleles present in only a single individual in the sample.
 In direct contrast to patterns observed for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B), even after downsampling our maize data to account for differences in sample size. This relationship was maintained when we analyzed diversity surrounding genes that did not show evidence of hard or soft sweeps according to H12 (Figure \ref{sFig:H12})
-Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, as indicated by our coalescent-based demographic analysis, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). 
+Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). %ref. here to MSMC if we use: "as indicated by our coalescent-based demographic analysis"
 
 These results suggest that demographic history and population size change have impacted the efficacy of purifying selection during maize evolution.
 In contrast, analysis of singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) provides a nearly identical pattern to that shown in Figure \ref{fig:hardSweeps}, providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize.  
@@ -192,7 +193,7 @@ Although we estimate the maize population split $\approx 5,000$ years earlier th
 We first note that the timing of the genetic split between populations likely preceded the anatomical changes that can be identified in the archaeological record. 
 We also caution, however, that our estimate may be inflated by population structure as our geographically diverse sample may include populations diverged from those that gave rise to maize.
 
-Although we estimate that the modern effective size of maize is three times that of teosinte, the small size of our sample dramatically reduces our power to estimate rapid population growth since rapid growth is most evidenced by rare alleles\cite{keinan2012}.  
+Although we estimate that the modern effective size of maize is three times that of teosinte, the small size of our sample dramatically reduces our power to identify low frequency alleles most sensitive to rapid population growth \cite{keinan2012}.  
 A better estimate of the effective size of modern maize comes from our analysis of singleton diversity in a large sample of maize landraces \cite{Hearne2015}.
 These data suggest a modern effective size of nearly 1 million, nearly eight times higher than modern teosinte.
 Nonetheless, missing data, sample size, and ascertainment bias in the genotyping data all bias this estimate downward as well.
@@ -202,7 +203,7 @@ Using this lower bound on planting density, ignoring all industrial maize agricu
 Clearly, the effective size of modern maize is extremely large.
 
 \subsection{Demography influences the efficiency of purifying selection}
-The observation that maize pairwise diversity is less impacted by the distance to the nearest gene than is teosinte pairwise diversity is reasonable from a long-term evolutionary standpoint. Purifying selection works more efficiently in a large population than in a small one \cite{kimura1984}, so this observation likely reflects that prediction. Since maize bottlenecked before recovering exponentially, the average $N_e$ of maize over the previous several thousand generations is much smaller than that of teosinte. Therefore, our observation shows that purifying selection in maize has not purged deleterious alleles, or the neutral alleles they are linked to, as effectively as in teosinte.
+The observation that pairwise diversity in maize is less affected by the distance to the nearest gene than in teosinte is reasonable from a long-term evolutionary standpoint. Purifying selection works more efficiently in a large population than in a small one \cite{kimura1984}, so this observation likely reflects that prediction. Since maize bottlenecked before recovering exponentially, the average $N_e$ of maize over the previous several thousand generations is much smaller than that of teosinte. Therefore, our observation shows that purifying selection in maize has not purged deleterious alleles, or the neutral alleles they are linked to, as effectively as in teosinte.
 
 The reversal of this trend when we analyze only singleton diversity instead of pairwise diversity stands out as a notable. Every mutation begins as a singleton (an allele present in only one individual), and therefore singletons are, on average, the youngest class of alleles that can be observed. Unlike pairwise patterns of diversity, which are most heavily influenced by intermediate frequency alleles based on the definition of $\pi$ \cite{nei1979}, singleton diversity is most influenced by recent patterns of evolution. Hence, because our demographic estimation indicates dramatic expansion of maize $N_e$ in the recent past, we expect for purifying selection to presently operate more efficiently in maize than in teosinte. This observation is very clearly demonstrated by the fact that singleton diversity in maize is more impacted by the distance to the nearest gene than it is in teosinte, as was shown in Figure \ref{fig:purify}.
 
@@ -242,9 +243,17 @@ We further made use of a large genotyping data set of more than 4,000 maize land
 We filtered these data to include only SNPs with data in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals by sampling each marker without replacement 1,000 times according to the observed allele frequencies.
 We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{clark2005} and the relation  $4N_e\mu = \frac{S}{L}$ \cite{fu1993}, where where $S$ is the total number of singleton SNPs and $L$ is the total number of SNPs in the dataset.
 
-\color{blue}
-Finally, MSMC text here
-\color{black}
+%%%Shorten if we include MSMC
+%Finally, MSMC \cite{schiffels2014} was employed to complement our model-based demographic inference. 
+%Using six each of maize and teosinte
+%The analyses were run for the following two groups: six maize haplotypes (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033) and six teosinte haplotypes (TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14).
+%SNPs were called in ANGSD \cite{korneliussen2014} with the SNP p value set as $1e-6$.
+%As the samples are highly inbred, each individual was treated as one haplotype.
+%Only Sites with mapping quality bigger than $30$, base quality over $20$ and depth between half and twice of its mean depth were chosen for the analyses, and the residual heterozygous sites were removed from the analyses.
+%In addition, as the maize genome contains a large body of repetitive regions \cite{schnable2009}, we used Heng Li's software SNPable (\href{<url>}{<http://lh3lh3.users.sourceforge.net/snpable.shtml>}) to mask out genomic regions, on which short sequencing reads are not uniquely mapped.
+%The mappability mask file was generated by cutting the maize genome with $1bp$ shift each time into the $100bp$ single-end reads, which were then mapped back to the maize B73 reference genome \cite{schnable2009}.
+%The sites with the majority of overlapping $100$-mers mapped uniquely without one mismatch were called the "SNPable" sites and used for the MSMC analyses.
+%The pattern parameter $20\times2+20\times4+10\times2$ was used for the population size inference.
 
 \subsection{Diversity}
 We made use of the software ANGSD \cite{korneliussen2014} for diversity calculations and genotype calling. 
@@ -262,7 +271,7 @@ We scanned the genome to identify sites that have experienced recent positive se
 \end{materials}
 
 \begin{acknowledgments}
-We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. \textcolor{red}{We thank Robert Bukowski and Qi Sun for providing early-access Panzea data.} Funding was provided by NSF Plant Genome Research Project 1238014.
+We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014.
 \end{acknowledgments}
 
 \bibliography{Reference}
