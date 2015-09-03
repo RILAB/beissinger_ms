@@ -82,7 +82,6 @@ Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
 
-
 \begin{figure}
 \begin{center}
   \includegraphics[width=.4\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
@@ -157,15 +156,14 @@ After its split from teosinte our model posits exponential population growth in 
 Because our relatively small sample size limits our ability to characterize the rare variants that are most informative of population expansion, we took advantage of a complementary data set of more than 4,000 maize landraces collected from across the Americas \cite{Hearne2015} to estimate the modern maize effective population size from low frequency variants. 
 This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 
-%MSMC results
-%Finally, we reconstructed the demographic history of maize and teosinte using a recently developed coalescent approach \citex that does not require conditioning on a particular model (Figure \X).
-%Though this analysis does highlight a potential weakness with our assumption of a constant size for teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \X). 
+Finally, we reconstructed the demographic history of maize and teosinte using a recently developed coalescent approach \cite{schiffels2014}  that does not require conditioning on a particular model.
+Though this analysis suggests the potential for nonequilibrium dynamics in teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \ref{sFig:msmc}). 
 
 \subsection{Population expansion leads to stronger purifying selection in modern maize}
 Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and therefore on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
 We thus repeated our analysis of diversity using alleles present in only a single individual in the sample.
 In direct contrast to patterns observed for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B), even after downsampling our maize data to account for differences in sample size. This relationship was maintained when we analyzed diversity surrounding genes that did not show evidence of hard or soft sweeps according to H12 (Figure \ref{sFig:H12})
-Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). %ref. here to MSMC if we use: "as indicated by our coalescent-based demographic analysis"
+Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, as indicated by our coalescent-based demographic analysis, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). 
 
 These results suggest that demographic history and population size change have impacted the efficacy of purifying selection during maize evolution.
 In contrast, analysis of singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) provides a nearly identical pattern to that shown in Figure \ref{fig:hardSweeps}, providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize.  
@@ -181,9 +179,9 @@ Moreover, genome-wide studies of domestication \cite{hufford2012},  local adapta
 Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013population}.  
 Assuming a mutation rate of $3 \times 10^{-8}$ \citep{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \citep{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \citep[e.g.][]{studer2011}. \jri{no mention of our H12 results. I think that's OK?}
 
-\jri{paragraph needs work. i need to reread C-D}
+\jri{paragraph needs work. maybe eliminate/move? i do think we need some comparison to other stuff, but the broader Ne-selection efficiency argument should come later.}
 The absence of evidence for a genome-wide impact of hard sweeps differs markedly from observations in \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, but is consistent with data from humans \cite{hernandez2011,pritchard2010genetics}. 
-In a related study, \cite{corbett2015} showed that selection tends to have an elevated impact on reducing diversity in species with large population size compared to small. This may explain why maize and humans, both bottlenecked species, show similar patterns while drosophila and capsella behave differently. \textcolor{red}{However, we also do not observe abundant hard sweeps in teosinte, which calls this hypothesis into question.}
+In a related study, \cite{corbett2015} showed that selection tends to have an elevated impact on reducing diversity in species with large population size compared to small. This may explain why maize and humans, both bottlenecked species, show similar patterns while drosophila and capsella behave differently. \textcolor{red}{However, we also do not observe abundant hard sweeps in teosinte, which calls this explanation into question.}
 
 \subsection{Demography of domestication}
 Although a number of authors have investigated the demography of maize domestication \cite{eyre1998, tenaillon2004selection, wright2005}, these  efforts relied on data only from genic regions of the genome and made a number of limiting assumptions about the demographic model.  
@@ -203,25 +201,26 @@ Assuming the effective size is only $\approx 0.4\%$ of the census size (i.e. 1 e
 While these rough estimates are likely poor, all of the evidence points to the fact that the effective size of modern maize is extremely large.
 
 \subsection{Demography influences the efficiency of purifying selection}
-\jri{section needs help -- i think all the points are there but i'm not happy with the writing} 
+\jri{section needs help --  i'm not happy with the writing} 
 We find a more pronounced decrease in nucleotide diversity around genes in teosinte compared to domesticated maize (Figure \ref{fig:purify}A).
 This difference in diversity is likely due to the effects of purifying selection.
 Purifying selection is more efficient in larger populations  \cite{kimura1984}, and our observation is thus consistent with our demographic model and previous work \cite{eyre1998, tenaillon2004selection, wright2005, ross2009} showing a smaller long-term effective population size in maize.  
 To understand how recent population growth has changed the effects of linked selection, we also analyzed diversity of singleton polymorphisms.   Under a simple neutral model, lower frequency polymorphisms are expected to be younger, and patterns of diversity at singleton SNPs should thus represent recent evolutionary history. 
 Consistent with its larger current size and thus more efficient purifying selection, we see a stronger decline of singleton diversity around genes in maize (Figure \ref{fig:purify}B than teosinte.
 
+\jri{I would like to see a supplemental figure or maybe just number here on the partial correlation in both teosinte and maize of diversity with recombination after accounting for gene density.  do this in 500kb windows and then in 10kb windows.  we should do the correlation with both pi and singletons.  This let's us compare more explictly with studies like C-D who evaluate overall patterns of linked selection. will be especially cool if we don't see a big difference in big windows but we do in 10kb windows.  }
 A consequence of the inefficient purifying selection that maize experienced during its bottleneck is likely that it harbors more weakly deleterious alleles segregating at intermediate frequency than does teosinte. This could be a part of the explanation of why maize inbreds have continued to improve over the past several decades \cite{meghji1984}; if deleterious alleles tend to be recessive and are particularly frequent, they will have ample opportunities to display their phenotypes in inbreds. Our results also demonstrate that recent purifying selection in maize has become much more effective, potentially explaining the ongoing improvement of these inbreds as maize lines are continuously selected. Additionally, the large $N_e$ of modern maize compared to modern teosinte implies that for new mutations, selection will operate much more efficiently in maize. \jri{inbreds stuff OK, but should be shortened.  and we need more/broader. Chia, Rogers-Melnick, Mezmouk all looked at load. does this have implications for large effect load (i.e. should bneck have purged those?), for heterosis, architecture of quant. traits, etc.}
 
-\jri{these results have implications for lots of studies. recent demographic history often ignored (examples). in crops, bneck is considered and loss of diversity, but expansion also likely ubiquitous and consequences not well studied.  in humans XYZ, and we see some of that already here. this argues that a full understanding of diversity in both wild and cultivated plants will require recent demography.}
+\jri{these results have implications for lots of studies. recent demographic history often ignored (examples). in crops, bneck is considered and loss of diversity, but expansion also likely ubiquitous and consequences not well studied.  in humans XYZ, and we see some of that already here. this argues that a full understanding of diversity in both wild and cultivated plants will require recent demography. mention C-D ignored recent demography -- here's where rec/pi windows could help.}
 
 \begin{materials}
 
-  \subsection{BASH, R, and Python scripts}
+\subsection{BASH, R, and Python scripts}
 All scripts used for analysis are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.} 
 
 \subsection{Plant materials}
 We made use of published sequences from inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project (bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}) \cite{chia2012, lemmon2014,hapmap3}. 
-From these data, we removed 4 teosinte individuals that were not ssp. \emph{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single tripsacum (\emph{T. dactyloides}) individual as an outgroup (bam file available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}).
+From these data, we removed 4 teosinte individuals that were not ssp. \emph{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single tripsacum (\emph{T. dactyloides}) individual as an outgroup (bam file available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}). \jri{some clarification here. did we use Lemmon's higher depth teosinte? If so, why does Li say we only had 7 high-depth bam files? there should be more}
 
 \subsection{Physical and genetic maps}
 Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{hapmap3}. All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following Li \emph{et al.} \cite{li2011statistical}.
@@ -244,17 +243,11 @@ We further made use of a large genotyping data set of more than 4,000 maize land
 We filtered these data to include only SNPs with data in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals by sampling each marker without replacement 1,000 times according to the observed allele frequencies.
 We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{clark2005} and the relation  $4N_e\mu = \frac{S}{L}$ \cite{fu1993}, where where $S$ is the total number of singleton SNPs and $L$ is the total number of SNPs in the dataset.
 
-%%%Shorten text here if we include MSMC
-%Finally, MSMC \cite{schiffels2014} was employed to complement our model-based demographic inference. 
-%Using six each of maize and teosinte
-%The analyses were run for the following two groups: six maize haplotypes (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033) and six teosinte haplotypes (TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14).
-%SNPs were called in ANGSD \cite{korneliussen2014} with the SNP p value set as $1e-6$.
-%As the samples are highly inbred, each individual was treated as one haplotype.
-%Only Sites with mapping quality bigger than $30$, base quality over $20$ and depth between half and twice of its mean depth were chosen for the analyses, and the residual heterozygous sites were removed from the analyses.
-%In addition, as the maize genome contains a large body of repetitive regions \cite{schnable2009}, we used Heng Li's software SNPable (\href{<url>}{<http://lh3lh3.users.sourceforge.net/snpable.shtml>}) to mask out genomic regions, on which short sequencing reads are not uniquely mapped.
-%The mappability mask file was generated by cutting the maize genome with $1bp$ shift each time into the $100bp$ single-end reads, which were then mapped back to the maize B73 reference genome \cite{schnable2009}.
-%The sites with the majority of overlapping $100$-mers mapped uniquely without one mismatch were called the "SNPable" sites and used for the MSMC analyses.
-%The pattern parameter $20\times2+20\times4+10\times2$ was used for the population size inference.
+As a final estimate of demography, we employed MSMC \cite{schiffels2014}  to complement our model-based demographic inference. 
+We used six each of maize and teosinte (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033, TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14), treating each inbred genome as a single haplotype.
+We called SNPs in ANGSD \cite{korneliussen2014} using a SNP p-value of $1e-6$ against a reference genome masked using SNPable (\url{http://lh3lh3.users.sourceforge.net/snpable.shtml}).
+We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\emph{log}_2(\emph{depth})|<1$.
+We ran MSMC with pattern parameters $20\times2+20\times4+10\times2$.
 
 \subsection{Diversity}
 We made use of the software ANGSD \cite{korneliussen2014} for diversity calculations and genotype calling. 
