@@ -20,7 +20,8 @@
   Ross-Ibarra\affil{1}{}\affil{5}{Genome Center and Center for population biology, University of
     California, Davis, CA, USA} }
 
-\significancetext{Patterns of linked selection, or the impact of selection on sites that neighbor a functional variant, play a critical role in shaping the genetic diversity of organisms.  In this work, we demonstrate that selection against deleterious mutations leaves a pronounced signature on the maize genome, reducing diversity in and immediately around genes. We show how demography interacts with selection to impact genome-wide patterns of diversity, including the important observation that rapid population expansion can increase the efficiency of selection as much as a sudden population bottleneck can weaken it. Along the way, we develop the first estimate the demographic parameters of the maize domestication from whole genome sequence data. }
+\significancetext{Both selection and demographic change play important roles in shaping diversity across the genome, but clear empirical examples of the interplay of these two forces are lacking.
+Here we document the combined effects of demography and linked selection on genome-wide diversity in domesticated maize and its wild ancestor teosinte.  We estimate that maize underwent a bottleneck of 5\% of the size of the ancestral teosinte population, but that recent expansion has resulted in a maize population perhaps orders of magnitude larger than teosinte.  We show that positive selection on new mutations has had relatively little effect on genetic diversity, but that selection against deleterious mutations has dramatically reduced diversity in and immediately around genes in both taxa.  We find that the relative effect of selection depend qualitatively on the age of the polymorphisms evaluated: while older polymorphisms in maize show more limited effects of linked selection, new mutations instead reflect its larger current size and more efficient purifying selection. Our results demonstrate that a complete understanding of genome-wide patterns of diversity will require careful assessment of both demographic history and the effects of linked selection. }
 
 \maketitle
 
@@ -112,15 +113,15 @@ Taken together, these data suggest hard sweeps do not play a major role in patte
 
 \subsection{Diversity is strongly influenced by purifying selection}
 
-Selection can also reduce diversity in functional regions of the genome via removal of deleterious mutations, a process known to as purifying or background selection \cite{charlesworth1993}.
-We investigated purifying selection in maize and teosinte by evaluating the reduction of diversity within genes.
+Selection can also reduce diversity in functional regions of the genome via removal of deleterious mutations, a process known as purifying or background selection \cite{charlesworth1993}.
+We investigated purifying selection in maize and teosinte by evaluating the reduction of diversity around genes.
 Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in maize \cite{tenaillon2002,chia2012}. 
-The reduction in relative diversity is more pronounced in teosinte, however, reaching lower levels in genes and occurring over a wider region.  
+The reduction in relative diversity is more pronounced in teosinte, reaching lower levels in genes and occurring over a wider region.  
 
 Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. 
 Such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. 
-To test this possibility, we performed a genome-wide scan for selection using a method expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
-After removing genes in the top 20\% of the H12 statistic used to identify targets of selection, we observe that qualitative differences between maize and teosinte in patterns of diversity in and near genes remained unchanged (Figure \ref{sFig:H12}A).
+To test this possibility, we performed a genome-wide scan for selection using the H12 statistic, expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
+Qualitative differences between maize and teosinte remained unchanged even after removing genes in the top 20\% of H12 (Figure \ref{sFig:H12}A).
 We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.
 
 \begin{figure*}
@@ -157,13 +158,13 @@ Finally, we reconstructed the demographic history of maize and teosinte using a 
 Though this analysis suggests the potential for nonequilibrium dynamics in teosinte, it nonetheless is broadly consistent with our simple model,   identifying a clear domestication bottleneck followed by rapid population expansion (Figure \ref{sFig:msmc}). 
 
 \subsection{Population expansion leads to stronger purifying selection in modern maize}
-Motivated by the rapid post-domestication expansion of maize evident from our demographic analysis, we investigated whether patterns of diversity at low frequency --- and therefore on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
+Motivated by the rapid post-domestication expansion of maize evident in our demographic analysis, we investigated whether diversity at low frequency --- and therefore on average younger --- polymorphisms would show similar results in comparisons of maize and teosinte.
 We thus repeated our analysis of diversity using alleles present in only a single individual in the sample.
-In direct contrast to patterns observed for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B), even after downsampling our maize data to account for differences in sample size. This relationship was maintained when we analyzed diversity surrounding genes that did not show evidence of hard or soft sweeps according to H12 (Figure \ref{sFig:H12})
+In contrast to our restults for pairwise nucleotide diversity (Figure \ref{fig:purify}A), diversity of singletons was more strongly reduced in and near genes in maize than in teosinte (Figure \ref{fig:purify}B), even after downsampling our maize data to account for differences in sample size. This relationship was maintained when we analyzed diversity surrounding genes that did not show evidence of hard or soft sweeps according to H12 (Figure \ref{sFig:H12})
 Finally, while direct comparison of curves for pairwise and singleton diversity within taxa are consistent with at least some non-equilibrium dynamics in teosinte, as indicated by our coalescent-based demographic analysis, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). 
 
 These results suggest that demographic history and population size change have impacted the efficacy of purifying selection during maize evolution.
-In contrast, analysis of singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) provides a nearly identical pattern to that shown in Figure \ref{fig:hardSweeps}, providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize.  
+In contrast, singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) appears nearly identical to results from pairwise diversity (Figure \ref{fig:hardSweeps}), providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize.  
 
 \section{Discussion}
 
