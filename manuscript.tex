@@ -74,10 +74,9 @@ teosinte; and 3) precisely estimate the parameters of the
 maize domestication bottleneck.  \cite{chia2012}.
 
 \section{Results}
-\subsection{Patterns of diversity differ between genic and  non-genic regions of the genome}
-To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we reanalyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 project \cite{chia2012}.
-We find broad differences in genic and non-genic diversity consistent with earlier results  \cite{hufford2012} (Figure \ref{fig:diversity}\jri{pi graph should use greek letter $\pi$}).  
-In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at positions at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
+\subsection{Patterns of diversity differ between genic and  intergenic regions of the genome}
+To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012} \jri{add cite to HM3}.
+We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}):  \jri{pi graph should use greek letter $\pi$} in maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at site at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
@@ -91,25 +90,24 @@ These observations suggest that diversity in genes is not evolving neutrally, bu
 
 \subsection{Hard sweeps do not explain diversity differences}
 Selection acting to increase the frequency of a new beneficial mutation will leave a signature of reduced diversity at surrounding linked sites \cite{smith1974}.
-To evaluate whether patterns of such ``hard sweeps'' could explain observed differences in diversity between genic and non-genic regions of the genome, we compared diversity around missense and synonymous substitutions between \emph{Tripsacum} and either maize or teosinte (Figure
-\ref{fig:hardSweeps}).
+To evaluate whether patterns of such ``hard sweeps'' could explain observed differences in diversity between genic and intergenic regions of the genome, we compared diversity around missense and synonymous substitutions between \emph{Tripsacum} and either maize or teosinte.
 If a proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
 We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}.
-Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte.
+Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte (Figure
+\ref{fig:hardSweeps}).
 
 \begin{figure*}
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_Aug}
 \hspace{0.05\textwidth} \includegraphics[width=.45\textwidth]{FigsAndFiles/plotDiversity_TvT_Folded2_Significance_Aug}
-\caption{Pairwise diversity surrounding synonymous and non-synonymous (missense)
-  substitutions in {\bf A} maize and {\bf B} teosinte. Axes show both absolute diversity values (on right) and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution (on left).  Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
+\caption{Pairwise diversity surrounding synonymous and missense  substitutions in {\bf A} maize and {\bf B} teosinte. Axes show absolute diversity values (right) and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution (left).  Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
-Previous analyses have suggested that this approach may have limited power because a higher proportion of nonsynonymous substitutions will be found in genes under weak purifying selection and thus with higher genetic diversity \cite{enard2014}. 
-To address this concern, we took advantage of genomic evolutionary rate profile (GERP) scores \cite{davydov2010}, a measure of evolutionary constraint, calculated across the maize genome \cite{rodgers2015}. 
-We re-analyzed substitutions in subsets of genes with the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
-As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still see no difference between synonymous and missense substitutions in either subset of the data.
+Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
+To address this concern, we took advantage of genome-wide estimates of evolutionary constraint \cite{rodgers2015}, calculated using genomic evolutionary rate profile (GERP) scores \cite{davydov2010}. 
+We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
+As expected, we see higher diversity around substitutions in genes under weak purifying selection \jri{there a table or figure we can reference?}, but we still find no difference between synonymous and missense substitutions in either subset of the data.
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
 \subsection{Diversity is strongly influenced by purifying selection}
@@ -120,11 +118,10 @@ Pairwise diversity is strongly reduced within genes for both maize and teosinte 
 The reduction in relative diversity is more pronounced in teosinte, however, reaching lower levels in genes and occurring over a wider region.  
 
 Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. 
-Such ``soft sweeps'', however, are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. 
-To test this possibility, we performed a genome-wide scan for selection using a method expected to be reasonably sensitive to both hard and soft sweeps \cite{garud2015}. 
+Such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. 
+To test this possibility, we performed a genome-wide scan for selection using a method expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
 After removing genes in the top 20\% of the H12 statistic used to identify targets of selection, we observe that qualitative differences between maize and teosinte in patterns of diversity in and near genes remained unchanged (Figure \ref{sFig:H12}A).
-
-We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.\jri{weird that this is a 1-sentence paragraph?} 
+We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.
 
 \begin{figure*}
 %\vspace*{.05in}
@@ -177,7 +174,8 @@ Although our approach ignores the potential for hard sweeps in noncoding regions
 Among well-characterized domestication loci, only the gene \emph{tga1} shows evidence of a hard sweep on a missense mutation \cite{wang2015}, while several loci are consistent with ``soft sweeps''  from standing variation \cite{studer2011,gallavotti2004role} or multiple mutations \cite{wills2013}. 
 Moreover, genome-wide studies of domestication \cite{hufford2012},  local adaptation \cite{Takuno15062015} and modern breeding \cite{beissinger2014} all support the importance of standing variation as the primary source of adaptive variation. 
 Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013population}.  
-Assuming a mutation rate of $3 \times 10^{-8}$ \citep{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \citep{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \citep[e.g.][]{studer2011}. \jri{no mention of our H12 results. I think that's OK?}
+Assuming a mutation rate of $3 \times 10^{-8}$ \citep{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \citep{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \citep[e.g.][]{studer2011}. 
+Indeed, many adaptive traits in both maize \citex and teosinte \citex are highly quantitative \jri{cite wallace for maize? weber and/or lauter for teosinte?} and adaptation in both maize \citep{hufford2012} and teosinte \citep{pyhajarvi2013complex} has involved selection on regulatory variation.  \jri{if number is nice, add something like "\X of the windows of top H12 score genome-wide occur outside of genes"}
 
 \jri{paragraph needs work. maybe eliminate/move? i do think we need some comparison to other stuff, but the broader Ne-selection efficiency argument should come later.}
 The absence of evidence for a genome-wide impact of hard sweeps differs markedly from observations in \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, but is consistent with data from humans \cite{hernandez2011,pritchard2010genetics}. 
@@ -203,7 +201,7 @@ While these rough estimates are likely poor, all of the evidence points to the f
 \subsection{Demography influences the efficiency of purifying selection}
 \jri{section needs help --  i'm not happy with the writing} 
 We find a more pronounced decrease in nucleotide diversity around genes in teosinte compared to domesticated maize (Figure \ref{fig:purify}A).
-This difference in diversity is likely due to the effects of purifying selection.
+This difference is likely due to the effects of purifying selection.
 Purifying selection is more efficient in larger populations  \cite{kimura1984}, and our observation is thus consistent with our demographic model and previous work \cite{eyre1998, tenaillon2004selection, wright2005, ross2009} showing a smaller long-term effective population size in maize.  
 To understand how recent population growth has changed the effects of linked selection, we also analyzed diversity of singleton polymorphisms.   Under a simple neutral model, lower frequency polymorphisms are expected to be younger, and patterns of diversity at singleton SNPs should thus represent recent evolutionary history. 
 Consistent with its larger current size and thus more efficient purifying selection, we see a stronger decline of singleton diversity around genes in maize (Figure \ref{fig:purify}B than teosinte.
@@ -260,7 +258,6 @@ For each window with $\geq 100bp$ of data we computed the genetic distance betwe
 
 \subsection{Selection scan}
 We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
-
 
 \end{materials}
 
