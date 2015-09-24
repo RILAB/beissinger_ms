@@ -5,6 +5,7 @@
 %\usepackage{hyperref}
 \usepackage[normalem]{ulem}
 \newcommand{\jri}[1]{\textcolor{red}{\scriptsize #1}}
+\newcommand{\mbh}[1]{\textcolor{blue}{\scriptsize #1}}
 \newcommand{\citex}{\textcolor{red}{\bf CITE}}
 \newcommand{\X}{\textcolor{red}{\bf X}}
 \usepackage{multibib}
@@ -14,10 +15,7 @@
 
 
 \title{Demography and linked selection in wild and domesticated maize}
-\author{Timothy M. Beissinger\affil{1}{Dept. of Plant Sciences, University of
-    California, Davis, CA, USA}\affil{2}{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}\affil{3}{Division of Plant Sciences, University of Missouri, Columbia, MO, USA} Li Wang\affil{4}{Iowa State University, Ames, IA, USA}, Kate Crosby\affil{1}{}, Arun
-  Durvasula\affil{1}{}, Matthew Hufford\affil{4}{}, \and Jeffrey
-  Ross-Ibarra\affil{1}{}\affil{5}{Genome Center and Center for population biology, University of
+\author{Timothy M. Beissinger\affil{1}{Dept. of Plant Sciences, University of California, Davis, CA, USA}\affil{2}{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}\affil{3}{Division of Plant Sciences, University of Missouri, Columbia, MO, USA}, Li Wang\affil{4}{Department of Ecology, Evolution, and Organismal Biology, Iowa State University, Ames, IA, USA}\affil{5}{Genome Informatics Facility, Iowa State University, Ames, IA, USA}, Kate Crosby\affil{1}{}, Arun Durvasula\affil{1}{}, Matthew B. Hufford\affil{4}{}, \and Jeffrey Ross-Ibarra\affil{1}{}\affil{6}{Genome Center and Center for Population Biology, University of
     California, Davis, CA, USA} }
 
 \significancetext{Both selection and demographic change play important roles in shaping diversity across the genome, but clear empirical examples of the interplay of these two forces are lacking.
@@ -28,15 +26,16 @@ Here we document the combined effects of demography and linked selection on geno
 \begin{article}
 
 \begin{abstract}
-  Unique selective and demographic forces operate on domesticated plant species. These forces interact during and after domestication to generate the patterns of DNA variability that are persistent today. To quantify the interplay between demography and selection, we investigated genetic diversity in maize, one of the most important crops for food, feed, and fuel world-wide. Our sample included whole genome sequence data from 23 maize and 13 teosinte individuals.  We obtained a complete estimate of the population size fluctuations and other demographic parameters experienced by maize as it was domesticated from teosinte. Here, we show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid population size expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. We find that a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize. However, expansion after domestication has since increased the efficiency of purifying selection to levels exceeding those seen in teosinte. Our results demonstrate that particularly in domesticated species or bottlenecked species, demographic and selective history in the ancient and recent past both contribute to genetic variability that is present today, providing substantial implications for the continued improvement of domesticated species.
+  Unique selective and demographic forces operate on domesticated plant species. \mbh{I don't agree with this statement; characteristics of demography and selection vary across crops and I wouldn't be surprised to find similar demographies and patterns of selection between crop and wild species} These forces interact during and after domestication to generate the patterns of DNA variability that are persistent today. To quantify the interplay between demography and selection, we investigated genetic diversity in maize, one of the most important crops for food, feed, and fuel world-wide. Our sample included whole genome sequence data from 23 maize and 13 teosinte individuals.  We obtained a complete estimate of the population size fluctuations and other demographic parameters experienced by maize as it was domesticated from teosinte. Here, we show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid population size expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. We find that a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize. However, expansion after domestication has since increased the efficiency of purifying selection to levels exceeding those seen in teosinte. Our results demonstrate that particularly in domesticated species or bottlenecked species \mbh{right, observations can be generalized to wild species as well; I don't think there's any need to say crops are a special case}, demographic and selective history in the ancient and recent past both contribute to genetic variability that is present today, providing substantial implications for the continued improvement of domesticated species. \mbh{I'd end this more generally, expressing the importance of knowing demography when characterizing selection genome-wide}
   
 \end{abstract}
 
 \jri{we need a starting paragraph on linked selection and demography. check out slotte 2014 briefings functional genomics for a great review of ideas. then we do a paragraph on why domesticates are great for this (modified version of your below)}
+\mbh{Yes, agree here...think the topics addressed in the manuscript need to be set up as generalizable and not just specific to domesticates.  Crops are a great system because we know a fair bit more about demography and the process of selection than in wild species, but they are not entirely unique.}
 
 \dropcap{D}omesticated plant species evolve in a unique fashion
-compared to their wild counterparts \cite{doebley2006}. This
-is a result of both the anthropomorphic nature of artificial selection on
+compared to their wild counterparts \cite{doebley2006}. \mbh{Again, I'm not a big fan of the distinction between natural and artificial selection.  While I think it's fair to say that crops and their wild relatives have experienced distinct evolutionary forces/histories (like any other pair of taxa), I don't like the broad domesticated/wild distinction.  Like domesticated species which encounter the human, agronomic environment, wild species can be confronted with novel environmental conditions and experience a bottleneck during adaptation to these conditions.  Here it seems the argument is that human selection and domestication demography are unlike any selection/demography plants have previously encountered.  If this is indeed the point we want to make, I think we need to be much more explicit in explaining how and why they are different}
+This is a result of both the anthropomorphic nature of artificial selection on
 domesticates \cite{purugganan2009} as well as the demographic characteristics of the domestication
 bottleneck(s) that they tend to have experienced
 \cite{ross2007}. However, the
@@ -65,20 +64,21 @@ domestication process remain uncertain. Specifically, the size of the
 maize domestication bottleneck has not been estimated independently of
 the bottleneck's duration, nor are there sequence-based estimates of the effective
 population size of modern maize. Sequence information from maize and
-teosinte plants may therefore be utilized to address these questions.
+teosinte may therefore be utilized to address these questions.
 
 To that end, the objectives of our study were to 1) investigate the
 relative importance of different forms of selection on whole-genome
 variability in both maize and teosinte 2) research the impact that the
-domestication process has had on genetic variability in maize, and how
+domestication process \mbh{I think this is referring specifically to demography (i.e., not selection during domestication)...might want to say that more clearly to distinguish this objective from objective 1} has had on genetic variability in maize, and how
 this compares to the impact of a different demographic history in
 teosinte; and 3) precisely estimate the parameters of the
-maize domestication bottleneck.  \cite{chia2012}.
+maize domestication bottleneck.  \cite{chia2012}. \mbh{A quick sentence here about why this matters broadly would help...what kind of basic inferences will this research allow us to make about the interplay of demography and selection?}
 
 \section{Results}
 %\subsection{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
 To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012} \jri{add cite to HM3}.
-We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}):  \jri{pi graph should use greek letter $\pi$} in maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at site at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
+We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  \jri{pi graph should use greek letter $\pi$} 
+In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
@@ -91,12 +91,11 @@ These observations suggest that diversity in genes is not evolving neutrally, bu
 \end{figure}
 
 \subsection{Hard sweeps do not explain diversity differences} %JRI
-Selection acting to increase the frequency of a new beneficial mutation will leave a signature of reduced diversity at surrounding linked sites \cite{smith1974}.
+When selection increases the frequency of a new beneficial mutation, a signature of reduced diversity is left at surrounding linked sites \cite{smith1974}.
 To evaluate whether patterns of such ``hard sweeps'' could explain observed differences in diversity between genic and intergenic regions of the genome, we compared diversity around missense and synonymous substitutions between \emph{Tripsacum} and either maize or teosinte.
 If a proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
-We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}.
-Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte (Figure
-\ref{fig:hardSweeps}).
+We observe this pattern around the causative amino acid substitution in the the domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005origin, wang2015}. \mbh{Awesome}
+Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte (Figure \ref{fig:hardSweeps}). \mbh{I'm curious whether linked selection is affecting the diversity around a sizable proportion of synonymous substitutions.  Would it be worthwhile to look at diversity around the subset of synonymous substitutions that are the least linked to missense substitutions just to make sure it is not substantially higher? Or perhaps generate a plot of diversity around synonymous substitutions vs. distance of these subs from missense subs?}
 
 \begin{figure*}
 %\vspace*{.05in}
@@ -106,7 +105,7 @@ Genome-wide, however, we observe no differences in diversity between synonymous 
 \caption{Pairwise diversity surrounding synonymous and missense  substitutions in {\bf A} maize and {\bf B} teosinte. Axes show absolute diversity values (right) and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution (left).  Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
-Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes under weak purifying selection and thus higher genetic diversity \cite{enard2014}. 
+Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes that are under weak purifying selection and thus have higher genetic diversity \cite{enard2014}. 
 To address this concern, we took advantage of genome-wide estimates of evolutionary constraint \cite{rodgers2015}, calculated using genomic evolutionary rate profile (GERP) scores \cite{davydov2010}. 
 We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
 As expected, we see higher diversity around substitutions in genes under weak purifying selection \jri{there a table or figure we can reference?}, but we still find no difference between synonymous and missense substitutions in either subset of the data.
@@ -116,13 +115,14 @@ Taken together, these data suggest hard sweeps do not play a major role in patte
 
 Selection can also reduce diversity in functional regions of the genome via removal of deleterious mutations, a process known as purifying or background selection \cite{charlesworth1993}.
 We investigated purifying selection in maize and teosinte by evaluating the reduction of diversity around genes.
-Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in maize \cite{tenaillon2002,chia2012}. 
+Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in these subspecies \cite{tenaillon2002,chia2012}. 
 The reduction in relative diversity is more pronounced in teosinte, reaching lower levels in genes and occurring over a wider region.  
 
-Our initial comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. 
+Our comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity is not necessarily reduced \cite{innan2004,messer2013}. 
 Such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity in genes. 
-To test this possibility, we performed a genome-wide scan for selection using the H12 statistic, expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
+To test this possibility, we performed a genome-wide scan for selection using the H12 statistic, a method expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
 Qualitative differences between maize and teosinte remained unchanged even after removing genes in the top 20\% of H12 (Figure \ref{sFig:H12}A).
+\mbh{This makes me wonder about the top 20\%. Is the pattern of diversity reduction different in this fraction of the genome?  If so, that seems like something that should be mentioned.}
 We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.
 
 \begin{figure*}
@@ -172,8 +172,8 @@ Although our approach ignores the potential for hard sweeps in noncoding regions
 Among well-characterized domestication loci, only the gene \emph{tga1} shows evidence of a hard sweep on a missense mutation \cite{wang2015}, while several loci are consistent with ``soft sweeps''  from standing variation \cite{studer2011,gallavotti2004role} or multiple mutations \cite{wills2013}. 
 Moreover, genome-wide studies of domestication \cite{hufford2012},  local adaptation \cite{Takuno15062015} and modern breeding \cite{beissinger2014} all support the importance of standing variation as the primary source of adaptive variation. 
 Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013population}.  
-Assuming a mutation rate of $3 \times 10^{-8}$ \citep{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \citep{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \citep[e.g.][]{studer2011}. 
-Indeed, many adaptive traits in both maize \citex and teosinte \citex are highly quantitative \jri{cite wallace for maize? weber and/or lauter for teosinte?} and adaptation in both maize \citep{hufford2012} and teosinte \citep{pyhajarvi2013complex} has involved selection on regulatory variation.  \jri{what \% of the windows of top H12 score genome-wide occur outside of genes? is that a number to include here?}
+Assuming a mutation rate of $3 \times 10^{-8}$ \cite{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \cite{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \cite[e.g.][]{studer2011}. 
+Indeed, many adaptive traits in both maize \cite and teosinte \cite are highly quantitative \jri{cite wallace for maize? weber and/or lauter for teosinte?} and adaptation in both maize \cite{hufford2012} and teosinte \cite{pyhajarvi2013complex} has involved selection on regulatory variation.  \jri{what \% of the windows of top H12 score genome-wide occur outside of genes? is that a number to include here?}
 
 \subsection{Demography of domestication} %JRI
 Although a number of authors have investigated the demography of maize domestication \cite{eyre1998, tenaillon2004selection, wright2005}, these  efforts relied on data only from genic regions of the genome and made a number of limiting assumptions about the demographic model.  
@@ -184,7 +184,7 @@ One surprising result from our model is the estimated timing of domestication at
 While this appears to conflict with archaeological \cite{piperno2009starch} estimates, we instead argue this estimate reflects the fact that the genetic split between populations likely preceded anatomical changes that can be identified in the archaeological record. 
 We also note that our result may also be inflated due to population structure, as our geographically diverse sample of teosinte may include populations diverged from those that gave rise to maize.
 
-The estimated bottleneck of $\approx 5\%$ of the ancestral teosinte population seems low given that maize landraces exhibit $\approx 80\%$ of the diversity of teosinte \citep{hufford2012}, but our model suggests that the effects of the bottleneck on diversity are likely ameliorated by both gene flow and rapid population growth (Figure \ref{fig:bottleneck}).   
+The estimated bottleneck of $\approx 5\%$ of the ancestral teosinte population seems low given that maize landraces exhibit $\approx 80\%$ of the diversity of teosinte \cite{hufford2012}, but our model suggests that the effects of the bottleneck on diversity are likely ameliorated by both gene flow and rapid population growth (Figure \ref{fig:bottleneck}).   
 Although we estimate that the modern effective size of maize is larger than teosinte, the small size of our sample reduces our power to identify the low frequency alleles most sensitive to rapid population growth \cite{keinan2012}, and our model is unable to incorporate growth faster than exponential.  
 Both alternative approaches we employ estimate much a larger modern effective size of maize in the range of $\approx 10^6 - 10^9$, an order of magnitude or more than the current size of teosinte.
 Census data suggest these estimates are plausible: there are 47.9 million ha of open-pollinated maize in production \cite{cimmyt1999}, likely planted at a density of $\approx 25,000$ individuals per hectare \cite{baden2001culture}.
