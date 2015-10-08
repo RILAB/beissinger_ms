@@ -2,7 +2,7 @@
 \usepackage{cite}
 \usepackage{color}
 \usepackage{pgf}
-%\usepackage{hyperref}
+%\usepackage{hyperref}scho
 \usepackage[normalem]{ulem}
 \newcommand{\jri}[1]{\textcolor{red}{\scriptsize #1}}
 \newcommand{\mbh}[1]{\textcolor{blue}{\scriptsize #1}}
@@ -33,8 +33,7 @@ Here we document the combined effects of demography and linked selection on geno
 %\jri{we need a starting paragraph on linked selection and demography. check out slotte 2014 briefings functional genomics for a great review of ideas. then we do a paragraph on why domesticates are great for this (modified version of your below)}
 %\mbh{Yes, agree here...think the topics addressed in the manuscript need to be set up as generalizable and not just specific to domesticates.  Crops are a great system because we know a fair bit more about demography and the process of selection than in wild species, but they are not entirely unique.}
 
-\dropcap{T}he genetic properties of populations are determined by a constant interplay between genetic drift and selection. Drift is the consequence of a finite population size, such that random sampling of gametes every generation will incrementally lead to genetic changes. In other words, the demographic history of a population, which includes its population size fluctuations and mating patterns, has a long-lasting impact on the patterns of DNA variability exhibited by that population. Conversely, selection systematically alters a population by favoring particular alleles at the expense of others. In contrast to drift, which results from demographic history, selection is the result of the relationship between genotypes, phenoytpes, and ultimately fitness. Importantly, demography and selection do not operate independently to determine genetic variability. Instead, these forces are engaged in a continuous battle by which each masks and obfuscates the outcomes of the other, ultimately meaning that the selective history of a species cannot be properly evaluated without an thorough estimate of demographic history, and demography cannot be evaluated without an understanding of selection.
-
+\dropcap{T}he genetic properties of populations are determined by a constant interplay between genetic drift and selection. Drift is the consequence of a finite population size, such that random sampling of gametes every generation will incrementally lead to genetic changes \cite{dobzhansky1957}. In other words, the demographic history of a population, which includes its population size fluctuations and mating patterns, has a long-lasting impact on the patterns of DNA variability exhibited by that population. Conversely, selection systematically alters a population by favoring particular alleles at the expense of others. In contrast to drift, which results from demographic history, selection is the result of the relationship between genotypes, phenoytpes, and ultimately fitness. Importantly, demography and selection do not operate independently to determine genetic variability \cite{li2012}. Instead, these forces are engaged in a continuous battle by which each masks and obfuscates the outcomes of the other, ultimately meaning that the selective history of a species cannot be properly evaluated without an thorough estimate of demographic history, and demography cannot be evaluated without an understanding of selection.
 
 For instance, supposed neutrally-evolving DNA is often used to estimate historical demographic
 parameters of a population such as effective population size, structure, and expansion
@@ -98,16 +97,15 @@ maize domestication bottleneck. Gaining an improved understanding of the interac
 
 \section{Results}
 %\subsection{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
-To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012} \jri{add cite to HM3}.
-We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  \jri{pi graph should use greek letter $\pi$} 
-In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
+To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012, hapmap3}.
+We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
 
 \begin{figure}
 \begin{center}
-  \includegraphics[width=.4\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
+  \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
 \caption{Pairwise diversity $\pi$ (A,B) and Tajimas D (C,D) in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means and one standard deviation.   \label{fig:diversity} }
 \end{figure}
@@ -129,8 +127,8 @@ Genome-wide, however, we observe no differences in diversity between synonymous 
 
 Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes that are under weak purifying selection and thus have higher genetic diversity \cite{enard2014}. 
 To address this concern, we took advantage of genome-wide estimates of evolutionary constraint \cite{rodgers2015}, calculated using genomic evolutionary rate profile (GERP) scores \cite{davydov2010}. 
-We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection  (Figure \ref{sFig:consUncons}). 
-As expected, we see higher diversity around substitutions in genes under weak purifying selection \jri{there a table or figure we can reference?}, but we still find no difference between synonymous and missense substitutions in either subset of the data.
+We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection. 
+As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference between synonymous and missense substitutions in either subset of the data (Figure \ref{sFig:consUncons}).
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
 \subsection{Diversity is strongly influenced by purifying selection} %JRI
