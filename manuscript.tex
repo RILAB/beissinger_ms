@@ -15,8 +15,8 @@
 \begin{document}
 
 
-\title{Demography and linked selection in wild and domesticated maize}
-\author{Timothy M. Beissinger\affil{1}{Dept. of Plant Sciences, University of California, Davis, CA, USA}\affil{2}{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}\affil{3}{Division of Plant Sciences, University of Missouri, Columbia, MO, USA}, Li Wang\affil{4}{Department of Ecology, Evolution, and Organismal Biology, Iowa State University, Ames, IA, USA}\affil{5}{Genome Informatics Facility, Iowa State University, Ames, IA, USA}, Kate Crosby\affil{1}{}, Arun Durvasula\affil{1}{}, Matthew B. Hufford\affil{4}{}, \and Jeffrey Ross-Ibarra\affil{1}{}\affil{6}{Genome Center and Center for Population Biology, University of
+\title{Recent demography drives changes in linked selection across the maize genome}
+\author{Timothy M. Beissinger\affil{1}{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}\affil{2}{Division of Plant Sciences, University of Missouri, Columbia, MO, USA}\affil{3}{Dept. of Plant Sciences, University of California, Davis, CA, USA}, Li Wang\affil{4}{Department of Ecology, Evolution, and Organismal Biology, Iowa State University, Ames, IA, USA}\affil{5}{Genome Informatics Facility, Iowa State University, Ames, IA, USA}, Kate Crosby\affil{1}{}, Arun Durvasula\affil{1}{}, Matthew B. Hufford\affil{4}{}, \and Jeffrey Ross-Ibarra\affil{1}{}\affil{6}{Genome Center and Center for Population Biology, University of
     California, Davis, CA, USA} }
 
 \significancetext{Both selection and demographic change play important roles in shaping diversity across the genome, but clear empirical examples of the interplay of these two forces are lacking.
@@ -34,62 +34,50 @@ Here we document the combined effects of demography and linked selection on geno
 %\jri{we need a starting paragraph on linked selection and demography. check out slotte 2014 briefings functional genomics for a great review of ideas. then we do a paragraph on why domesticates are great for this (modified version of your below)}
 %\mbh{Yes, agree here...think the topics addressed in the manuscript need to be set up as generalizable and not just specific to domesticates.  Crops are a great system because we know a fair bit more about demography and the process of selection than in wild species, but they are not entirely unique.}
 
-\dropcap{T}he genetic properties of populations are determined by a constant interplay between genetic drift and selection. Drift is the consequence of a finite population size, such that random sampling of gametes every generation will incrementally lead to changes in genetic variabiligy \cite{dobzhansky1957}. In other words, the demographic history of a population, which includes its population size fluctuations and mating patterns, has a long-lasting impact on the patterns of DNA variability displayed by that population. Conversely, selection systematically alters a population by favoring particular alleles at the expense of others. In contrast to drift, which results from demographic history, selection is the result of the relationship between genotypes, phenoytpes, and ultimately fitness. Importantly, demography and selection do not operate independently to determine genetic variability \cite{li2012}. Instead, each of these forces is constantly masking and obfuscating the other, ultimately meaning that the selective history of a species cannot be properly evaluated without a thorough estimate of demographic history, and demography cannot be evaluated without an understanding of selection.
+\dropcap{T}he genetic properties of populations are determined by a constant interplay between genetic drift and selection. Drift is the consequence of a finite population size, such that random sampling of gametes every generation will incrementally lead to changes in genetic variabiligy \cite{dobzhansky1957}. In other words, the demographic history of a population, which includes its population size fluctuations and mating patterns, has a long-lasting impact on the patterns of DNA variability displayed by that population. Conversely, selection systematically alters a population by favoring particular alleles at the expense of others. In contrast to drift, which results from demographic history, selection is the result of the relationship between genotypes, phenoytpes, and ultimately fitness. A classical approach for studying selection is to remove the genome-wide effects of demography and assume that selection will leave locus-specific evidence \cite{Wall2002, akey2009}. Conversely, demography is often researched by excluding potentially selected sites \cite{voight2005, luikart2003, gutenkunst2009}.
 
-For instance, to estimate the historical demographic parameters of a population, researchers often utilize supposed neutrally-evolving DNA  \cite{luikart2003, gutenkunst2009}. However, it has been called into question whether reasonable approaches exist
-for identifying neutral regions of the genome, since the effects of
-selection can be wide-ranging \cite{li2012, slotte2014}. In \emph{Drosophila}, for example, the majority of the genome is
+However, recent work has shown that demography and selection do not operate independently to determine genetic variability, in large part because linkage allows the effects of selection to be wide-ranging \cite{li2012,slotte2014}. For example, in \emph{Drosophila} the majority of the genome is
 impacted by the effects of selection through linkage
-\cite{sella2009}. One technique that has been utilized to estimate demographic parameters independently of selective parameters is to limit analyses to only sites far from genes
-\cite{gazave2014}, but as \emph{Drosophila} demonstrates, it is
-difficult to be certain, without species-specific knowledge, that sites even in gene-poor regions of the
-genome are not influenced by linked selection. Ultimately, an understanding
-of which sites have the potential to be adaptive, and how these affect
-genome-wide patterns of variability through linkage, is required for
-reasonable demographic inference. At the same time, since the effects of demography alter genetic variability genome-wide \cite{akey2009}, and because the efficiency of selection depends on demographic characteristics such as population size \cite{kimura1963}, selection is equally difficult to quantify without properly accounting for demographic history.
+\cite{sella2009}. One technique that has been utilized to estimate demographic parameters independently of selective parameters is to limit analyses to only sites far from genes\cite{gazave2014}, but as \emph{Drosophila} demonstrates, it is
+difficult to be certain, without species-specific knowledge, that sites even in gene-poor regions of the genome are not influenced by linked selection. Therefore, characterizing selection, demography or both, first requires an understanding of linked selection. It has already been established that patterns of linked selection are heavily influenced by population size ($N_e$) \cite{cutter2013, slotte2014}, but nearly all species including humans \cite{reich1998}, domesticates \cite{hyten2006, bovine2009}, ecological \cite{storfer2014}, and model species \cite{duchen2013} have experienced recent or ancient changes in $N_e$. Although much is known about how the long-term average $N_e$ affects linked selection, much less is understood about the immediate effects and dynamics of changing in $N_e$ on patterns of linked selection. 
 
-Maize (\emph{Zea mays}) represents an excellent organism to study this interplay. Maize is a species of tremendous importance worldwide as both a staple crop \cite{shiferaw2011} and as a model for understanding plant evolution \cite{strable2009}. 
-Archaeological and genetic studies have
-established that maize domestication is likely to have taken place in
- Mexico approximately 9,000 years bp
-\cite{smith1995,matsuoka2002}. Teosinte, the most
-recent wild ancestor to maize, remains extant throughout much of the
-Americas \cite{wilkes1967}. Additionally, several large-effect
+Because of its relatively simple demographic history and abundant availability of genomic tools, maize (\emph{Zea mays}) represents an excellent organism to study this phenomenon. Maize is a species of tremendous importance worldwide as both a model species \cite{strable2009} and a staple crop \cite{shiferaw2011}. Archaeological and genetic studies have established that maize domestication began in
+Central Mexico at least 9,000 years bp
+\cite{smith1995,matsuoka2002}, and involved a population bottleneck followed by recent expansion \cite{wright2005}. Because of this simple but dynamic demographic history, patterns of linked selection in wild and domesticated maize can be used to understand the effects of changing $N_e$ on linked selection. Teosinte, which remains extant throughout much of the Americas \cite{wilkes1967}, is the wild ancestor to maize. Additionally, several large-effect
 domestication loci \cite{doebley1995, wills2013, wang2015} and putative domestication
-regions \cite{hufford2012} have been identified. But despite all that is
+regions \cite{hufford2012} have been identified in maize. But despite all that is
 known about maize domestication, the demographic parameters of the
 domestication process remain uncertain. Specifically, the size of the
 maize domestication bottleneck has not been estimated independently of
 the bottleneck's duration, nor are there sequence-based estimates of the effective
-population size of modern maize. At the same time, the predominant form or forms of selection that have taken place during and since domestication remain unknown. Sequence information from maize and teosinte may therefore be utilized to address these questions, and to better explain the interaction between selection and demography in a system with complex but quantifiable selective and demographic histories.
+population size of modern maize. At the same time, the predominant form or forms of selection that have taken place during and since domestication, and how linkage impacts the evidence and patterns of selection across the genome, remain unknown. 
 
-
-To that end, the objectives of our study were to 1) investigate the
-relative importance of different forms of selection on whole-genome
-variability, using maize and teosinte as a model; 2) research the impact that
-demographic history has had on genetic variability in maize, and how
-this compares to the impact of a different demographic history in teosinte; and 3) precisely estimate the parameters of the
-maize domestication bottleneck. Gaining an improved understanding of the interaction between demography and selection in maize will help to increase the understanding of these phenomena across a wide array of organisms.
-
-
-%% \dropcap{D}omesticated plant species evolve in a unique fashion
-%% compared to their wild counterparts \cite{doebley2006}.
-%% This is a result of both the anthropomorphic nature of artificial selection on
-%% domesticates \cite{purugganan2009} as well as the demographic characteristics of the domestication
-%% bottleneck(s) that they tend to have experiencedtu
-%% \cite{ross2007}. However, the
-%% complex interplay between selective pressures and demographic
-%% limitations, and the impact that this interplay has on identifying
-%% selection and understanding demography, is not fully understood. Although a large body of
-%% research that involves searching the genomes of domesticated species for evidence
-%% of positive selection exists \cite{hufford2012, he2011, vigouroux2002, chapman2008}, these studies tend to focus on
-%% identifying or mapping particular genes or regions that play an
-%% important role in phenotypic evolution. In contrast, knowledge regarding the impacts that demography and
-%% selection have on whole-genome patterns of genetic variability remains limited.
-
+For this study, we begin by estimating the parameters of maize domestication based on whole-genome sequencing data. Next, we utilized these estimates to 1) investigate the relative importance of different forms of selection on genetic
+variability in the recent and acient past; and 2) research the impact that demographic history, specifically changes in $N_e$, has had on linked selection in maize, and how this compares to the impact of a different demographic history in teosinte. Gaining an improved understanding of the impacts of a dynamic demography on whole-genome variability in maize will help to increase the understanding of these phenomena across all organisms, since changes in $N_e$ are pervasive.
 
 \section{Results}
-%\subsection{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
+
+
+\subsection{Demography of maize domestication} %JRI
+To explore whether differences in the efficacy of purifying selection between maize and teosinte can be explained by demographic processes, we estimated the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). 
+The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ teosinte individuals.
+We estimate that maize split from teosinte $\approx 15,000$ generations in the past, with an initial size of only $\approx 5\% $ of the ancestral $N_a$. 
+After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
+Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
+
+\begin{figure*}[!tb]
+%\vspace*{.05in}
+\centering
+\includegraphics[width=.4\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
+\caption{Parameter estimates for a basic bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
+\end{figure*}
+
+In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
+This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
+Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
+Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
+
+\subsection{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
 To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012, hapmap3}.
 We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
@@ -153,25 +141,6 @@ gene for pairwise diversity and singletons, respectively.
   }
 \end{figure*}
 
-\subsection{Demography of maize domestication} %JRI
-To explore whether differences in the efficacy of purifying selection between maize and teosinte can be explained by demographic processes, we estimated the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). 
-The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ teosinte individuals.
-We estimate that maize split from teosinte $\approx 15,000$ generations in the past, with an initial size of only $\approx 5\% $ of the ancestral $N_a$. 
-After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
-Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
-
-\begin{figure*}[!tb]
-%\vspace*{.05in}
-\centering
-\includegraphics[width=.4\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
-\caption{Parameter estimates for a basic bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
-\end{figure*}
-
-In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
-This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
-Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
-Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}). 
-
 \subsection{Population expansion leads to stronger purifying selection in modern maize} %JRI
 Motivated by the rapid post-domestication expansion of maize evident in our demographic analysis, we reasoned that low-frequency --- and thus younger --- polymorphisms might show patterns distinct from pairwise diversity. 
 Singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) appears nearly identical to results from pairwise diversity (Figure \ref{fig:hardSweeps}), providing little support for a substantial increase in the number or strength of hard sweeps occurring in maize. 
@@ -186,8 +155,7 @@ Our findings demonstrate that classic hard selective sweeps have not contributed
 Although our approach ignores the potential for hard sweeps in noncoding regions of the genome, a growing body of evidence argues against hard sweeps as the prevalent mode of selection shaping maize variability. 
 Among well-characterized domestication loci, only the gene \emph{tga1} shows evidence of a hard sweep on a missense mutation \cite{wang2015}, while several loci are consistent with ``soft sweeps''  from standing variation \cite{studer2011,gallavotti2004role} or multiple mutations \cite{wills2013}. 
 Moreover, genome-wide studies of domestication \cite{hufford2012},  local adaptation \cite{Takuno15062015} and modern breeding \cite{beissinger2014} all support the importance of standing variation and/or non-coding variants as primary sources of adaptive variation. 
-Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013population}.  \tmb{Jeff, rewrote this part, and I like your writing here, but as written I don't think we need to mention $s_b?$}
-Assuming a mutation rate of $3 \times 10^{-8}$ \cite{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \cite{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \cite[e.g.]{studer2011}.
+Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013population}. Assuming a mutation rate of $3 \times 10^{-8}$ \cite{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \cite{eyre2007distribution}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \cite[e.g.]{studer2011}.
 Indeed, many adaptive traits in both maize \cite{wallace2014} and teosinte \cite{weber2008} are highly quantitative,  and adaptation in both maize \cite{hufford2012} and teosinte \cite{pyhajarvi2013complex} has involved selection on regulatory variation.
 
 The absence of evidence for a genome-wide impact of hard sweeps differs markedly from observations in \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, but is consistent with data from humans \cite{hernandez2011,pritchard2010genetics}. \cite{corbett2015} recently showed that selection tends to have an elevated impact reducing diversity in species with large population size compared to small, which may explain why maize and humans, both bottlenecked species, show similar patterns while \emph{drosophila} and \emph{capsella} behave differently.
