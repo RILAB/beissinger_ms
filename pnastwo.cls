@@ -16,7 +16,7 @@
   %*     pnas@nas.edu                                              *%
   %*                                                               *%
   %*****************************************************************%
-
+%edited
 \typeout{^^J^^J
 Two Column Journal Style for the^^J
 Proceedings of the National Academy of Science
@@ -26,6 +26,7 @@ Written by Amy Hendrickson, TeXnology, Inc., 9/04^^J
 This version is dated \currversion^^J^^J}
 
 \ProvidesClass{pnastwo}
+
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -3249,7 +3250,7 @@ tabnote\the\tablenotenum\endcsname
 %% Materials and Methods Fonts
 \font\materialfont=\frutiger at 7pt
 \font\materialbffont=\helveticabold at 7pt
-\font\materialitfont=\helveticaboldoblique at 7pt
+\font\materialitfont=\helveticaoblique at 7pt
 
 %% Bibliography fonts
 \font\xbibfont=\frutigerbold at 6pt
@@ -3353,6 +3354,11 @@ in keywords
 dec 4, 2006: fixed bug in table notes, by
 resetting tablenotenum every time tabular
 is used
+
+
+
+
+
 
 %\def\currversion{October 18, 2006}
 %\def\currversion{July 10, 2006}
