@@ -197,25 +197,13 @@ The efficiency of purifying selection is proportional to the effective populatio
 Although demographic change affects the efficiency of purifying selection, it may have limited implications for genetic load. 
 Recent population bottlenecks and expansions have increased the relative abundance of rare and 
 deleterious variants in domesticated plants \cite{Gunther:2010gt,renaut2015} and human populations out of Africa \cite{keinan2012,coventry2010}, and such variants may play an important role in phenotypic variation \cite{Mezmouk:2014es, coventry2010, eyre2010}.
-Nonetheless, demographic history may have little impact on the overall genetic load of populations \cite{do2015,simons2014}, as decreases in $N_e$ that allow weakly deleterious variants to escape selection also help purge strongly deleterious ones, and the increase of new deleterious mutations in expanding populations is mitigated by their  lower initial frequency and the increasing efficiency of purifying selection \cite{gazave2013, simons2014, lohmueller2014}. 
+Nonetheless, demographic history may have little impact on the overall genetic load of populations \cite{do2015,simons2014}, as decreases in $N_e$ that allow weakly deleterious variants to escape selection also help purge strongly deleterious ones, and the increase of new deleterious mutations in expanding populations is mitigated by their lower initial frequency and the increasing efficiency of purifying selection \cite{gazave2013, simons2014, lohmueller2014}. 
 
-\section{Rapid changes in linked selection} %JRI NOT DONE
+\section{Rapid changes in linked selection} %JRI 
 Our results demonstrate that consideration of long-term differences in $N_e$ cannot fully capture the dynamic relationship between demography and selection. 
-While a number of authors have incorporated demographic change into methods for detecting selection \cite{eyre2009estimating} \jri{include other sites. maybe zeng and charlesworth 2010 genetics?, XP-CLR? others?} and others have compared estimates of the efficiency of selection across species \citex or populations \cite{Elyashiv:2010ga}, previous analyses of the impact of linked selection on genome-wide diversity have relied on single estimates of the effective population size
-
-
- cite e.g. 
- $N_e$ among populations leads to differences in efficiency of purifying selection
-
-
-
-
-
-%While it is certainly the case that diversity is lost during a bottleneck, it is equally true that from the viewpoint of a mutation that arises later, the bottleneck is irrelevant. Although the relatively straight-forward demographic history of maize risks oversimplifying this observation, it is applicable to any species that has undergone demographic change. For instance, human populations have experienced recent growth much like maize has, and this growth corresponds to a documented excess of rare genetic variants \cite{keinan2012, tennessen2012, coventry2010}. Our results suggest that in such scenarios, ongoing background selection may lead to a dearth of rare variants in and around genes compared to outside of them. This conflicts with an alternative possibility; that sudden expansion should lead to a comparable increase in rare variants genome-wide.
-
-
-
-%\cite{corbett2015} recently showed that selection tends to have an elevated impact reducing diversity in species with large population size compared to small, which may explain why maize and humans, both bottlenecked species, show similar patterns while \emph{drosophila} and \emph{capsella} behave differently.
+While a number of authors have incorporated demographic change into methods for detecting selection \cite{eyre2009estimating} \jri{include other citations. maybe zeng and charlesworth 2010 genetics?, XP-CLR? others?} and others have compared estimates of the efficiency of adaptive and purifying selection across species \citex or populations \cite{Elyashiv:2010ga}, previous analyses of the impact of linked selection on genome-wide diversity have relied on single estimates of the effective population size \cite{corbett2015,leffler2012}.
+Our results show that demographic change over short periods of time can quickly change the dynamics of linked selection: mutations arising in extant maize populations are much more strongly impacted by the effects of selection on linked sites than would be suggested by analyses using long-term effective population size.
+As many natural and domesticated populations have undergone considerable demographic change in their recent past, long-term comparisons of $N_e$ are likely not informative about current processes affecting allele frequency trajectories.
 
 \begin{materials} %JRI
 
@@ -226,12 +214,9 @@ All scripts used for analysis are available in an online repository at \textcolo
 We made use of published sequences from inbred accessions of teosinte (Z. {\it mays} ssp. {\it parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project  \cite{chia2012, lemmon2014, bukowski2015}. 
 From these data, we removed 4 teosinte individuals that were not ssp. \textit{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single individual of (\textit{Tripsacum dactyloides}) as an outgroup.  All bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}. 
 
-
 \subsection{Physical and genetic maps}
 Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{bukowski2015}. 
 All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following \cite{li2011statistical}.
-%\jri{did we really only use uniquely mapping? or just a MQ $>30$ filter?}
-%both. quality filter and unique only
 We converted physical coordinates to genetic coordinates via linear interpolation of the previously published 1cM resolution NAM genetic map \cite{glaubitz2014}. 
 
 \subsection{Estimating the site frequency spectrum}
