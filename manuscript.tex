@@ -252,7 +252,7 @@ The model includes migration of $M_{mt}$ individuals each generation from maize 
 We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations and allowing initial values between runs to be randomly perturbed by a factor of 2.  
 Optimized parameters along with their initial values and upper and lower bounds can be found in table \ref{sTab:dadi}. We report parameter estimates from the optimization run with the highest log-likelihood.
 
-We further made use of a large genotyping data set of more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts. \jri{imputed or nonimputed?}
+We further made use of a large genotyping data set of more than 4,000 partially imputed maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts. 
 We filtered these data to include only SNPs with data in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals by sampling each marker without replacement 1,000 times according to the observed allele frequencies.
 We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{clark2005} and the relation  $4N_e\mu = \frac{S}{L}$ \cite{fu1993}, where where $S$ is the total number of singleton SNPs and $L$ is the total number of SNPs in the dataset.
 
