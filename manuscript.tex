@@ -27,14 +27,8 @@ Here we document the combined effects of demography and linked selection on geno
 \begin{article}
 
 \begin{abstract}
-  The genetic variability present in a population results from a constant interaction between drift and natural selection. 
-To quantify the interplay between drift and selection, we investigated patterns of linked selection in in the genomes of 23 domesticated maize and 13 wild teosinte individuals. 
-We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid population size expansion post-domestication. 
-We observe that hard sweeps on genic mutations are not the primary force driving maize evolution, and that a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize. 
-We find that expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. 
-Our results demonstrate that demographic and selective history in the ancient and recent past both contribute to the levels of genetic variability that present today. 
-Our results also show that for bottlenecked species, rapid post-bottleneck expansion can have wide-ranging impacts on diversity that conflict with the expected loss of diversity that occurs during the bottleneck itself. \jri{the whole abstract still needs work. other bottlenecked species? not very exciting. i think we need to add in the motivation rather than just "to quantify". explain that everyone else looks at long-term Ne when discussing linked selection.}
-  
+Genetic drift and selection interact to determine the level of genetic variability present in a population.
+Linked selection, whereby polymporhisms at neutral sites are manipulated by selection at linked sites, plays a primary roll in shaping genetic diversity. However, patterns of linked selection depends heavily on a population's propensity to drift, which in turn is shaped by its demographic history. Generally, demographic history is accounted for in terms of long-term effective population size ($N_e$). In practice, bottlenecks, invasions, or novel selective pressures can cause demography to change rapidly and dramatically, but the immediate genomic effects of a changing demography have not been well studied.   To address this, We investigated linked selection in in the genomes of 23 domesticated maize and 13 wild maize (teosinte) individuals. We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. As expected, a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize, but rapid expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. This final observation demonstrates that rapid demographic change can have wide-ranging impacts on diversity that conflict with would-be expectations based on long-term $N_e$.  
 \end{abstract}
 
 \dropcap{T}he genetic diversity of populations is determined by a constant interplay between genetic drift and natural selection. 
@@ -48,18 +42,18 @@ Recent work in a \emph{Drosophila}, for example, has shown that virtually the en
 
 The impact of linked selection, in turn, is heavily influenced by the effective population size ($N_e$), as the  efficiency of natural selection is proportional to the product $N_es$, where $s$ is the strength of selection on a variant \cite{cutter2013, slotte2014, corbett2015,leffler2012}.
 The effective size of a population is not static, and nearly all species, including flies \cite{duchen2013}, humans \cite{reich1998}, domesticates \cite{hyten2006, bovine2009}, and non-model species \cite{ellegren2014} have experienced recent or ancient changes in $N_e$. 
-Although much is known about how the long-term average $N_e$ affects linked selection \jri{citations needed}, relatively little is understood about the immediate effects of more recent changes in $N_e$ on patterns of linked selection.
+Although much is known about how the long-term average $N_e$ affects linked selection \cite{cutter2013}, relatively little is understood about the immediate effects of more recent changes in $N_e$ on patterns of linked selection.
 
 Because of its relatively simple demographic history and well-developed genomic resources, maize (\emph{Zea mays}) represents an excellent organism to study these effects. 
 Archaeological and genetic studies have established that maize domestication began in Central Mexico at least 9,000 years bp \cite{smith1995,matsuoka2002}, and involved a population bottleneck followed by recent expansion \cite{wright2005,eyre1998,tenaillon2004}.
 Because of this simple but dynamic demographic history, domesticated maize and its wild ancestor teosinte can be used to understand the effects of changing $N_e$ on linked selection. 
-In this study, we leverage the maize-teosinte study system to study these effects by first estimating the parameters of the maize domestication bottleneck using whole-genome resequencing data and then investigating the relative importance of different forms of linked selection on diversity in the recent and ancient past. 
+In this study, we leverage the maize-teosinte system to study these effects by first estimating the parameters of the maize domestication bottleneck using whole-genome resequencing data and then investigating the relative importance of different forms of linked selection on diversity in the recent and ancient past. 
 We show that, while patterns of overall nucleotide diversity reflect long-term differences in $Ne$, recent growth following domestication qualitatively changes these effects, thereby illustrating the importance of a comprehensive understanding of demography when considering the effects of selection genome-wide. 
 
 \section{Results}
 
 \subsection{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
-To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012, hapmap3}. As a preliminary step, we evaluated levels of diversity inside and outside of genes across the genome. We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
+To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012, bukowski2015}. As a preliminary step, we evaluated levels of diversity inside and outside of genes across the genome. We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
 Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $p\approx 0$). 
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
@@ -79,7 +73,7 @@ Maize and teosinte have continued to exchange migrants after the population spli
 \begin{center}
   \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
-\caption{Pairwise diversity $\pi$ (A,B) and Tajimas D (C,D) in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
+\caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
 \end{figure}
 
 
@@ -156,7 +150,7 @@ Singleton diversity around missense and synonymous substitutions (Figure \ref{sF
 In contrast, we observe a significant shift in the effects of purifying selection: singleton polymorphisms are more strongly reduced in and near genes in maize than in teosinte, even after downsampling our maize data to account for differences in sample size (Figure \ref{fig:purify}B). 
 This result is the opposite of the pattern observed for $\pi$, where teosinte demonstrated a stronger reduction of diversity in and around genes than did maize. 
 As before, this relationship remained after we removed the 20\% of genes with the highest H12 values (Figure \ref{sFig:H12}).
-Finally, while direct comparison of pairwise and singleton diversity within taxa is consistent with   non-equilibrium dynamics in teosinte as indicated in our coalescent-based demographic analysis, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}). \jri{tempted to remove phrase "as indicated in our coalescent-based demographic analysis"}
+Finally, while direct comparison of pairwise and singleton diversity within taxa is consistent with   non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}).
 
 
 
@@ -198,8 +192,8 @@ We observe a more pronounced decrease in $\pi$ around genes in teosinte than mai
 The efficiency of purifying selection is proportional to the effective population size \cite{kimura1984}, and these results are thus consistent with a demestication bottleneck and smaller long-term $N_e$ in maize \cite{eyre1998, tenaillon2004, wright2005, ross2009} and our demographic analyses showing rapid expansion and a much larger modern $N_e$.  
 
 Although demographic change affects the efficiency of purifying selection, it may have limited implications for genetic load. 
-Recent population bottlenecks and expansions have increased the relative abundance of 
-deleterious variants in domesticated plants \cite{Gunther:2010gt,renaut2015} and human populations out of Africa \jri{is keinan2012 appropriate here? others?}, and such variant have been shown to play an important role in phenotypic variation \cite{Mezmouk:2014es} \jri{need some human cites here}. 
+Recent population bottlenecks and expansions have increased the relative abundance of rare and 
+deleterious variants in domesticated plants \cite{Gunther:2010gt,renaut2015} and human populations out of Africa \cite{keinan2012,coventry2010}, and such variants may play an important role in phenotypic variation \cite{Mezmouk:2014es, coventry2010, eyre2010}.
 Nonetheless, demographic history may have little impact on the overall genetic load of populations \cite{do2015,simons2014}, as decreases in $N_e$ that allow weakly deleterious variants to escape selection also help purge strongly deleterious ones, and the increase of new deleterious mutations in expanding populations is mitigated by their  lower initial frequency and the increasing efficiency of purifying selection \cite{gazave2013, simons2014, lohmueller2014}. 
 
 
@@ -227,16 +221,15 @@ Our results demonstrate that consideration of long-term differences in $N_e$ can
 All scripts used for analysis are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.} 
 
 \subsection{Plant materials}
-We made use of published sequences from inbred accessions of teosinte (Z. \emph{mays} ssp. \emph{parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project  \cite{chia2012, lemmon2014, hapmap3}. 
-From these data, we removed 4 teosinte individuals that were not ssp. \emph{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single individual of (\emph{Tripsacum dactyloides}) as an outgroup.  All bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}). 
+We made use of published sequences from inbred accessions of teosinte (Z. {\it mays} ssp. {\it parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project  \cite{chia2012, lemmon2014, bukowski2015}. 
+From these data, we removed 4 teosinte individuals that were not ssp. \textit{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single individual of (\textit{Tripsacum dactyloides}) as an outgroup.  All bam files are available at \textcolor{red}{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}. 
 
-%\jri{some clarification here. did we use Lemmon's higher depth teosinte? If so, why does Li say we only had 7 high-depth bam files?  shouldn't there be more?}
-
-% TB Says: Most bam files were not high-depth, but a few were. I used what was made available from Panzea group via iplant in summer 2014, and precise files that were used are linked and described in table. ANGSD GL approach makes it OK that depth varied.
 
 \subsection{Physical and genetic maps}
-Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{hapmap3}. \jri{update ref. 29 to hapmap 3 paper}
- All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following Li \emph{et al.} \cite{li2011statistical}. \jri{did we really only use uniquely mapping? or just a MQ $>30$ filter?}
+Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/) as described by \cite{bukowski2015}. 
+All analyses made use of uniquely mapping reads with mapping quality score $\geq  30$ and bases with base quality score $\geq 20$; quality scores around indels were adjusted following \cite{li2011statistical}.
+%\jri{did we really only use uniquely mapping? or just a MQ $>30$ filter?}
+%both. quality filter and unique only
 We converted physical coordinates to genetic coordinates via linear interpolation of the previously published 1cM resolution NAM genetic map \cite{glaubitz2014}. 
 
 \subsection{Estimating the site frequency spectrum}
@@ -258,16 +251,16 @@ We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{cl
 
 As a final estimate of demography, we employed MSMC \cite{schiffels2014}  to complement our model-based demographic inference. 
 We used six each of maize and teosinte (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033, TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14), treating each inbred genome as a single haplotype.
-We called SNPs in ANGSD \cite{korneliussen2014} using a SNP p-value of $1e-6$ against a reference genome masked using SNPable (\url{http://lh3lh3.users.sourceforge.net/snpable.shtml}). \jri{fix url, not showing up in pdf}
-We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\emph{log}_2(\emph{depth})|<1$. \jri{fix depth, italics is weird}
+We called SNPs in ANGSD \cite{korneliussen2014} using a SNP p-value of $1e-6$ against a reference genome masked using SNPable (http://lh3lh3.users.sourceforge.net/snpable.shtml). 
+We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\textit{log}_2(\text{depth})|<1$.
 We ran MSMC with pattern parameters $20\times2+20\times4+10\times2$.
 
 \subsection{Diversity}
 We made use of the software ANGSD \cite{korneliussen2014} for diversity calculations and genotype calling. 
 We calculated diversity statistics in maize and teosinte in 1 kb non-overlapping windows using filters as described above for the SFS. 
 We used allele counts to estimate the number of singleton polymorphisms in each window, and used binomial sampling to create a second maize data set down-sampled to have the same number of samples as teosinte.
-We called genotypes in maize, teosinte, and \emph{Tripsacum} at sites with a SNP p-value $<10^{-6}$ and when the genotype posterior probability $>0.95$. \jri{in methods, not sure if you should use emph instead of textit or something, as italics text looks weird}
-We identified substitutions in maize and teosinte as all sites with a fixed difference with \emph{Tripsacum} and $\leq 20\%$ missing data. 
+We called genotypes in maize, teosinte, and \textit{ Tripsacum} at sites with a SNP p-value $<10^{-6}$ and when the genotype posterior probability $>0.95$. 
+We identified substitutions in maize and teosinte as all sites with a fixed difference with \textit{Tripsacum} and $\leq 20\%$ missing data. 
 Substitutions were classified as synonymous, missense, or noncoding using the ensembl variant effects predictor \cite{mclaren2010}.
 For each window with $\geq 100bp$ of data we computed the genetic distance between the window center and the nearest synonymous and missense substitution as well as the genetic distance to the center of the nearest gene transcript.  
 
@@ -277,7 +270,7 @@ We scanned the genome to identify sites that have experienced recent positive se
 \end{materials}
 
 \begin{acknowledgments}
-We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014.
+We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014 and the USDA-Agricultural Research Service.
 \end{acknowledgments}
 
 \bibliography{Reference}

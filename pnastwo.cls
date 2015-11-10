@@ -3250,7 +3250,7 @@ tabnote\the\tablenotenum\endcsname
 %% Materials and Methods Fonts
 \font\materialfont=\frutiger at 7pt
 \font\materialbffont=\helveticabold at 7pt
-\font\materialitfont=\helveticaboldoblique at 7pt
+\font\materialitfont=\helveticaoblique at 7pt
 
 %% Bibliography fonts
 \font\xbibfont=\frutigerbold at 6pt
