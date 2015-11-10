@@ -16,7 +16,7 @@
   %*     pnas@nas.edu                                              *%
   %*                                                               *%
   %*****************************************************************%
-
+%edited
 \typeout{^^J^^J
 Two Column Journal Style for the^^J
 Proceedings of the National Academy of Science
