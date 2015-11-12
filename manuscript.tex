@@ -27,8 +27,7 @@ Here we document the combined effects of demography and linked selection on geno
 \begin{article}
 
 \begin{abstract}
-Genetic drift and selection interact to determine the level of genetic variability present in a population.
-Linked selection, whereby polymorphisms at neutral sites are manipulated by selection at linked sites, plays a primary roll in shaping genetic diversity. However, patterns of linked selection depend heavily on a population's propensity to drift, which in turn is shaped by its demographic history. Generally, demographic history is accounted for in terms of long-term effective population size ($N_e$). In practice, bottlenecks, invasions, or novel selective pressures can cause demography to change rapidly and dramatically, but the immediate genomic effects of a changing demography have not been well studied.   To address this, We investigated linked selection in in the genomes of 23 domesticated maize and 13 wild maize (teosinte) individuals. We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. As expected, a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize, but rapid expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. This final observation demonstrates that rapid demographic change can have wide-ranging impacts on diversity that conflict with would-be expectations based on long-term $N_e$.  
+  The interaction between genetic drift and selection in shaping genetic diversity is not fully understood. In particular, a population's propensity to drift is typically summarized by its long-term effective population size ($N_e$) but rapidly changing population demographics may complicate this relationship. To better understand how changing demography impacts selection, we investigated linked selection in in the genomes of 23 domesticated maize and 13 wild maize (teosinte) individuals. We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. As expected, a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize, but rapid expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. This final observation demonstrates that rapid demographic change can have wide-ranging impacts on diversity that conflict with would-be expectations based on long-term $N_e$.
 \end{abstract}
 
 \dropcap{T}he genetic diversity of populations is determined by a constant interplay between genetic drift and natural selection. 
@@ -67,10 +66,15 @@ We estimate that maize split from teosinte $\approx 15,000$ generations in the p
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
 Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
 
+In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
+This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
+Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
+Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
+Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
 \begin{figure}[!tb]
-\begin{center}
+  \begin{center}
   \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
 \caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
@@ -83,12 +87,6 @@ Maize and teosinte have continued to exchange migrants after the population spli
 \includegraphics[width=.5\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
 \caption{Parameter estimates for a basic bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
 \end{figure*}
-
-In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
-This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
-Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
-Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
-Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
 \subsection{Hard sweeps do not explain diversity differences} %JRI
@@ -202,14 +200,14 @@ Nonetheless, demographic history may have little impact on the overall genetic l
 
 \section{Rapid changes in linked selection} %JRI 
 Our results demonstrate that consideration of long-term differences in $N_e$ cannot fully capture the dynamic relationship between demography and selection. 
-While a number of authors have incorporated demographic change into methods for detecting selection \cite{eyre2009estimating} \jri{include other citations. maybe zeng and charlesworth 2010 genetics?, XP-CLR? others?} and others have compared estimates of the efficiency of adaptive and purifying selection across species \citex or populations \cite{Elyashiv:2010ga}, previous analyses of the impact of linked selection on genome-wide diversity have relied on single estimates of the effective population size \cite{corbett2015,leffler2012}.
+While a number of authors have tested for selection using methods that explicitly incorporate or are robust to demographic change \cite{eyre2009estimating, chen2010, zeng2010} and others have compared estimates of the efficiency of adaptive and purifying selection across species \cite{popadin2012} or populations \cite{Elyashiv:2010ga}, previous analyses of the impact of linked selection on genome-wide diversity have relied on single estimates of the effective population size \cite{corbett2015,leffler2012}.
 Our results show that demographic change over short periods of time can quickly change the dynamics of linked selection: mutations arising in extant maize populations are much more strongly impacted by the effects of selection on linked sites than would be suggested by analyses using long-term effective population size.
 As many natural and domesticated populations have undergone considerable demographic change in their recent past, long-term comparisons of $N_e$ are likely not informative about current processes affecting allele frequency trajectories.
 
 \begin{materials} %JRI
 
 \subsection{BASH, R, and Python scripts}
-All scripts used for analysis are available in an online repository at \textcolor{red}{REPO ADDRESS HERE.} 
+All scripts used for analysis are available in an online repository at https://github.com/timbeissinger/Maize-Teo-Scripts. 
 
 \subsection{Plant materials}
 We made use of published sequences from inbred accessions of teosinte (Z. {\it mays} ssp. {\it parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project  \cite{chia2012, lemmon2014, bukowski2015}. 
