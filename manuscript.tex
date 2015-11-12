@@ -31,9 +31,9 @@ The interaction between genetic drift and selection in shaping genetic diversity
 \end{abstract}
 
 \dropcap{T}he genetic diversity of populations is determined by a constant interplay between genetic drift and natural selection. 
-Drift is a consequence of a finite population size and the random sampling of gametes every generation \cite{dobzhansky1957}. 
+Drift is a consequence of a finite population size and the random sampling of gametes each generation \cite{dobzhansky1957}. 
 In contrast to the stochastic effects of drift, selection systematically alters allele frequencies by favoring particular alleles at the expense of others as a result of their effects on fitness.
-Researchers often seek to study drift by excluding potentially selected sites \cite{voight2005, luikart2003, gutenkunst2009}, or to study selection by focusing on site-specific patterns under the assumption that genome-wide diversity reflects primarily the action of drift \cite{akey2009}.
+Researchers often study drift by excluding potentially selected sites \cite{voight2005, luikart2003, gutenkunst2009}, or selection by focusing on site-specific patterns under the assumption that genome-wide diversity reflects primarily the action of drift \cite{akey2009}.
 
 Drift and selection do not operate independently to determine genetic variability, however, in large part because linkage allows the effects of selection to be wide-ranging \cite{smith1974, li2012,slotte2014}. 
 Linked selection can take the form of hitch-hiking, when the frequency of a neutral allele changes as a result of positive selection at a physically linked site \cite{smith1974}, or background selection, where diversity is reduced at loci linked to a site undergoing selection against deleterious alleles \cite{charlesworth1993}. 
@@ -46,7 +46,7 @@ Although much is known about how the long-term average $N_e$ affects linked sele
 Because of its relatively simple demographic history and well-developed genomic resources, maize (\emph{Zea mays}) represents an excellent organism to study these effects. 
 Archaeological and genetic studies have established that maize domestication began in Central Mexico at least 9,000 years bp \cite{smith1995,matsuoka2002}, and involved a population bottleneck followed by recent expansion \cite{wright2005,eyre1998,tenaillon2004}.
 Because of this simple but dynamic demographic history, domesticated maize and its wild ancestor teosinte can be used to understand the effects of changing $N_e$ on linked selection. 
-In this study, we leverage the maize-teosinte system to study these effects by first estimating the parameters of the maize domestication bottleneck using whole-genome resequencing data and then investigating the relative importance of different forms of linked selection on diversity in the recent and ancient past. 
+In this study, we leverage the maize-teosinte system to study these effects by first estimating the parameters of the maize domestication bottleneck using whole-genome resequencing data and then investigating the relative importance of different forms of linked selection on diversity in the ancient and more recent past. 
 We show that, while patterns of overall nucleotide diversity reflect long-term differences in $Ne$, recent growth following domestication qualitatively changes these effects, thereby illustrating the importance of a comprehensive understanding of demography when considering the effects of selection genome-wide. 
 
 \section{Results}
@@ -87,14 +87,14 @@ In addition to our simple bottleneck model, we investigated two alternative appr
 This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
 Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
-Our assessment of the historical demography of maize and teosinte provides important context for subsequent analyses of linked selection.
+Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
 \subsection{Hard sweeps do not explain diversity differences} %JRI
 When selection increases the frequency of a new beneficial mutation, a signature of reduced diversity is left at surrounding linked sites \cite{smith1974}.
 To evaluate whether patterns of such ``hard sweeps'' could explain observed differences in diversity between genic and intergenic regions of the genome, we compared diversity around missense and synonymous substitutions between \emph{Tripsacum} and either maize or teosinte.
 If a substantial proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
-We observe this pattern around the causative amino acid substitution in the the maize domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005, wang2015}. Genome-wide, however, we observe no differences in diversity between synonymous and missense substitutions in either maize or teosinte (Figure \ref{fig:hardSweeps}).
+We observe this pattern around the causative amino acid substitution in the the maize domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2005, wang2015}. Genome-wide, however, we observe no differences in diversity at sites near synonymous versus missense substitutions in either maize or teosinte (Figure \ref{fig:hardSweeps}).
 
 %\mbh{I'm curious whether linked selection is affecting the diversity around a sizable proportion of synonymous substitutions.  Would it be worthwhile to look at diversity around the subset of synonymous substitutions that are the least linked to missense substitutions just to make sure it is not substantially higher? Or perhaps generate a plot of diversity around synonymous substitutions vs. distance of these subs from missense subs?}
 
@@ -106,10 +106,10 @@ We observe this pattern around the causative amino acid substitution in the the 
 \caption{Pairwise diversity surrounding synonymous and missense  substitutions in {\bf A} maize and {\bf B} teosinte. Axes show absolute diversity values (right) and values relative to mean nucleotide diversity in windows $\geq 0.01 cM$ from a substitution (left).  Lines depict a loess curve (span of 0.01) and shading represents bootstrap-based 95\% confidence intervals. Inset plots depict a larger range on the x-axis. \label{fig:hardSweeps}}
 \end{figure*}
 
-Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes that are under weak purifying selection and thus have higher genetic diversity \cite{enard2014}. 
+Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes that, due to weak purifying selection, have higher genetic diversity \cite{enard2014}. 
 To address this concern, we took advantage of genome-wide estimates of evolutionary constraint \cite{rodgers2015} calculated using genomic evolutionary rate profile (GERP) scores \cite{davydov2010}. 
 We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection. 
-As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference between synonymous and missense substitutions in either subset of the data (Figure \ref{sFig:consUncons}).
+As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference in diversity near synonymous and missense substitutions in either subset of the data (Figure \ref{sFig:consUncons}).
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
 
@@ -122,13 +122,13 @@ We investigated purifying selection in maize and teosinte by evaluating the redu
 Pairwise diversity is strongly reduced within genes for both maize and teosinte (Figure \ref{fig:purify}A) but recovers quickly at sites outside of genes, consistent with the low levels of linkage disequilibrium generally observed in these subspecies \cite{tenaillon2002,chia2012}. 
 The reduction in relative diversity is more pronounced in teosinte, reaching lower levels in genes and occurring over a wider region.  
 
-Our previous comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple mutations or standing genetic variation, because in such cases diversity around the substitution may be reduced to a lesser degree \cite{innan2004,messer2013}. 
-Nonetheless, such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation for the observed reduction of diversity at linked sites in genes. 
+Our previous comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple beneficial mutations or standing genetic variation, because in such cases diversity around the substitution may be reduced to a lesser degree \cite{innan2004,messer2013}. 
+Nonetheless, such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation to background selection for the observed reduction of diversity at linked sites in genes. 
 To test this possibility, we performed a genome-wide scan for selection using the H12 statistic, a method expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
 Qualitative differences between maize and teosinte in patterns of diversity within and outside of genes remained unchanged even after removing genes in the top 20\% quantile of H12 (Figure \ref{sFig:H12}A).
 %\mbh{This makes me wonder about the top 20\%. Is the pattern of diversity reduction different in this fraction of the genome?  If so, that seems like something that should be mentioned.}
 %TB Says: Sites in the top 20% of H12 are unlikely to be under background selection, so maize vs teo background selection pattern at these sites seems strange to investigate.
-We interpret these combined results as suggesting that purifying selection has left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in effective population size.
+We interpret these combined results as suggesting that purifying selection has predominantly shaped diversity near genes and left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in long-term effective population size.
 
 \begin{figure*}[tb]
 %\vspace*{.05in}
