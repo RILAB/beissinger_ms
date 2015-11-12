@@ -27,7 +27,7 @@ Here we document the combined effects of demography and linked selection on geno
 \begin{article}
 
 \begin{abstract}
-The interaction between genetic drift and selection in shaping genetic diversity is not fully understood. In particular, a population's propensity to drift is typically summarized by its long-term effective population size ($N_e$) but rapidly changing population demographics may complicate this relationship. To better understand how changing demography impacts selection, we investigated linked selection in in the genomes of 23 domesticated maize and 13 wild maize (teosinte) individuals. We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. As expected, a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize, but rapid expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. This final observation demonstrates that rapid demographic change can have wide-ranging impacts on diversity that conflict with would-be expectations based on long-term $N_e$.  
+  The interaction between genetic drift and selection in shaping genetic diversity is not fully understood. In particular, a population's propensity to drift is typically summarized by its long-term effective population size ($N_e$) but rapidly changing population demographics may complicate this relationship. To better understand how changing demography impacts selection, we investigated linked selection in in the genomes of 23 domesticated maize and 13 wild maize (teosinte) individuals. We show that maize went through a domestication bottleneck with a population size of approximately 5\% that of teosinte before it experienced rapid expansion post-domestication. We observe that hard sweeps on genic mutations are not the primary force driving maize evolution. As expected, a reduced population size during domestication decreased the efficiency of purifying selection to purge deleterious alleles from maize, but rapid expansion after domestication has increased the efficiency of purifying selection to levels exceeding those seen in teosinte. This final observation demonstrates that rapid demographic change can have wide-ranging impacts on diversity that conflict with would-be expectations based on long-term $N_e$.
 \end{abstract}
 
 \dropcap{T}he genetic diversity of populations is determined by a constant interplay between genetic drift and natural selection. 
@@ -66,10 +66,15 @@ We estimate that maize split from teosinte $\approx 15,000$ generations in the p
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
 Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
 
+In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
+This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
+Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
+Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
+Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
 \begin{figure}[!tb]
-\begin{center}
+  \begin{center}
   \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
 \caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
@@ -82,12 +87,6 @@ Maize and teosinte have continued to exchange migrants after the population spli
 \includegraphics[width=.5\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
 \caption{Parameter estimates for a basic bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
 \end{figure*}
-
-In addition to our simple bottleneck model, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using low frequency variants  informative of population expansion. 
-This analysis yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
-Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
-Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
-Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
 \subsection{Hard sweeps do not explain diversity differences} %JRI
