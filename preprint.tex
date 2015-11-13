@@ -20,17 +20,17 @@
 
 
 \title{More than one Author with different Affiliations}
-\author[1,2,3]{Timothy M. Beissinger}
-\author[4]{Li Wang}
+\author[1,2]{Timothy M. Beissinger}
+\author[3]{Li Wang}
 \author[1]{Kate Crosby}
 \author[1]{Arun Durvasula}
-\author[4]{Matthew B. Hufford}
-\author[1,5]{Jeffrey Ross-Ibarra}
+\author[3]{Matthew B. Hufford}
+\author[1,4]{Jeffrey Ross-Ibarra}
 \affil[1]{Dept. of Plant Sciences, University of California, Davis, CA, USA}
 \affil[2]{US Department of Agriculture, Agricultural Research Service, Columbia, MO, USA}
-\affil[3]{Division of Plant Sciences, University of Missouri, Columbia, MO, USA}
-\affil[4]{Department of Ecology, Evolution, and Organismal Biology, Iowa State University, Ames, IA, USA}
-\affil[5]{Genome Center and Center for Population Biology, University of California, Davis, CA, USA}
+%\affil[3]{Division of Plant Sciences, University of Missouri, Columbia, MO, USA}
+\affil[3]{Department of Ecology, Evolution, and Organismal Biology, Iowa State University, Ames, IA, USA}
+\affil[4]{Genome Center and Center for Population Biology, University of California, Davis, CA, USA}
 
 \renewcommand\Authands{ and }
 
@@ -78,6 +78,12 @@ Diversity differences in teosinte are even more pronounced (0.0088 vs. 0.0115, $
 Differences were also apparent in the site frequency spectrum, with mean Tajima's D positive in genic regions in both maize (0.4) and teosinte (0.013) but negative outside of genes (-0.087 in maize and -0.25 in teosinte, $p\approx 0$ for both comparisons).
 These observations suggest that diversity in genes is not evolving neutrally, but instead is reduced by the impacts of selection on linked sites. 
 
+\begin{figure}[!tb]
+  \begin{center}
+  \includegraphics[width=.65\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
+\end{center}
+\caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
+\end{figure}
 
 
 \subsection*{Demography of maize domestication} %JRI
@@ -94,12 +100,6 @@ Though this analysis suggests non-equilibrium dynamics for teosinte not included
 Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
-\begin{figure}[!tb]
-  \begin{center}
-  \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
-\end{center}
-\caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
-\end{figure}
 
 
 \begin{figure*}[!tb]
@@ -206,7 +206,7 @@ Comparisons of the estimated percentages of nonsynonmyous substitutions fixed by
 While differences in long-term $N_e$ likely explains some of the observed variation across species, we see little change in the importance of hard sweeps in genes in singleton diversity in modern maize (Figure \ref{sFig:singleton}), perhaps suggesting other factors may contribute to these differences as well.  
 One possibility, for example, is that, if mutational target size scales with genome size, the larger genomes of human and maize may offer more opportunities for noncoding loci to contribute to adaptation, with hard sweeps on nonsynonymous variants then playing a relatively smaller role. 
 Support for this idea comes from numerous cases of adaptive transposable element insertion modifying gene regulation in maize \cite{studer2011,castelletti2014mite,mao2015,yang2013} and studies of local adaptation that show enrichment for SNPs in regulatory regions in teosinte \cite{pyhajarvi2013} and humans \cite{fraser2013gene} but for nonsynonymous variants in the smaller \emph{Arabidopsis} genome.  
-Our results, for example, are not dissimilar to findings in the comparably-sized mouse genome, where no differences are seen in diversity around nonsynonymous and synonymous substitutions in spite of a large $N_e$ and  as many as 80\% of adaptive substitutions occur outside of genes\cite{Halligan:2013ir}.
+Our results, for example, are not dissimilar to findings in the comparably-sized mouse genome, where no differences are seen in diversity around nonsynonymous and synonymous substitutions in spite of a large $N_e$ and as many as 80\% of adaptive substitutions occuring outside of genes\cite{Halligan:2013ir}.
 Future comparative analyses using a common statistical framework (e.g. \cite{corbett2015}) and considering additional ecological and life history factors (c.f. \cite{leffler2012}) should allow explicit testing of this idea.
 
 \subsection*{Demography influences the efficiency of purifying selection} %JRI 
@@ -243,13 +243,13 @@ We converted physical coordinates to genetic coordinates via linear interpolatio
 We estimated both the genome-wide site frequency spectrum (SFS) as well as a separate SFS for genic (within annotated transcript) and intergenic ($\geq 5kb$ from a transcript) regions. 
 We used the biomaRt package \cite{durinck2009,durinck2005} of R \cite{R2014} to parse annotations from genebuild version 5b of AGPv3. 
 We estimated single population and joint SFS with the software ANGSD \cite{korneliussen2014}, including all positions with at least one aligned read in $\geq 80\%$ of samples in one or both populations.
-We assumed individuals were fully inbred and treated each line as a single haplotype. Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta\alpha\delta{i}$ \cite{gutenkunst2009}.
+We assumed individuals were fully inbred and treated each line as a single haplotype. Because ANGSD cannot calculate a folded joint SFS, we first polarized SNPs using the maize reference genome and then folded spectra using $\delta$a$\delta$i \cite{gutenkunst2009}.
 
 \subsection*{Demographic inference}
-We used the software $\delta\alpha\delta{i}$ \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS, using only sites $>5 kb$ from a gene to ameliorate the effects of linked selection.
+We used the software $\delta$a$\delta$i \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS, using only sites $>5 kb$ from a gene to ameliorate the effects of linked selection.
 We modeled a teosinte population of constant effective size $N_a$, that at time $T_b$ generations in the past gave rise to a maize population of size $N_b$ which grew exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck}).
-The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  We estimated $N_a$ using $\delta\alpha\delta{i}$'s estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $\mu = 3 \times 10^{-8}$ \cite{clark2005}. 
-We estimated all other parameters using 1,000 $\delta\alpha\delta{i}$ optimizations and allowing initial values between runs to be randomly perturbed by a factor of 2.  
+The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  We estimated $N_a$ using $\delta$a$\delta$i's estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $\mu = 3 \times 10^{-8}$ \cite{clark2005}. 
+We estimated all other parameters using 1,000  $\delta$a$\delta$i optimizations and allowing initial values between runs to be randomly perturbed by a factor of 2.  
 Optimized parameters along with their initial values and upper and lower bounds can be found in table \ref{sTab:dadi}. We report parameter estimates from the optimization run with the highest log-likelihood.
 
 We further made use of a large genotyping data set of more than 4,000 partially imputed maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts. 
@@ -259,7 +259,7 @@ We then estimated $N_e$ from the data assuming $\mu = 3 \times 10^{-8}$ \cite{cl
 As a final estimate of demography, we employed MSMC \cite{schiffels2014}  to complement our model-based demographic inference. 
 We used six each of maize and teosinte (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033, TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14), treating each inbred genome as a single haplotype.
 We called SNPs in ANGSD \cite{korneliussen2014} using a SNP p-value of $1e-6$ against a reference genome masked using SNPable (\url{http://lh3lh3.users.sourceforge.net/snpable.shtml}). 
-We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\textit{log}_2(\text{depth})|<1$.
+We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\mbox{log}_2(\mbox{depth})|<1$.
 We ran MSMC with pattern parameters $20\times2+20\times4+10\times2$.
 
 \subsection*{Diversity}
@@ -268,24 +268,22 @@ We calculated diversity statistics in maize and teosinte in 1 kb non-overlapping
 We used allele counts to estimate the number of singleton polymorphisms in each window, and used binomial sampling to create a second maize data set down-sampled to have the same number of samples as teosinte.
 We called genotypes in maize, teosinte, and \textit{ Tripsacum} at sites with a SNP p-value $<10^{-6}$ and when the genotype posterior probability $>0.95$. 
 We identified substitutions in maize and teosinte as all sites with a fixed difference with \textit{Tripsacum} and $\leq 20\%$ missing data. 
-Substitutions were classified as synonymous, missense, or noncoding using the ensembl variant effects predictor \cite{mclaren2010}.
+Substitutions were classified as synonymous or missense using the ensembl variant effects predictor \cite{mclaren2010}.
 For each window with $\geq 100bp$ of data we computed the genetic distance between the window center and the nearest synonymous and missense substitution as well as the genetic distance to the center of the nearest gene transcript.  
 
 \subsection*{Selection scan}
 We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
 
 
-\begin{acknowledgments}
+\section*{acknowledgments}
 We are indebted to Graham Coop and Simon Aeshbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014 and the USDA-Agricultural Research Service.
-\end{acknowledgments}
 
+
+\bibliographystyle{unsrt}
 \bibliography{Reference}
-\bibliographystyle{pnas}
+
 \onecolumn
 \input{supportingInfo} 
-
-
-\end{article}
 
 
 \end{document}
