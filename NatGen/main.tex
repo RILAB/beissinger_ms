@@ -1,0 +1,550 @@
+%\documentclass[twocolumn,twoside]{article}
+\documentclass[twoside, twocolumn, letterpaper]{article}
+\usepackage{graphics}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{NatGenArtT}
+%\usepackage{NatureLetT}
+\usepackage{times}
+\DeclareMathAlphabet{\msfsl}{OT1}{cmss}{m}{sl}
+\DeclareMathAlphabet{\msfrg}{OT1}{cmss}{n}{sl}
+\renewcommand{\baselinestretch}{1}
+\addtolength{\oddsidemargin}{-.2cm}
+\addtolength{\evensidemargin}{-1.2cm}
+\addtolength{\textwidth}{1.5cm}
+\addtolength{\topmargin}{-1.75cm}
+\addtolength{\textheight}{3.5cm}
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\topfraction}{0.99}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.90}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\renewcommand{\sfdefault}{phv}
+
+\usepackage[sort&compress]{natbib}
+\bibpunct{}{}{,}{s}{}{\textsuperscript{,}}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%added commands YANG
+\usepackage[colorinlistoftodos]{todonotes} % comments in margins
+\setlength{\marginparwidth}{1.5cm}
+\definecolor{flame}{rgb}{0.89, 0.35, 0.13}
+\newcommand{\jri}[1]{\todo[size=\scriptsize, color=flame]{#1}}
+\newcommand{\yang}[1]{\todo[size=\scriptsize, color=cyan]{#1}}
+\newcommand{\X}{\textcolor{red}{\bf X\,}}
+\newcommand{\citex}{\textcolor{red}{\bf (CITE)\,}}
+\newcommand{\out}[1]{\textcolor{red}{#1}} %outline placeholder text
+
+%\usepackage[natbib=true]{biblatex}% natbib compatibility mode
+%\addbibresource{Diallel.bib}
+%\bibliographystyle{NatureSeriesT}
+
+\graphicspath{{Figure_Table/}{SI/}} % Location of the graphics files
+%
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\tablename}{Supplementary Table}%
+        \setcounter{figure}{0}
+        \renewcommand{\figurename}{Supplementary Figure}%
+}
+
+\makeatletter
+\renewcommand{\footnotesep}{-2pt}
+\makeatletter
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% fancy for Nature Genetics
+\fancyhead[RO]{\begin{picture}(600,1)(10,20)\put(440,32) {\textcolor{Dgreen}{\large{\sfbf{ARTICLES}}}}\end{picture}}
+\fancyhead[RE]{\begin{picture}(600,1)(10,20)\put(10,32)  {\textcolor{Dgreen}{\large{\sfbf{ARTICLES}}}}\end{picture}}
+\fancyhead[C]{\begin{picture}(600,1)(10,20)\linethickness{50pt}\put(-43,52) {{\color{pTop}{\line(1,0){615}}}}\linethickness{0.5pt}\put(10,-678) {{\line(1,0){515}}}\end{picture}}
+
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+}
+\setcounter{footnote}{0}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Incorporation of Evolutionary Constraint Improves Genomic Prediction of Hybrid Phenotypes}
+
+\author{
+Jinliang Yang\thanks{Department of Plant Sciences, University of California, Davis, CA 95616, USA} $^,$\thanks{These authors contributed equally to this work} \hspace{0.5mm}, 
+Sofiane Mezmouk$^{1,2,}$\thanks{Current address: KWS SAAT AG, Grimsehlstr. 31, 37555 Einbeck, Germany} \hspace{0.5mm}, 
+Andy Baumgarten\thanks{DuPont Pioneer, Johnston, IA 50131, USA} \hspace{0.5mm}, 
+Edward S. Buckler\thanks{US Department of Agriculture, Agricultural Research Service, Ithaca, NY 14853, USA} \hspace{0.5mm}, 
+Katherine E. Guill\thanks{US Department of Agriculture, Agricultural Research Service, Columbia, MO 65211, USA} \hspace{0.5mm},
+Michael D. McMullen$^{6,}$\thanks{Division of Plant Sciences, University of Missouri, Columbia, MO 65211, USA} \hspace{0.5mm},
+Rita H. Mumm\thanks{Department of Crop Sciences, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} \hspace{0.5mm},
+and Jeffrey Ross-Ibarra$^{1,}$\thanks{Center for Population Biology and Genome Center, University of California, Davis, CA 95616, USA} $^,$\thanks{Correspondence should be addressed to J.R.-I. (rossibarra@ucdavis.edu).}\hspace{0.5mm}
+}
+\date{\small Manuscript intended for \emph{Nature Genetics}, \today}
+
+\begin{document} 
+\maketitle
+
+
+\begin{abstract}
+\noindent \bf
+\noindent
+Complementation of deleterious alleles has long been proposed as a major contributor to the hybrid vigor observed in offspring of inbred parents. 
+We tested this hypothesis using evolutionary measures of sequence conservation to ask whether incorporating information about putatively deleterious alleles can inform genomic selection (GS) models and improve phenotypic prediction.
+We measured a number of agronomic traits in both the inbred parents and hybrids of an elite maize partial diallel population and re-sequenced the parents of the population. 
+We identified haplotype blocks using an identity-by-decent (IBD) analysis and scored these blocks on the basis of segregating putatively deleterious variants. 
+We implement a genomic prediction model and show that incorporating sequence conservation, especially with an incomplete dominance model, improves prediction accuracy in a five-fold cross-validation experiment for several traits \emph{per se}, as well as heterosis for those traits. 
+These results provide strong empirical support for incomplete dominance (or partial complementation) in explaining heterosis, and demonstrates the utility of incorporating functional annotation and its potential in phenotypic prediction and plant breeding.
+\end{abstract}
+
+\vspace{6mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent %\textbf{Why we care about deleterious variants. Discuss results of Mezmouk 2014. We are extending this in three ways}  
+The phenomenon of heterosis or hybrid vigor has been observed across many species, from yeast \citep{Shapira2014} to plants \citep{shull1908composition} and vertebrates \citep{Gama2013}. 
+Hybrid vigor is particularly important in agriculture, where hybrid breeding is fundamental to the production of a number of crops including rice \citep{virmani1982heterosis} and maize \citep{east1936heterosis, shull1946hybrid}.
+A number of hypotheses have been put forth to explain the phenomenon, including gene dosage \citep{birchler2003search}, overdominance \citep{east1936heterosis, schwartz1973single, krieger2010flowering, frascaroli2007classical}, 
+%pseudo-overdomiance \cite[]{graham1997characterization, McMullen2009}, 
+and epistasis \citep{minvielle1987dominance, schnell1992multiplicative}. 
+
+Complementation of recessive deleterious alleles \citep{crow199890,Charlesworth2009}, however, remains the simplest genetic explanation, and one that is supported by considerable empirical evidence \citep{garcia2008quantitative, xiao1995dominance}. It remains controversial, however, because... \out{birchler arguments here. tetraploid inbreeding depression, triploid heterosis AAB vs ABB.}\jri{red text placeholders for me to come back and fill in. to minimize comments}
+
+\out{One of the best studied examples of hybrid vigor is that of maize. 
+Hybrid maize has formed the basis of modern maize agriculture since the early 20th century \cite[]{crow1998}. maize is rad, here we leverage the system to ask X, Y, Z.
+In this study, we characterized genome-wide deleterious variants using genomic evolutionary rate profiling (GERP) \citep{Cooper2005}. Using a genomic selection approach, where the evolutionary constraint information was incorporated into the training model as a biological prior under the Bayesian framework, we demonstrated the prediction accuracy could be improved for heterosis relative to permuted data.}
+
+%Cr the benefits of cross-fertilization or hybridization were not unknown, it was not until the early 20th century that East, Shull, and others demonstrated the utility of hybrid breeding for  in the past, it was not until the early 20th century that hybridwork of Shull, East, and others that it's significance for agriculture was well appreciated \citex.
+%Now, hybrid seed makes up the vast majority \jri{in progress, still reading}
+
+
+%Deleterious alleles were arisen from new mutations during meiosis. In maize, about 90 new mutations were generated per meiosis \cite[]{Clark2005}, majority of which were deleterious according to empirical estimates \cite[]{Joseph2004}. In a natural outcross population, the negative effects on fitness of these deleterious alleles make them subject to be selection against, which lead the deleterious alleles to be maintained in a low frequency \cite[]{Eyre-Walker2007}. But the deleterious alleles could not be completely purged. 
+
+%In maize, the total number of mildly deleterious mutations is substantial because of the exponential growth of population size after domestication. The modern breeding probably aims to remove these deleterious mutations and pyramiding beneficial alleles for agronomical purposes. In practice, the relatively homogeneous maize germplasm pool was artificially divided into different heterotic groups \cite[]{Heerwaarden2012}. It enabled the improvement of germplasm pools to be conducted in a parallel fashion, and therefore, facilitated the breeding efficiency. Using this hybrid breeding approach, the maize yield has been steadily improved since the early 20th century \cite[]{duvick2001biotechnology}. However, removing deleterious mutations in low recombination regions or in tightly linked regions become less effective. Studies indicated that residual heterozygosity correlates negatively with recombination \cite[]{Gore2009, McMullen2009} and the low recombination is effective over long period of time \cite[]{Haddrill2007}. As a consequence, the deleterious alleles would be accumulated in the low recombination regions, such as the pericentromeric regions in maize, and the vigorous performance could be realized by combining two sets of non-deleterious or beneficial alleles in repulsion state, thus lead to pesudo-overdominance. A recent QTL study identified loci controlling for heterosis are enriched in centromeric regions \cite[]{Lariepe2012}, which partly support this pesudo-overdominance hypothesis.
+
+%Typical heterosis traits, for example, grain yield or plant height, were highly polygenic \citep{huang2010genetic, peiffer2014genetic} and were believed to be controlled by many large effect loci and thousands of hard-to-be-detected minor effect loci. Traditional QTL or GWAS studies could only estimate gene action at large effect loci. However, the accumulative effects of the many minor effect loci had not been considered. Therefore, the heterosis hypotheses tested using QTL or GWAS approaches might be somewhat biased.
+%Despite the importance of deleterious alleles in contributing to heterosis, they have not been systematically investigated probably because of their low frequencies in the population and mostly exhibiting minor effects. Here, we employed a genomic selection (GS) approach to simultaneously estimate genome-wide deleterious variants in a half diallel population. The diallel population was composed of a set of hybrids, which enabled us to explore different modes of inheritance of the deleterious variants. And the study can be conducted with millions of variants but using relative little sequencing efforts. In our previous study, deleterious SNPs were found to be enriched in a SNP set identified by GWAS \cite[]{Mezmouk2014}. The deleterious variants in the study were defined as non-synonymous mutations in the coding regions. Clearly, deleterious variants are not limited to coding regions. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%---phenotype------%%%%%%%%%%%%%%%%%%%%%% 
+\begin{figure*}[tb]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.8\linewidth]{Fig1_pheno.pdf}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{
+   {\bfseries Phenotypic variability in an elite maize partial diallel.}  (\textbf{a}) Density plots of the BLUE values for the seven phenotypic traits. On the x-axis, the genetic values were normalized. (\textbf{b}) Boxplot of the percent best-parent heterosis (BPH). (\textbf{c}) Pairwise correlation plot of the seven phenotypic traits. On the left, Pearson correlation coefficient ($r$). Stars indicate the correlations are statistically significant. On the right, the dot plots and smoothed regression lines. (\textbf{d}) Heatmap of the specific combining ability for grain yield.  } 
+\vspace{-4mm}
+    \label{fig:pheno}
+  \end{center}
+\end{figure*}
+%In the plot, ASI was calculated using pBPHmin and the other six traits were calculated using pBPHmax.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{RESULTS}
+\subsection*{Genetic values, heterosis and combining abilities}
+\jri{numbers on axes in fig. 1c are not straightforward, can they be fixed? add to this figure a graph of heritability?}
+\yang{checked and removed all passive voice.}
+FIgure test \ref{fig:gerpibd}
+We created a partial diallel population from 12 maize inbred lines including the reference genome line B73 \citep{schnable2009b73}, the important public inbred Mo17, and 10 proprietary inbreds with expired Plant Variety Porection (LH1, LH123HT, LH82, PH207, 4676A, PHG39, PHG47, PHG84, PHJ40, and PHZ51) which together represent much of the lineage of key heterotic germplasm pools used in present-day commercial corn hybrids \citep{nelson2008molecular}.
+We collected a number of agronomically important phenotypes from the inbred parents and hybrid crosses of this diallel across three years: anthesis-silking interval (ASI, in days), days to 50\% pollen shed (DTP), days to 50\% silking (DTS),  height of primary ear (EHT, in cm), plant height (PHT, in cm), test weight (TW, in pounds), and grain yield (GY, in bu/A).
+
+\yang{added table and figure refs.}
+We derived best linear unbiased estimators (BLUEs) of each phenotype for each genotype from mixed linear models (\textbf{Supplementary Table \ref{table:traits}}).
+In the models, all fixed effects were significant (Wald test \emph{P} value $<0.05$) for all traits except ASI, for which the effect of replicates within environments was not significant. \jri{can this sentence be moved to supp?} 
+Genetic values were relatively normally distributed for all traits (\textbf{Figure \ref{fig:pheno}A}, Shapiro-Wilk normality test \emph{P} values $>0.05$), and broad sense heritabilities ($H^2$) ranged from 0.65 for ASI to 0.95 for PHT. \jri{can we add $H^2$ as a panel? why not report/plot $h^2$ instead?}
+Some of the genetic values were highly correlated (\textbf{Figure \ref{fig:pheno}C}), i.e., DTS and DTP were positively correlated (Pearson correlation coefficient $(r) = 0.93$), PHT and EHT were positively correlated ($r = 0.79$), and GY were negatively correlated with the flowering time related traits, DTP ($r = -0.25$) and DTS ($r = -0.19$). \jri{spearman better than pearson? text says these are genetic. figure cap just says phenotypes? are correls genetic or phenotypic? }
+
+Using  parental phenotypic data, we then estimated best-parent heterosis (BPH) for each trait (\textbf{Figure \ref{fig:pheno}B}) as well as general and specific combining ability (GCA and SCA) of the inbreds.  
+Because the selected inbred lines are commercially relevant and fairly elite in performance, hybrids in this population exhibit relatively low hybrid vigor (overall mean percent BPH = 0.3\% $\pm$ 0.4\%). 
+However, hybrid vigor varied among traits, from flowering time traits that showed virtually no heterosis to 95\% $\pm$ 16\% for GY.
+%Finally, general and specific combining ability (GCA and SCA) were estimated following Falconer and Mackay \citep{Falconer1996}.
+General and specific combining ability (GCA and SCA) also varied among traits (\textbf{Figure \ref{fig:pheno}d, Supplementary Table 2}\jri{need figure/table ref}), but B73 and Mo17, founder of two important heterotic groups, not surprisingly exhibited one of the highest SCA for GY.
+\jri{need a sentence on estimating GCA/SCA in methods/supp?}
+
+%%%%%%%%%%%%%%%%%%%%---phenotype------%%%%%%%%%%%%%%%%%%%%%% 
+\begin{figure*}[tbh]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.8\linewidth]{Fig2_gerp.pdf}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{{\bfseries Genomic features of putative deleterious SNPs.} \textbf{(a)} Histogram of GERP scores at $\sim$1.3 million SNP sites. 
+%The existing of spikes were because only limited species were used to derive GERP. 
+\textbf{(b)} Mean GERP scores across bins of minor allele frequency. Red and grey lines define the regression and its 95\% confidence interval. \textbf{(c)} Mean GERP scores (y-axis) in 1 cM window across 10 maize chromosomes.} 
+\vspace{-4mm}
+    \label{fig:gerp}
+  \end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+
+\subsection*{Sequence variation and evolutionary constraint}
+
+All twelve inbreds were resequenced to an average depth of $\sim 10\times$, resulting in a filtered set of 13.8 million SNPs with an mean concordance rate of 99.1\% to SNPs genotyped in previous studies.\jri{put details in supp. if sofiane doesn't respond, do a quick comparison to sequence data from HapMap3 or SNP55K or GBS and call it good.} 
+%We estimated the allelic error rate using three independent data sets: for all individuals using 41,292 overlapping SNPs on the maize SNP50 bead chip \citep{Heerwaarden2012}; for all individuals using 180,313 overlapping SNPs identified through genotyping-by-sequencing (GBS) \citep{Romay2013}; and for B73 and Mo17 using the 10,426,715 SNP from the HapMap2 project \citep{Chia2012}.  Compared to corresponding SNPs identified by previous studies, a concordance rate of 99.1\% was observed. %\jri{Sofiane: can we separate those numbers out by study? or just report for one study and mention that similar rates were seen in other studies? either way it would be nice to know what rate went with what data. also is concordance mean identical genotype? do we have minor allele rate (which is a bit more informative)? if not, skip it.} 
+We annotated these SNPs using Genomic Evolutionary Rate Profiling (GERP) scores from \citep{rodgers2015recombination}, resulting in 506,898 annotated SNPs.
+% than 86 million bp (or $\sim$3.7\%) of the maize reference genome were annotated as conserved, with GERP scores $>0$. Nonetheless, 506,898 (or 0.6\%) of these sites were found to segregate among the 12 inbred parents of our diallel (\textbf{Supplementary Figure 1})\jri{need table ref}.
+On average, each inbred parent carried 179,144 putative deleterious variants, ranged from 156,386 (PHG35) to 195,959 (PHG84). %Mo17 carried 189,241 putative deleterious variants, ranked as the third place. 
+The minor allele frequencies of these putative deleterious SNPs were negatively correlated with their GERP scores (\textbf{Figure \ref{fig:gerp}B}, $P$ value $< 0.05$, $r = -0.8$), and supporting the use of GERP as a quantitative measure of the deleteriousness of an observed variant.\jri{if n=12 why are there $>>12$ dots on figure 2b??}
+Centromeric regions of each chromosome were enriched for SNPs with high GERP scores (\textbf{Figure \ref{fig:gerp}c}), consistent with data from reduced representation genotyping \citep{rodgers2015recombination} and previous observations of retained residual heterozygosity in centromeres during inbreeding \citep{McMullen2009, Gore2009}.
+
+%We calculated the number of complementation of these putative deleterious variants among F1 hybrids, except ones that have B73 as one of their parents. The best combination (Mo17 and PHG35) complemented each other at 412,042 sites, however, it still carried 94,856 homozygous putative deleterious alleles. The correlation of the complmentation significantly (Pearson correlation test, P-value = 0.02) correlated with the SCA of the GY trait and negative correlated with the cumulative deleterious scores (\textbf{Figure 2a}), which indicate hybrid combining ability might be determined by the complementation of deleterious alleles. \yang{correlation of the number of deleterious complementation and SCA, MPH and trait per se? Or just because of the genetic distance?}    
+
+%%%%%%%%%%%%%%%%%%%%---GERP SNPs------%%%%%%%%%%%%%%%%%%%%%% 
+\begin{figure*}[tbh]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.8\linewidth]{Figure_k.pdf}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{{\bfseries Genetic variance, degree of dominance of GERP SNPs and relationships of these values with their GERP scores.} \textbf{(a)} Genetic variance was partitioned into additive and dominant variance. \textbf{(b)} The distribution of degree of dominance (k). \textbf{(c-h)} GERP scores fitted with their corresponding additive effects \textbf{(c)}, dominant effects \textbf{(d)}, dominance (k) of the reference allele \textbf{(e)}, additive variance \textbf{(f)}, dominant variance \textbf{(g)} and total variance \textbf{(h)} for seven phenotypic traits, respectively. Grey color defines their 95\% confidence interval.  } 
+\vspace{-4mm}
+    \label{fig:k}
+  \end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+\jri{fig. 3: {\bf a} what is y axis?  {\bf b} don't normalize, just show data, also reflect around 0. filter by effect size? {\bf c-h} loess instead of linear? use more different colors. {\bf c-e} what is y-axis? {\bf h} genetic variance or phenotypic?}
+\subsection*{Genetic effects and variance partitioning}
+
+We employed a genomic best linear unbiased prediction (GBLUP) approach \citep{da2014mixed} to estimate the additive and dominance variance components for each trait and effects for each  GERP-annotated SNP.\jri{is this sentence still correct?}
+% to partition genetic values into additive (or allele substitution effects) and dominance deviation was employed 
+Across traits, the proportion of variance explained by dominance  positively correlated with observed heterosis  (\emph{P} value $<$ 0.01), from 0 for flowering time to 30\% for GY (\textbf{Figue 3a}).\jri{what's the correlation coeff?}
+%For traits exhibiting intermediate levels of heterosis, i.e. TW, PHT and EHT, 20\%, 10\% and 5\% of the genetic variance could be explained by dominance. For traits exhibiting almost no heterosis, i.e., ASI, DTS and DTP, genetic variance could be largely  explained by additivity but not dominance. Notably, the accumulative variance explained by dominance positively correlated with their levels of heterosis
+We calculated the degree of dominance $k$ for each SNP following \citep{lynch1998genetics}.
+Individual SNPs showed patterns of dominance broadly consistent with overall partitioning of variance components (\textbf{Figure \ref{fig:k}b}). \jri{anything else we want to say here? about \% that are overdominant? about effect sizes?}
+%According to Lynch and Walsh \citep{lynch1998genetics}, we estimated the degrees of dominance ($k$) of these GERP SNPs by dividing dominant effects with their additive effects. The value of $k > 1$ indicates the GERP SNP shows an overdominant effect; $0 < k < 1$ indicates a partial dominant effect; $-1 < k < 0$ indicates a partial recessive effect; and $k < -1$ indicates a underdominant effect. 
+%Note reference alleles at GERP sites were considered as beneficial alleles and the alternative alleles were deemed as deleterious alleles. 
+%Consistent with our partitioning of variance components, GERP SNPs exhibit exclusively additive effects for non-heterosis traits (\textbf{Figure \ref{fig:k}b}). 
+%On the contrary, an excess of alleles (N= for GY, N= for TW, N= for PHT and N= for EHT)\jri{list as numbers or \% excess?} exhibit dominant or overdominant effects for traits showing intermediate to high levels of heterosis. 
+%
+%Note the reasons that a large number of recessive loci were detected at GERP sites were: 1) the GERP may no the causal SNPs, the effects they accounted for might be the variants in LD with them; and 2) we did not apply any cutoff on effect detection, by chance a small negative dominant effects will be assigned;  
+%
+The additive effect size of SNPs correlated positively with GERP score for \out{... explain this somehow.} \jri{are the correlations in 1c genetic? can we interpret them as correlations of each trait with fitness?}
+%JRI STOPPED HERE
+ observed that SNPs with high GERP scores, on average, tend to have larger additive effects for traits showing low levels of heterosis (\textbf{Figure \ref{fig:k}c}).
+However, dominant effects stay constant across the range of GERP score for all the traits (\textbf{Figure \ref{fig:k}d}). 
+%The average dominant effects are larger for traits (GY, EHT, PHT) showing high level of heterosis, but the average dominant effects are almost =0 for traits showing mediate or no heterosis (ASI, DTS, DTP, TW).  
+The degree of dominance significantly (\emph{P} value $<$ 0.01) increased as the GERP score increase (\textbf{Figure \ref{fig:k}e}). 
+
+%%%%%%%% ----- BEAN PLOT using all GERP SNPs-------- %%%%%%%%%%%
+\begin{figure*}[tbh]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.8\linewidth]{Figure4_beanplots.pdf}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{{\bfseries GERP-enabled genomic prediction accuracy using additive, dominant and incomplete dominant models.} Cross-validation experiments were conducted using GERP SNPs and same set of SNPs with permuted GERP scores for traits \emph{per se} (\textbf{a}, \textbf{b} and \textbf{c}) and BPH (\textbf{d}, \textbf{e} and \textbf{f}) under additive (\textbf{a} and \textbf{d}), dominant (\textbf{b} and \textbf{e}) and incomplete dominant (\textbf{c} and \textbf{f}) models. Prediction accuracy from the real data were plotted on the left (red) and permutation results on the right (green). Horizontal bars indicate mean accuracy for each trait and the gray dashed lines indicate the overall mean accuracy. Stars above the beans indicate significantly (FDR $<$ 0.05) higher cross-validation accuracy.     } 
+    \vspace{-4mm}
+    \label{fig:beanplots}
+  \end{center}
+\end{figure*}
+%%%%%%%% ------------- %%%%%%%%%%%
+
+
+\subsection*{GERP-enabled genomic prediction}
+
+The small sample size of our diallel and the general low frequency of deleterious SNPs precludes association-based approaches to evaluate the impact of variants on phenotypic variation.
+To alleviate this limitation, we conceived a haplotype-based genomic selection approach in which we use estimates of evolutionary constraint across the genome to sum the individual effects of deleterious alleles within IBD blocks (See \textbf{Methods} and \textbf{Supplementary Figure X}\jri{figure ref}). Three IBD conservation matricies were constructed under additive, dominant and incomplete dominant models. The matrix was solved using a Bayesian-based statistical method (BayesC) \citep{habier2011extension} (\textbf{Methods}).
+With 5-fold cross-validation, prediction arracy was derived for real data and circularly shuttled data. 
+
+In general, average prediction accuracies were higher using the additive model (mean \emph{r} = 0.81 and 0.49 for traits \emph{per se} and BPH) than the dominant model (mean \emph{r} = 0.70 and 0.42), and accuracies for heterosis traits were lower than for traits \emph{per se} (Table \ref{table:table_s3}).  A student-t test was employed to compare the mean prediction accuracies between data with real GERP information and data with permutated GERP. To account for multiple traits and multiple transformations, the FDR approach was used to correct the obtained P-values. As a result, incorporating evolutionary constraint information improved prediction accuracy for ASI and PHT \emph{per se} under an additive model and for ASI under a dominant model (FDR $<$ 0.05, Figure \ref{fig:gerpall} A and B).
+GERP scores also improved prediction accuracies of heterosis (BPH) for GY under the additive model and DTP, DTS and TW under the dominant model (FDR < 0.05, Figure \iffalse\ref{fig:gerpall}\fi C and D). \jri{should these be ref to Figure \ref{fig:beanplots}?}
+To rule out the possible confounding of high GERP scores and genic annotations, we re-permuted the data using only deleterious (GERP $> 0$) genic SNPs.  
+Though this resulted in fewer SNPs (316, 983), the model prediction accuracies remained significantly improved for GY \emph{per se} under the additive model and for BPH of GY and PHT under the additive model (Figure \iffalse\ref{fig:genicsnp}\fi and \emph{Supplementary Table}). %\ref{table:table_s4}).   
+
+%the relevant text:
+% pnas201221966 2665..2669 
+%However, if complementation of recessive mutations were the sole basis of heterosis, one would predict that the two types of triploid hybrids would be equivalent for their heterotic response because the recessive mutations would be equally complemented. Moreover, the complementation hypothesis would also lead one to predict that heterosis should be basically equivalent between dip- loid and triploid hybrids. Neither of these predictions was met. "
+Birchler et al., argued that if the genetic basis of heterosis could be adequately explained by complementation of deleterious mutations, one would expect that the equivalent heterosis for triploid hybrids of AAB and ABB. Under the incomplete dominant model, we simulated a set of triploid hybrids and demonstrated that the two types of hybrids different significantly for GY, but not for other traits exhibiting low to intermediate levels of heterosis (\textbf{Supplementary Figure X}\jri{need figure ref}).
+
+
+%It was argued that SNPs in genic regions might have higher GERP scores than those in non-genic regions. The circular shuffling permutations may shift the high GERP scores to non-genic regions. If that is the case, the approach tended to weigh more on genic SNPs. To rule out this possibility, we elected SNPs with GERP scores >0 in genic regions only and did the circular shuffling to assign GERP scores to the same set of the selected SNPs. By doing this, the method will not take advantage of genomic positional information any more. Noted that in this study less number of SNPs was selected (N = 316, 983). Nevertheless, model prediction accuracies were significantly improved for traits \emph{per se} of GY under the additive model. For heterosis transformations, prediction accuracies were significantly improved for BPH of GY and PHT under the additive model and the prediction accuracy was significantly improved for pBPH of GY (Figure \ref{fig:genicsnp} and Table S4). 
+
+\subsection*{Posterior phenotypic variance explained and model comparisons}
+
+To learn why the prediction performance varied among traits \emph{per se} and heterosis, we obtained the posterior variance explained by our models using the complete set of data. 
+As shown in Figure \ref{fig:h2}, additive models explained more phenotypic variance for traits \emph{per se} of DTP, DTS, EHT and PHT; but explained less phenotypic variance for heterosis (BPH) of ASI, GY and TW. 
+In contrast, a larger proportion of the phenotypic variance could be explained by the dominant models for heterosis (BPH) of ASI, GY and TW. \jri{is this correct? the figure looks to me to disagree with this statement.}
+This difference was particularly striking for grain yield under the dominant model, where only 3\% of the variance in trait \emph{per se} could be explained but 61\% of the variance in BPH was explained. \jri{I think a sentence or two here connecting variance explained with prediction accuracy would be helpful}
+
+Heterosis transformations are largely determined by the accuracies of the parental phenotypes. 
+To control for uncertainty of parental phenotypes, we estimated combining ability  directly from the hybrid population itself.
+We extracted the breeding values estimated under both additive and dominant models using our haplotype blocks and incorporating GERP scores. 
+We then applied the following models:
+\begin{equation}
+Y_{ij} = \mu + GCA_{i} + GCA_{j} + \varepsilon
+\label{eq:refname1}
+\end{equation}
+\begin{equation}
+Y_{ij} = \mu + GCA_{i} + GCA_{j} +  G_{ij} + \varepsilon
+\label{eq:refname2}
+\end{equation}
+\begin{equation}
+Y_{ij} = \mu + GCA_{i} + GCA_{j} + SCA_{ij} + \varepsilon
+\label{eq:refname3}
+\end{equation}
+\begin{equation}
+Y_{ij} = \mu + GCA_{i} + GCA_{j} + SCA_{ij} + G_{ij} + \varepsilon
+\label{eq:refname4}
+\end{equation}
+where 
+$Y_{ij}$ is the BLUE value of the hybrid crossed between the $i^{th}$ inbred and $j^{th}$ inbred; 
+$\mu$, the overall mean; 
+$GCA_{i}$, the general combining ability of the $i^{th}$ inbred;
+$GCA_{j}$, the general combining ability of the $j^{th}$ inbred;
+$SCA_{ij}$, the specific combining ability of between the $i^{th}$ and $j^{th}$ inbreds;
+$G_{ij}$, breeding values estimated by our GS model for hybrid crossed between the $i^{th}$ inbred and $j^{th}$ inbred; 
+$\varepsilon$, the model residuals.
+
+Consistent with the previous analysis, haplotype blocks coded with the dominant mode of inheritance significantly improved the fit of models for heterosis for ASI and GY (equation \ref{eq:refname1} vs. equation \ref{eq:refname2}, ANOVA \emph{P} value $<0.05$, Table \ref{table:table_s5}). \jri{i'm having trouble following here.  GY gives a p of 0.04 which is not significant after bonferonni (maybe after FDR?) under the dominant model, but DOES give a significant p<4E-16 under the additive model. why not mention/discuss that? }
+Comparison of models \ref{eq:refname3} and \ref{eq:refname4}, however, show no real difference (ANOVA \emph{P} value = \X), indicating that specific combining ability captures most of the parental interactions and the our haplotype blocks are unable to detect higher order interactions. \jri{ there are also at least three tests that are significant after multiple correction for 4 vs 3. is that not meaningful?} 
+
+
+%%%%%%%% ----- h2 plots-------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Figure_h2.pdf}
+\caption{Posterior phenotypic variance explained by deleterious genic SNPs in IBD blocks using additive and dominant models. Dark color indicates trait \emph{per se} and grey color indicates BPH. }  
+\label{fig:h2}
+\end{figure}
+%%%%%%%% ------------- %%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{DISCUSSION}
+\jri{mention del. variants here and in results. is there variation? mo17 vs pvps? given comment below about linkage, can we calc. mean del. variants/cM? cool to know and show tons around centromere. more detail on distribution since Eli's paper only uses GBS. then add a few sentences comparing to Eli and McMullen 2009.}
+In this study we have identified more than 500,000 evolutionary conserved (GERP $>$ 0) sites in the genome segregating for putatively deleterious alleles in a panel of elite maize lines. 
+The non-reference alleles at these SNPs are found at low frequency, consistent with previous observations \citep{Mezmouk2014, rodgers2015recombination} and the role of selection preventing such alleles from reaching high frequency. 
+Nonetheless, each inbred line carries a large number of deleterious variants, averaging $\sim 200,000$ per line. 
+
+\out{continued improvement of inbreds, constancy of heterosis \citep{Troyer:2009jf}. demography leads us to expect lots of mildy deleterious near-additive. From \citep{Gazave:2013bx}: 'As a consequence, while each individual carries a larger number of deleterious alleles than expected in the absence of growth, the average selection coefficient of each segregating allele is less deleterious.'
+Because the low recombination rate in these centromeric regions, deleterious mutations were hard to be purged. The complementation of deleterious mutations in repulsion states may lead to pseudo-overdominance \citep{graham1997characterization, McMullen2009}.   
+}
+
+Across lines, however, the majority of these deleterious mutations were maintained at low frequency, consistent with previous observations \citep{rodgers2015recombination}. 
+
+\jri{\citep{Phadnis:2005ka,Simmons:1977bx} show correlation between effect size and dominance of mutations in yeast and flies}
+The large number of linked deleterious alleles present means that there is likely insufficient recombination in standard breeding programs to completely purge all such alleles. 
+Instead, breeders have devised a strategy --- hybrid breeding --- that circumvents much of this problem via complementation.
+Consistent with this idea, our results show that prediction accuracies for both traits \emph{per se} as well as heterosis increased when SNPs were weighted by their likelihood of being deleterious.
+Because there are likely thousands of deleterious alleles involved in complementation, many with relatively small effects, traditional GWAS approaches with genome-wide thresholds of multiple testing may not have the power to detect such effects.
+Using a liberal significance threshold, however, even GWAS methods have identified an enrichment for deleterious genic SNPs among associated markers for a number of traits \citep{Mezmouk2014}.
+
+
+Our models did not increase the prediction accuracies equally well for traits \emph{per se} and their heterosis transformations. 
+This is not surprising, given the variation in genetic architecture of different phenotypic traits --- flowering time, for example, appears primarily determined by many loci of small additive effect \citep{buckler2009genetic}, and prediction accuracy is highest and the vast majority of phenotypic variance can be explained under simple additive models.  \jri{add other ex. from our data and maize lit. sentence or 2 of corr. b/t prediction accuracies and BPH in boxplots -- traits w/ higher BPH have lower $h^2$ and thus harder to predict.}
+
+% Paritcally, with dominant model, up to 20\% of the phenotypic variance could be explained for the heterosis traits. Theoritically, BPH transformation subtracts the joint effects of the additive and dominant alleles in the best parents as residule, the substantial variance of these redidules explained by the additive or dominant models in our studies indicated that genetic components controlling for heterosis might in linked state.  
+
+% How to explain the prediction difference?  
+ The variation of the prediction accuracies were relative large in this study. First of all, broad sense heritability of the traits are different. Second, from the simulation we learned that different traits may controlled by different proportion of additive, dominant and even recessive gene actions. Our naive model only built the pure additive and pure dominant effects in. For the more complicated cases, the models may not work very well.
+
+\out{paragraph about how additive often beat recessive  consistent with role for partial dom. cite Birchler complete dom is unlikely and doesn't jive with much data. cite Huang showing partial dominance for phenotypes per se among hybrids. can cite \citep{halligan2009spontaneous} reviewing several studies finding evidence of partial dominance. while we don't have power to estimate dominance, that additive model works  suggests values of h $\approx -0.5$. 	 would be consistent with plant height  being mostly additive \citep{peiffer2014genetic}, but plant height correlated with yield (cite) so alleles affecting height will have a weak +  additive effect on yield.  }
+
+
+%limitation of our current models is that we assume phenotypic traits are determined by complete additive or complete dominant effects. 
+%Traits with a mixture of additive and dominant casual loci may thus fail to be predicted. 
+Another limitation is likely the population size used; we may simply not have enough power to predict traits with low heritability. \out{missing GERP data b/c of alignment with Tripsacum, missing information on non-SNP variants, etc.}
+%where the haplotype was coded with the SNP conservation score as the explainatory variables. 
+%Genomic variants occurred at the evolutionary constraint sites were potentially deleterious. The phenotypic effects of these genetic loads and their contributions to heterosis become an interesting area to explore. However, the population size in this study is relative small and SNPs detected at sites containing high GERP scores are generally in low frequencies. The statistical power to detect the separate effects of these putative deleterious alleles becomes very low.
+
+As genotyping costs continue to decline, genomic prediction models are increasing in popularity \citep{desta2014genomic}. 
+Most previous work on genomic prediction, however, focuses exclusively on statistical properties of the models, ignoring potentially useful biological information (but see \citex for a recent example). 
+In addition to providing evidence in favor of the simple complementation model for heterosis, our work here shows the utility of incorporating functional information about the variants used in genomic prediction models.  
+As our functional annotations of genomes improve, we predict that including such information in genomic prediction will be vital to the development of more powerful predictive models for plant breeding.
+
+\section*{METHODS}
+Methods and any associated references are available in a separate pdf file.
+
+\section*{ACKNOWLEDGMENTS}
+Financial support for this work came from NSF (grants IOS-0820619 and IOS-1238014), USDA (grants 2009-65300-05668 and \X), DuPont Pioneer, and Mars Incorporated. 
+We would like to thank Graham Coop, James Holland, \X, and \X reviewers for helpful discussion.
+
+\section*{AUTHOR CONTRIBUTIONS}
+J.Y. and J.R.-I. designed this work. E.S.B., K.E.G., M.D.M. and R.H.M. generated the data. J.Y., S.M. and J.R.-I. analyzed data. A.B. provided conceptual advice. J.Y. and J.R.-I. wrote the manuscript.
+
+\section*{COMPETING INTERESTS STATEMENT}
+The authors declare no competing financial interests.
+
+{\scriptsize \sf
+\renewcommand{\baselinestretch}{2.0}
+\bibliography{Diallel}
+\bibliographystyle{NatureSeriesT}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section*{ONLINE METHODS} 
+\subsection*{Plant materials and phenotypic data}
+%-------------------
+We selected 12 maize inbred lines, broadly representative of corn belt maize germplasm \citep{mikel2006evolution}\jri{this is a diff. ref than used in introduction. which one is better?}, as parents of a partial diallel population. 
+Each parent in a cross was used as both male and female and the resulting seed was bulked  (Figure \ref{fig:diallel}). 
+We evaluated the 66 F1 hybrids, 12 inbred parents and two current commercial check hybrids in the field in Urbana, IL over three years (2009-2011) in an incomplete block design with three replicates each year.  
+Plots consisted of four rows, with all observations taken from the inside two rows to minimize effects of shading and maturity differences from adjacent plots.  
+We measured plant height (PHT, in cm), height of primary ear (EHT, in cm), days to 50\% silking (DTS), days to 50\% pollen shed (DTP), anthesis-silking interval (ASI, in days), grain yield adjusted to 15.5\% moisture (adj GY, in bu/A), and test weight (TW, in pounds). 
+Overall mean phenotypic values for each cross can be found at Table \ref{table:table_s1}.
+
+We estimated Best Linear Unbiased Estimates (BLUEs) of the genetic effects in ASReml-R \citep{gilmour2009asreml} with the following linear model: 
+%
+\[Y_{ijkl} = \mu + \varsigma_{i} + \delta_{ij} + \beta_{jk} + \alpha_{l} +  \varsigma_{i} \cdot \alpha_{l} + \varepsilon\]
+%
+where 
+$Y_{ijkl}$ is the phenotypic value of the $l^{th}$ genotype evaluated in the $k^{th}$ block of the $j^{th}$ replicate within the $i^{th}$ year; 
+$\mu$, the overall mean; 
+$\varsigma_{i}$, the fixed effect of the $i^{th}$ year;
+$\delta_{ij}$, the fixed effect of the $j^{th}$ replicate nested in the $i^{th}$ year; 
+$\beta_{jk}$, the random effect of the $k^{th}$ block nested in the $j^{th}$ replicate; 
+$\alpha_{l}$, the the fixed genetic effect  of the $l^{th}$ individual; 
+$\varsigma_{i} \cdot \alpha_{l}$, the interaction effect of the $l^{th}$ individual with the $i^{th}$ year; 
+$\varepsilon$, the model residuals. 
+
+We estimated best-parent heterosis (BPH) as:
+%
+%\[ MPH_{ij}=\hat{G_{ij}}-\frac{1}{2}(\hat{G_{i}}+\hat{G_{j}}) \]
+\[ BPH_{min,ij}=\hat{G_{ij}}-min(\hat{G_{i}} ,\hat{G_{j}}) \] 
+\[ BPH_{max,ij}=\hat{G_{ij}}-max(\hat{G_{i}} ,\hat{G_{j}}) \]
+%
+where $\hat{G_{ij}}$, $\hat{G_{i}}$ and $\hat{G_{j}}$ are the genetic values of the hybrid and its two parents $i$ and $j$. $BPH_{min}$ was used instead of $BPH_{max}$ for ASI. 
+
+\subsection*{Sequencing and Genotyping}
+
+% wet lab
+We extracted DNA from the 12 inbred lines following \citep{Doyle1987} and sheared the DNA on a Covaris (Woburn, Massachusetts) for library preparation. Libraries were prepared using an Illumina paired end libaray protocol with 180 bp fragments. Libraries were then sequenced at Cornell.
+
+%Read mapping
+We trimmed raw sequence reads for adapter contamination with Scythe  (\url{https://github.com/vsbuffalo/scythe}) and for quality \jri{Sofiane: what qual score? do we need to say anything about overlapping reads?} and sequence length ($\geq 20$ nucleotides) with Sickle (\url{https://github.com/najoshi/sickle}). 
+We mapped filtered reads to the maize B73 reference genome (AGPv2) with bwa-mem \citep{Li2009B}, keeping reads with mapping quality (MAPQ) higher than 10 and with a best alignment score higher than the second best one for further analyses.
+%SNP calling
+We called single nucleotide polymorphisms (SNPs) using the $mpileup$ function from the samtools utilities \citep{Li2009}. 
+To deal with known issues with paralogy in maize \citep{Chia2012}, SNPs were filtered to be heterozygote in less than 3 inbred lines, have a mean minor allele depth of at least 4, have a mean depth over all individuals lower than 30 and have missing/heterozygote alleles in fewer than 6 inbred lines. 
+
+%IBD
+We used the fastIBD method implemented in BEAGLE \citep{Browning2009} to impute missing data and identify regions of identity by descent (IBD) between the 12 inbred lines. 
+We then defined haplotype blocks as contiguous regions within which there were no IBD break points across all pairwise comparisons of the parental lines (Figure \ref{fig:defineibd}). IBD blocks at least 1 Kb in size were kept for further analysis. 
+
+
+%SIFT and MAPP \yang{hide}
+%The SNPs were annotated as synonymous and non-synonymous with the software polydNdS from the analysis package of libsequence  \citep{Thornton2003} using the first transcript of each gene in B73 5b filtered gene set. Deleterious effects of amino acid changes were then predicted with both SIFT \citep{Ng2003, Ng2006} and MAPP \citep{Stone2005} software packages as described by \citep{Mezmouk2014}.
+
+%\subsection*{Association mapping} \yang{hide}
+%SNP association with heterosis (BPH and MPH) was tested assuming dominance/recessivity of the reference allele or assuming overdominance where only the heterozygote alleles are expected to be significant. For each SNP, root mean square error were used to select the best fitting model. 
+%Haplotype association with heterosis were tested comparing the heterozygote alleles to all homozygote ones all confounded. 
+
+\subsection*{Genomic selection using IBD blocks incorporated with GERP scores}
+
+%GERP
+We used genome-wide estimates of evolutionary constraint (GERP) \citep{Davydov2010} estimated by \citep{rodgers2015recombination}. 
+Haplotype blocks were weighted by the summed GERP scores of all deleterious (GERP score $>0$) SNPs; blocks with no deleterious SNPs were excluded from further analysis. 
+This estimation was calculated under both additive and dominant modes of inheritance using a custom python script available at (\url{https://github.com/yangjl/zmSNPtools}). 
+For a particular SNP with a GERP score $g$, the non-reference homozygote was assigned a value of $2g$, the heterozygote a value of $g$, and the reference homozygote a value of 0.  
+Under the dominant model, both the heterozygote and the non-reference homozygote were assigned a value of $g$, with the reference homozygote again assigned a value of 0.
+To conduct prediction, a 5-fold cross-validation method was used, dividing the diallel population  randomly  into training (80\%) and validation sets (20\%)  10 times. 
+The BayesC option from GenSel4 \citep{habier2011extension} was used for model training, using 41,000 iterations and removing the first 1,000 as burn-in. 
+After model training, prediction accuracies were obtained by comparing the predicted breeding values with the observed phenotypes in the corresponding validation sets. 
+For comparison, GERP scores were permuted using 50k SNP ($> 100$Mb) windows which were circularly shuffled 10 times to estimate a null conservation score for each IBD blocks. 
+Cross-validation experiments using the permuted data were conducted on the same training and validation sets.  
+
+
+{\scriptsize \sf
+\renewcommand{\baselinestretch}{2.0}
+\bibliography{Diallel}
+\bibliographystyle{NatureSeriesT}
+}
+
+
+
+\onecolumn
+
+
+%Figure
+%----------------------------------------
+% SUPPLEMENTARY FIGURES
+%----------------------------------------
+\pagebreak
+\beginsupplement
+
+\section*{Supporting Information}
+
+% \section*{Supporting Table}:
+\begin{table}[]
+\caption{BLUE values of the seven phenotypic traits. (\url{https://github.com/RILAB/pvpDiallel/blob/master/manuscript/Figure_Table/Table_S1.trait_matrix.csv})}
+\label{table:table_s1}
+\end{table}
+
+\begin{table}[]
+\caption{General combining ability and specific combining ability of the seven phenotypic traits. (\url{https://github.com/RILAB/pvpDiallel/blob/master/manuscript/Figure_Table/Table_S2.CA.csv})}
+\label{table:table_s2}
+\end{table}
+
+\begin{table}[]
+\caption{Cross-validation results using all genome-wide deleterious SNPs. (\url{https://github.com/RILAB/pvpDiallel/blob/master/manuscript/Figure_Table/Table_S3_allsnps_FDR.csv})}
+\label{table:table_s3}
+\end{table}
+
+\begin{table}[]
+\caption{Cross-validation results using deleterious genic SNPs. (\url{https://github.com/RILAB/pvpDiallel/blob/master/manuscript/Figure_Table/Table_S4_genicsnps_FDR.csv})}
+\label{table:table_s4}
+\end{table}
+
+\begin{table}[]
+\caption{ANOVA P values of model comparisons. (\url{https://github.com/RILAB/pvpDiallel/blob/master/manuscript/Figure_Table/Table_S5_model_comp.csv})}
+\label{table:table_s5}
+\end{table}
+
+%%%%%%%% ----- diallel-------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{SFig_diallel.pdf}
+\caption{Twelve maize inbred lines were selected and crossed in a partial diallel fashion. Each inbred lines was used as both male and female and the resulting F1s were bulked. }
+\label{fig:diallel}
+\end{figure}
+
+
+%%%%%%%% ----- define IBD-------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{SFig_define_IBD.pdf}
+\caption{Haplotype block identification using an IBD approach. In the upper panel, regions in red are IBD blocks identified by pairwise comparison of the two parental lines of a hybrid. The vertical dashed lines define haplotype blocks. In the lower panel, hybrid genotypes in each block are coded as heterozygotes (0) or homozygotes (1).}
+\label{fig:defineibd}
+\end{figure}
+%%%%%%%% ------------- %%%%%%%%%%%
+
+
+
+
+%%%%%%%% ----- GERP dis1m -------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{SFig_gerp_dis1m.pdf}
+\caption{GERP score distribution across the genome. Shown are mean GERP scores in a 1-Mb bin region.}
+\label{fig:dis1m}
+\end{figure}
+%%%%%%%% ------------- %%%%%%%%%%%
+
+%%%%%%%% ----- GERP IBD diagram -------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\includegraphics[width=0.9\textwidth]{SFig_gerpIBD.pdf}
+\caption{
+\textbf{Incorporation of conservation information into IBD blocks.}
+Regions of the genome that are identical by descent (IBD) among the 12 inbreds were identified using Beagle \citep{Browning2009}.  The GERP scores of SNPs in an IBD block were summed up under pure additive and pure dominant assumptions, as well as incomplete dominant assumptions, including under-dominance and over-dominance. For $n$ SNPs in a IBD block, with GERP score $g$, the homozygous non-reference genotype was assigned a value of $2g$, the heterozygote assigned a value of $g$, and the reference homozygote a value of 0.  Under the dominant model, both the heterozygote and the non-reference homozygote were assigned a value of $g$, with the reference homozygote again assigned a value of 0.}
+\label{fig:gerpibd}
+\end{figure}
+%%%%%%%% ------------- %%%%%%%%%%%
+
+%%%%%%%% ----- BEANPLOT-------- %%%%%%%%%%%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{SFig_genicsnp_m.pdf}
+\caption{Cross-validation accuracies using genic SNPs. Cross-validation experiments were conducted using genic SNPs and compared to circular-shuffled data for traits \emph{per se} (\textbf{A, B}) and pBPH (\textbf{C, D}) under additive (\textbf{A, C}) and dominant (\textbf{B, D}) models. Distirbutions show accuracty of prediction from real data (blue) and permutations (grey), with horizontal bars to indicate mean accuracy.  Stars indicate significantly higher cross-validation accuracy for the real data.  The average accuracy across all traits is shown with the grey dotted line. }
+\label{fig:genicsnp}
+\end{figure}
+\jri{need to explain red points here too.}
+%%%%%%%% ------------- %%%%%%%%%%%
+\end{document}
