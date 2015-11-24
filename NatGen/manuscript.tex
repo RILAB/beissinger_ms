@@ -98,7 +98,7 @@ Because of this simple but dynamic demographic history, domesticated maize and i
 In this study, we leverage the maize-teosinte system to study these effects by first estimating the parameters of the maize domestication bottleneck using whole-genome resequencing data and then investigating the relative importance of different forms of linked selection on diversity in the ancient and more recent past. 
 We show that, while patterns of overall nucleotide diversity reflect long-term differences in $Ne$, recent growth following domestication qualitatively changes these effects, thereby illustrating the importance of a comprehensive understanding of demography when considering the effects of selection genome-wide. 
 
-\section*{Results}
+\section*{RESULTS}
 
 \subsection*{Patterns of diversity differ between genic and  intergenic regions of the genome} %JRI
 To investigate how demography and linked selection have shaped patterns of diversity in maize and teosinte, we analyzed data from 23 maize and 13 teosinte genomes from the maize HapMap 2 and HapMap 3 projects \cite{chia2012, bukowski2015}. As a preliminary step, we evaluated levels of diversity inside and outside of genes across the genome. We find broad differences in genic and intergenic diversity consistent with earlier results  \cite{hufford2012}(Figure \ref{fig:diversity}).  In maize, mean pairwise diversity ($\pi$) within genes was significantly lower than at sites at least 5 kb away from genes (0.00668 vs 0.00691, $p<2\times 10^{-44}$). 
@@ -126,16 +126,16 @@ Our assessment of the historical demography of maize and teosinte provides conte
   \begin{center}
   \includegraphics[width=.45\textwidth] {FigsAndFiles/Pi_and_Tajima.png}
 \end{center}
-\caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize (A,C) and teosinte (B,D). Shown in A and B are means $\pm$ one standard deviation.   \label{fig:diversity} }
+\caption{\textbf{A} and \textbf{B} Show pairwise diversity $\pi$, while \textbf{C} and \textbf{D} depict and Tajimas D in 1kb windows from genic and nongenic regions of maize and teosinte. Shown in \textbf{A} and \textbf{B} are means $\pm$ one standard deviation.   \label{fig:diversity} }
 \end{figure}
 
 
-\begin{figure*}[!tb]
+\begin{figure}[!tb]
 %\vspace*{.05in}
 \centering
 \includegraphics[width=.5\textwidth]{FigsAndFiles/DomesticationModel/domesticationModel.pdf}
 \caption{Parameter estimates for a basic bottleneck model of maize domestication. See methods for details. \label{fig:bottleneck} }
-\end{figure*}
+\end{figure}
 
 
 \subsection*{Hard sweeps do not explain diversity differences} %JRI
@@ -202,7 +202,7 @@ Finally, while direct comparison of pairwise and singleton diversity within taxa
 
 
 
-\section*{Discussion}
+\section*{DISCUSSION}
 
 
 \subsection*{Demography of domestication} %JRI
@@ -256,9 +256,15 @@ As many natural and domesticated populations have undergone considerable demogra
 \section*{METHODS}
 Methods and any associated references are available in a separate pdf file.
 
-\begin{acknowledgments}
+\section*{ACKNOWLEDGEMENTS}
 We are indebted to Graham Coop and Simon Aeschbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014 and the USDA-Agricultural Research Service.
-\end{acknowledgments}
+
+\section*{AUTHOR CONTRIBUTIONS}
+TMB and JRI devised this study. TB, LW, and KC analyzed the data. AD performed early-stage simulations. MBH provided advice. TB, JRI, and MBH wrote the manuscript.
+
+
+\section*{COMPETING INTERESTS STATEMENT}
+The authors declare no competing financial interests.
 
 {\scriptsize \sf
 \renewcommand{\baselinestretch}{2.0}
@@ -317,8 +323,6 @@ For each window with $\geq 100bp$ of data we computed the genetic distance betwe
 
 \subsection*{Selection scan}
 We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
-
-
 
 
 \onecolumn
