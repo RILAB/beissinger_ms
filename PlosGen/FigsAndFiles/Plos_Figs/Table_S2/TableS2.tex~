@@ -1,0 +1,37 @@
+\documentclass[12pt,letterpaper]{article}
+
+\begin{document}
+
+\begin{table}[h!]  
+ \begin{center}
+ \begin{tabular}{c|c}
+   \bf Maize & \bf Teosinte \\ \hline \hline
+   BKN009 &  TIL01 \\
+   BKN010 & TIL02 \\
+   BKN011 & TIL03 \\
+   BKN014 & TIL04-TIP454 \\
+   BKN015 & TIL07 \\
+   BKN016 & TIL09 \\
+   BKN017 & TIL10 \\
+   BKN018 & TIL11 \\
+   BKN019 & TIL12 \\
+   BKN020 & TIL14-TIP498 \\
+   BKN022 & TIL15 \\
+   BKN023 & TIL16 \\
+   BKN025 & TIL17 \\
+   BKN026 & \\
+   BKN027 & \\
+   BKN029 & \\
+   BKN030 & \\
+   BKN031 & \\
+   BKN032 & \\
+   BKN033 & \\
+   BKN034 & \\
+   BKN035 & \\
+   BKN040 & \\ \hline
+ \end{tabular}
+ \end{center}
+%  \caption{ {\bf A list of maize and teosinte individuals included in this study.} Sequencing and details were previously described by \cite{chia2012}   } \label{sTab:list}
+\end{table}
+
+\end{document}
