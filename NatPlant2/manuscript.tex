@@ -84,7 +84,9 @@ We estimate that maize split from teosinte $\approx 15,000$ generations in the p
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
 Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
 
-In addition to our simple bottleneck model, and because our modest sample size of fully sequenced individuals has limited power to infer recent population expansion, we investigated two alternative approaches for demographic inference.  First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size using on a rare variant-based estimate of  $\theta$ \cite{fu1993} (see online methods). Because of the larger population size, this sample can be used to estimate the abundance of rare alleles and is therefore informative for recent population expansion. 
+Because our modest sample size of fully sequenced individuals has limited power to infer recent population expansion, we investigated two alternative approaches for demographic inference.  
+First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size.
+Because rare variants provide the best information about recent effective population sizes \jri{CITE}, we estimate $N_e$ using \citet{fu1993} singleton-based estimator of the population mutation rate $\theta=4N_e\mu$ and published values of the mutation rate \cite{clark2005} (see online methods for details). 
 This yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
 Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
@@ -222,7 +224,7 @@ As many natural and domesticated populations have undergone considerable demogra
 We are indebted to Graham Coop and Simon Aeschbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014 and the USDA-Agricultural Research Service.
 
 \section*{AUTHOR CONTRIBUTIONS}
-TMB and JRI devised this study. TMB, LW, and KC analyzed the data. AD performed early-stage simulations. MBH provided advice. TMB, JRI, and MBH wrote the manuscript.
+TMB and JRI devised this study. TMB, LW, JRI, and KC analyzed the data. AD performed early-stage simulations. TMB, JRI, and MBH wrote the manuscript.
 
 \section*{COMPETING INTERESTS STATEMENT}
 The authors declare no competing financial interests.
