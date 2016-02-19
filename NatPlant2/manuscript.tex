@@ -5,7 +5,7 @@
 \usepackage[margin=1in]{geometry}
 %\usepackage{hyperref}
 \usepackage[normalem]{ulem}
-\usepackage{coffee4}
+%\usepackage{coffee4}
 \newcommand{\jri}[1]{\textcolor{red}{\scriptsize #1}}
 \newcommand{\mbh}[1]{\textcolor{blue}{\scriptsize #1}}
 \newcommand{\tmb}[1]{\textcolor{brown}{\scriptsize #1}}
@@ -44,7 +44,7 @@
 \title{Recent demography drives changes in linked selection across the maize genome}
 
 \maketitle
-\cofeAm{1}{1.0}{0}{5.5cm}{3cm}
+%\cofeAm{1}{1.0}{0}{5.5cm}{3cm}
 
 \begin{abstract}
 Genetic diversity is shaped by the interaction of drift and selection, but the details of this interaction are not well understood. Although a population's propensity to drift is determined by its demographic history, typically summarized by its long-term effective population size ($N_e$ ), rapidly changing population demographics complicate this relationship. To better understand how changing demography impacts selection, we used whole-genome sequencing data to investigate patterns of linked selection in domesticated and wild maize (teosinte). We produce the first whole-genome estimate of the demography of maize domestication, showing that maize was reduced to approximately 5\% the population size of teosinte before it experienced rapid expansion post-domestication to population sizes much larger than its ancestor. Evaluation of patterns of nucleotide diversity in and near genes shows little evidence of selection on beneficial amino acid substitutions, and that the domestication bottleneck led to a decline in the efficiency of purifying selection in maize.  Young alleles, however, show evidence of much stronger purifying selection in maize, reflecting the much larger effective size of present day populations. Our results demonstrate that recent demographic change --- a hallmark of many species including both humans and crops ---  can have immediate and wide-ranging impacts on diversity that conflict with would-be expectations based on $N_e$ alone.
@@ -85,7 +85,7 @@ To minimize the impact of selection on our estimates \jri{cite http://onlinelibr
 The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ teosinte individuals.
 We estimate that maize split from teosinte $\approx 15,000$ generations in the past, with an initial size of only $\approx 5\% $ of the ancestral $N_a$. 
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
-Maize and teosinte have continued to exchange migrants after the population split, with gene flow between the populations estimated at $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation from teosinte to maize and $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants from maize to teosinte. 
+Although, our model provides only a rough approximation of migration rates, we included migration parameters during demographic inference because omitting these could bias our population size estimates. Still, we observe that maize and teosinte have continued to exchange migrants after the population split. We estimate that gene flow from teosinte to maize was $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation, and from maize to teosinte we estimate $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants per generation. 
 
 Because our modest sample size of fully sequenced individuals has limited power to infer recent population expansion, we investigated two alternative approaches for demographic inference.  
 First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size.
