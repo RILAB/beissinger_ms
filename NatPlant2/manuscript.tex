@@ -78,7 +78,8 @@ These observations suggest that diversity in genes is not evolving neutrally, bu
 
 
 \subsection*{Demography of maize domestication} %JRI
-After establishing that genic sites are not evolving neutrally, we used sites $>5$kb from genes to estimate the parameters of a simple domestication bottleneck model  (Figure \ref{fig:bottleneck}). Here, we make the assumption that non-genic DNA is less selectively constrained than genic DNA. This assumption is consistent with observations purifying selection described in a later section, but we should highlight that there are known instances of non-genic sites under selection in maize\cite{studer2011}.
+We next estimated a demographic model of maize domestication (Figure \ref{fig:bottleneck}). 
+To minimize the impact of selection on our estimates \jri{cite http://onlinelibrary.wiley.com/doi/10.1111/mec.13390/full}, we only included sites \textgreater 5kb from genes.  
 The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ teosinte individuals.
 We estimate that maize split from teosinte $\approx 15,000$ generations in the past, with an initial size of only $\approx 5\% $ of the ancestral $N_a$. 
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
@@ -88,7 +89,7 @@ Because our modest sample size of fully sequenced individuals has limited power 
 First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size.
 Because rare variants provide the best information about recent effective population sizes \jri{CITE}, we estimate $N_e$ using \citet{fu1993} singleton-based estimator of the population mutation rate $\theta=4N_e\mu$ and published values of the mutation rate \cite{clark2005} (see online methods for details). 
 This yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
-Finally, we applied a model-free coalescent approach \cite{schiffels2014} using a subset of our samples. 
+Finally, we employed a model-free coalescent approach \cite{schiffels2014} to estimate population size change using a subset of six genomes each of maize and teosinte.
 Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent, identifying a clear domestication bottleneck followed by rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
 Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
@@ -250,7 +251,7 @@ We assumed individuals were fully inbred and treated each line as a single haplo
 
 \subsection*{Demographic inference}
 We used the software $\delta$a$\delta$i \cite{gutenkunst2009} to estimate parameters of a domestication bottleneck from the joint maize-teosinte SFS, using only sites $>5 kb$ from a gene to ameliorate the effects of linked selection.
-We modeled a teosinte population of constant effective size $N_a$, that at time $T_b$ generations in the past gave rise to a maize population of size $N_b$ which grew exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck}).
+To minimize the number of parameters estimated, we employed a simple demographic model which posits a teosinte population of constant effective size $N_a$.  At time $T_b$ generations in the past, this population gave rise to a maize population of size $N_b$ which grew exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck}).
 The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  We estimated $N_a$ using $\delta$a$\delta$i's estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $\mu = 3 \times 10^{-8}$ \cite{clark2005}. 
 We estimated all other parameters using 1,000 $\delta$a$\delta$i optimizations and allowing initial values between runs to be randomly perturbed by a factor of 2.  
 Optimized parameters along with their initial values and upper and lower bounds can be found in table \ref{sTab:dadi}. We report parameter estimates from the optimization run with the highest log-likelihood.
