@@ -5,7 +5,6 @@
 \usepackage[margin=1in]{geometry}
 %\usepackage{hyperref}
 \usepackage[normalem]{ulem}
-%\usepackage{coffee4}
 \newcommand{\jri}[1]{\textcolor{red}{\scriptsize #1}}
 \newcommand{\mbh}[1]{\textcolor{blue}{\scriptsize #1}}
 \newcommand{\tmb}[1]{\textcolor{brown}{\scriptsize #1}}
@@ -47,7 +46,7 @@
 %\cofeAm{1}{1.0}{0}{5.5cm}{3cm}
 
 \begin{abstract}
-Genetic diversity is shaped by the interaction of drift and selection, but the details of this interaction are not well understood. Although a population's propensity to drift is determined by its demographic history, typically summarized by its long-term effective population size ($N_e$ ), rapidly changing population demographics complicate this relationship. To better understand how changing demography impacts selection, we used whole-genome sequencing data to investigate patterns of linked selection in domesticated and wild maize (teosinte). We produce the first whole-genome estimate of the demography of maize domestication, showing that maize was reduced to approximately 5\% the population size of teosinte before it experienced rapid expansion post-domestication to population sizes much larger than its ancestor. Evaluation of patterns of nucleotide diversity in and near genes shows little evidence of selection on beneficial amino acid substitutions, and that the domestication bottleneck led to a decline in the efficiency of purifying selection in maize.  Young alleles, however, show evidence of much stronger purifying selection in maize, reflecting the much larger effective size of present day populations. Our results demonstrate that recent demographic change --- a hallmark of many species including both humans and crops ---  can have immediate and wide-ranging impacts on diversity that conflict with would-be expectations based on $N_e$ alone.
+Genetic diversity is shaped by the interaction of drift and selection, but the details of this interaction are not well understood. The impact of genetic drift in a population is largely determined by its demographic history, typically summarized by its long-term effective population size ($N_e$ ).  Rapidly changing population demographics complicate this relationship, however. To better understand how changing demography impacts selection, we used whole-genome sequencing data to investigate patterns of linked selection in domesticated and wild maize (teosinte). We produce the first whole-genome estimate of the demography of maize domestication, showing that maize was reduced to approximately 5\% the population size of teosinte before it experienced rapid expansion post-domestication to population sizes much larger than its ancestor. Evaluation of patterns of nucleotide diversity in and near genes shows little evidence of selection on beneficial amino acid substitutions, and that the domestication bottleneck led to a decline in the efficiency of purifying selection in maize.  Young alleles, however, show evidence of much stronger purifying selection in maize, reflecting the much larger effective size of present day populations. Our results demonstrate that recent demographic change --- a hallmark of many species including both humans and crops ---  can have immediate and wide-ranging impacts on diversity that conflict with would-be expectations based on $N_e$ alone.
 \end{abstract}
 
 The genetic diversity of populations is determined by a constant interplay between genetic drift and natural selection. 
@@ -85,7 +84,8 @@ To minimize the impact of selection on our estimates \cite{ewing2016}, we only i
 The most likely model estimates an ancestral population mutation rate of $\theta=0.0147$ per bp, which translates to an effective population size of $N_a \approx 123,000$ teosinte individuals.
 We estimate that maize split from teosinte $\approx 15,000$ generations in the past, with an initial size of only $\approx 5\% $ of the ancestral $N_a$. 
 After its split from teosinte, our model posits exponential population growth in maize, estimating a final modern effective population size of $N_m \approx 370,000$.
-Although our model provides only a rough approximation of migration rates, we included migration parameters during demographic inference because omitting these could bias our population size estimates. Still, we observe that maize and teosinte have continued to exchange migrants after the population split. We estimate that gene flow from teosinte to maize was $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation, and from maize to teosinte we estimate $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants per generation. 
+Although our model provides only a rough approximation of migration rates, we included migration parameters during demographic inference because omitting these could bias our population size estimates. 
+We observe that maize and teosinte have continued to exchange migrants after the population split, with gene flow from teosinte to maize was $M_{tm} =  1.1 \times 10^{-5} \times N_a $  migrants per generation, and from maize to teosinte we estimate $M_{mt} =  1.4 \times 10^{-5} \times N_a$ migrants per generation. 
 
 Because our modest sample size of fully sequenced individuals has limited power to infer recent population expansion, we investigated two alternative approaches for demographic inference.  
 First, we utilized genotyping data from more than 4,000 maize landraces \cite{Hearne2015} to estimate the modern maize effective population size.
@@ -134,9 +134,6 @@ We then evaluated substitutions only in subsets of genes in the highest and lowe
 As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference in diversity near synonymous and missense substitutions in either subset of the data (Figure \ref{sFig:consUncons}).
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
-
-
-
 \subsection*{Diversity is strongly influenced by purifying selection} %JRI
 In the case of purifying or background selection, diversity is reduced in functional regions of the genome via removal of deleterious mutations \cite{charlesworth1993}.
 We investigated purifying selection in maize and teosinte by evaluating the reduction of diversity around genes.
@@ -171,13 +168,15 @@ Singleton diversity around missense and synonymous substitutions (Figure \ref{sF
 In contrast, we observe a significant shift in the effects of purifying selection: singleton polymorphisms are more strongly reduced in and near genes in maize than in teosinte, even after downsampling our maize data to account for differences in sample size (Figure \ref{fig:purify}B). 
 This result is the opposite of the pattern observed for $\pi$, where teosinte demonstrated a stronger reduction of diversity in and around genes than did maize. 
 As before, this relationship remained after we removed the 20\% of genes with the highest H12 values (Figure \ref{sFig:H12}).
-Finally, while direct comparison of pairwise and singleton diversity within taxa is consistent with   non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}).
+While direct comparison of pairwise and singleton diversity within taxa is consistent with non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}) and mirror results from simulations of purifying selection (Figure \ref{sFig:sims}).
+
 
 \section*{DISCUSSION}
 
 
 \subsection*{Demography of domestication} %JRI
 Although a number of authors have investigated the demography of maize domestication \cite{eyre1998, tenaillon2004, wright2005}, these  efforts relied on data only from genic regions of the genome and made a number of limiting assumptions about the demographic model.  We show that diversity within genes has been strongly reduced by the effects of linked selection, such that even synonymous polymorphisms in genes are not representative of diversity at unconstrained sites. This implies that genic polymorphism data are unable to tell the complete or accurate demographic history of maize, but the rapid recovery of diversity outside of genes demonstrates that sites far from genes can be reasonably used for demographic inference. Furthermore, by utilizing the full joint SFS, we are able to estimate population growth, gene flow, and the strength of the domestication bottleneck without making assumptions about its duration.  
+This model paves the way for future work on the demography of domestication, evaluating for example the significance of differences in gene flow estimated here or removing assumptions about demographic history in teosinte.
 
 One surprising result from our model is the estimated divergence time of maize and teosinte approximately $15,000$ generations before present.
 While this appears to conflict with archaeological estimates \cite{piperno2009}, we emphasize that this estimate reflects the fact that the genetic split between populations likely preceded anatomical changes that can be identified in the archaeological record. 
@@ -188,7 +187,7 @@ Although we estimate that the modern effective size of maize is larger than teos
 Both alternative approaches we employ estimate a much larger modern effective size of maize in the range of $\approx 10^6 - 10^9$, an order of magnitude or more than the current size of teosinte.
 Census data suggest these estimates are plausible: there are 47.9 million ha of open-pollinated maize in production \cite{cimmyt1999}, likely planted at a density of $\approx 25,000$ individuals per hectare \cite{baden2001}.
 Assuming the effective size is only $\approx 0.4\%$ of the census size (i.e. 1 ear for every 1000 male plants), this still implies a modern effective population size of more than four billion.
-While these genetic and census estimates are likely inaccurate, all of the evidence points to the fact that the effective size of modern maize is extremely large.
+While these genetic and census estimates are likely inaccurate, all of the evidence points to the fact that the modern effective size of maize is extremely large.
 
 
 \subsection*{Hard sweeps do not shape genome-wide diversity in maize} %JRI
@@ -210,7 +209,9 @@ Future comparative analyses using a common statistical framework (e.g. \cite{cor
 \subsection*{Demography influences the efficiency of purifying selection} %JRI 
 One of our more striking findings is that the impact of purifying selection on maize and teosinte qualitatively changed over time. 
 We observe a more pronounced decrease in $\pi$ around genes in teosinte than maize (Figure \ref{fig:purify}A), but the opposite trend when we evaluate diversity using singleton polymorphisms (Figure \ref{fig:purify}B).
-The efficiency of purifying selection is proportional to effective population size \cite{kimura1984}, and these results are thus consistent with our demographic analyses which show a domestication bottleneck and smaller long-term $N_e$ in maize \cite{eyre1998, tenaillon2004, wright2005, ross2009} followed by recent rapid expansion and a much larger modern $N_e$.  
+The efficiency of purifying selection is proportional to effective population size \cite{kimura1984}, and these results are thus consistent with our demographic analyses which show a domestication bottleneck and smaller long-term $N_e$ in maize \cite{eyre1998, tenaillon2004, wright2005, ross2009} followed by recent rapid expansion and a much larger modern $N_e$. 
+Simple foward-in-time population genetic simulations qualitatively confirm these results, and further suggest that the observed patterns are likely cause by sites under relatively weak purifying selection \ref{sFig:sims}.
+
 
 Although demographic change affects the efficiency of purifying selection, it may have limited implications for genetic load. 
 Recent population bottlenecks and expansions have increased the relative abundance of rare and 
@@ -280,6 +281,15 @@ For each window with $\geq 100bp$ of data we computed the genetic distance betwe
 \subsection*{Selection scan}
 We scanned the genome to identify sites that have experienced recent positive selection using the H12 statistic \cite{garud2015} in sliding windows of 200 SNPs with a step of 25 SNPs.
 
+\subsection*{Simulations}
+We used the program \emph{bneck\_selection\_ind} included in version 0.4.4 of the forward-in-time population genetic simulation library \emph{fwdpp} \citep[\url{https://github.com/molpopgen/fwdpp}[]{thornton2014genetics}. 
+All simulations used a population mutation rate of $\theta=20$, a population recombination rate of $\rho=20$, and simulated 150,000 burn-in generations at an ancestral population size of $N_1=15,000$ to establish equilibrium, after which the population instantly changed to size $N_2$ and then grew exponentially for 1,000 generations to size $N_3$. 
+To simulate a constant size population emulating teosinte, we set $N_2=N_3=15,000$.
+For maize we simulated a bottleneck similar to that estimated in Figure \ref{fig:bottleneck} by setting $N_2=750$,   followed by exponential growth to a large modern population size of $N_3=150,000$. 
+For each taxon, we performed 1,000 simulations for each of five values of the strength of purifying selection: $s=\{0,10^{-6},10^{-5},10^{-4},10^{-3}\}$. 
+All mutations were assumed to be codominant.
+To mimic nonsynonymous changes at a coding locus, we assumed that $\frac{3}{4}$ of mutations were selected.
+We calculated summary statistic across all sites using version 0.3.4 of \emph{msstats} (\url{https://github.com/molpopgen/msstats/releases}).
 
 {\scriptsize \sf
 \renewcommand{\baselinestretch}{2.0}
