@@ -194,7 +194,7 @@ While these genetic and census estimates are likely inaccurate, all of the evide
 Our findings demonstrate that classic hard selective sweeps have not contributed substantially to genome-wide patterns of diversity in maize, a result we show is robust to concerns about power due to the effects of purifying selection  \cite{enard2014}. 
 Although our approach ignores the potential for hard sweeps in noncoding regions of the genome, a growing body of evidence argues against hard sweeps as the prevalent mode of selection shaping maize variability. 
 Among well-characterized domestication loci, only the gene \emph{tga1} shows evidence of a hard sweep on a missense mutation \cite{wang2015}, while published data for several loci are consistent with soft sweeps from standing variation \cite{studer2011} or multiple mutations \cite{wills2013}. 
-Moreover, genome-wide studies of domestication \cite{hufford2012},  local adaptation \cite{Takuno15062015} and modern breeding \cite{van2012historical, beissinger2014,hirsch2014} all support the importance of standing variation as primary sources of adaptive variation. 
+Moreover, genome-wide studies of domestication \cite{hufford2012},  local adaptation \cite{Takuno15062015} and modern breeding \cite{van2012historical, beissinger2014} all support the importance of standing variation as primary sources of adaptive variation. 
 Soft sweeps are expected to be common when $2N_e\mu_b \ge 1$, where $\mu_b$ is the mutation rate of beneficial alleles with selection coefficient $s_b$ \cite{messer2013}. Assuming a mutation rate of $3 \times 10^{-8}$ \cite{clark2005} and that on the order of $\approx 1-5\%$ of mutations are beneficial \cite{eyre2007}, this implies that soft sweeps should be common in both maize and teosinte for mutational targets $>>10kb$ --- a plausible size for quantitative traits or for regulatory evolution targeting genes with large up- or down-stream control regions \cite[e.g.]{studer2011}.
 Indeed, many adaptive traits in both maize \cite{wallace2014} and teosinte \cite{weber2008} are highly quantitative,  and adaptation in both maize \cite{hufford2012} and teosinte \cite{pyhajarvi2013} has involved selection on regulatory variation.
 
@@ -202,11 +202,11 @@ The absence of evidence for a genome-wide impact of hard sweeps in coding region
 Comparisons of the estimated percentages of nonsynonmyous substitutions fixed by natural selection \cite{ross2009,sella2009,eyre2009estimating,williamson2014} give similar results. 
 While differences in long-term $N_e$ likely explains some of the observed variation across species, we see little change in the importance of hard sweeps in genes in singleton diversity in modern maize (Figure \ref{sFig:singleton}), perhaps suggesting other factors may contribute to these differences as well.  
 One possibility, for example, is that, if mutational target size scales with genome size, the larger genomes of human and maize may offer more opportunities for noncoding loci to contribute to adaptation, with hard sweeps on nonsynonymous variants then playing a relatively smaller role. 
-Support for this idea comes from numerous cases of adaptive transposable element insertion modifying gene regulation in maize \cite{studer2011,mao2015,yang2013} and studies of local adaptation that show enrichment for SNPs in regulatory regions in teosinte \cite{pyhajarvi2013} and humans \cite{fraser2013gene} but for nonsynonymous variants in the smaller \emph{Arabidopsis} genome.  
-Our results, for example, are not dissimilar to findings in the comparably-sized mouse genome, where no differences are seen in diversity around nonsynonymous and synonymous substitutions in spite of a large $N_e$ and  as many as 80\% of adaptive substitutions occuring outside of genes\cite{Halligan:2013ir}.
+Support for this idea comes from numerous cases of adaptive transposable element insertion modifying gene regulation in maize \cite{studer2011,mao2015,yang2013} and studies of local adaptation that show enrichment for SNPs in regulatory regions in teosinte \cite{pyhajarvi2013} and humans \cite{fraser2013gene} but for nonsynonymous variants in the smaller \emph{Arabidopsis} genome \cite{hancock2011adaptation}.  
+Our results, for example, are not dissimilar to findings in the comparably-sized mouse genome, where no differences are seen in diversity around nonsynonymous and synonymous substitutions in spite of a large $N_e$ and  as many as 80\% of adaptive substitutions occurring outside of genes\cite{Halligan:2013ir}.
 Future comparative analyses using a common statistical framework (e.g. \cite{corbett2015} )and considering additional ecological and life history factors (c.f. \cite{leffler2012}) should allow explicit testing of this idea.
 
-\subsection*{Demography influences the efficiency of purifying selection} %JRI 
+\subsection*{Demography influences the efficiency of purifying selection} 
 One of our more striking findings is that the impact of purifying selection on maize and teosinte qualitatively changed over time. 
 We observe a more pronounced decrease in $\pi$ around genes in teosinte than maize (Figure \ref{fig:purify}A), but the opposite trend when we evaluate diversity using singleton polymorphisms (Figure \ref{fig:purify}B).
 The efficiency of purifying selection is proportional to effective population size \cite{kimura1984}, and these results are thus consistent with our demographic analyses which show a domestication bottleneck and smaller long-term $N_e$ in maize \cite{eyre1998, tenaillon2004, wright2005, ross2009} followed by recent rapid expansion and a much larger modern $N_e$. 
@@ -215,7 +215,7 @@ Simple foward-in-time population genetic simulations qualitatively confirm these
 
 Although demographic change affects the efficiency of purifying selection, it may have limited implications for genetic load. 
 Recent population bottlenecks and expansions have increased the relative abundance of rare and 
-deleterious variants in domesticated plants \cite{renaut2015} and human populations out of Africa \cite{keinan2012,coventry2010}, and such variants may play an important role in phenotypic variation \cite{Mezmouk:2014es, coventry2010, eyre2010}.
+deleterious variants in domesticated plants \cite{Gunther:2010gt,renaut2015} and human populations out of Africa \cite{keinan2012,coventry2010}, and such variants may play an important role in phenotypic variation \cite{Mezmouk:2014es, coventry2010, eyre2010}.
 Nonetheless, demographic history may have little impact on the overall genetic load of populations \cite{do2015,simons2014}, as decreases in $N_e$ that allow weakly deleterious variants to escape selection also help purge strongly deleterious ones, and the increase of new deleterious mutations in expanding populations is mitigated by their lower initial frequency and the increasing efficiency of purifying selection \cite{simons2014, lohmueller2014}. 
 
 \section*{Rapid changes in linked selection} %JRI
@@ -283,7 +283,7 @@ To mimic nonsynonymous changes at a coding locus, we assumed that $\frac{3}{4}$ 
 We calculated summary statistic across all sites using version 0.3.4 of \emph{msstats} (\url{https://github.com/molpopgen/msstats/releases}).
 
 \section*{ACKNOWLEDGEMENTS}
-We are indebted to Graham Coop and Simon Aeschbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014 and the USDA-Agricultural Research Service.
+We are indebted to Graham Coop and Simon Aeschbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014, the USDA-Agricultural Research Service, and USDA Hatch project CA-D-PLS-2066-H.
 
 \section*{AUTHOR CONTRIBUTIONS}
 TMB and JRI devised this study. TMB, LW, JRI, and KC analyzed the data. AD performed early-stage simulations. TMB, JRI, and MBH wrote the manuscript.
