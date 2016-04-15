@@ -21,6 +21,10 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 
+%\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+\renewcommand{\abstractname}{Abstract (opening paragraph)}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{More than one Author with different Affiliations}
 \author[1,2,3,*]{Timothy M. Beissinger}
@@ -37,6 +41,9 @@
 \affil[*]{Correspondence may be addressed to rossibarra@ucdavis.edu or beissingert@missouri.edu}
 
 \renewcommand\Authands{ and }
+
+
+\newcounter{firstbib} % bibliography counter
 
 \begin{document}
 
@@ -92,7 +99,7 @@ First, we utilized genotyping data from more than 4,000 maize landraces \cite{He
 Because rare variants provide the best information about recent effective population sizes \cite{keinan2012}, we estimate $N_e$ using  a singleton-based estimator \cite{fu1993} of the population mutation rate $\theta=4N_e\mu$  and published values of the mutation rate \cite{clark2005} (see online methods for details). 
 This yields a much higher estimate of the modern maize effective population size at  $N_m \approx 993,000$.
 Finally, we employed a model-free coalescent approach \cite{schiffels2014} to estimate population size change using a subset of six genomes each of maize and teosinte.
-Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent with the other approaches, identifying population isolation beginning between 10,000 and 15,000 generations ago, a clear domestication bottleneck, and ultimately rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure \ref{sFig:msmc}).
+Though this analysis suggests non-equilibrium dynamics for teosinte not included in our initial model, it is nonetheless broadly consistent with the other approaches, identifying population isolation beginning between 10,000 and 15,000 generations ago, a clear domestication bottleneck, and ultimately rapid population expansion in maize to an extremely large extant size of $\approx 10^9$ (Figure S2).
 Our assessment of the historical demography of maize and teosinte provides context for subsequent analyses of linked selection.
 
 
@@ -116,7 +123,7 @@ Our assessment of the historical demography of maize and teosinte provides conte
 When selection increases the frequency of a new beneficial mutation, a signature of reduced diversity is left at surrounding linked sites \cite{smith1974}.
 To evaluate whether patterns of such ``hard sweeps'' could explain observed differences in diversity between genic and intergenic regions of the genome, we compared diversity around missense and synonymous substitutions between \emph{Tripsacum} and either maize or teosinte.
 If a substantial proportion of missense mutations have been fixed due to hard sweeps, diversity around these substitutions should be lower than around synonymous substitutions. 
-We observe this pattern around the causative amino acid substitution in the maize domestication locus \emph{tga1} (Figure \ref{sFig:tga1}), likely the result of a hard sweep during domestication \cite{wang2015}. Genome-wide, however, we observe no differences in diversity at sites near synonymous versus missense substitutions in either maize or teosinte (Figure \ref{fig:hardSweeps}).
+We observe this pattern around the causative amino acid substitution in the maize domestication locus \emph{tga1} (Figure S1), likely the result of a hard sweep during domestication \cite{wang2015}. Genome-wide, however, we observe no differences in diversity at sites near synonymous versus missense substitutions in either maize or teosinte (Figure \ref{fig:hardSweeps}).
 
 %\mbh{I'm curious whether linked selection is affecting the diversity around a sizable proportion of synonymous substitutions.  Would it be worthwhile to look at diversity around the subset of synonymous substitutions that are the least linked to missense substitutions just to make sure it is not substantially higher? Or perhaps generate a plot of diversity around synonymous substitutions vs. distance of these subs from missense subs?}
 
@@ -131,7 +138,7 @@ We observe this pattern around the causative amino acid substitution in the maiz
 Previous analyses have suggested that this approach may have limited power because a relatively high proportion of missense substitutions will be found in genes that, due to weak purifying selection, have higher genetic diversity \cite{enard2014}. 
 To address this concern, we took advantage of genome-wide estimates of evolutionary constraint \cite{rodgers2015} calculated using genomic evolutionary rate profile (GERP) scores \cite{davydov2010}. 
 We then evaluated substitutions only in subsets of genes in the highest and lowest 10\% quantile of mean GERP score, putatively representing genes under the strongest and weakest purifying selection. 
-As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference in diversity near synonymous and missense substitutions in either subset of the data (Figure \ref{sFig:consUncons}).
+As expected, we see higher diversity around substitutions in genes under weak purifying selection, but we still find no difference in diversity near synonymous and missense substitutions in either subset of the data (Figure S3).
 Taken together, these data suggest hard sweeps do not play a major role in patterning genic diversity in either maize or teosinte.
 
 \subsection*{Diversity is strongly influenced by purifying selection} %JRI
@@ -143,7 +150,7 @@ The reduction in relative diversity is more pronounced in teosinte, reaching low
 Our previous comparison of synonymous and missense substitutions has low power to detect the effects of selection acting on multiple beneficial mutations or standing genetic variation, because in such cases diversity around the substitution may be reduced to a lesser degree \cite{messer2013}. 
 Nonetheless, such ``soft sweeps'' are still expected to occur more frequently in functional regions of the genome and could provide an alternative explanation to purifying selection for the observed reduction of diversity at linked sites in genes. 
 To test this possibility, we performed a genome-wide scan for selection using the H12 statistic, a method expected to be sensitive to both hard and soft sweeps \cite{garud2015}. 
-Qualitative differences between maize and teosinte in patterns of diversity within and outside of genes remained unchanged even after removing genes in the top 20\% quantile of H12 (Figure \ref{sFig:H12}A).
+Qualitative differences between maize and teosinte in patterns of diversity within and outside of genes remained unchanged even after removing genes in the top 20\% quantile of H12 (Figure S7A).
 %\mbh{This makes me wonder about the top 20\%. Is the pattern of diversity reduction different in this fraction of the genome?  If so, that seems like something that should be mentioned.}
 %TB Says: Sites in the top 20% of H12 are unlikely to be under background selection, so maize vs teo background selection pattern at these sites seems strange to investigate.
 We interpret these combined results as suggesting that purifying selection has predominantly shaped diversity near genes and left a more pronounced signature in the teosinte genome due to the increased efficacy of selection resulting from differences in long-term effective population size.
@@ -163,12 +170,12 @@ gene for pairwise diversity and singletons, respectively.
 
 \subsection*{Population expansion leads to stronger purifying selection in modern maize} %JRI
 Motivated by the rapid post-domestication expansion of maize evident in our demographic analyses, we reasoned that low-frequency --- and thus younger --- polymorphisms might show patterns distinct from pairwise diversity, which is determined primarily by intermediate frequency --- therefore comparably older --- alleles. 
-Singleton diversity around missense and synonymous substitutions (Figure \ref{sFig:singleton}) appears nearly identical to results from pairwise diversity (Figure \ref{fig:hardSweeps}), providing little support for a substantial recent increase in the number or strength of hard sweeps occurring in maize. 
+Singleton diversity around missense and synonymous substitutions (Figure S4) appears nearly identical to results from pairwise diversity (Figure \ref{fig:hardSweeps}), providing little support for a substantial recent increase in the number or strength of hard sweeps occurring in maize. 
 
 In contrast, we observe a significant shift in the effects of purifying selection: singleton polymorphisms are more strongly reduced in and near genes in maize than in teosinte, even after downsampling our maize data to account for differences in sample size (Figure \ref{fig:purify}B). 
 This result is the opposite of the pattern observed for $\pi$, where teosinte demonstrated a stronger reduction of diversity in and around genes than did maize. 
-As before, this relationship remained after we removed the 20\% of genes with the highest H12 values (Figure \ref{sFig:H12}).
-While direct comparison of pairwise and singleton diversity within taxa is consistent with non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure \ref{sFig:singletonPi}) and mirror results from simulations of purifying selection (Figure \ref{sFig:sims}).
+As before, this relationship remained after we removed the 20\% of genes with the highest H12 values (Figure S7).
+While direct comparison of pairwise and singleton diversity within taxa is consistent with non-equilibrium dynamics in teosinte, these too reveal much stronger differences in maize (Figure S5) and mirror results from simulations of purifying selection (Figure S6).
 
 
 \section*{DISCUSSION}
@@ -200,7 +207,7 @@ Indeed, many adaptive traits in both maize \cite{wallace2014} and teosinte \cite
 
 The absence of evidence for a genome-wide impact of hard sweeps in coding regions differs markedly from observations in \emph{Drosophila} \cite{sattath2011} and \emph{Capsella} \cite{williamson2014}, but is consistent with data from humans \cite{hernandez2011}.
 Comparisons of the estimated percentages of nonsynonmyous substitutions fixed by natural selection \cite{ross2009,sella2009,eyre2009estimating,williamson2014} give similar results. 
-While differences in long-term $N_e$ likely explains some of the observed variation across species, we see little change in the importance of hard sweeps in genes in singleton diversity in modern maize (Figure \ref{sFig:singleton}), perhaps suggesting other factors may contribute to these differences as well.  
+While differences in long-term $N_e$ likely explains some of the observed variation across species, we see little change in the importance of hard sweeps in genes in singleton diversity in modern maize (Figure S4), perhaps suggesting other factors may contribute to these differences as well.  
 One possibility, for example, is that, if mutational target size scales with genome size, the larger genomes of human and maize may offer more opportunities for noncoding loci to contribute to adaptation, with hard sweeps on nonsynonymous variants then playing a relatively smaller role. 
 Support for this idea comes from numerous cases of adaptive transposable element insertion modifying gene regulation in maize \cite{studer2011,mao2015,yang2013} and studies of local adaptation that show enrichment for SNPs in regulatory regions in teosinte \cite{pyhajarvi2013} and humans \cite{fraser2013gene} but for nonsynonymous variants in the smaller \emph{Arabidopsis} genome \cite{hancock2011adaptation}.  
 Our results, for example, are not dissimilar to findings in the comparably-sized mouse genome, where no differences are seen in diversity around nonsynonymous and synonymous substitutions in spite of a large $N_e$ and  as many as 80\% of adaptive substitutions occurring outside of genes\cite{Halligan:2013ir}.
@@ -210,7 +217,7 @@ Future comparative analyses using a common statistical framework (e.g. \cite{cor
 One of our more striking findings is that the impact of purifying selection on maize and teosinte qualitatively changed over time. 
 We observe a more pronounced decrease in $\pi$ around genes in teosinte than maize (Figure \ref{fig:purify}A), but the opposite trend when we evaluate diversity using singleton polymorphisms (Figure \ref{fig:purify}B).
 The efficiency of purifying selection is proportional to effective population size \cite{kimura1984}, and these results are thus consistent with our demographic analyses which show a domestication bottleneck and smaller long-term $N_e$ in maize \cite{eyre1998, tenaillon2004, wright2005, ross2009} followed by recent rapid expansion and a much larger modern $N_e$. 
-Simple foward-in-time population genetic simulations qualitatively confirm these results, and further suggest that the observed patterns are likely cause by sites under relatively weak purifying selection \ref{sFig:sims}.
+Simple foward-in-time population genetic simulations qualitatively confirm these results, and further suggest that the observed patterns are likely cause by sites under relatively weak purifying selection (Figure S6).
 
 
 Although demographic change affects the efficiency of purifying selection, it may have limited implications for genetic load. 
@@ -230,7 +237,7 @@ All scripts used for analysis are available in an online repository at \url{http
 
 \subsection*{Plant materials}
 We made use of published sequences from inbred accessions of teosinte (Z. {\it mays} ssp. {\it parviglumis}) and maize landraces from the Maize HapMap3 panel as part of the Panzea project  \cite{chia2012, lemmon2014, bukowski2015}. 
-From these data, we removed 4 teosinte individuals that were not ssp. \textit{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure \ref{sFig:PCA}), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table \ref{sTab:list}). We also utilized a single individual of (\textit{Tripsacum dactyloides}) as an outgroup.  All bam files are available at \url{/iplant/home/shared/panzea/hapmap3/bam\_internal/v3\_bams\_bwamem}. 
+From these data, we removed 4 teosinte individuals that were not ssp. \textit{parviglumis} or appeared as outliers in an initial principal component analysis conducted with the package adegenet \cite{jombart2011} (Figure S8), leaving 13 teosinte and 23 maize that were used for all subsequent analyses (Table S1). We also utilized a single individual of (\textit{Tripsacum dactyloides}) as an outgroup.  All bam files are available from Cyverse at \url{/iplant/home/shared/data_commons/curated/Beissinger_MaizeTeo_2016}. 
 
 \subsection*{Physical and genetic maps}
 Sequences were mapped to the maize B73 version 3 reference genome \cite{schnable2009} (\url{ftp://ftp.ensemblgenomes.org/pub/plants/release-22/fasta/zea\_mays/dna/}) as described by \cite{bukowski2015}. 
@@ -248,7 +255,7 @@ We used the software $\delta$a$\delta$i \cite{gutenkunst2009} to estimate parame
 To minimize the number of parameters estimated, we employed a simple demographic model which posits a teosinte population of constant effective size $N_a$.  At time $T_b$ generations in the past, this population gave rise to a maize population of size $N_b$ which grew exponentially to size $N_m$ in the present (Figure \ref{fig:bottleneck}).
 The model includes migration of $M_{mt}$ individuals each generation from maize to teosinte and $M_{tm}$ individuals from teosinte to maize.  We estimated $N_a$ using $\delta$a$\delta$i's estimation of $\theta=4N_a\mu$ from the data and a mutation rate of $\mu = 3 \times 10^{-8}$ \cite{clark2005}. 
 We estimated all other parameters using 1,000 $\delta$a$\delta$i optimizations and allowing initial values between runs to be randomly perturbed by a factor of 2.  
-Optimized parameters along with their initial values and upper and lower bounds can be found in table \ref{sTab:dadi}. We report parameter estimates from the optimization run with the highest log-likelihood.
+Optimized parameters along with their initial values and upper and lower bounds can be found in table S2. We report parameter estimates from the optimization run with the highest log-likelihood.
 
 We further made use of a large genotyping data set of more than 4,000 partially imputed maize landraces \cite{Hearne2015} to estimate the modern maize $N_e$ from singleton counts. 
 We filtered these data to include only SNPs with data in $\geq 1,500$ individuals, and then projected the SFS down to a sample of 500 individuals by sampling each marker without replacement 1,000 times according to the observed allele frequencies.
@@ -258,7 +265,7 @@ As a final estimate of demography, we employed MSMC \cite{schiffels2014}  to com
 We used six each of maize and teosinte (BKN022, BKN025, BKN029, BKN030, BKN031, BKN033, TIL01, TIL03, TIL09, TIL10, TIL11 and TIL14), treating each inbred genome as a single haplotype.
 We called SNPs in ANGSD \cite{korneliussen2014} using a SNP p-value of $1e-6$ against a reference genome masked using SNPable (\url{http://lh3lh3.users.sourceforge.net/snpable.shtml}). 
 We then removed heterozygous genotypes and filtered sites with a mapping quality $<30$, a base quality $<20$, or a $|\textit{log}_2(\text{depth})|<1$.
-We ran MSMC with pattern parameter $20\times2+20\times4+10\times2$ (Figure \ref{sFig:msmc}A) for population size inference. To estimate the rate of cross-coalescence we used four maize and four teosinte haplotypes with pattern parameter $20\times1 + 20\times2$ (Figure \ref{sFig:msmc}B).
+We ran MSMC with pattern parameter $20\times2+20\times4+10\times2$ (Figure S2A) for population size inference. To estimate the rate of cross-coalescence we used four maize and four teosinte haplotypes with pattern parameter $20\times1 + 20\times2$ (Figure \S2B).
 
 \subsection*{Diversity}
 We made use of the software ANGSD \cite{korneliussen2014} for diversity calculations and genotype calling. 
@@ -282,6 +289,9 @@ All mutations were assumed to be codominant.
 To mimic nonsynonymous changes at a coding locus, we assumed that $\frac{3}{4}$ of mutations were selected.
 We calculated summary statistic across all sites using version 0.3.4 of \emph{msstats} (\url{https://github.com/molpopgen/msstats/releases}).
 
+\section*{Correspondence}
+Correspondence may be addressed to Tim Beissinger (beissingert@missouri.edu) or Jeffrey Ross-Ibarra (rossibarra@ucdavis.edu)
+
 \section*{ACKNOWLEDGEMENTS}
 We are indebted to Graham Coop and Simon Aeschbacher for their constructive input during this study. We thank Robert Bukowski and Qi Sun for providing early-access data from maize HapMap3. Funding was provided by NSF Plant Genome Research Project 1238014, the USDA-Agricultural Research Service, and USDA Hatch project CA-D-PLS-2066-H.
 
@@ -292,139 +302,685 @@ TMB and JRI devised this study. TMB, LW, JRI, and KC analyzed the data. AD perfo
 The authors declare no competing financial interests.
 
 
-{\scriptsize \sf
-\renewcommand{\baselinestretch}{2.0}
-\bibliographystyle{naturemag}
-\bibliography{Reference}
-}
+%{\scriptsize \sf
+%\renewcommand{\baselinestretch}{2.0}
+%\bibliographystyle{naturemag}
+%\bibliography{Reference}
+%}
+
+\renewcommand\refname{References (Main Text)}
+
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{dobzhansky1957}
+\bibinfo{author}{Dobzhansky, T.} \& \bibinfo{author}{Pavlovsky, O.}
+\newblock \bibinfo{title}{An experimental study of interaction between genetic
+  drift and natural selection}.
+\newblock \emph{\bibinfo{journal}{Evolution}} \bibinfo{pages}{311--319}
+  (\bibinfo{year}{1957}).
+
+\bibitem{voight2005}
+\bibinfo{author}{Voight, B.~F.} \emph{et~al.}
+\newblock \bibinfo{title}{Interrogating multiple aspects of variation in a full
+  resequencing data set to infer human population size changes}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences of the United States of America}} \textbf{\bibinfo{volume}{102}},
+  \bibinfo{pages}{18508--18513} (\bibinfo{year}{2005}).
+
+\bibitem{gutenkunst2009}
+\bibinfo{author}{Gutenkunst, R.~N.}, \bibinfo{author}{Hernandez, R.~D.},
+  \bibinfo{author}{Williamson, S.~H.} \& \bibinfo{author}{Bustamante, C.~D.}
+\newblock \bibinfo{title}{Inferring the joint demographic history of multiple
+  populations from multidimensional snp frequency data}.
+\newblock \emph{\bibinfo{journal}{PLoS genetics}} \textbf{\bibinfo{volume}{5}},
+  \bibinfo{pages}{e1000695} (\bibinfo{year}{2009}).
+
+\bibitem{akey2009}
+\bibinfo{author}{Akey, J.~M.}
+\newblock \bibinfo{title}{Constructing genomic maps of positive selection in
+  humans: Where do we go from here?}
+\newblock \emph{\bibinfo{journal}{Genome research}}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{711--722}
+  (\bibinfo{year}{2009}).
+
+\bibitem{smith1974}
+\bibinfo{author}{Smith, J.~M.} \& \bibinfo{author}{Haigh, J.}
+\newblock \bibinfo{title}{The hitch-hiking effect of a favourable gene}.
+\newblock \emph{\bibinfo{journal}{Genetical research}}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{23--35}
+  (\bibinfo{year}{1974}).
+
+\bibitem{slotte2014}
+\bibinfo{author}{Slotte, T.}
+\newblock \bibinfo{title}{The impact of linked selection on plant genomic
+  variation}.
+\newblock \emph{\bibinfo{journal}{Briefings in functional genomics}}
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{268--275}
+  (\bibinfo{year}{2014}).
+
+\bibitem{charlesworth1993}
+\bibinfo{author}{Charlesworth, B.}, \bibinfo{author}{Morgan, M.} \&
+  \bibinfo{author}{Charlesworth, D.}
+\newblock \bibinfo{title}{The effect of deleterious mutations on neutral
+  molecular variation.}
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{134}},
+  \bibinfo{pages}{1289--1303} (\bibinfo{year}{1993}).
+
+\bibitem{sella2009}
+\bibinfo{author}{Sella, G.}, \bibinfo{author}{Petrov, D.~A.},
+  \bibinfo{author}{Przeworski, M.} \& \bibinfo{author}{Andolfatto, P.}
+\newblock \bibinfo{title}{Pervasive natural selection in the drosophila
+  genome?}
+\newblock \emph{\bibinfo{journal}{PLoS genetics}} \textbf{\bibinfo{volume}{5}},
+  \bibinfo{pages}{e1000495} (\bibinfo{year}{2009}).
+
+\bibitem{elyashiv2014}
+\bibinfo{author}{Elyashiv, E.} \emph{et~al.}
+\newblock \bibinfo{title}{A genomic map of the effects of linked selection in
+  drosophila}.
+\newblock \emph{\bibinfo{journal}{arXiv preprint arXiv:1408.5461}}
+  (\bibinfo{year}{2014}).
+
+\bibitem{andolfatto2005}
+\bibinfo{author}{Andolfatto, P.}
+\newblock \bibinfo{title}{Adaptive evolution of non-coding dna in drosophila}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{437}},
+  \bibinfo{pages}{1149--1152} (\bibinfo{year}{2005}).
+
+\bibitem{cutter2013}
+\bibinfo{author}{Cutter, A.~D.} \& \bibinfo{author}{Payseur, B.~A.}
+\newblock \bibinfo{title}{Genomic signatures of selection at linked sites:
+  unifying the disparity among species}.
+\newblock \emph{\bibinfo{journal}{Nature Reviews Genetics}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{262--274}
+  (\bibinfo{year}{2013}).
+
+\bibitem{corbett2015}
+\bibinfo{author}{Corbett-Detig, R.~B.}, \bibinfo{author}{Hartl, D.~L.} \&
+  \bibinfo{author}{Sackton, T.~B.}
+\newblock \bibinfo{title}{Natural selection constrains neutral diversity across
+  a wide range of species}.
+\newblock \emph{\bibinfo{journal}{PLoS Biol}} \textbf{\bibinfo{volume}{13}},
+  \bibinfo{pages}{e1002112} (\bibinfo{year}{2015}).
+\newblock \urlprefix\url{http://dx.doi.org/10.1371%2Fjournal.pbio.1002112}.
+
+\bibitem{leffler2012}
+\bibinfo{author}{Leffler, E.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{Revisiting an old riddle: what determines genetic
+  diversity levels within species}.
+\newblock \emph{\bibinfo{journal}{PLoS Biol}} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{e1001388} (\bibinfo{year}{2012}).
+
+\bibitem{duchen2013}
+\bibinfo{author}{Duchen, P.}, \bibinfo{author}{{\v{Z}}ivkovi{\'c}, D.},
+  \bibinfo{author}{Hutter, S.}, \bibinfo{author}{Stephan, W.} \&
+  \bibinfo{author}{Laurent, S.}
+\newblock \bibinfo{title}{Demographic inference reveals african and european
+  admixture in the north american drosophila melanogaster population}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{193}},
+  \bibinfo{pages}{291--301} (\bibinfo{year}{2013}).
+
+\bibitem{reich1998}
+\bibinfo{author}{Reich, D.~E.} \& \bibinfo{author}{Goldstein, D.~B.}
+\newblock \bibinfo{title}{Genetic evidence for a paleolithic human population
+  expansion in africa}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{95}}, \bibinfo{pages}{8119--8123}
+  (\bibinfo{year}{1998}).
+
+\bibitem{meyer2013}
+\bibinfo{author}{Meyer, R.~S.} \& \bibinfo{author}{Purugganan, M.~D.}
+\newblock \bibinfo{title}{Evolution of crop species: genetics of domestication
+  and diversification}.
+\newblock \emph{\bibinfo{journal}{Nature Reviews Genetics}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{840--852}
+  (\bibinfo{year}{2013}).
+
+\bibitem{ellegren2014}
+\bibinfo{author}{Ellegren, H.}
+\newblock \bibinfo{title}{Genome sequencing and population genomics in
+  non-model organisms}.
+\newblock \emph{\bibinfo{journal}{Trends in ecology \& evolution}}
+  \textbf{\bibinfo{volume}{29}}, \bibinfo{pages}{51--63}
+  (\bibinfo{year}{2014}).
+
+\bibitem{matsuoka2002}
+\bibinfo{author}{Matsuoka, Y.} \emph{et~al.}
+\newblock \bibinfo{title}{A single domestication for maize shown by multilocus
+  microsatellite genotyping}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{99}}, \bibinfo{pages}{6080--6084}
+  (\bibinfo{year}{2002}).
+
+\bibitem{wright2005}
+\bibinfo{author}{Wright, S.~I.} \emph{et~al.}
+\newblock \bibinfo{title}{The effects of artificial selection on the maize
+  genome}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{308}},
+  \bibinfo{pages}{1310--1314} (\bibinfo{year}{2005}).
+
+\bibitem{eyre1998}
+\bibinfo{author}{Eyre-Walker, A.}, \bibinfo{author}{Gaut, R.~L.},
+  \bibinfo{author}{Hilton, H.}, \bibinfo{author}{Feldman, D.~L.} \&
+  \bibinfo{author}{Gaut, B.~S.}
+\newblock \bibinfo{title}{Investigation of the bottleneck leading to the
+  domestication of maize}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{95}}, \bibinfo{pages}{4441--4446}
+  (\bibinfo{year}{1998}).
+
+\bibitem{tenaillon2004}
+\bibinfo{author}{Tenaillon, M.~I.}, \bibinfo{author}{U'Ren, J.},
+  \bibinfo{author}{Tenaillon, O.} \& \bibinfo{author}{Gaut, B.~S.}
+\newblock \bibinfo{title}{Selection versus demography: a multilocus
+  investigation of the domestication process in maize}.
+\newblock \emph{\bibinfo{journal}{Molecular Biology and Evolution}}
+  \textbf{\bibinfo{volume}{21}}, \bibinfo{pages}{1214--1225}
+  (\bibinfo{year}{2004}).
+
+\bibitem{chia2012}
+\bibinfo{author}{Chia, J.-M.} \emph{et~al.}
+\newblock \bibinfo{title}{Maize hapmap2 identifies extant variation from a
+  genome in flux}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}
+  \textbf{\bibinfo{volume}{44}}, \bibinfo{pages}{803--807}
+  (\bibinfo{year}{2012}).
+
+\bibitem{bukowski2015}
+\bibinfo{author}{Bukowski, R.} \emph{et~al.}
+\newblock \bibinfo{title}{Construction of the third generation zea mays
+  haplotype map}.
+\newblock \emph{\bibinfo{journal}{bioRxiv}} \bibinfo{pages}{026963}
+  (\bibinfo{year}{2015}).
+
+\bibitem{hufford2012}
+\bibinfo{author}{Hufford, M.~B.} \emph{et~al.}
+\newblock \bibinfo{title}{Comparative population genomics of maize
+  domestication and improvement}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}
+  \textbf{\bibinfo{volume}{44}}, \bibinfo{pages}{808--811}
+  (\bibinfo{year}{2012}).
+
+\bibitem{ewing2016}
+\bibinfo{author}{Ewing, G.~B.} \& \bibinfo{author}{Jensen, J.~D.}
+\newblock \bibinfo{title}{The consequences of not accounting for background
+  selection in demographic inference}.
+\newblock \emph{\bibinfo{journal}{Molecular ecology}}
+  \textbf{\bibinfo{volume}{25}}, \bibinfo{pages}{135--141}
+  (\bibinfo{year}{2016}).
+
+\bibitem{Hearne2015}
+\bibinfo{author}{Hearne, S.}, \bibinfo{author}{Chen, C.},
+  \bibinfo{author}{Buckler, E.} \& \bibinfo{author}{Mitchell, S.}
+\newblock \bibinfo{title}{Unimputed gbs derived snps for maize landrace
+  accessions represented in the seed-maize gwas panel}.
+\newblock \bibinfo{howpublished}{\url{http://hdl.handle.net/11529/10034}}
+  (\bibinfo{year}{2015}).
+\newblock \bibinfo{note}{Accessed: 2015-02-16}.
+
+\bibitem{keinan2012}
+\bibinfo{author}{Keinan, A.} \& \bibinfo{author}{Clark, A.~G.}
+\newblock \bibinfo{title}{Recent explosive human population growth has resulted
+  in an excess of rare genetic variants}.
+\newblock \emph{\bibinfo{journal}{science}} \textbf{\bibinfo{volume}{336}},
+  \bibinfo{pages}{740--743} (\bibinfo{year}{2012}).
+
+\bibitem{fu1993}
+\bibinfo{author}{Fu, Y.-X.} \& \bibinfo{author}{Li, W.-H.}
+\newblock \bibinfo{title}{Statistical tests of neutrality of mutations.}
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{133}},
+  \bibinfo{pages}{693--709} (\bibinfo{year}{1993}).
+
+\bibitem{clark2005}
+\bibinfo{author}{Clark, R.~M.}, \bibinfo{author}{Tavar{\'e}, S.} \&
+  \bibinfo{author}{Doebley, J.}
+\newblock \bibinfo{title}{Estimating a nucleotide substitution rate for maize
+  from polymorphism at a major domestication locus}.
+\newblock \emph{\bibinfo{journal}{Molecular biology and evolution}}
+  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{2304--2312}
+  (\bibinfo{year}{2005}).
+
+\bibitem{schiffels2014}
+\bibinfo{author}{Schiffels, S.} \& \bibinfo{author}{Durbin, R.}
+\newblock \bibinfo{title}{Inferring human population size and separation
+  history from multiple genome sequences}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}  (\bibinfo{year}{2014}).
+
+\bibitem{wang2015}
+\bibinfo{author}{Wang, H.}, \bibinfo{author}{Studer, A.~J.},
+  \bibinfo{author}{Zhao, Q.}, \bibinfo{author}{Meeley, R.} \&
+  \bibinfo{author}{Doebley, J.~F.}
+\newblock \bibinfo{title}{Evidence that the origin of naked kernels during
+  maize domestication was caused by a single amino acid substitution in tga1}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \bibinfo{pages}{genetics--115}
+  (\bibinfo{year}{2015}).
+
+\bibitem{enard2014}
+\bibinfo{author}{Enard, D.}, \bibinfo{author}{Messer, P.~W.} \&
+  \bibinfo{author}{Petrov, D.~A.}
+\newblock \bibinfo{title}{Genome-wide signals of positive selection in human
+  evolution}.
+\newblock \emph{\bibinfo{journal}{Genome research}}
+  \textbf{\bibinfo{volume}{24}}, \bibinfo{pages}{885--895}
+  (\bibinfo{year}{2014}).
+
+\bibitem{rodgers2015}
+\bibinfo{author}{Rodgers-Melnick, E.} \emph{et~al.}
+\newblock \bibinfo{title}{Recombination in diverse maize is stable,
+  predictable, and associated with genetic load}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{112}}, \bibinfo{pages}{3823--3828}
+  (\bibinfo{year}{2015}).
+
+\bibitem{davydov2010}
+\bibinfo{author}{Davydov, E.~V.} \emph{et~al.}
+\newblock \bibinfo{title}{Identifying a high fraction of the human genome to be
+  under selective constraint using gerp++}.
+\newblock \emph{\bibinfo{journal}{PLoS Comput Biol}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{e1001025}
+  (\bibinfo{year}{2010}).
+
+\bibitem{messer2013}
+\bibinfo{author}{Messer, P.~W.} \& \bibinfo{author}{Petrov, D.~A.}
+\newblock \bibinfo{title}{Population genomics of rapid adaptation by soft
+  selective sweeps}.
+\newblock \emph{\bibinfo{journal}{Trends in ecology \& evolution}}
+  \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{659--669}
+  (\bibinfo{year}{2013}).
+
+\bibitem{garud2015}
+\bibinfo{author}{Garud, N.~R.}, \bibinfo{author}{Messer, P.~W.},
+  \bibinfo{author}{Buzbas, E.~O.} \& \bibinfo{author}{Petrov, D.~A.}
+\newblock \bibinfo{title}{Recent selective sweeps in north american drosophila
+  melanogaster show signatures of soft sweeps}.
+\newblock \emph{\bibinfo{journal}{PLoS genetics}}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{e1005004}
+  (\bibinfo{year}{2015}).
+
+\bibitem{piperno2009}
+\bibinfo{author}{Piperno, D.~R.}, \bibinfo{author}{Ranere, A.~J.},
+  \bibinfo{author}{Holst, I.}, \bibinfo{author}{Iriarte, J.} \&
+  \bibinfo{author}{Dickau, R.}
+\newblock \bibinfo{title}{Starch grain and phytolith evidence for early ninth
+  millennium bp maize from the central balsas river valley, mexico}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{106}}, \bibinfo{pages}{5019--5024}
+  (\bibinfo{year}{2009}).
+
+\bibitem{cimmyt1999}
+\bibinfo{author}{Program, T.~M.}
+\newblock \emph{\bibinfo{title}{Development, maintenance, and seed
+  multiplication of open-pollinated maize varieties}}
+  (\bibinfo{publisher}{CIMMYT}, \bibinfo{address}{Mexico, D.F.},
+  \bibinfo{year}{1999}), \bibinfo{edition}{2} edn.
+
+\bibitem{baden2001}
+\bibinfo{author}{Baden, W.~W.} \& \bibinfo{author}{Beekman, C.~S.}
+\newblock \bibinfo{title}{Culture and agriculture: A comment on sissel
+  schroeder, maize productivity in the eastern woodlands and great plains of
+  north america}.
+\newblock \emph{\bibinfo{journal}{American Antiquity}}
+  \bibinfo{pages}{505--515} (\bibinfo{year}{2001}).
+
+\bibitem{studer2011}
+\bibinfo{author}{Studer, A.}, \bibinfo{author}{Zhao, Q.},
+  \bibinfo{author}{Ross-Ibarra, J.} \& \bibinfo{author}{Doebley, J.}
+\newblock \bibinfo{title}{Identification of a functional transposon insertion
+  in the maize domestication gene tb1}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}
+  \textbf{\bibinfo{volume}{43}}, \bibinfo{pages}{1160--1163}
+  (\bibinfo{year}{2011}).
+
+\bibitem{wills2013}
+\bibinfo{author}{Wills, D.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{From many, one: genetic control of prolificacy during
+  maize domestication}.
+\newblock \emph{\bibinfo{journal}{PLoS Genet}} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{e1003604} (\bibinfo{year}{2013}).
+
+\bibitem{Takuno15062015}
+\bibinfo{author}{Takuno, S.} \emph{et~al.}
+\newblock \bibinfo{title}{Independent molecular basis of convergent highland
+  adaptation in maize}.
+\newblock \emph{\bibinfo{journal}{Genetics}}  (\bibinfo{year}{2015}).
+\newblock
+  \urlprefix\url{http://www.genetics.org/content/early/2015/06/15/genetics.115.178327.abstract}.
+\newblock
+  \eprint{http://www.genetics.org/content/early/2015/06/15/genetics.115.178327.full.pdf+html}.
+
+\bibitem{van2012historical}
+\bibinfo{author}{van Heerwaarden, J.}, \bibinfo{author}{Hufford, M.~B.} \&
+  \bibinfo{author}{Ross-Ibarra, J.}
+\newblock \bibinfo{title}{Historical genomics of north american maize}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{109}}, \bibinfo{pages}{12420--12425}
+  (\bibinfo{year}{2012}).
+
+\bibitem{beissinger2014}
+\bibinfo{author}{Beissinger, T.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{A genome-wide scan for evidence of selection in a
+  maize population under long-term artificial selection for ear number}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{196}},
+  \bibinfo{pages}{829--840} (\bibinfo{year}{2014}).
+
+\bibitem{eyre2007}
+\bibinfo{author}{Eyre-Walker, A.} \& \bibinfo{author}{Keightley, P.~D.}
+\newblock \bibinfo{title}{The distribution of fitness effects of new
+  mutations}.
+\newblock \emph{\bibinfo{journal}{Nature Reviews Genetics}}
+  \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{610--618}
+  (\bibinfo{year}{2007}).
+
+\bibitem{wallace2014}
+\bibinfo{author}{Wallace, J.}, \bibinfo{author}{Larsson, S.} \&
+  \bibinfo{author}{Buckler, E.}
+\newblock \bibinfo{title}{Entering the second century of maize quantitative
+  genetics}.
+\newblock \emph{\bibinfo{journal}{Heredity}} \textbf{\bibinfo{volume}{112}},
+  \bibinfo{pages}{30--38} (\bibinfo{year}{2014}).
+
+\bibitem{weber2008}
+\bibinfo{author}{Weber, A.~L.} \emph{et~al.}
+\newblock \bibinfo{title}{The genetic architecture of complex traits in
+  teosinte (zea mays ssp. parviglumis): new evidence from association mapping}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{180}},
+  \bibinfo{pages}{1221--1232} (\bibinfo{year}{2008}).
+
+\bibitem{pyhajarvi2013}
+\bibinfo{author}{Pyh{\"a}j{\"a}rvi, T.}, \bibinfo{author}{Hufford, M.~B.},
+  \bibinfo{author}{Mezmouk, S.} \& \bibinfo{author}{Ross-Ibarra, J.}
+\newblock \bibinfo{title}{Complex patterns of local adaptation in teosinte}.
+\newblock \emph{\bibinfo{journal}{Genome biology and evolution}}
+  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{1594--1609}
+  (\bibinfo{year}{2013}).
+
+\bibitem{sattath2011}
+\bibinfo{author}{Sattath, S.}, \bibinfo{author}{Elyashiv, E.},
+  \bibinfo{author}{Kolodny, O.}, \bibinfo{author}{Rinott, Y.} \&
+  \bibinfo{author}{Sella, G.}
+\newblock \bibinfo{title}{Pervasive adaptive protein evolution apparent in
+  diversity patterns around amino acid substitutions in drosophila simulans}.
+\newblock \emph{\bibinfo{journal}{PLoS genetics}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{e1001302} (\bibinfo{year}{2011}).
+
+\bibitem{williamson2014}
+\bibinfo{author}{Williamson, R.} \emph{et~al.}
+\newblock \bibinfo{title}{Evidence for widespread positive and negative
+  selection in coding and conserved noncoding regions of capsella grandiflora.}
+\newblock \emph{\bibinfo{journal}{PLoS genetics}}
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{e1004622--e1004622}
+  (\bibinfo{year}{2014}).
+
+\bibitem{hernandez2011}
+\bibinfo{author}{Hernandez, R.~D.} \emph{et~al.}
+\newblock \bibinfo{title}{Classic selective sweeps were rare in recent human
+  evolution}.
+\newblock \emph{\bibinfo{journal}{science}} \textbf{\bibinfo{volume}{331}},
+  \bibinfo{pages}{920--924} (\bibinfo{year}{2011}).
+
+\bibitem{ross2009}
+\bibinfo{author}{Ross-Ibarra, J.}, \bibinfo{author}{Tenaillon, M.} \&
+  \bibinfo{author}{Gaut, B.~S.}
+\newblock \bibinfo{title}{Historical divergence and gene flow in the genus
+  zea}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{181}},
+  \bibinfo{pages}{1399--1413} (\bibinfo{year}{2009}).
+
+\bibitem{eyre2009estimating}
+\bibinfo{author}{Eyre-Walker, A.} \& \bibinfo{author}{Keightley, P.~D.}
+\newblock \bibinfo{title}{Estimating the rate of adaptive molecular evolution
+  in the presence of slightly deleterious mutations and population size
+  change}.
+\newblock \emph{\bibinfo{journal}{Molecular biology and evolution}}
+  \textbf{\bibinfo{volume}{26}}, \bibinfo{pages}{2097--2108}
+  (\bibinfo{year}{2009}).
+
+\bibitem{mao2015}
+\bibinfo{author}{Mao, H.} \emph{et~al.}
+\newblock \bibinfo{title}{A transposable element in a nac gene is associated
+  with drought tolerance in maize seedlings}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{6}} (\bibinfo{year}{2015}).
+
+\bibitem{yang2013}
+\bibinfo{author}{Yang, Q.} \emph{et~al.}
+\newblock \bibinfo{title}{{CACTA}-like transposable element in {ZmCCT}
+  attenuated photoperiod sensitivity and accelerated the postdomestication
+  spread of maize}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{110}}, \bibinfo{pages}{16969--16974}
+  (\bibinfo{year}{2013}).
+
+\bibitem{fraser2013gene}
+\bibinfo{author}{Fraser, H.~B.}
+\newblock \bibinfo{title}{Gene expression drives local adaptation in humans}.
+\newblock \emph{\bibinfo{journal}{Genome research}}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{1089--1096}
+  (\bibinfo{year}{2013}).
+
+\bibitem{hancock2011adaptation}
+\bibinfo{author}{Hancock, A.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{Adaptation to climate across the arabidopsis thaliana
+  genome}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{334}},
+  \bibinfo{pages}{83--86} (\bibinfo{year}{2011}).
+
+\bibitem{Halligan:2013ir}
+\bibinfo{author}{Halligan, D.~L.} \emph{et~al.}
+\newblock \bibinfo{title}{{Contributions of Protein-Coding and Regulatory
+  Change to Adaptive Molecular Evolution in Murid Rodents}}.
+\newblock \emph{\bibinfo{journal}{PLoS Genetics}} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{e1003995--14} (\bibinfo{year}{2013}).
+
+\bibitem{kimura1984}
+\bibinfo{author}{Kimura, M.}
+\newblock \emph{\bibinfo{title}{The neutral theory of molecular evolution}}
+  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{1984}).
+
+\bibitem{Gunther:2010gt}
+\bibinfo{author}{G{\"u}nther, T.} \& \bibinfo{author}{Schmid, K.~J.}
+\newblock \bibinfo{title}{{Deleterious amino acid polymorphisms in Arabidopsis
+  thaliana and rice}}.
+\newblock \emph{\bibinfo{journal}{Theoretical and Applied Genetics}}
+  \textbf{\bibinfo{volume}{121}}, \bibinfo{pages}{157--168}
+  (\bibinfo{year}{2010}).
+
+\bibitem{renaut2015}
+\bibinfo{author}{Renaut, S.} \& \bibinfo{author}{Rieseberg, L.~H.}
+\newblock \bibinfo{title}{The accumulation of deleterious mutations as a
+  consequence of domestication and improvement in sunflowers and other
+  compositae crops}.
+\newblock \emph{\bibinfo{journal}{Molecular biology and evolution}}
+  \bibinfo{pages}{msv106} (\bibinfo{year}{2015}).
+
+\bibitem{coventry2010}
+\bibinfo{author}{Coventry, A.} \emph{et~al.}
+\newblock \bibinfo{title}{Deep resequencing reveals excess rare recent variants
+  consistent with explosive population growth}.
+\newblock \emph{\bibinfo{journal}{Nature communications}}
+  \textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{131} (\bibinfo{year}{2010}).
+
+\bibitem{Mezmouk:2014es}
+\bibinfo{author}{Mezmouk, S.} \& \bibinfo{author}{Ross-Ibarra, J.}
+\newblock \bibinfo{title}{{The pattern and distribution of deleterious
+  mutations in maize.}}
+\newblock \emph{\bibinfo{journal}{G3 (Bethesda, Md.)}}
+  \textbf{\bibinfo{volume}{4}}, \bibinfo{pages}{163--171}
+  (\bibinfo{year}{2014}).
+
+\bibitem{eyre2010}
+\bibinfo{author}{Eyre-Walker, A.}
+\newblock \bibinfo{title}{Genetic architecture of a complex trait and its
+  implications for fitness and genome-wide association studies}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{107}}, \bibinfo{pages}{1752--1756}
+  (\bibinfo{year}{2010}).
+
+\bibitem{do2015}
+\bibinfo{author}{Do, R.} \emph{et~al.}
+\newblock \bibinfo{title}{No evidence that selection has been less effective at
+  removing deleterious mutations in europeans than in africans}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}
+  \textbf{\bibinfo{volume}{47}}, \bibinfo{pages}{126--131}
+  (\bibinfo{year}{2015}).
+
+\bibitem{simons2014}
+\bibinfo{author}{Simons, Y.~B.}, \bibinfo{author}{Turchin, M.~C.},
+  \bibinfo{author}{Pritchard, J.~K.} \& \bibinfo{author}{Sella, G.}
+\newblock \bibinfo{title}{The deleterious mutation load is insensitive to
+  recent population history}.
+\newblock \emph{\bibinfo{journal}{Nature genetics}}
+  \textbf{\bibinfo{volume}{46}}, \bibinfo{pages}{220--224}
+  (\bibinfo{year}{2014}).
+
+\bibitem{lohmueller2014}
+\bibinfo{author}{Lohmueller, K.~E.}
+\newblock \bibinfo{title}{The impact of population demography and selection on
+  the genetic architecture of complex traits}.
+\newblock \emph{\bibinfo{journal}{PLoS Genetics}} \textbf{\bibinfo{volume}{10}}
+  (\bibinfo{year}{2014}).
+
+\bibitem{zeng2010}
+\bibinfo{author}{Zeng, K.} \& \bibinfo{author}{Charlesworth, B.}
+\newblock \bibinfo{title}{The effects of demography and linkage on the
+  estimation of selection and mutation parameters}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{186}},
+  \bibinfo{pages}{1411--1424} (\bibinfo{year}{2010}).
+
+\bibitem{popadin2012}
+\bibinfo{author}{Popadin, K.~Y.}, \bibinfo{author}{Nikolaev, S.~I.},
+  \bibinfo{author}{Junier, T.}, \bibinfo{author}{Baranova, M.} \&
+  \bibinfo{author}{Antonarakis, S.~E.}
+\newblock \bibinfo{title}{Purifying selection in mammalian mitochondrial
+  protein-coding genes is highly effective and congruent with evolution of
+  nuclear genes}.
+\newblock \emph{\bibinfo{journal}{Molecular biology and evolution}}
+  \bibinfo{pages}{mss219} (\bibinfo{year}{2012}).
+
+\bibitem{Elyashiv:2010ga}
+\bibinfo{author}{Elyashiv, E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Shifts in the intensity of purifying selection: An
+  analysis of genome-wide polymorphism data from two closely related yeast
+  species}}.
+\newblock \emph{\bibinfo{journal}{Genome Research}}
+  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{1558--1573}
+  (\bibinfo{year}{2010}).
+
+
+  \setcounter{firstbib}{\value{NAT@ctr}}
+  
+\end{thebibliography}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% Supporting info below this line %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{References (Methods)}
 
-\onecolumn
-\section*{Supporting Information}
-\renewcommand\thefigure{S\arabic{figure}}
-\renewcommand\thetable{S\arabic{table}}    
-\setcounter{figure}{0}
-\setcounter{table}{0}
-
-
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[width=\textwidth]{FigsAndFiles/plotDiversity_TvM_Folded2_Significance_tga1Supp_June.png}
-    \end{center}
-\caption{Diversity surrounding the causative substitution at the \emph{tga1} locus.  \label{sFig:tga1}}
-\end{figure}
-\clearpage
-
-\begin{figure}
-  \includegraphics[width=.5\textwidth]{FigsAndFiles/TIL_BKN_bootstrapping_msmc2_labeled.pdf}
-  \includegraphics[width=.5\textwidth]{FigsAndFiles/relativeCrossCoalescenceRate_labeled.pdf}
-\caption{MSMC Analyses. Shown in \textbf{A} are effective population size estimates over time. Estimates are depicted as solid lines and boostrap resampling is represented with dotted lines for both maize (red) and teosinte (blue). \textbf{B} depticts the relative cross-coalescence rate between maize and teosinte estimated using MSMC. In both panels, time is estimated assuming an annual generation time and a mutation rate of $\mu=3\times 10^{-8}$ \label{sFig:msmc}}
-\end{figure}
-\clearpage
+  \begin{thebibliography}{10}
+\setcounter{NAT@ctr}{\value{firstbib}}
+    \expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
 
 
-\begin{figure}
-  \includegraphics[width=.5\textwidth]{FigsAndFiles/plotDiversity_TvM_Conserved_Significance_June.png}
-  \includegraphics[width=.5\textwidth]{FigsAndFiles/plotDiversity_TvM_Unconserved_Significance_June.png}
-\caption{ Pairwise diversity surrounding synonymous and nonsynonymous
-  substitutions in maize at \textbf{A} highly conserved or \textbf{B}  unconserved sites.  Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a larger range on the x-axis. \label{sFig:consUncons}}
-\end{figure}
-\clearpage
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{FigsAndFiles/plotDiversity_TvM_Singletons.png}
-\caption{ Singleton diversity surrounding synonymous and nonsynonymous
-  substitutions in maize. \label{sFig:singleton}}
-\end{figure}
-\clearpage
+\bibitem{lemmon2014}
+\bibinfo{author}{Lemmon, Z.~H.}, \bibinfo{author}{Bukowski, R.},
+  \bibinfo{author}{Sun, Q.} \& \bibinfo{author}{Doebley, J.~F.}
+\newblock \bibinfo{title}{The role of cis regulatory evolution
+  in maize domestication}.
+\newblock \emph{\bibinfo{journal}{PLoS Genet}} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{e1004745} (\bibinfo{year}{2014}).
+\newblock \urlprefix\url{http://dx.doi.org/10.1371%2Fjournal.pgen.1004745}.
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{FigsAndFiles/distanceToGene_WithSignificance_Folded2_maizeAndTeoSingleVsPi.png}
-\caption{ Relative diversity versus distance to nearest gene in maize and teosinte. Relative diversity is calculated by comparing to the mean diversity in all windows $\geq 0.02 cM$ from the nearest gene. Lines depict cubic smoothing splines with smoothing parameters chosen via generalized cross validation and shading depicts bootstrap-based 95\% confidence intervals.  \label{sFig:singletonPi}}
-\end{figure}
-\clearpage
+\bibitem{jombart2011}
+\bibinfo{author}{Jombart, T.} \& \bibinfo{author}{Ahmed, I.}
+\newblock \bibinfo{title}{adegenet 1.3-1: new tools for the analysis of
+  genome-wide snp data}.
+\newblock \emph{\bibinfo{journal}{Bioinformatics}}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{3070--3071}
+  (\bibinfo{year}{2011}).
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{FigsAndFiles/jri_sims.png}
-\caption{Simulations of diversity statistics in maize and teosinte with varying strengths of purifying selection. Points show the mean ($\pm$ standard error) of the population mutation rate $\theta$ estimated by singletons ($\eta_1$) and pairwise differences ($\pi$). \label{sFig:sims}}
-\end{figure}
-\clearpage
+\bibitem{schnable2009}
+\bibinfo{author}{Schnable, P.~S.} \emph{et~al.}
+\newblock \bibinfo{title}{The b73 maize genome: complexity, diversity, and
+  dynamics}.
+\newblock \emph{\bibinfo{journal}{science}} \textbf{\bibinfo{volume}{326}},
+  \bibinfo{pages}{1112--1115} (\bibinfo{year}{2009}).
 
+\bibitem{li2011statistical}
+\bibinfo{author}{Li, H.}
+\newblock \bibinfo{title}{A statistical framework for snp calling, mutation
+  discovery, association mapping and population genetical parameter estimation
+  from sequencing data}.
+\newblock \emph{\bibinfo{journal}{Bioinformatics}}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{2987--2993}
+  (\bibinfo{year}{2011}).
 
-\begin{figure}
-  \includegraphics[width=.5\textwidth]{FigsAndFiles/distanceToGene_Unselected_manuscript.png}
-    \includegraphics[width=.5\textwidth]{FigsAndFiles/distanceToGene_unselected_Singletons_manuscript.png}
-\caption{ Relative level of diversity versus distance to the nearest gene, in maize and teosinte, based on only sites that do not show evidence of hard or soft sweeps according to H12. Two measures of diversity were investigated. {\bf A} displays pairwise diversity,
-which is most influenced by intermediate frequency alleles and therefore depicts more ancient evolutionary patterns, and {\bf B} depicts singleton diversity, influenced by rare alleles and thus depicting evolutionary patterns in the recent past. Bootstrap-based 95\% confidence intervals are depicted via shading. Inset plots depict a smaller range on the x-axis. \label{sFig:H12}}
-\end{figure}
-\clearpage
+\bibitem{glaubitz2014}
+\bibinfo{author}{Glaubitz, J.~C.} \emph{et~al.}
+\newblock \bibinfo{title}{Tassel-gbs: a high capacity genotyping by sequencing
+  analysis pipeline}.
+\newblock \emph{\bibinfo{journal}{PLoS One}} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{E90346} (\bibinfo{year}{2014}).
 
+\bibitem{durinck2009}
+\bibinfo{author}{Durinck, S.}, \bibinfo{author}{Spellman, P.~T.},
+  \bibinfo{author}{Birney, E.} \& \bibinfo{author}{Huber, W.}
+\newblock \bibinfo{title}{Mapping identifiers for the integration of genomic
+  datasets with the r/bioconductor package biomart}.
+\newblock \emph{\bibinfo{journal}{Nature protocols}}
+  \textbf{\bibinfo{volume}{4}}, \bibinfo{pages}{1184--1191}
+  (\bibinfo{year}{2009}).
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=.75\textwidth]{FigsAndFiles/tilPCA_aug.pdf}\\
-  \includegraphics[width=.75\textwidth]{FigsAndFiles/bknPCA_aug.pdf}\\
-  \end{center}
-  \caption{Principal component analysis of teosinte and maize individuals to ensure that no close relatives were inadvertantly included in our study. Plots are based on a random sample of 10,000 SNPs. {\bf A} displays the percentage of total variance explained by each principal component for teosinte, while {\bf B} shows PC1 vs PC2 for all 13 teosinte individuals. Simlarly, {\bf C} depicts the percentage of total variance explained by each principal component for maize, and {\bf D} shows PC1 vs PC2 for all 23 maize individuals. \label{sFig:PCA}}
-\end{figure}
-\clearpage
+\bibitem{durinck2005}
+\bibinfo{author}{Durinck, S.} \emph{et~al.}
+\newblock \bibinfo{title}{Biomart and bioconductor: a powerful link between
+  biological databases and microarray data analysis}.
+\newblock \emph{\bibinfo{journal}{Bioinformatics}}
+  \textbf{\bibinfo{volume}{21}}, \bibinfo{pages}{3439--3440}
+  (\bibinfo{year}{2005}).
 
-\begin{table}[h]  
-  \begin{center}
-  \begin{tabular}{c|c}
-    \bf Maize & \bf Teosinte \\ \hline \hline
-    BKN009 &  TIL01 \\
-    BKN010 & TIL02 \\
-    BKN011 & TIL03 \\
-    BKN014 & TIL04-TIP454 \\
-    BKN015 & TIL07 \\
-    BKN016 & TIL09 \\
-    BKN017 & TIL10 \\
-    BKN018 & TIL11 \\
-    BKN019 & TIL12 \\
-    BKN020 & TIL14-TIP498 \\
-    BKN022 & TIL15 \\
-    BKN023 & TIL16 \\
-    BKN025 & TIL17 \\
-    BKN026 & \\
-    BKN027 & \\
-    BKN029 & \\
-    BKN030 & \\
-    BKN031 & \\
-    BKN032 & \\
-    BKN033 & \\
-    BKN034 & \\
-    BKN035 & \\
-    BKN040 & \\ \hline
-  \end{tabular}
-  \end{center}
-  \caption{A list of maize and teosinte individuals included in this study. Sequencing and details were previously described by \cite{chia2012}   } \label{sTab:list}
-\end{table}
-\clearpage
+\bibitem{R2014}
+\bibinfo{author}{{R Core Team}}.
+\newblock \emph{\bibinfo{title}{R: A Language and Environment for Statistical
+  Computing}}.
+\newblock \bibinfo{organization}{R Foundation for Statistical Computing},
+  \bibinfo{address}{Vienna, Austria} (\bibinfo{year}{2014}).
+\newblock \urlprefix\url{http://www.R-project.org/}.
 
+\bibitem{korneliussen2014}
+\bibinfo{author}{Korneliussen, T.~S.}, \bibinfo{author}{Albrechtsen, A.} \&
+  \bibinfo{author}{Nielsen, R.}
+\newblock \bibinfo{title}{Angsd: analysis of next generation sequencing data}.
+\newblock \emph{\bibinfo{journal}{BMC bioinformatics}}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{356} (\bibinfo{year}{2014}).
 
-\begin{table}
-  \begin{center}
-  \def\arraystretch{2}
-%  \begin{center}
-  \begin{tabular}{l|c|c|c}
-    \bf Parameter & \bf Initial value & \bf Upper bound & \bf Lower bound\\ \hline 
-    $\frac{N_b}{N_a}$ & 0.02 & $1\times10^{-7}$ & 2 \\ 
-    $\frac{N_{m}}{N_a}$ & 3 & $1\times10^{-7}$ & 200 \\
-    $\frac{T_b}{2N_a}$ & 0.04 & 0  & 1 \\ 
-    $\frac{M_{mt}}{N_a}$ & $1\times10^{-10}$ & $1\times10^{-7}$ & 0.001 \\
-    $\frac{M_{tm}}{N_a}$ & $1\times10^{-10}$ & $1\times10^{-7}$ & 0.001 \\
-  \end{tabular}
-  \def\arraystretch{1} % undo stretching
-  \end{center}
-    \caption{ Parameters, initial values, and boundaries used for model-fitting with $\delta\alpha\delta{i}$. Parameters are shown in the units utilized by $\delta\alpha\delta{i}$, although in the text simplified units are reported.    }\label{sTab:dadi}
-\end{table}
+\bibitem{mclaren2010}
+\bibinfo{author}{McLaren, W.} \emph{et~al.}
+\newblock \bibinfo{title}{Deriving the consequences of genomic variants with
+  the ensembl api and snp effect predictor}.
+\newblock \emph{\bibinfo{journal}{Bioinformatics}}
+  \textbf{\bibinfo{volume}{26}}, \bibinfo{pages}{2069--2070}
+  (\bibinfo{year}{2010}).
+
+\bibitem{thornton2014genetics}
+\bibinfo{author}{Thornton, K.~R.}
+\newblock \bibinfo{title}{A c++ template library for efficient forward-time
+  population genetic simulation of large populations}.
+\newblock \emph{\bibinfo{journal}{Genetics}} \textbf{\bibinfo{volume}{198}},
+  \bibinfo{pages}{157--166} (\bibinfo{year}{2014}).
+
+\end{thebibliography}
 
 
 \end{document}
